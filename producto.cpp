@@ -57,7 +57,6 @@ using namespace std;
 // {
 //   return _categoria;
 // }
-
  int Producto::getProveedor()
  {
    return _proveedor;

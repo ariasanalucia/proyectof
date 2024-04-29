@@ -37,3 +37,41 @@
 	"producto.h"
 	<cstring>
 
+1714410437 source:c:\users\pc\desktop\cpp\proyectof\funcionesglobales.cpp
+	<iostream>
+	"funcionesGlobales.h"
+
+1714410437 c:\users\pc\desktop\cpp\proyectof\funcionesglobales.h
+	<iostream>
+	<cstring>
+
+1714410437 source:c:\users\pc\desktop\cpp\proyectof\producto.cpp
+	<iostream>
+	"producto.h"
+	"funcionesGlobales.h"
+
+1714410437 c:\users\pc\desktop\cpp\proyectof\producto.h
+
+1714410437 source:c:\users\pc\desktop\cpp\proyectof\productoarchivo.cpp
+	<iostream>
+	"productoArchivo.h"
+	"producto.h"
+
+1714410437 c:\users\pc\desktop\cpp\proyectof\productoarchivo.h
+	"producto.h"
+	<cstring>
+
+1714410437 source:c:\users\pc\desktop\cpp\proyectof\productomanager.cpp
+	<iostream>
+	"funcionesGlobales.h"
+	"producto.h"
+	"productoManager.h"
+	"productoArchivo.h"
+
+1714410437 c:\users\pc\desktop\cpp\proyectof\productomanager.h
+	"productoArchivo.h"
+
+1714411188 source:c:\users\pc\desktop\cpp\proyectof\main.cpp
+	<iostream>
+	"productoManager.h"
+

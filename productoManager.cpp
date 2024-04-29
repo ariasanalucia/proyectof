@@ -58,7 +58,7 @@ using namespace std;
       cout << "----------------" << endl;
       cout << "1 - ALTA PRODUCTO" << endl;
       cout << "2 - MOSTRAR PRODUCTOS" << endl;
-      cout << "3 - " << endl;
+      cout << "3 soy ana- " << endl;
       cout << "4 - " << endl;
       cout << "5 - " << endl;
       cout << "6 - " << endl;
