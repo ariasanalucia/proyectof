@@ -1,0 +1,46 @@
+# depslib dependency file v1.0
+1714422369 source:c:\users\usuario\documents\utn\laboratorio 2\proyecto lab2\producto.cpp
+	<iostream>
+	"producto.h"
+	"funcionesGlobales.h"
+	"fecha.h"
+
+1714346199 source:c:\users\usuario\documents\utn\laboratorio 2\proyecto lab2\main.cpp
+	<iostream>
+	"productoManager.h"
+
+1714415802 source:c:\users\usuario\documents\utn\laboratorio 2\proyecto lab2\productoarchivo.cpp
+	<iostream>
+	"productoArchivo.h"
+	"producto.h"
+
+1714422715 source:c:\users\usuario\documents\utn\laboratorio 2\proyecto lab2\productomanager.cpp
+	<iostream>
+	"funcionesGlobales.h"
+	"producto.h"
+	"productoManager.h"
+
+1714160210 source:c:\users\usuario\documents\utn\laboratorio 2\proyecto lab2\funcionesglobales.cpp
+	<iostream>
+	"funcionesGlobales.h"
+
+1714422409 c:\users\usuario\documents\utn\laboratorio 2\proyecto lab2\producto.h
+	"fecha.h"
+
+1714415720 c:\users\usuario\documents\utn\laboratorio 2\proyecto lab2\productomanager.h
+	"productoArchivo.h"
+
+1714154916 c:\users\usuario\documents\utn\laboratorio 2\proyecto lab2\funcionesglobales.h
+	<iostream>
+	<cstring>
+
+1714408603 c:\users\usuario\documents\utn\laboratorio 2\proyecto lab2\productoarchivo.h
+	"producto.h"
+	<cstring>
+
+1714394985 source:c:\users\usuario\documents\utn\laboratorio 2\proyecto lab2\fecha.cpp
+	<iostream>
+	"fecha.h"
+
+1714394985 c:\users\usuario\documents\utn\laboratorio 2\proyecto lab2\fecha.h
+
