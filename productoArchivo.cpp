@@ -21,7 +21,6 @@ ProductoArchivo::ProductoArchivo(const char *nombre)
    return escribio;
  }
 
-
  int ProductoArchivo::contarRegistros()
  {
    Producto producto;
@@ -53,7 +52,7 @@ ProductoArchivo::ProductoArchivo(const char *nombre)
    return aux;
  }
 
- int ProductoArchivo::buscar(int id)
+ int ProductoArchivo::buscar(int id) //Retorna ID si existe, sino -1
  {
    int cantidad = contarRegistros();
    for (int i=0; i<cantidad; i++)
@@ -75,7 +74,7 @@ ProductoArchivo::ProductoArchivo(const char *nombre)
      return false;
    }
    fseek(p,pos*sizeof(Producto), 0);
-   bool escribio=fwrite(&producto, sizeof(Producto), 1,p);
+   bool escribio = fwrite(&producto, sizeof(Producto), 1,p);
    fclose(p);
    return escribio;
  }

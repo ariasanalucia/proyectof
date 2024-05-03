@@ -1,5 +1,6 @@
 #include <iostream>
 using namespace std;
+#include "rlutil.h"
 #include "funcionesGlobales.h"
 #include "producto.h"
 #include "productoManager.h"
@@ -86,6 +87,7 @@ using namespace std;
    }else
    {
      cout << "NO EXISTE EL NUMERO DE ID INGRESADO" << endl;
+     pause();
    }
  }
 
@@ -94,8 +96,8 @@ using namespace std;
    int opcion;
     while(true)
     {
-      system("cls");
-      cout << "MENU PRODUCTO" << endl;
+      rlutil::cls();
+      cout << "PRODUCTOS" << endl;
       cout << "----------------" << endl;
       cout << "1 - ALTA PRODUCTO" << endl;
       cout << "2 - MOSTRAR PRODUCTOS" << endl;
@@ -109,7 +111,7 @@ using namespace std;
 
       cout << "INGRESE UNA OPCION: ";
       cin >> opcion;
-      system("cls");
+      rlutil::cls();
       switch (opcion)
       {
        case 1:
@@ -137,10 +139,10 @@ using namespace std;
        default:
         {
           cout << "OPCION INCORRECTA" << endl;
+          pause();
         }
       }
-      system("pause");
-      system("cls");
+      rlutil::cls();
     }
    return;
  }

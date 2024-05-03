@@ -28,3 +28,9 @@ using namespace std;
     fflush(stdin);
 
  }
+
+ void pause(){
+   cin.ignore();
+   cin.get();
+   return;
+ }
