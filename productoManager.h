@@ -10,7 +10,7 @@ using namespace std;
     void mostrarPorId();
 
    public:
-    void menuPrincipal();
+    void menuProducto();
     Producto Cargar();
     void Mostrar (Producto producto);
     void bajaPoducto(Producto producto);

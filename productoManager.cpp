@@ -89,13 +89,13 @@ using namespace std;
    }
  }
 
- void ProductoManager::menuPrincipal()
+ void ProductoManager::menuProducto()
  {
    int opcion;
     while(true)
     {
       system("cls");
-      cout << "MENU PRINCIPAL" << endl;
+      cout << "MENU PRODUCTO" << endl;
       cout << "----------------" << endl;
       cout << "1 - ALTA PRODUCTO" << endl;
       cout << "2 - MOSTRAR PRODUCTOS" << endl;

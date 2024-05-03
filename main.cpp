@@ -1,10 +1,11 @@
 #include <iostream>
 using namespace std;
-#include "productoManager.h"
+#include "app.h"
 
  int main()
  {
-   ProductoManager producto;
-   producto.menuPrincipal();
+   App menu;
+   menu.MenuPrincipal();
+
     return 0;
  }
