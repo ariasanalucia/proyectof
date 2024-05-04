@@ -29,8 +29,8 @@ using namespace std;
 
  }
 
- void pause(){
-   cin.ignore();
-   cin.get();
-   return;
+ void pausa(){
+    std::cin.ignore();
+    std::cin.get();
+    return;
  }

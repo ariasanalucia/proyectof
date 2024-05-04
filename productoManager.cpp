@@ -87,7 +87,7 @@ using namespace std;
    }else
    {
      cout << "NO EXISTE EL NUMERO DE ID INGRESADO" << endl;
-     pause();
+     pausa();
    }
  }
 
@@ -139,7 +139,7 @@ using namespace std;
        default:
         {
           cout << "OPCION INCORRECTA" << endl;
-          pause();
+          pausa();
         }
       }
       rlutil::cls();

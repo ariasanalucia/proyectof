@@ -5,4 +5,4 @@ using namespace std;
 
  ///Funcion
  void cargarCadena(char *palabra, int tamano);
- //void pause();
+ void pausa();

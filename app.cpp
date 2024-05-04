@@ -1,4 +1,5 @@
 #include <iostream>
+#include "funcionesGlobales.h"
 using namespace std;
 #include "rlutil.h"
 #include "app.h"
@@ -47,7 +48,7 @@ using namespace std;
        default:
         {
           cout << "OPCION INCORRECTA" << endl;
-          pause();
+          pausa();
         }
       }
       rlutil::cls();
