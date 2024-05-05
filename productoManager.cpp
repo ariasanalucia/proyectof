@@ -123,12 +123,11 @@ using namespace std;
        case 2:
         {
           mostrarTodos();
-          break;
         }
+        break;
        case 3:
         {
           mostrarPorId();
-          break;
         }
         break;
        case 0:
@@ -139,9 +138,9 @@ using namespace std;
        default:
         {
           cout << "OPCION INCORRECTA" << endl;
-          pausa();
         }
       }
+      pausa();
       rlutil::cls();
     }
    return;

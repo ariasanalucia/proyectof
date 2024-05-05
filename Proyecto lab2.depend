@@ -50,15 +50,15 @@
 
 1714394985 c:\users\usuario\documents\github\proyectof\fecha.h
 
-1714160210 source:c:\users\usuario\documents\github\proyectof\funcionesglobales.cpp
+1714938150 source:c:\users\usuario\documents\github\proyectof\funcionesglobales.cpp
 	<iostream>
 	"funcionesGlobales.h"
 
-1714154916 c:\users\usuario\documents\github\proyectof\funcionesglobales.h
+1714938150 c:\users\usuario\documents\github\proyectof\funcionesglobales.h
 	<iostream>
 	<cstring>
 
-1714704179 source:c:\users\usuario\documents\github\proyectof\main.cpp
+1714881194 source:c:\users\usuario\documents\github\proyectof\main.cpp
 	<iostream>
 	"app.h"
 
@@ -78,7 +78,7 @@
 	"funcionesGlobales.h"
 	"fecha.h"
 
-1714415802 source:c:\users\usuario\documents\github\proyectof\productoarchivo.cpp
+1714839494 source:c:\users\usuario\documents\github\proyectof\productoarchivo.cpp
 	<iostream>
 	"productoArchivo.h"
 	"producto.h"
@@ -86,13 +86,30 @@
 1714704999 c:\users\usuario\documents\github\proyectof\app.h
 	"productoManager.h"
 
-1714702843 source:c:\users\usuario\documents\github\proyectof\productomanager.cpp
+1714883880 source:c:\users\usuario\documents\github\proyectof\productomanager.cpp
 	<iostream>
+	"rlutil.h"
 	"funcionesGlobales.h"
 	"producto.h"
 	"productoManager.h"
 
-1714705036 source:c:\users\usuario\documents\github\proyectof\app.cpp
+1714881701 source:c:\users\usuario\documents\github\proyectof\app.cpp
 	<iostream>
+	"funcionesGlobales.h"
+	"rlutil.h"
 	"app.h"
+
+1714839494 c:\users\usuario\documents\github\proyectof\rlutil.h
+	<iostream>
+	<string>
+	<cstdio>
+	<stdio.h>
+	<string.h>
+	<windows.h>
+	<conio.h>
+	<termios.h>
+	<unistd.h>
+	<sys/ioctl.h>
+	<sys/types.h>
+	<sys/time.h>
 
