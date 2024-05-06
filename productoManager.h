@@ -7,7 +7,6 @@ using namespace std;
    private:
     ProductoArchivo _archivo = ProductoArchivo("producto.dat");
     void mostrarTodos();
-    void mostrarPorId();
     void modificarRegistro();
     void modificarProveedores();
 
@@ -16,6 +15,9 @@ using namespace std;
     Producto Cargar();
     Producto CargarNuevo();
     void Mostrar (Producto producto);
+    void mostrarPorId();
     void bajaPoducto();
+    void mostrarPorProveedor();
+    void mostrarPorCategoria();
 
  };

@@ -1,9 +1,11 @@
 #include <iostream>
 using namespace std;
+#include <cstring>
 #include "rlutil.h"
 #include "funcionesGlobales.h"
 #include "producto.h"
 #include "productoManager.h"
+#include "consultas.h"
 
  //CARGAR
  Producto ProductoManager::Cargar()
@@ -96,10 +98,16 @@ using namespace std;
    cout << endl;
 
    int posicion = _archivo.buscar(id);
-   if (posicion >= 0 && aux.getProveedor() != 0)
+   if (posicion >= 0)
    {
      aux = _archivo.leer(posicion);
      Mostrar(aux);
+     if (aux.getProveedor() == 0)
+     {
+       cout << "ESTE REGISTRO NO PUEDE SER LISTADO YA QUE SE DEBE MODIFICAR X CAMPO DE PRODUCTO" << endl;
+       cout << "(Sugerencia: ir al apartado de (LISTAR PRODUCTOS A MODIFICAR POR X ERROR DE CARGA))" << endl;
+       return;
+     }
      cout << "STOCK ACTUAL: " << aux.getStock() << endl;
      if (aux.getStock() == 0)
      {
@@ -249,6 +257,61 @@ using namespace std;
    }
  }
 
+ void ProductoManager::mostrarPorProveedor()
+ {
+   Producto aux;
+   int proveedor;
+   int cantidad = _archivo.contarRegistros();
+
+   cout << "Ingresar el proveedor: ";
+   cin >> proveedor;
+   cout << endl;
+
+   for (int i=0; i<cantidad; i++)
+   {
+      aux = _archivo.leer(i);
+     if (proveedor == 1 || proveedor == 2)
+     {
+       if (aux.getProveedor() == proveedor)
+       {
+         Mostrar(aux);
+       }
+     }else
+     {
+       cout << "NO EXISTE EL NUMERO DE PROVEEDOR INGRESADO" << endl;
+       return;
+     }
+   }
+
+ }
+
+ void ProductoManager::mostrarPorCategoria()
+ {
+   Producto aux;
+   char categoria[30];
+   int cantidad = _archivo.contarRegistros();
+   bool existe = false;
+
+   cout << "Ingresar categoria: ";
+   cargarCadena(categoria,29);
+   cout << endl;
+
+   for (int i=0; i<cantidad; i++)
+   {
+     aux = _archivo.leer(i);
+     int comparacion = strcmp(aux.getCategoria(),categoria);
+     if (comparacion == 0)
+     {
+       Mostrar(aux);
+       existe = true;
+     }
+   }
+   if (!existe)
+   {
+     cout << "CATEGORIA INEXISTENTE" << endl;
+   }
+ }
+
  void ProductoManager::menuProducto()
  {
    int opcion;
@@ -259,10 +322,10 @@ using namespace std;
       cout << "----------------" << endl;
       cout << "1 - ALTA PRODUCTO" << endl;
       cout << "2 - LISTAR PRODUCTOS A LA VENTA" << endl;
-      cout << "3 - BUSCAR PRODUCTO POR ID" << endl;
-      cout << "4 - BAJA PRODUCTO" << endl;
-      cout << "5 - MODIFICAR PRODUCTO" << endl;
-      cout << "6 - LISTAR PRODUCTOS A MODIFICAR POR X ERROR DE CARGA" << endl;
+      cout << "3 - BAJA PRODUCTO" << endl;
+      cout << "4 - MODIFICAR PRODUCTO" << endl;
+      cout << "5 - LISTAR PRODUCTOS A MODIFICAR POR X ERROR DE CARGA" << endl;
+      cout << "6 - CONSULTAS" << endl;
       cout << endl;
       cout << "0 - PARA SALIR" << endl;
       cout << "----------------" << endl;
@@ -285,22 +348,23 @@ using namespace std;
         break;
        case 3:
         {
-          mostrarPorId();
+          bajaPoducto();
         }
         break;
        case 4:
         {
-          bajaPoducto();
+         modificarRegistro();
         }
         break;
        case 5:
         {
-         modificarRegistro();
+          modificarProveedores();
         }
         break;
        case 6:
         {
-          modificarProveedores();
+          Consultas consulta;
+          consulta.menuConsultas();
         }
         break;
        case 0:

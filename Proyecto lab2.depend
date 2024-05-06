@@ -62,7 +62,7 @@
 	<iostream>
 	"app.h"
 
-1714968045 c:\users\usuario\documents\github\proyectof\productomanager.h
+1715006411 c:\users\usuario\documents\github\proyectof\productomanager.h
 	"productoArchivo.h"
 
 1714955731 c:\users\usuario\documents\github\proyectof\productoarchivo.h
@@ -86,12 +86,14 @@
 1714704999 c:\users\usuario\documents\github\proyectof\app.h
 	"productoManager.h"
 
-1714968431 source:c:\users\usuario\documents\github\proyectof\productomanager.cpp
+1715008272 source:c:\users\usuario\documents\github\proyectof\productomanager.cpp
 	<iostream>
+	<cstring>
 	"rlutil.h"
 	"funcionesGlobales.h"
 	"producto.h"
 	"productoManager.h"
+	"consultas.h"
 
 1714949257 source:c:\users\usuario\documents\github\proyectof\app.cpp
 	<iostream>
@@ -112,4 +114,14 @@
 	<sys/ioctl.h>
 	<sys/types.h>
 	<sys/time.h>
+
+1715002747 c:\users\usuario\documents\github\proyectof\consultas.h
+	"productoManager.h"
+
+1715006428 source:c:\users\usuario\documents\github\proyectof\consultas.cpp
+	<iostream>
+	"rlutil.h"
+	"funcionesGlobales.h"
+	"consultas.h"
+	"productoManager.h"
 
