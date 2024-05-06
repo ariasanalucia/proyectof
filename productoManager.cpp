@@ -77,29 +77,6 @@ using namespace std;
    }
  }
 
- void ProductoManager::modificarProveedores()
- {
-   Producto producto;
-   int cantidad = _archivo.contarRegistros();
-   cout << "LOS PRODUCTOS A MODIFICAR EL APARTADO DE ""PROVEEDORES"" SON LOS SIGUIENTES: " << endl;
-   cout << endl;
-   for (int i=0; i<cantidad; i++)
-   {
-     producto = _archivo.leer(i);
-     if (producto.getProveedor() == 0)
-     {
-       cout << "ID de producto: " << producto.getId() << endl;
-       cout << "Nombre de producto: " << producto.getNombre() << endl;
-       cout << "Categoria de producto: " << producto.getCategoria() << endl;
-       cout << "proveedor(1 - Disval / 2 - Suizo): " << producto.getProveedor() << endl;
-       cout << "Fecha de vencimiento: " << producto.getVenciemiento().toString() << endl;
-       cout << "Presentacion: " << producto.getPresentacion() << endl;
-       cout << "Cantidad que ingresa: " << producto.getCantidad() << endl;
-       cout << endl;
-       cout << "-------------------------------" << endl;
-     }
-   }
- }
 
  void ProductoManager::mostrarTodos()
  {
@@ -119,7 +96,7 @@ using namespace std;
    cout << endl;
 
    int posicion = _archivo.buscar(id);
-   if (posicion >= 0)
+   if (posicion >= 0 && aux.getProveedor() != 0)
    {
      aux = _archivo.leer(posicion);
      Mostrar(aux);
@@ -131,7 +108,6 @@ using namespace std;
    }else
    {
      cout << "NO EXISTE EL NUMERO DE ID INGRESADO" << endl;
-     pausa();
    }
 
  }
@@ -146,7 +122,7 @@ using namespace std;
 
    int cantidad = _archivo.contarRegistros();
    int posicion = _archivo.buscar(id);
-   if (posicion >= 0)
+   if (posicion >= 0 && producto.getProveedor() != 0)
    {
      Producto aux = _archivo.leer(posicion);
      Mostrar(aux);
@@ -245,6 +221,30 @@ using namespace std;
      }else
      {
        cout << "NO SE PUDO MODIFICAR EL REGISTRO!" << endl;
+     }
+   }
+ }
+
+ void ProductoManager::modificarProveedores()
+ {
+   Producto producto;
+   int cantidad = _archivo.contarRegistros();
+   cout << "LOS PRODUCTOS A MODIFICAR EL APARTADO DE ""PROVEEDORES"" SON LOS SIGUIENTES: " << endl;
+   cout << endl;
+   for (int i=0; i<cantidad; i++)
+   {
+     producto = _archivo.leer(i);
+     if (producto.getProveedor() == 0)
+     {
+       cout << "ID de producto: " << producto.getId() << endl;
+       cout << "Nombre de producto: " << producto.getNombre() << endl;
+       cout << "Categoria de producto: " << producto.getCategoria() << endl;
+       cout << "proveedor(1 - Disval / 2 - Suizo): " << producto.getProveedor() << endl;
+       cout << "Fecha de vencimiento: " << producto.getVenciemiento().toString() << endl;
+       cout << "Presentacion: " << producto.getPresentacion() << endl;
+       cout << "Cantidad que ingresa: " << producto.getCantidad() << endl;
+       cout << endl;
+       cout << "-------------------------------" << endl;
      }
    }
  }

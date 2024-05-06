@@ -86,7 +86,7 @@
 1714704999 c:\users\usuario\documents\github\proyectof\app.h
 	"productoManager.h"
 
-1714968045 source:c:\users\usuario\documents\github\proyectof\productomanager.cpp
+1714968431 source:c:\users\usuario\documents\github\proyectof\productomanager.cpp
 	<iostream>
 	"rlutil.h"
 	"funcionesGlobales.h"
