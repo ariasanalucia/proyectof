@@ -8,10 +8,13 @@ using namespace std;
     ProductoArchivo _archivo = ProductoArchivo("producto.dat");
     void mostrarTodos();
     void mostrarPorId();
+    void modificarRegistro();
 
    public:
     void menuProducto();
     Producto Cargar();
+    Producto CargarNuevo();
     void Mostrar (Producto producto);
-    void bajaPoducto(Producto producto);
+    void bajaPoducto();
+
  };
