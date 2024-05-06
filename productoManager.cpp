@@ -25,11 +25,17 @@ using namespace std;
    cargarCadena(categoria, 29);
    aux.setCategoria(categoria);
 
-   cout << "Proveedor: ";
+   cout << "Proveedor(1 - Disval / 2 - Suizo): ";
    cin >> proveedor;
-   aux.setProveedor(proveedor);
+   if (aux.getProveedor() == 1 || aux.getProveedor() == 2)
+   {
+     aux.setProveedor(proveedor);
+   }else
+   {
+     aux.setProveedor(0);
+   }
 
-   cout << "Fecha de vencimiento: ";
+   cout << "Fecha de vencimiento: " << endl;
    venci.Cargar();
    aux.setVencimiento(venci);
 
@@ -47,23 +53,51 @@ using namespace std;
    }
    aux.setStock(stock);
 
+   if (aux.getProveedor() == 0)
+   {
+     cout << "SE LE SOLICITA QUE MODIFIQUE ESTE REGISTRO, YA QUE INGRESO UN NUMERO DE PROVEEDOR INEXISTENTE!" << endl;
+   }
    return aux;
  }
 
 //MOSTRAR
  void ProductoManager::Mostrar(Producto producto)
  {
-   if (producto.getEstado())
+   if (producto.getEstado() && producto.getProveedor() == 1 || producto.getProveedor() == 2)
    {
      cout << "ID de producto: " << producto.getId() << endl;
      cout << "Nombre de producto: " << producto.getNombre() << endl;
      cout << "Categoria de producto: " << producto.getCategoria() << endl;
-     cout << "proveedor: " << producto.getProveedor() << endl;
+     cout << "proveedor(1 - Disval / 2 - Suizo): " << producto.getProveedor() << endl;
      cout << "Fecha de vencimiento: " << producto.getVenciemiento().toString() << endl;
      cout << "Presentacion: " << producto.getPresentacion() << endl;
      cout << "Cantidad que ingresa: " << producto.getCantidad() << endl;
      cout << endl;
      cout << "-------------------------------" << endl;
+   }
+ }
+
+ void ProductoManager::modificarProveedores()
+ {
+   Producto producto;
+   int cantidad = _archivo.contarRegistros();
+   cout << "LOS PRODUCTOS A MODIFICAR EL APARTADO DE ""PROVEEDORES"" SON LOS SIGUIENTES: " << endl;
+   cout << endl;
+   for (int i=0; i<cantidad; i++)
+   {
+     producto = _archivo.leer(i);
+     if (producto.getProveedor() == 0)
+     {
+       cout << "ID de producto: " << producto.getId() << endl;
+       cout << "Nombre de producto: " << producto.getNombre() << endl;
+       cout << "Categoria de producto: " << producto.getCategoria() << endl;
+       cout << "proveedor(1 - Disval / 2 - Suizo): " << producto.getProveedor() << endl;
+       cout << "Fecha de vencimiento: " << producto.getVenciemiento().toString() << endl;
+       cout << "Presentacion: " << producto.getPresentacion() << endl;
+       cout << "Cantidad que ingresa: " << producto.getCantidad() << endl;
+       cout << endl;
+       cout << "-------------------------------" << endl;
+     }
    }
  }
 
@@ -121,12 +155,12 @@ using namespace std;
      cout << "NO EXISTE EL NUMERO DE ID INGRESADO" << endl;
      return;
    }
-   char respuesta;
-   cout << "¿ESTA SEGURO QUE QUIERE ELIMINAR EL REGISTRO?(S - SI / N - NO)" << endl;
+   int respuesta;
+   cout << "¿ESTA SEGURO QUE QUIERE ELIMINAR EL REGISTRO?(1 - SI / 0 - NO)" << endl;
    cin >> respuesta;
    cout << endl;
 
-   if (respuesta == 's' || respuesta == 'S')
+   if (respuesta == 1)
    {
      producto.setEstado(false);
      if (_archivo.modificarProducto(producto, posicion))
@@ -160,8 +194,9 @@ using namespace std;
      cout << "NO EXISTE EL NUMERO DE ID INGRESADO" << endl;
      return;
    }
-   char respuesta;
-   cout << "¿ESTA SEGURO QUE QUIERE MODIFICAR EL REGISTRO?(S - SI / N - NO)" << endl;
+   int respuesta;
+   cout << "¿ESTA SEGURO QUE QUIERE MODIFICAR EL REGISTRO?(1 - SI / 0 - NO)" << endl;
+   cout << "RESPUESTA: ";
    cin >> respuesta;
    cout << endl;
 
@@ -169,8 +204,10 @@ using namespace std;
    char _nombre[30], _categoria[30], _presentacion[30];
    Fecha _venci;
 
-   if (respuesta == 's' || respuesta == 'S')
+   if (respuesta == 1)
    {
+     cout << "INGRESE NUEVAMENTE LOS CAMPOS DEL PRODUCTO A MODIFICAR..." << endl;
+
      cout << "ID de producto: ";
      cin >> _id;
      producto.setId(_id);
@@ -183,11 +220,11 @@ using namespace std;
      cargarCadena(_categoria, 29);
      producto.setCategoria(_categoria);
 
-     cout << "Proveedor: ";
+     cout << "Proveedor(1 - Disval / 2 - Suizo): ";
      cin >> _proveedor;
      producto.setProveedor(_proveedor);
 
-     cout << "Fecha de vencimiento: ";
+     cout << "Fecha de vencimiento: " << endl;
      _venci.Cargar();
      producto.setVencimiento(_venci);
 
@@ -199,20 +236,15 @@ using namespace std;
      cin >> _cantidad;
      producto.setCantidad(_cantidad);
 
-     if (cantidad > 0)
-     {
-       _stock += _cantidad;
-     }
+     _stock += cantidad;
      producto.setStock(_stock);
 
      if (_archivo.modificarProducto(producto, posicion))
      {
        cout << "REGISTRO MODIFICADO CON EXITO!" << endl;
-       pausa();
      }else
      {
        cout << "NO SE PUDO MODIFICAR EL REGISTRO!" << endl;
-       pausa();
      }
    }
  }
@@ -227,10 +259,10 @@ using namespace std;
       cout << "----------------" << endl;
       cout << "1 - ALTA PRODUCTO" << endl;
       cout << "2 - LISTAR PRODUCTOS A LA VENTA" << endl;
-      cout << "3 - LISTAR POR ID DE PRODUCTO" << endl;
+      cout << "3 - BUSCAR PRODUCTO POR ID" << endl;
       cout << "4 - BAJA PRODUCTO" << endl;
       cout << "5 - MODIFICAR PRODUCTO" << endl;
-      cout << "6 - " << endl;
+      cout << "6 - LISTAR PRODUCTOS A MODIFICAR POR X ERROR DE CARGA" << endl;
       cout << endl;
       cout << "0 - PARA SALIR" << endl;
       cout << "----------------" << endl;
@@ -264,6 +296,11 @@ using namespace std;
        case 5:
         {
          modificarRegistro();
+        }
+        break;
+       case 6:
+        {
+          modificarProveedores();
         }
         break;
        case 0:

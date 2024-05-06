@@ -9,6 +9,7 @@ using namespace std;
     void mostrarTodos();
     void mostrarPorId();
     void modificarRegistro();
+    void modificarProveedores();
 
    public:
     void menuProducto();

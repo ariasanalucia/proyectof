@@ -6,6 +6,5 @@ using namespace std;
  {
    App menu;
    menu.MenuPrincipal();
-
     return 0;
  }
