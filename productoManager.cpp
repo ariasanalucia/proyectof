@@ -237,7 +237,7 @@ using namespace std;
  {
    Producto producto;
    int cantidad = _archivo.contarRegistros();
-   cout << "LOS PRODUCTOS A MODIFICAR EL APARTADO DE ""PROVEEDORES"" SON LOS SIGUIENTES: " << endl;
+   cout << "LOS PRODUCTOS A MODIFICAR EL APARTADO DE (PROVEEDORES) SON LOS SIGUIENTES: " << endl;
    cout << endl;
    for (int i=0; i<cantidad; i++)
    {
