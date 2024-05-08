@@ -69,6 +69,7 @@ using namespace std;
    {
      Mostrar(_archivo.leer(i));
    }
+   pausa();
  }
 
  void ProductoManager::mostrarPorId()
@@ -84,6 +85,7 @@ using namespace std;
    {
      Producto aux = _archivo.leer(posicion);
      Mostrar(aux);
+     pausa();
    }else
    {
      cout << "NO EXISTE EL NUMERO DE ID INGRESADO" << endl;
@@ -139,9 +141,9 @@ using namespace std;
        default:
         {
           cout << "OPCION INCORRECTA" << endl;
-          pausa();
         }
       }
+      pausa();
       rlutil::cls();
     }
    return;
