@@ -1,20 +1,21 @@
 #include <iostream>
-#include "funcionesGlobales.h"
 using namespace std;
 #include "rlutil.h"
-#include "app.h"
+#include "funcionesGlobales.h"
+#include "consultas.h"
+#include "productoManager.h"
 
- void App::MenuPrincipal()
+ void Consultas::menuConsultas()
  {
    int opcion;
     while(true)
     {
       rlutil::cls();
-      cout << "MENU PRINCIPAL" << endl;
+      cout << "MENU DE CONSULTAS" << endl;
       cout << "----------------" << endl;
-      cout << "1 - PRODUCTO" << endl;
-      cout << "2 - VENTAS" << endl;
-      cout << "3 - EMPLEADOS" << endl;
+      cout << "1 - POR ID" << endl;
+      cout << "2 - POR PROVEEDOR" << endl;
+      cout << "3 - POR CATEGORIA" << endl;
       cout << endl;
       cout << "0 - PARA SALIR" << endl;
       cout << "----------------" << endl;
@@ -26,18 +27,17 @@ using namespace std;
       {
        case 1:
         {
-          subMenu.menuProducto();
+         pm.mostrarPorId();
         }
         break;
        case 2:
         {
-
-          break;
+         pm.mostrarPorProveedor();
         }
+        break;
        case 3:
         {
-
-          break;
+         pm.mostrarPorCategoria();
         }
         break;
        case 0:
@@ -48,9 +48,9 @@ using namespace std;
        default:
         {
           cout << "OPCION INCORRECTA" << endl;
-          pausa();
         }
       }
+      pausa();
       rlutil::cls();
     }
    return;

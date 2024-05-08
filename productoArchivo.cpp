@@ -18,6 +18,7 @@ ProductoArchivo::ProductoArchivo(const char *nombre)
 
    bool escribio = fwrite(&producto, sizeof(Producto), 1,p);
    fclose(p);
+
    return escribio;
  }
 

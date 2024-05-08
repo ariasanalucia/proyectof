@@ -7,7 +7,31 @@
 			<Cursor1 position="1084" topLine="49" />
 		</Cursor>
 	</File>
+<<<<<<< HEAD
 	<File name="app.h" open="1" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+=======
+	<File name="main.cpp" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="120" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="productoArchivo.cpp" open="1" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1606" topLine="56" />
+		</Cursor>
+	</File>
+	<File name="app.cpp" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="389" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="productoArchivo.h" open="1" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="386" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="app.h" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+>>>>>>> a2124fd671b94be24e8f79d0626baa861acd95b7
 		<Cursor>
 			<Cursor1 position="140" topLine="0" />
 		</Cursor>
@@ -17,14 +41,14 @@
 			<Cursor1 position="2172" topLine="80" />
 		</Cursor>
 	</File>
-	<File name="app.cpp" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="producto.cpp" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="514" topLine="0" />
+			<Cursor1 position="402" topLine="44" />
 		</Cursor>
 	</File>
-	<File name="productoManager.h" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="1" zoom_2="0">
+	<File name="productoManager.h" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="1" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="264" topLine="0" />
+			<Cursor1 position="348" topLine="0" />
 		</Cursor>
 	</File>
 	<File name="main.cpp" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -37,6 +61,7 @@
 			<Cursor1 position="219" topLine="0" />
 		</Cursor>
 	</File>
+<<<<<<< HEAD
 	<File name="producto.h" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="679" topLine="0" />
@@ -50,6 +75,16 @@
 	<File name="productoArchivo.cpp" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="1527" topLine="46" />
+=======
+	<File name="productoManager.cpp" open="1" top="1" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="5671" topLine="216" />
+		</Cursor>
+	</File>
+	<File name="producto.h" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="237" topLine="3" />
+>>>>>>> a2124fd671b94be24e8f79d0626baa861acd95b7
 		</Cursor>
 	</File>
 </CodeBlocks_layout_file>
