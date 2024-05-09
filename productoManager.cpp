@@ -5,7 +5,7 @@ using namespace std;
 #include "funcionesGlobales.h"
 #include "producto.h"
 #include "productoManager.h"
-#include "consultas.h"
+#include "consultasNuevo.h"
 
  //CARGAR
  Producto ProductoManager::Cargar()
@@ -356,8 +356,8 @@ using namespace std;
         break;
        case 6:
         {
-          //Consultas consulta;
-          //consulta.menuConsultas();
+          Consultas consulta;
+          consulta.menuConsultas();
         }
         break;
        case 0:
