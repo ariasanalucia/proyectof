@@ -29,13 +29,7 @@ using namespace std;
 
    cout << "Proveedor(1 - Disval / 2 - Suizo): ";
    cin >> proveedor;
-   if (aux.getProveedor() == 1 || aux.getProveedor() == 2)
-   {
-     aux.setProveedor(proveedor);
-   }else
-   {
-     aux.setProveedor(0);
-   }
+   aux.setProveedor(proveedor);
 
    cout << "Fecha de vencimiento: " << endl;
    venci.Cargar();
@@ -49,13 +43,10 @@ using namespace std;
    cin >> cantidad;
    aux.setCantidad(cantidad);
 
-   if (cantidad > 0)
-   {
-     stock += cantidad;
-   }
+   stock += cantidad;
    aux.setStock(stock);
 
-   if (aux.getProveedor() == 0)
+   if (aux.getProveedor() != 1 || aux.getProveedor() != 2)
    {
      cout << "SE LE SOLICITA QUE MODIFIQUE ESTE REGISTRO, YA QUE INGRESO UN NUMERO DE PROVEEDOR INEXISTENTE!" << endl;
    }
