@@ -187,3 +187,77 @@
 	"funcionesGlobales.h"
 	"consultas.h"
 
+1715290089 source:c:\users\gianf\desktop\utn\labo2\proyectof\app.cpp
+	<iostream>
+	"funcionesGlobales.h"
+	"rlutil.h"
+	"app.h"
+
+1715290089 c:\users\gianf\desktop\utn\labo2\proyectof\funcionesglobales.h
+	<iostream>
+	<cstring>
+
+1715290089 c:\users\gianf\desktop\utn\labo2\proyectof\rlutil.h
+	<iostream>
+	<string>
+	<cstdio>
+	<stdio.h>
+	<string.h>
+	<windows.h>
+	<conio.h>
+	<termios.h>
+	<unistd.h>
+	<sys/ioctl.h>
+	<sys/types.h>
+	<sys/time.h>
+
+1715290089 c:\users\gianf\desktop\utn\labo2\proyectof\app.h
+	"productoManager.h"
+
+1715290089 c:\users\gianf\desktop\utn\labo2\proyectof\productomanager.h
+	"productoArchivo.h"
+
+1715292493 c:\users\gianf\desktop\utn\labo2\proyectof\productoarchivo.h
+	"producto.h"
+	<cstring>
+
+1715290089 c:\users\gianf\desktop\utn\labo2\proyectof\producto.h
+	"fecha.h"
+
+1715290089 c:\users\gianf\desktop\utn\labo2\proyectof\fecha.h
+
+1715290089 source:c:\users\gianf\desktop\utn\labo2\proyectof\fecha.cpp
+	<iostream>
+	"fecha.h"
+
+1715290089 source:c:\users\gianf\desktop\utn\labo2\proyectof\funcionesglobales.cpp
+	<iostream>
+	"funcionesGlobales.h"
+
+1715290089 source:c:\users\gianf\desktop\utn\labo2\proyectof\producto.cpp
+	<iostream>
+	"producto.h"
+	"funcionesGlobales.h"
+	"fecha.h"
+
+1715290089 source:c:\users\gianf\desktop\utn\labo2\proyectof\productoarchivo.cpp
+	<iostream>
+	"productoArchivo.h"
+	"producto.h"
+
+1715290089 source:c:\users\gianf\desktop\utn\labo2\proyectof\productomanager.cpp
+	<iostream>
+	<cstring>
+	"rlutil.h"
+	"funcionesGlobales.h"
+	"producto.h"
+	"productoManager.h"
+	"consultas.h"
+
+1715290089 c:\users\gianf\desktop\utn\labo2\proyectof\consultas.h
+	"productoManager.h"
+
+1715291747 source:c:\users\gianf\desktop\utn\labo2\proyectof\main.cpp
+	<iostream>
+	"app.h"
+

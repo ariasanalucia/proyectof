@@ -10,14 +10,14 @@ using namespace std;
  //CARGAR
  Producto ProductoManager::Cargar()
  {
-   Producto aux;
-   int id,proveedor, stock, cantidad;
-   char nombre[30], categoria[30], presentacion[30];
-   Fecha venci;
+    Producto aux;
+    ProductoArchivo obj_archivo_producto("producto.dat");
+    int id,proveedor, stock, cantidad;
+    char nombre[30], categoria[30], presentacion[30];
+    Fecha venci;
 
-   cout << "ID de producto: ";
-   cin >> id;
-   aux.setId(id);
+    id = obj_archivo_producto.contarRegistros()+1;
+    aux.setId(id);
 
    cout << "Nombre de producto: ";
    cargarCadena(nombre, 29);
@@ -356,8 +356,8 @@ using namespace std;
         break;
        case 6:
         {
-          Consultas consulta;
-          consulta.menuConsultas();
+          //Consultas consulta;
+          //consulta.menuConsultas();
         }
         break;
        case 0:
