@@ -29,6 +29,7 @@ using namespace std;
 
    cout << "Proveedor(1 - Disval / 2 - Suizo): ";
    cin >> proveedor;
+   validar_proveedor(&proveedor);
    aux.setProveedor(proveedor);
 
    cout << "Fecha de vencimiento: " << endl;
@@ -46,17 +47,13 @@ using namespace std;
    stock += cantidad;
    aux.setStock(stock);
 
-   if (aux.getProveedor() != 1 || aux.getProveedor() != 2)
-   {
-     cout << "SE LE SOLICITA QUE MODIFIQUE ESTE REGISTRO, YA QUE INGRESO UN NUMERO DE PROVEEDOR INEXISTENTE!" << endl;
-   }
    return aux;
  }
 
 //MOSTRAR
  void ProductoManager::Mostrar(Producto producto)
  {
-   if (producto.getEstado() && producto.getProveedor() == 1 || producto.getProveedor() == 2)
+   if (producto.getEstado())
    {
      cout << "ID de producto: " << producto.getId() << endl;
      cout << "Nombre de producto: " << producto.getNombre() << endl;

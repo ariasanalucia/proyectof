@@ -29,6 +29,18 @@ using namespace std;
 
  }
 
+ bool es_proveedor(int proveedor){
+    return (proveedor == 1 || proveedor == 2);
+ }
+
+
+ void validar_proveedor(int *proveedor){
+    while(!es_proveedor(*proveedor)){
+        cout<<"ingrese correctamente el provedor 1 o 2:";
+        cin>>*proveedor;
+    }
+ }
+
  void pausa(){
     std::cin.ignore();
     std::cin.get();
