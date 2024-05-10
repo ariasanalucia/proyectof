@@ -20,4 +20,5 @@ using namespace std;
     void mostrarPorProveedor();
     void mostrarPorCategoria();
 
+
  };
