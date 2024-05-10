@@ -34,6 +34,8 @@
 		</Compiler>
 		<Unit filename="app.cpp" />
 		<Unit filename="app.h" />
+		<Unit filename="consultasNuevo.cpp" />
+		<Unit filename="consultasNuevo.h" />
 		<Unit filename="fecha.cpp" />
 		<Unit filename="fecha.h" />
 		<Unit filename="funcionesGlobales.cpp" />
