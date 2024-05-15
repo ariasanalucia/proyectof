@@ -1,7 +1,6 @@
 #include <iostream>
 using namespace std;
 #include <cstring>
-#include "rlutil.h"
 #include "funcionesGlobales.h"
 #include "producto.h"
 #include "productoManager.h"
@@ -58,7 +57,7 @@ using namespace std;
      cout << "ID de producto: " << producto.getId() << endl;
      cout << "Nombre de producto: " << producto.getNombre() << endl;
      cout << "Categoria de producto: " << producto.getCategoria() << endl;
-     cout << "proveedor(1 - Disval / 2 - Suizo): " << producto.getProveedor() << endl;
+     cout << "Proveedor(1 - Disval / 2 - Suizo): " << producto.getProveedor() << endl;
      cout << "Fecha de vencimiento: " << producto.getVenciemiento().toString() << endl;
      cout << "Presentacion: " << producto.getPresentacion() << endl;
      cout << "Cantidad que ingresa: " << producto.getCantidad() << endl;
@@ -106,7 +105,6 @@ using namespace std;
    {
      cout << "NO EXISTE EL NUMERO DE ID INGRESADO" << endl;
    }
-
  }
 
  void ProductoManager::bajaPoducto()
@@ -169,7 +167,8 @@ using namespace std;
      return;
    }
    int respuesta;
-   cout << "¿ESTA SEGURO QUE QUIERE MODIFICAR EL REGISTRO?(1 - SI / 0 - NO)" << endl;
+   cout << "¿ESTA SEGURO QUE QUIERE MODIFICAR EL REGISTRO?" << endl;
+   cout << "(1 - SI / 0 - NO)" << endl;
    cout << "RESPUESTA: ";
    cin >> respuesta;
    cout << endl;
@@ -237,7 +236,7 @@ using namespace std;
        cout << "ID de producto: " << producto.getId() << endl;
        cout << "Nombre de producto: " << producto.getNombre() << endl;
        cout << "Categoria de producto: " << producto.getCategoria() << endl;
-       cout << "proveedor(1 - Disval / 2 - Suizo): " << producto.getProveedor() << endl;
+       cout << "Proveedor(1 - Disval / 2 - Suizo): " << producto.getProveedor() << endl;
        cout << "Fecha de vencimiento: " << producto.getVenciemiento().toString() << endl;
        cout << "Presentacion: " << producto.getPresentacion() << endl;
        cout << "Cantidad que ingresa: " << producto.getCantidad() << endl;
@@ -272,7 +271,6 @@ using namespace std;
        return;
      }
    }
-
  }
 
  void ProductoManager::mostrarPorCategoria()
@@ -307,14 +305,14 @@ using namespace std;
    int opcion;
     while(true)
     {
-      rlutil::cls();
+      clear();
       cout << "PRODUCTOS" << endl;
       cout << "----------------" << endl;
       cout << "1 - ALTA PRODUCTO" << endl;
       cout << "2 - LISTAR PRODUCTOS A LA VENTA" << endl;
       cout << "3 - BAJA PRODUCTO" << endl;
       cout << "4 - MODIFICAR PRODUCTO" << endl;
-      cout << "5 - LISTAR PRODUCTOS A MODIFICAR POR X ERROR DE CARGA" << endl;
+      cout << "5 - LISTAR PRODUCTOS CON CARGA ERRONEA" << endl;
       cout << "6 - CONSULTAS" << endl;
       cout << endl;
       cout << "0 - PARA SALIR" << endl;
@@ -322,7 +320,7 @@ using namespace std;
 
       cout << "INGRESE UNA OPCION: ";
       cin >> opcion;
-      rlutil::cls();
+      clear();
       switch (opcion)
       {
        case 1:
@@ -368,7 +366,7 @@ using namespace std;
         }
       }
       pausa();
-      rlutil::cls();
+      clear();
     }
    return;
  }

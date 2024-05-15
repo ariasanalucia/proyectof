@@ -1,7 +1,6 @@
 #include <iostream>
 #include "funcionesGlobales.h"
 using namespace std;
-#include "rlutil.h"
 #include "app.h"
 
  void App::MenuPrincipal()
@@ -9,7 +8,7 @@ using namespace std;
    int opcion;
     while(true)
     {
-      rlutil::cls();
+      clear();
       cout << "MENU PRINCIPAL" << endl;
       cout << "----------------" << endl;
       cout << "1 - PRODUCTO" << endl;
@@ -21,7 +20,7 @@ using namespace std;
 
       cout << "INGRESE UNA OPCION: ";
       cin >> opcion;
-      rlutil::cls();
+      clear();
       switch (opcion)
       {
        case 1:
@@ -51,7 +50,7 @@ using namespace std;
           pausa();
         }
       }
-      rlutil::cls();
+      clear();
     }
    return;
  }

@@ -103,13 +103,13 @@
 
 1714839494 D
 
-1714862024 source:/home/juli/Documents/UTN/2-Labo2/proyectof/app.cpp
+1715198103 source:/home/juli/Documents/UTN/2-Labo2/proyectof/app.cpp
 	<iostream>
 	"funcionesGlobales.h"
 	"rlutil.h"
 	"app.h"
 
-1714861993 /home/juli/Documents/UTN/2-Labo2/proyectof/funcionesGlobales.h
+1715301282 /home/juli/Documents/UTN/2-Labo2/proyectof/funcionesGlobales.h
 	<iostream>
 	<cstring>
 
@@ -135,7 +135,7 @@
 1714747945 /home/juli/Documents/UTN/2-Labo2/proyectof/app.h
 	"productoManager.h"
 
-1714749336 /home/juli/Documents/UTN/2-Labo2/proyectof/productoManager.h
+1715301282 /home/juli/Documents/UTN/2-Labo2/proyectof/productoManager.h
 	"productoArchivo.h"
 
 1714749363 /home/juli/Documents/UTN/2-Labo2/proyectof/productoArchivo.h
@@ -151,11 +151,12 @@
 	<iostream>
 	"fecha.h"
 
-1714862006 source:/home/juli/Documents/UTN/2-Labo2/proyectof/funcionesGlobales.cpp
+1715355675 source:/home/juli/Documents/UTN/2-Labo2/proyectof/funcionesGlobales.cpp
 	<iostream>
 	"funcionesGlobales.h"
+	<limits>
 
-1714744483 source:/home/juli/Documents/UTN/2-Labo2/proyectof/main.cpp
+1715293511 source:/home/juli/Documents/UTN/2-Labo2/proyectof/main.cpp
 	<iostream>
 	"app.h"
 
@@ -165,16 +166,19 @@
 	"funcionesGlobales.h"
 	"fecha.h"
 
-1714755237 source:/home/juli/Documents/UTN/2-Labo2/proyectof/productoArchivo.cpp
+1715198103 source:/home/juli/Documents/UTN/2-Labo2/proyectof/productoArchivo.cpp
 	<iostream>
 	"productoArchivo.h"
 	"producto.h"
 
-1714883374 source:/home/juli/Documents/UTN/2-Labo2/proyectof/productoManager.cpp
+1715349931 source:/home/juli/Documents/UTN/2-Labo2/proyectof/productoManager.cpp
 	<iostream>
+	<cstring>
 	"rlutil.h"
 	"funcionesGlobales.h"
 	"producto.h"
+	"productoManager.h"
+	"consultasNuevo.h"
 
 1714883374 h"
 
@@ -272,5 +276,15 @@
 	"consultasNuevo.h"
 	"rlutil.h"
 	"funcionesGlobales.h"
+	"productoManager.h"
+
+1715301282 source:/home/juli/Documents/UTN/2-Labo2/proyectof/consultasNuevo.cpp
+	<iostream>
+	"consultasNuevo.h"
+	"rlutil.h"
+	"funcionesGlobales.h"
+	"productoManager.h"
+
+1715297419 /home/juli/Documents/UTN/2-Labo2/proyectof/consultasNuevo.h
 	"productoManager.h"
 

@@ -1,7 +1,6 @@
 #include <iostream>
 using namespace std;
 #include "consultasNuevo.h"
-#include "rlutil.h"
 #include "funcionesGlobales.h"
 #include "productoManager.h"
 
@@ -10,7 +9,7 @@ using namespace std;
    int opcion;
     while(true)
     {
-      rlutil::cls();
+      clear();
       cout << "MENU DE CONSULTAS" << endl;
       cout << "----------------" << endl;
       cout << "1 - POR ID" << endl;
@@ -22,7 +21,7 @@ using namespace std;
 
       cout << "INGRESE UNA OPCION: ";
       cin >> opcion;
-      rlutil::cls();
+      clear();
       switch (opcion)
       {
        case 1:
@@ -51,7 +50,7 @@ using namespace std;
         }
       }
       pausa();
-      rlutil::cls();
+      clear();
     }
    return;
  }
