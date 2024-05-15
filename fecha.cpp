@@ -16,6 +16,8 @@ using namespace std;
      _dia = dia;
      _mes = mes;
      _anio = anio;
+   } else {
+    cout << "INGRESE UNA FECHA VALIDA";
    }
  }
 
@@ -66,7 +68,6 @@ using namespace std;
    cout << (_dia <= 9 ? "0" : "" ) << _dia << "/";
    cout << (_mes <= 9 ? "0" : "" ) << _mes << "/";
    cout << (_anio <= 9 ? "0" : "" ) << _anio << endl;
-   cout << endl;
  }
 
  string Fecha::toString()
