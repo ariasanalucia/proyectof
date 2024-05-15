@@ -63,20 +63,13 @@ using namespace std;
 
  void Fecha::Mostrar()
  {
-   cout << "NACIMIENTO: " << endl;
-   if (_dia < 9)
-   {
-     cout << "0" << _dia << "/";
-   }
-   if (_mes < 9)
-   {
-     cout << "0" << _mes << "/";
-   }
-   cout <<_anio << endl;
+   cout << (_dia <= 9 ? "0" : "" ) << _dia << "/";
+   cout << (_mes <= 9 ? "0" : "" ) << _mes << "/";
+   cout << (_anio <= 9 ? "0" : "" ) << _anio << endl;
+   cout << endl;
  }
 
  string Fecha::toString()
  {
    return to_string(_dia) + "/" + to_string (_mes) + "/" + to_string (_anio);
  }
-

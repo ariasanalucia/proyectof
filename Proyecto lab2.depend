@@ -109,7 +109,7 @@
 	"rlutil.h"
 	"app.h"
 
-1715301282 /home/juli/Documents/UTN/2-Labo2/proyectof/funcionesGlobales.h
+1715801232 /home/juli/Documents/UTN/2-Labo2/proyectof/funcionesGlobales.h
 	<iostream>
 	<cstring>
 
@@ -147,26 +147,27 @@
 
 1714516852 /home/juli/Documents/UTN/2-Labo2/proyectof/fecha.h
 
-1714755723 source:/home/juli/Documents/UTN/2-Labo2/proyectof/fecha.cpp
+1715800227 source:/home/juli/Documents/UTN/2-Labo2/proyectof/fecha.cpp
 	<iostream>
 	"fecha.h"
 
-1715355675 source:/home/juli/Documents/UTN/2-Labo2/proyectof/funcionesGlobales.cpp
+1715798155 source:/home/juli/Documents/UTN/2-Labo2/proyectof/funcionesGlobales.cpp
 	<iostream>
 	"funcionesGlobales.h"
-	<limits>
+	<iostream>
+	<cstdlib>
 
 1715293511 source:/home/juli/Documents/UTN/2-Labo2/proyectof/main.cpp
 	<iostream>
 	"app.h"
 
-1714755823 source:/home/juli/Documents/UTN/2-Labo2/proyectof/producto.cpp
+1715527731 source:/home/juli/Documents/UTN/2-Labo2/proyectof/producto.cpp
 	<iostream>
 	"producto.h"
 	"funcionesGlobales.h"
 	"fecha.h"
 
-1715198103 source:/home/juli/Documents/UTN/2-Labo2/proyectof/productoArchivo.cpp
+1715540320 source:/home/juli/Documents/UTN/2-Labo2/proyectof/productoArchivo.cpp
 	<iostream>
 	"productoArchivo.h"
 	"producto.h"
