@@ -44,17 +44,19 @@
 
 1714394985 c:\users\usuario\documents\utn\laboratorio 2\proyecto lab2\fecha.h
 
-1714394985 source:c:\users\usuario\documents\github\proyectof\fecha.cpp
+1715816191 source:c:\users\usuario\documents\github\proyectof\fecha.cpp
 	<iostream>
 	"fecha.h"
 
 1714394985 c:\users\usuario\documents\github\proyectof\fecha.h
 
-1714938150 source:c:\users\usuario\documents\github\proyectof\funcionesglobales.cpp
+1715816191 source:c:\users\usuario\documents\github\proyectof\funcionesglobales.cpp
 	<iostream>
 	"funcionesGlobales.h"
+	<iostream>
+	<cstdlib>
 
-1714938150 c:\users\usuario\documents\github\proyectof\funcionesglobales.h
+1715816191 c:\users\usuario\documents\github\proyectof\funcionesglobales.h
 	<iostream>
 	<cstring>
 
@@ -62,17 +64,17 @@
 	<iostream>
 	"app.h"
 
-1715300089 c:\users\usuario\documents\github\proyectof\productomanager.h
+1715884079 c:\users\usuario\documents\github\proyectof\productomanager.h
 	"productoArchivo.h"
 
 1714955731 c:\users\usuario\documents\github\proyectof\productoarchivo.h
 	"producto.h"
 	<cstring>
 
-1714955731 c:\users\usuario\documents\github\proyectof\producto.h
+1715899736 c:\users\usuario\documents\github\proyectof\producto.h
 	"fecha.h"
 
-1714422369 source:c:\users\usuario\documents\github\proyectof\producto.cpp
+1715899736 source:c:\users\usuario\documents\github\proyectof\producto.cpp
 	<iostream>
 	"producto.h"
 	"funcionesGlobales.h"
@@ -83,22 +85,20 @@
 	"productoArchivo.h"
 	"producto.h"
 
-1714704999 c:\users\usuario\documents\github\proyectof\app.h
+1715884078 c:\users\usuario\documents\github\proyectof\app.h
 	"productoManager.h"
 
-1715294227 source:c:\users\usuario\documents\github\proyectof\productomanager.cpp
+1715886420 source:c:\users\usuario\documents\github\proyectof\productomanager.cpp
 	<iostream>
 	<cstring>
-	"rlutil.h"
 	"funcionesGlobales.h"
 	"producto.h"
 	"productoManager.h"
-	"consultasNuevo.h"
+	"consultas.h"
 
-1714949257 source:c:\users\usuario\documents\github\proyectof\app.cpp
+1715884078 source:c:\users\usuario\documents\github\proyectof\app.cpp
 	<iostream>
 	"funcionesGlobales.h"
-	"rlutil.h"
 	"app.h"
 
 1714839494 D
@@ -182,7 +182,7 @@
 
 1714883374 h"
 
-1715002747 c:\users\usuario\documents\github\proyectof\consultas.h
+1715884078 c:\users\usuario\documents\github\proyectof\consultas.h
 	"productoManager.h"
 
 1715006428 source:c:\users\usuario\documents\github\proyectof\consultas.cpp
@@ -287,4 +287,7 @@
 
 1715297419 /home/juli/Documents/UTN/2-Labo2/proyectof/consultasNuevo.h
 	"productoManager.h"
+
+1715897661 source:c:\users\usuario\documents\github\proyectof\proveedor.cpp
+	<iostream>
 

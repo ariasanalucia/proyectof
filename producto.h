@@ -14,9 +14,10 @@ using namespace std;
     bool _estado;
     char _presentacion[30];
     int _cantidad;
+    float _importe;
 
    public:
-    Producto(int id, const char *nombre, const char *categoria, int proveedor, Fecha vencimiento, bool estado, const char *presentacion, int cantidad);
+    Producto(int id, const char *nombre, const char *categoria, int proveedor, Fecha vencimiento, bool estado, const char *presentacion, int cantidad, float importe);
     Producto();
     //SETS
     void setId(int id);
@@ -28,6 +29,7 @@ using namespace std;
     void setEstado(bool estado);
     void setPresentacion(const char *presentacion);
     void setCantidad(int cantidad);
+    void setImporte(float importe);
     //GETS
     int getId();
     const char *getNombre(){return _nombre;}
@@ -38,4 +40,5 @@ using namespace std;
     bool getEstado();
     const char *getPresentacion(){return _presentacion;}
     int getCantidad();
+    float getImporte();
  };
