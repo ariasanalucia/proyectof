@@ -47,6 +47,7 @@
 		<Unit filename="productoArchivo.h" />
 		<Unit filename="productoManager.cpp" />
 		<Unit filename="productoManager.h" />
+		<Unit filename="proveedor.cpp" />
 		<Extensions />
 	</Project>
 </CodeBlocks_project_file>
