@@ -4,14 +4,14 @@ using namespace std;
 #include "funcionesGlobales.h"
 #include "producto.h"
 #include "productoManager.h"
-#include "consultasNuevo.h"
+#include "consultas.h"
 
  //CARGAR
  Producto ProductoManager::Cargar()
  {
     Producto aux;
     ProductoArchivo obj_archivo_producto("producto.dat");
-    int id,proveedor, stock, cantidad;
+    int id, proveedor, stock, cantidad;
     char nombre[30], categoria[30], presentacion[30];
     Fecha venci;
 
@@ -26,7 +26,8 @@ using namespace std;
    cargarCadena(categoria, 29);
    aux.setCategoria(categoria);
 
-   cout << "Proveedor(1 - Disval / 2 - Suizo): ";
+   cout << "Proveedor: " << endl;
+   cout << "[1 - Disval | 2 - Suizo]" << endl;
    cin >> proveedor;
    validar_proveedor(&proveedor);
    aux.setProveedor(proveedor);

@@ -12,12 +12,9 @@ using namespace std;
    public:
     void menuProducto();
     Producto Cargar();
-    Producto CargarNuevo();
     void Mostrar (Producto producto);
     void mostrarPorId();
     void bajaPoducto();
     void mostrarPorProveedor();
     void mostrarPorCategoria();
-
-
  };

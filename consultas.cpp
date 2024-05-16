@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-#include "consultasNuevo.h"
+#include "consultas.h"
 #include "funcionesGlobales.h"
 #include "productoManager.h"
 

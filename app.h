@@ -5,6 +5,7 @@
  {
    private:
     ProductoManager subMenu;
+    //ProductoEmpleado ???;
 
    public:
     void MenuPrincipal();

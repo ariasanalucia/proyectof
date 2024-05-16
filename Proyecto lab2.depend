@@ -103,13 +103,12 @@
 
 1714839494 D
 
-1715198103 source:/home/juli/Documents/UTN/2-Labo2/proyectof/app.cpp
+1715802202 source:/home/juli/Documents/UTN/2-Labo2/proyectof/app.cpp
 	<iostream>
 	"funcionesGlobales.h"
-	"rlutil.h"
 	"app.h"
 
-1715801232 /home/juli/Documents/UTN/2-Labo2/proyectof/funcionesGlobales.h
+1715802206 /home/juli/Documents/UTN/2-Labo2/proyectof/funcionesGlobales.h
 	<iostream>
 	<cstring>
 
@@ -132,42 +131,42 @@
 	<sys/time.h>
 	"productoManager.h"
 
-1714747945 /home/juli/Documents/UTN/2-Labo2/proyectof/app.h
+1715872576 /home/juli/Documents/UTN/2-Labo2/proyectof/app.h
 	"productoManager.h"
 
-1715301282 /home/juli/Documents/UTN/2-Labo2/proyectof/productoManager.h
+1715870217 /home/juli/Documents/UTN/2-Labo2/proyectof/productoManager.h
 	"productoArchivo.h"
 
-1714749363 /home/juli/Documents/UTN/2-Labo2/proyectof/productoArchivo.h
+1715865798 /home/juli/Documents/UTN/2-Labo2/proyectof/productoArchivo.h
 	"producto.h"
 	<cstring>
 
-1714755565 /home/juli/Documents/UTN/2-Labo2/proyectof/producto.h
+1715802206 /home/juli/Documents/UTN/2-Labo2/proyectof/producto.h
 	"fecha.h"
 
-1714516852 /home/juli/Documents/UTN/2-Labo2/proyectof/fecha.h
+1715802206 /home/juli/Documents/UTN/2-Labo2/proyectof/fecha.h
 
-1715800227 source:/home/juli/Documents/UTN/2-Labo2/proyectof/fecha.cpp
+1715802202 source:/home/juli/Documents/UTN/2-Labo2/proyectof/fecha.cpp
 	<iostream>
 	"fecha.h"
 
-1715798155 source:/home/juli/Documents/UTN/2-Labo2/proyectof/funcionesGlobales.cpp
+1715802202 source:/home/juli/Documents/UTN/2-Labo2/proyectof/funcionesGlobales.cpp
 	<iostream>
 	"funcionesGlobales.h"
 	<iostream>
 	<cstdlib>
 
-1715293511 source:/home/juli/Documents/UTN/2-Labo2/proyectof/main.cpp
+1715802202 source:/home/juli/Documents/UTN/2-Labo2/proyectof/main.cpp
 	<iostream>
 	"app.h"
 
-1715527731 source:/home/juli/Documents/UTN/2-Labo2/proyectof/producto.cpp
+1715863564 source:/home/juli/Documents/UTN/2-Labo2/proyectof/producto.cpp
 	<iostream>
 	"producto.h"
 	"funcionesGlobales.h"
 	"fecha.h"
 
-1715540320 source:/home/juli/Documents/UTN/2-Labo2/proyectof/productoArchivo.cpp
+1715802202 source:/home/juli/Documents/UTN/2-Labo2/proyectof/productoArchivo.cpp
 	<iostream>
 	"productoArchivo.h"
 	"producto.h"
