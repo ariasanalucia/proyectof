@@ -71,10 +71,10 @@
 	"producto.h"
 	<cstring>
 
-1715899736 c:\users\usuario\documents\github\proyectof\producto.h
+1715960737 c:\users\usuario\documents\github\proyectof\producto.h
 	"fecha.h"
 
-1715899736 source:c:\users\usuario\documents\github\proyectof\producto.cpp
+1715961013 source:c:\users\usuario\documents\github\proyectof\producto.cpp
 	<iostream>
 	"producto.h"
 	"funcionesGlobales.h"
@@ -89,7 +89,7 @@
 	"productoManager.h"
 	"empleadoManager.h"
 
-1715954752 source:c:\users\usuario\documents\github\proyectof\productomanager.cpp
+1715961420 source:c:\users\usuario\documents\github\proyectof\productomanager.cpp
 	<iostream>
 	<cstring>
 	"funcionesGlobales.h"

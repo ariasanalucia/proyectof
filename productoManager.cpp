@@ -12,18 +12,22 @@ using namespace std;
     Producto aux;
     ProductoArchivo obj_archivo_producto("producto.dat");
     int id, proveedor, stock, cantidad;
-    char nombre[30], categoria[30], presentacion[30];
+    char marca[30], droga[30], categoria[30], presentacion[30];
     Fecha venci;
     float importe;
 
     id = obj_archivo_producto.contarRegistros()+1;
     aux.setId(id);
 
-   cout << "Nombre de producto: ";
-   cargarCadena(nombre, 29);
-   aux.setNombre(nombre);
+   cout << "Marca del medicameto: ";
+   cargarCadena(marca, 29);
+   aux.setMarca(marca);
 
-   cout << "Categoria de producto: ";
+   cout << "Droga del medicamento: ";
+   cargarCadena(droga, 29);
+   aux.setDroga(droga);
+
+   cout << "Categoria de medicamento: ";
    cargarCadena(categoria, 29);
    aux.setCategoria(categoria);
 
@@ -60,9 +64,10 @@ using namespace std;
  {
    if (producto.getEstado())
    {
-     cout << "ID de producto: " << producto.getId() << endl;
-     cout << "Nombre de producto: " << producto.getNombre() << endl;
-     cout << "Categoria de producto: " << producto.getCategoria() << endl;
+     cout << "ID de medicamento: " << producto.getId() << endl;
+     cout << "Marca del medicamento: " << producto.getMarca() << endl;
+     cout << "Droga del medicamento :" << producto.getDroga() << endl;
+     cout << "Categoria de medicamento: " << producto.getCategoria() << endl;
      cout << "Proveedor(1 - Disval / 2 - Suizo): " << producto.getProveedor() << endl;
      cout << "Fecha de vencimiento: " << producto.getVenciemiento().toString() << endl;
      cout << "Presentacion: " << producto.getPresentacion() << endl;
@@ -181,7 +186,7 @@ using namespace std;
    cout << endl;
 
    int _id,_proveedor, _stock, _cantidad;
-   char _nombre[30], _categoria[30], _presentacion[30];
+   char _marca[30], _droga[30], _categoria[30], _presentacion[30];
    Fecha _venci;
    float _importe;
 
@@ -189,15 +194,19 @@ using namespace std;
    {
      cout << "INGRESE NUEVAMENTE LOS CAMPOS DEL PRODUCTO A MODIFICAR..." << endl;
 
-     cout << "ID de producto: ";
+     cout << "ID de medicamento: ";
      cin >> _id;
      producto.setId(_id);
 
-     cout << "Nombre de producto: ";
-     cargarCadena(_nombre, 29);
-     producto.setNombre(_nombre);
+     cout << "Marca del medicamento: ";
+     cargarCadena(_marca, 29);
+     producto.setMarca(_marca);
 
-     cout << "Categoria de producto: ";
+     cout << "Droga del medicamento: ";
+     cargarCadena(_droga, 29);
+     producto.setDroga(_droga);
+
+     cout << "Categoria de medicamento: ";
      cargarCadena(_categoria, 29);
      producto.setCategoria(_categoria);
 
@@ -296,10 +305,10 @@ using namespace std;
       clear();
       cout << "PRODUCTOS" << endl;
       cout << "----------------" << endl;
-      cout << "1 - ALTA PRODUCTO" << endl;
-      cout << "2 - LISTAR PRODUCTOS A LA VENTA" << endl;
-      cout << "3 - BAJA PRODUCTO" << endl;
-      cout << "4 - MODIFICAR PRODUCTO" << endl;
+      cout << "1 - ALTA MEDICAMENTO" << endl;
+      cout << "2 - LISTAR MEDICAMENTOS A LA VENTA" << endl;
+      cout << "3 - BAJA MEDICAMENTO" << endl;
+      cout << "4 - MODIFICAR REGISTRO DE MEDICAMENTO" << endl;
       cout << "5 - CONSULTAS" << endl;
       cout << endl;
       cout << "0 - PARA SALIR" << endl;

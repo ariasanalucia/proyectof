@@ -5,10 +5,11 @@ using namespace std;
 #include "fecha.h"
 
 //CONSTRUCTOR CON PARAMETROS
- Producto::Producto(int id, const char *nombre, const char *categoria, int proveedor, Fecha vencimiento, bool estado, const char *presentacion, int cantidad, float importe)
+ Producto::Producto(int id,const char *marca, const char *droga, const char *categoria, int proveedor, Fecha vencimiento, bool estado, const char *presentacion, int cantidad, float importe)
  {
    _id = id;
-   strcpy(_nombre,nombre);
+   strcpy(_marca,marca);
+   strcpy(_droga, droga);
    strcpy(_categoria,categoria);
    _proveedor = proveedor;
    _vencimiento = Fecha();
@@ -22,19 +23,21 @@ using namespace std;
  Producto::Producto()
  {
    _id = 0;
-   strcpy(_nombre, "S/N");
-   strcpy(_categoria, "S/C");
+   strcpy(_marca,"VACIO");
+   strcpy(_droga,"VACIO");
+   strcpy(_categoria, "VACIO");
    _proveedor = 0;
    _vencimiento = Fecha();
    _estado = true;
-   strcpy(_presentacion, "S/P");
+   strcpy(_presentacion, "VACIO");
    _cantidad = 0;
    _importe = 0;
  }
 
 //SETS
  void Producto::setId(int id){_id = id;}
- void Producto::setNombre(const char *nombre){strcpy(_nombre, nombre);}
+ void Producto::setMarca(const char *marca){strcpy(_marca,marca);}
+ void Producto::setDroga(const char *droga){strcpy(_droga,droga);}
  void Producto::setCategoria(const char *categoria){strcpy(_categoria, categoria);}
  void Producto::setProveedor(int proveedor){_proveedor = proveedor;}
  void Producto::setVencimiento(Fecha vencimiento){_vencimiento = vencimiento;}

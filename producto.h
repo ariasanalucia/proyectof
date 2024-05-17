@@ -6,7 +6,8 @@ using namespace std;
  {
    protected:
     int _id;
-    char _nombre[30];
+    char _marca[30];
+    char _droga[30];
     char _categoria[30];
     int _proveedor;
     Fecha _vencimiento;
@@ -17,11 +18,12 @@ using namespace std;
     float _importe;
 
    public:
-    Producto(int id, const char *nombre, const char *categoria, int proveedor, Fecha vencimiento, bool estado, const char *presentacion, int cantidad, float importe);
+    Producto(int id,const char *marca, const char *droga, const char *categoria, int proveedor, Fecha vencimiento, bool estado, const char *presentacion, int cantidad, float importe);
     Producto();
     //SETS
     void setId(int id);
-    void setNombre(const char *nombre);
+    void setMarca(const char *marca);
+    void setDroga(const char *droga);
     void setCategoria(const char *categoria);
     void setProveedor(int proveedor);
     void setVencimiento(Fecha vencimiento);
@@ -32,7 +34,8 @@ using namespace std;
     void setImporte(float importe);
     //GETS
     int getId();
-    const char *getNombre(){return _nombre;}
+    const char *getMarca(){return _marca;}
+    const char *getDroga(){return _droga;}
     const char *getCategoria(){return _categoria;}
     int getProveedor();
     Fecha getVenciemiento(){return _vencimiento;}
