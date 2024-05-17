@@ -1,7 +1,7 @@
 #pragma once
 #include "fecha.h"
 
- class Ventas
+ class Venta
  {
    protected:
     int _numero;
@@ -11,8 +11,8 @@
     bool _estado;
 
    public:
-    Ventas(int numero, int idEmpleado, Fecha fechaDeVenta, float importe);
-    Ventas();
+    Venta(int numero, int idEmpleado, Fecha fechaDeVenta, float importe);
+    Venta();
     //SETS
     void setNumero(int numero);
     void setIdEmpleado(int idEmpleado);
