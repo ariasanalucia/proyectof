@@ -90,11 +90,56 @@ cursor=0:0
 [header]
 path=proveedorManager.h
 cursor=0:0
+[header]
+path=ventas.h
+cursor=0:0
+[header]
+path=ventasArchivo.h
+cursor=0:0
+[header]
+path=ventasManager.h
+cursor=0:0
 [other]
 path=.gitignore
 cursor=0:0
 [other]
+path=diagrama App.png
+cursor=0:0
+[other]
+path=diagrama Consultas.png
+cursor=0:0
+[other]
 path=diagrama de clases.png
+cursor=0:0
+[other]
+path=diagrama Empleado.png
+cursor=0:0
+[other]
+path=diagrama empleadoArchivo.png
+cursor=0:0
+[other]
+path=diagrama empleadoManager.png
+cursor=0:0
+[other]
+path=diagrama Fecha.png
+cursor=0:0
+[other]
+path=diagrama Producto.png
+cursor=0:0
+[other]
+path=diagrama ProductoArchivo.png
+cursor=0:0
+[other]
+path=diagrama ProductoManager.png
+cursor=0:0
+[other]
+path=diagrama Proveedor.png
+cursor=0:0
+[other]
+path=diagrama ProveedorArchivo.png
+cursor=0:0
+[other]
+path=diagrama ProveedorManager.png
 cursor=0:0
 [other]
 path=main.o
@@ -116,6 +161,9 @@ path=proyecto-Farmacia.docx
 cursor=0:0
 [other]
 path=bin\Debug\Proyecto lab2
+cursor=0:0
+[other]
+path=bin\Debug\Proyecto lab2.exe
 cursor=0:0
 [other]
 path=obj\Debug\app.o
@@ -140,6 +188,9 @@ path=obj\Debug\productoArchivo.o
 cursor=0:0
 [other]
 path=obj\Debug\productoManager.o
+cursor=0:0
+[other]
+path=obj\Debug\proveedor.o
 cursor=0:0
 [other]
 path=obj\Release\app.o

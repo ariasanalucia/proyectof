@@ -184,11 +184,11 @@
 1715884078 c:\users\usuario\documents\github\proyectof\consultas.h
 	"productoManager.h"
 
-1715006428 source:c:\users\usuario\documents\github\proyectof\consultas.cpp
+1715884078 source:c:\users\usuario\documents\github\proyectof\consultas.cpp
 	<iostream>
-	"rlutil.h"
-	"funcionesGlobales.h"
 	"consultas.h"
+	"funcionesGlobales.h"
+	"productoManager.h"
 
 1715299078 source:c:\users\gianf\desktop\utn\labo2\proyectof\app.cpp
 	<iostream>
