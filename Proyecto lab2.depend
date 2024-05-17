@@ -88,7 +88,7 @@
 1715884078 c:\users\usuario\documents\github\proyectof\app.h
 	"productoManager.h"
 
-1715886420 source:c:\users\usuario\documents\github\proyectof\productomanager.cpp
+1715904048 source:c:\users\usuario\documents\github\proyectof\productomanager.cpp
 	<iostream>
 	<cstring>
 	"funcionesGlobales.h"

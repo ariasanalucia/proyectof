@@ -51,6 +51,9 @@
 		<Unit filename="proveedor.h" />
 		<Unit filename="proveedorArchivo.h" />
 		<Unit filename="proveedorManager.h" />
+		<Unit filename="ventas.h" />
+		<Unit filename="ventasArchivo.h" />
+		<Unit filename="ventasManager.h" />
 		<Extensions />
 	</Project>
 </CodeBlocks_project_file>
