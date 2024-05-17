@@ -24,5 +24,5 @@ class Empleado{
         const char *getNombre(){return _nombre;}
         const char *getApellido(){return _apellido;}
         const char *getTelefono(){return _telefono;}
-        bool getEstado(){return _estado;}
+        bool getEstado();
 };

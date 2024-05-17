@@ -29,7 +29,4 @@ void Empleado::setEstado(bool estado){_estado = estado;}
 
 //GETS
 int Empleado::getDni(){return _dni;}
-char Empleado::getNombre(){return _nombre;}
-char Empleado::getApellido(){return _apellido;}
-char Empleado::getTelefono(){return _telefono;}
 bool Empleado::getEstado(){return _estado;}

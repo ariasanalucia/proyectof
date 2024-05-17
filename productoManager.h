@@ -8,7 +8,6 @@ using namespace std;
     ProductoArchivo _archivo = ProductoArchivo("producto.dat");
     void mostrarTodos();
     void modificarRegistro();
-    void modificarProveedores();
    public:
     void menuProducto();
     Producto Cargar();

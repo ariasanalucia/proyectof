@@ -25,7 +25,7 @@ using namespace std;
       {
        case 1:
         {
-          subMenu.menuProducto();
+          subMenuP.menuProducto();
         }
         break;
        case 2:
@@ -35,7 +35,7 @@ using namespace std;
         }
        case 3:
         {
-          //menuEmpleado();
+          subMenuE.menuEmpleado();
           break;
         }
         break;

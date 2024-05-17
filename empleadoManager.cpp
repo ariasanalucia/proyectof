@@ -85,7 +85,7 @@ using namespace std;
  void EmpleadoManager::bajaEmpleado()
  {
    Empleado empleado;
-   int dni; 
+   int dni;
    cout << "Ingresar el DNI: ";
    cin >> dni;
    cout << endl;
@@ -181,27 +181,6 @@ using namespace std;
    }
  }
 
- void EmpleadoManager::modificarDni()
- {
-   Empleado empleado;
-   int cantidad = _archivo.contarRegistros();
-   cout << "EMPLEADOS A MODIFICAR:"<<endl; 
-   cout << endl;
-   cout << "-------------------------------" << endl;
-   for (int i=0; i<cantidad; i++)
-   {
-     empleado = _archivo.leer(i);
-     if (empleado.getDni() < 0)
-     {
-       cout << "DNI: " << empleado.getDni() << endl;
-       cout << "Nombre: " << empleado.getNombre() << endl;
-       cout << "Apellido: " << empleado.getApellido() << endl;
-       cout << "Telefono: " << empleado.getTelefono() << endl;
-       cout << endl;
-       cout << "-------------------------------" << endl;
-     }
-   }
- }
 
  void EmpleadoManager::menuEmpleado()
  {
@@ -215,8 +194,7 @@ using namespace std;
       cout << "2 - LISTAR" << endl;
       cout << "3 - BAJA" << endl;
       cout << "4 - EDITAR" << endl;
-      cout << "5 - LISTAR CARGAS ERRONEAS" << endl;
-      cout << "6 - CONSULTAS" << endl;
+      cout << "5 - CONSULTAS" << endl;
       cout << endl;
       cout << "0 - PARA SALIR" << endl;
       cout << "----------------" << endl;
@@ -247,12 +225,6 @@ using namespace std;
         }
         break;
        case 5:
-        {
-          Empleado aux;
-          aux.modificarDni();
-        }
-        break;
-       case 6:
         {
           Consultas consulta;
           consulta.menuConsultas();

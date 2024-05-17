@@ -14,6 +14,7 @@ using namespace std;
     int id, proveedor, stock, cantidad;
     char nombre[30], categoria[30], presentacion[30];
     Fecha venci;
+    float importe;
 
     id = obj_archivo_producto.contarRegistros()+1;
     aux.setId(id);
@@ -44,6 +45,10 @@ using namespace std;
    cin >> cantidad;
    aux.setCantidad(cantidad);
 
+   cout << "Importe: ";
+   cin >> importe;
+   aux.setImporte(importe);
+
    stock += cantidad;
    aux.setStock(stock);
 
@@ -62,6 +67,7 @@ using namespace std;
      cout << "Fecha de vencimiento: " << producto.getVenciemiento().toString() << endl;
      cout << "Presentacion: " << producto.getPresentacion() << endl;
      cout << "Cantidad que ingresa: " << producto.getCantidad() << endl;
+     cout << "Importe: " << producto.getImporte() << endl;
      cout << endl;
      cout << "-------------------------------" << endl;
    }
@@ -177,6 +183,7 @@ using namespace std;
    int _id,_proveedor, _stock, _cantidad;
    char _nombre[30], _categoria[30], _presentacion[30];
    Fecha _venci;
+   float _importe;
 
    if (respuesta == 1)
    {
@@ -210,6 +217,10 @@ using namespace std;
      cin >> _cantidad;
      producto.setCantidad(_cantidad);
 
+     cout << "Importe: ";
+     cin >> _importe;
+     producto.setImporte(_importe);
+
      _stock += cantidad;
      producto.setStock(_stock);
 
@@ -219,30 +230,6 @@ using namespace std;
      }else
      {
        cout << "NO SE PUDO MODIFICAR EL REGISTRO!" << endl;
-     }
-   }
- }
-
- void ProductoManager::modificarProveedores()
- {
-   Producto producto;
-   int cantidad = _archivo.contarRegistros();
-   cout << "LOS PRODUCTOS A MODIFICAR EL APARTADO DE (PROVEEDORES) SON LOS SIGUIENTES: " << endl;
-   cout << endl;
-   for (int i=0; i<cantidad; i++)
-   {
-     producto = _archivo.leer(i);
-     if (producto.getProveedor() == 0)
-     {
-       cout << "ID de producto: " << producto.getId() << endl;
-       cout << "Nombre de producto: " << producto.getNombre() << endl;
-       cout << "Categoria de producto: " << producto.getCategoria() << endl;
-       cout << "Proveedor(1 - Disval / 2 - Suizo): " << producto.getProveedor() << endl;
-       cout << "Fecha de vencimiento: " << producto.getVenciemiento().toString() << endl;
-       cout << "Presentacion: " << producto.getPresentacion() << endl;
-       cout << "Cantidad que ingresa: " << producto.getCantidad() << endl;
-       cout << endl;
-       cout << "-------------------------------" << endl;
      }
    }
  }
@@ -313,8 +300,7 @@ using namespace std;
       cout << "2 - LISTAR PRODUCTOS A LA VENTA" << endl;
       cout << "3 - BAJA PRODUCTO" << endl;
       cout << "4 - MODIFICAR PRODUCTO" << endl;
-      cout << "5 - LISTAR PRODUCTOS CON CARGA ERRONEA" << endl;
-      cout << "6 - CONSULTAS" << endl;
+      cout << "5 - CONSULTAS" << endl;
       cout << endl;
       cout << "0 - PARA SALIR" << endl;
       cout << "----------------" << endl;
@@ -347,11 +333,6 @@ using namespace std;
         break;
        case 5:
         {
-          modificarProveedores();
-        }
-        break;
-       case 6:
-        {
           Consultas consulta;
           consulta.menuConsultas();
         }
@@ -366,7 +347,6 @@ using namespace std;
           cout << "OPCION INCORRECTA" << endl;
         }
       }
-      pausa();
       clear();
     }
    return;

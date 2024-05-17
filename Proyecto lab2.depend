@@ -64,7 +64,7 @@
 	<iostream>
 	"app.h"
 
-1715884079 c:\users\usuario\documents\github\proyectof\productomanager.h
+1715954708 c:\users\usuario\documents\github\proyectof\productomanager.h
 	"productoArchivo.h"
 
 1714955731 c:\users\usuario\documents\github\proyectof\productoarchivo.h
@@ -85,10 +85,11 @@
 	"productoArchivo.h"
 	"producto.h"
 
-1715884078 c:\users\usuario\documents\github\proyectof\app.h
+1715955541 c:\users\usuario\documents\github\proyectof\app.h
 	"productoManager.h"
+	"empleadoManager.h"
 
-1715904048 source:c:\users\usuario\documents\github\proyectof\productomanager.cpp
+1715954752 source:c:\users\usuario\documents\github\proyectof\productomanager.cpp
 	<iostream>
 	<cstring>
 	"funcionesGlobales.h"
@@ -96,7 +97,7 @@
 	"productoManager.h"
 	"consultas.h"
 
-1715884078 source:c:\users\usuario\documents\github\proyectof\app.cpp
+1715955519 source:c:\users\usuario\documents\github\proyectof\app.cpp
 	<iostream>
 	"funcionesGlobales.h"
 	"app.h"
@@ -296,4 +297,32 @@
 	<iostream>
 
 1715897661 7e267874ed97dcf35189ce0fc24851198d8bf
+
+1715884078 source:c:\users\usuario\documents\github\proyectof\empleadoarchivo.cpp
+	<iostream>
+	"empleadoArchivo.h"
+	"empleado.h"
+
+1715884078 c:\users\usuario\documents\github\proyectof\empleadoarchivo.h
+	"empleado.h"
+	<cstring>
+
+1715955140 c:\users\usuario\documents\github\proyectof\empleado.h
+	<cstring>
+
+1715955140 source:c:\users\usuario\documents\github\proyectof\empleado.cpp
+	<iostream>
+	"empleado.h"
+	"funcionesGlobales.h"
+
+1715955648 source:c:\users\usuario\documents\github\proyectof\empleadomanager.cpp
+	<iostream>
+	<cstring>
+	"funcionesGlobales.h"
+	"empleado.h"
+	"empleadoManager.h"
+	"consultas.h"
+
+1715955648 c:\users\usuario\documents\github\proyectof\empleadomanager.h
+	"empleadoArchivo.h"
 

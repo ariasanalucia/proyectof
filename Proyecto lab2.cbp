@@ -36,6 +36,12 @@
 		<Unit filename="app.h" />
 		<Unit filename="consultas.cpp" />
 		<Unit filename="consultas.h" />
+		<Unit filename="empleado.cpp" />
+		<Unit filename="empleado.h" />
+		<Unit filename="empleadoArchivo.cpp" />
+		<Unit filename="empleadoArchivo.h" />
+		<Unit filename="empleadoManager.cpp" />
+		<Unit filename="empleadoManager.h" />
 		<Unit filename="fecha.cpp" />
 		<Unit filename="fecha.h" />
 		<Unit filename="funcionesGlobales.cpp" />
