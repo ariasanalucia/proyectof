@@ -1,16 +1,18 @@
 #pragma once
-#include "ventasArchivo.h"
+#include "ventaArchivo.h"
+#include "venta.h"
 
- class VentasManager
+ class VentaManager
  {
    private:
-    ventasArchivo _archivo = ventasArchivo("ventas.dat");
+    VentaArchivo _archivo = VentaArchivo("venta.dat");
     void mostrarTodos();
     void modificarRegistro();
+
    public:
     void menuVentas();
-    Ventas Cargar();
-    void Mostrar (Ventas venta);
+    Venta Cargar();
+    void Mostrar (Venta venta);
     void bajaVenta();
     void MostrarPorNumCompra();
  };

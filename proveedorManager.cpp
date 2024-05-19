@@ -1,20 +1,20 @@
 #include <iostream>
-#include "funcionesGlobales.h"
 using namespace std;
-#include "app.h"
+#include "proveedorManager.h"
+#include "funcionesGlobales.h"
 
- void App::MenuPrincipal()
+void proveedorManager::menuProveedor()
  {
    int opcion;
     while(true)
     {
       clear();
-      cout << "MENU PRINCIPAL" << endl;
+      cout << "PROVEEDOR" << endl;
       cout << "----------------" << endl;
-      cout << "1 - PRODUCTO" << endl;
-      cout << "2 - VENTAS" << endl;
-      cout << "3 - EMPLEADOS" << endl;
-      cout << "4 - PROVEEDOR" << endl;
+      cout << "1 - ALTA PROVEEDOR" << endl;
+      cout << "2 - BAJA PROVEEDOR" << endl;
+      cout << "4 - MODIFICAR REGISTRO DE PROVEEDOR" << endl;
+      cout << "5 - CONSULTAS" << endl;
       cout << endl;
       cout << "0 - PARA SALIR" << endl;
       cout << "----------------" << endl;
@@ -26,23 +26,29 @@ using namespace std;
       {
        case 1:
         {
-          subMenuP.menuProducto();
+//          Product aux = Cargar();
+//          _archivo.guardarArchivo(aux);
         }
         break;
        case 2:
         {
-          subMenuV.menuVentas();
-          break;
+//          mostrarTodos();
         }
+        break;
        case 3:
         {
-          subMenuE.menuEmpleado();
-          break;
+//          bajaPoducto();
         }
         break;
        case 4:
         {
-          subMenuProveedor.menuProveedor();
+//         modificarRegistro();
+        }
+        break;
+       case 5:
+        {
+//          Consultas consulta;
+//          consulta.menuConsultas();
         }
         break;
        case 0:
@@ -53,10 +59,11 @@ using namespace std;
        default:
         {
           cout << "OPCION INCORRECTA" << endl;
-          pausa();
         }
       }
       clear();
     }
    return;
  }
+
+

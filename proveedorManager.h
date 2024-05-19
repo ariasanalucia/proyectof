@@ -5,9 +5,9 @@
 class proveedorManager
 {
     private:
-        ProveedorArchivo _archivo = ProveedorArchivo(“proveedores.dat)
+        proveedorArchivo _archivo = proveedorArchivo("proveedores.dat");
     public:
-        void menuProveedor
+        void menuProveedor();
         proveedor Cargar();
         void Mostrar (proveedor proveedores);
         void mostrarPorId();

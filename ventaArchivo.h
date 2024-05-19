@@ -1,16 +1,20 @@
 #pragma once
-#include "ventas.h"
+#include <cstring>
+#include "venta.h"
 
- class ventasArchivo
+ class VentaArchivo
  {
    private:
     char _nombre[30];
 
    public:
-    ventasArchivo(const char *nombre);
-    bool guardarArchivo(Ventas venta);
+    VentaArchivo(const char *nombre)
+    {
+      strcpy(_nombre,nombre);
+    }
+    bool guardarArchivo(Venta venta);
     int contarRegistros();
-    Ventas leer(int numero);
+    Venta leer(int numero);
     int buscar(int id);
-    bool modificarProducto(Ventas venta, int pos);
+    bool modificarProducto(Venta venta, int pos);
  };

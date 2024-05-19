@@ -85,9 +85,11 @@
 	"productoArchivo.h"
 	"producto.h"
 
-1715955541 c:\users\usuario\documents\github\proyectof\app.h
+1716077854 c:\users\usuario\documents\github\proyectof\app.h
 	"productoManager.h"
 	"empleadoManager.h"
+	"ventaManager.h"
+	"proveedorManager.h"
 
 1715961420 source:c:\users\usuario\documents\github\proyectof\productomanager.cpp
 	<iostream>
@@ -97,7 +99,7 @@
 	"productoManager.h"
 	"consultas.h"
 
-1715955519 source:c:\users\usuario\documents\github\proyectof\app.cpp
+1716078995 source:c:\users\usuario\documents\github\proyectof\app.cpp
 	<iostream>
 	"funcionesGlobales.h"
 	"app.h"
@@ -325,4 +327,41 @@
 
 1715955648 c:\users\usuario\documents\github\proyectof\empleadomanager.h
 	"empleadoArchivo.h"
+
+1716072045 c:\users\usuario\documents\github\proyectof\ventamanager.h
+	"ventaArchivo.h"
+	"venta.h"
+
+1716069391 source:c:\users\usuario\documents\github\proyectof\venta.cpp
+	<iostream>
+	"venta.h"
+	"funcionesGlobales.h"
+
+1716069391 c:\users\usuario\documents\github\proyectof\venta.h
+	"fecha.h"
+
+1716072259 c:\users\usuario\documents\github\proyectof\ventaarchivo.h
+	<cstring>
+	"venta.h"
+
+1716072520 source:c:\users\usuario\documents\github\proyectof\ventamanager.cpp
+	<iostream>
+	"ventaManager.h"
+	"funcionesGlobales.h"
+
+1716078944 source:c:\users\usuario\documents\github\proyectof\proveedormanager.cpp
+	<iostream>
+	"proveedorManager.h"
+	"funcionesGlobales.h"
+
+1716076703 c:\users\usuario\documents\github\proyectof\proveedormanager.h
+	"proveedorArchivo.h"
+	"proveedor.h"
+
+1716076657 c:\users\usuario\documents\github\proyectof\proveedorarchivo.h
+	<cstring>
+	"proveedor.h"
+
+1716077507 c:\users\usuario\documents\github\proyectof\proveedor.h
+	<cstring>
 

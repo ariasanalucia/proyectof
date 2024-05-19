@@ -1,14 +1,18 @@
 #pragma once
-using namespace std;
+#include <cstring>
+#include "proveedor.h"
 
 class proveedorArchivo
 {
     private:
         char _nombre[30];
     public:
-        proveedorManager(const char* nombre);
-        bool guardarArchivo(Producto producto);
+        proveedorArchivo(const char* nombre)
+        {
+          strcpy(_nombre, nombre);
+        }
+        bool guardarArchivo(proveedor proveedor);
         int contarRegistros();
         int buscar(int id);
-        bool modificarProveedor(Producto producto, int pos);
+        bool modificarProveedor(proveedor provedor, int pos);
 };
