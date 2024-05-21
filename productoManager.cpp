@@ -297,6 +297,42 @@ using namespace std;
    }
  }
 
+ bool compararNombres(char productoSolicitado[30],const char* nombreProducto){
+    int cont = 0,aux = 0;
+    int largo1 = strlen(nombreProducto);
+    int largo2 = strlen(productoSolicitado);
+    if(largo2 > largo1){
+        return false;
+    }else{
+        for(int i = 0; i < largo1; i++){
+            if(productoSolicitado[i] == nombreProducto[i]){
+                cont++;
+            }
+        }
+    }
+    if(cont > 0 && cont == largo2){
+        return true;
+    }else{
+        return false;
+    }
+ }
+
+ void ProductoManager::mostrarPorNombre(){
+    ProductoArchivo archiProducto("producto.dat");
+    Producto productos;
+    char nombreProducto[30];
+    cout<<"ingrese el producto solicitado:";
+    cargarCadena(nombreProducto,29);
+    for(int i = 0; i < archiProducto.contarRegistros(); i++)
+    {
+        productos = archiProducto.leer(i);
+        if(compararNombres(nombreProducto,productos.getDroga())){
+            Mostrar(productos);
+        }
+
+    }
+ }
+
  void ProductoManager::menuProducto()
  {
    int opcion;

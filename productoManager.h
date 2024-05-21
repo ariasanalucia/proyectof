@@ -16,4 +16,5 @@ using namespace std;
     void bajaPoducto();
     void mostrarPorProveedor();
     void mostrarPorCategoria();
+    void mostrarPorNombre();
  };

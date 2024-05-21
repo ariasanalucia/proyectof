@@ -193,13 +193,12 @@
 	"funcionesGlobales.h"
 	"productoManager.h"
 
-1715299078 source:c:\users\gianf\desktop\utn\labo2\proyectof\app.cpp
+1716249721 source:c:\users\gianf\desktop\utn\labo2\proyectof\app.cpp
 	<iostream>
 	"funcionesGlobales.h"
-	"rlutil.h"
 	"app.h"
 
-1715300492 c:\users\gianf\desktop\utn\labo2\proyectof\funcionesglobales.h
+1715816134 c:\users\gianf\desktop\utn\labo2\proyectof\funcionesglobales.h
 	<iostream>
 	<cstring>
 
@@ -217,30 +216,35 @@
 	<sys/types.h>
 	<sys/time.h>
 
-1715299078 c:\users\gianf\desktop\utn\labo2\proyectof\app.h
+1716249721 c:\users\gianf\desktop\utn\labo2\proyectof\app.h
 	"productoManager.h"
+	"empleadoManager.h"
+	"ventaManager.h"
+	"proveedorManager.h"
 
-1715301102 c:\users\gianf\desktop\utn\labo2\proyectof\productomanager.h
+1716334278 c:\users\gianf\desktop\utn\labo2\proyectof\productomanager.h
 	"productoArchivo.h"
 
 1715299078 c:\users\gianf\desktop\utn\labo2\proyectof\productoarchivo.h
 	"producto.h"
 	<cstring>
 
-1715299078 c:\users\gianf\desktop\utn\labo2\proyectof\producto.h
+1716249721 c:\users\gianf\desktop\utn\labo2\proyectof\producto.h
 	"fecha.h"
 
 1715299078 c:\users\gianf\desktop\utn\labo2\proyectof\fecha.h
 
-1715299078 source:c:\users\gianf\desktop\utn\labo2\proyectof\fecha.cpp
+1715816134 source:c:\users\gianf\desktop\utn\labo2\proyectof\fecha.cpp
 	<iostream>
 	"fecha.h"
 
-1715300645 source:c:\users\gianf\desktop\utn\labo2\proyectof\funcionesglobales.cpp
+1715816134 source:c:\users\gianf\desktop\utn\labo2\proyectof\funcionesglobales.cpp
 	<iostream>
 	"funcionesGlobales.h"
+	<iostream>
+	<cstdlib>
 
-1715299078 source:c:\users\gianf\desktop\utn\labo2\proyectof\producto.cpp
+1716249721 source:c:\users\gianf\desktop\utn\labo2\proyectof\producto.cpp
 	<iostream>
 	"producto.h"
 	"funcionesGlobales.h"
@@ -251,19 +255,18 @@
 	"productoArchivo.h"
 	"producto.h"
 
-1715299078 source:c:\users\gianf\desktop\utn\labo2\proyectof\productomanager.cpp
+1716334310 source:c:\users\gianf\desktop\utn\labo2\proyectof\productomanager.cpp
 	<iostream>
 	<cstring>
-	"rlutil.h"
 	"funcionesGlobales.h"
 	"producto.h"
 	"productoManager.h"
-	"consultasNuevo.h"
+	"consultas.h"
 
-1715290089 c:\users\gianf\desktop\utn\labo2\proyectof\consultas.h
+1715889627 c:\users\gianf\desktop\utn\labo2\proyectof\consultas.h
 	"productoManager.h"
 
-1715299078 source:c:\users\gianf\desktop\utn\labo2\proyectof\main.cpp
+1715903380 source:c:\users\gianf\desktop\utn\labo2\proyectof\main.cpp
 	<iostream>
 	"app.h"
 
@@ -364,4 +367,78 @@
 
 1716077507 c:\users\usuario\documents\github\proyectof\proveedor.h
 	<cstring>
+
+1716249721 c:\users\gianf\desktop\utn\labo2\proyectof\empleadomanager.h
+	"empleadoArchivo.h"
+
+1715889627 c:\users\gianf\desktop\utn\labo2\proyectof\empleadoarchivo.h
+	"empleado.h"
+	<cstring>
+
+1716249721 c:\users\gianf\desktop\utn\labo2\proyectof\empleado.h
+	<cstring>
+
+1716249721 c:\users\gianf\desktop\utn\labo2\proyectof\ventamanager.h
+	"ventaArchivo.h"
+	"venta.h"
+
+1716249721 c:\users\gianf\desktop\utn\labo2\proyectof\ventaarchivo.h
+	<cstring>
+	"venta.h"
+
+1716249721 c:\users\gianf\desktop\utn\labo2\proyectof\venta.h
+	"fecha.h"
+
+1716334279 c:\users\gianf\desktop\utn\labo2\proyectof\proveedormanager.h
+	"proveedorArchivo.h"
+	"proveedor.h"
+
+1716249721 c:\users\gianf\desktop\utn\labo2\proyectof\proveedorarchivo.h
+	<cstring>
+	"proveedor.h"
+
+1716249721 c:\users\gianf\desktop\utn\labo2\proyectof\proveedor.h
+	<cstring>
+
+1716249721 source:c:\users\gianf\desktop\utn\labo2\proyectof\empleado.cpp
+	<iostream>
+	"empleado.h"
+	"funcionesGlobales.h"
+
+1715889627 source:c:\users\gianf\desktop\utn\labo2\proyectof\empleadoarchivo.cpp
+	<iostream>
+	"empleadoArchivo.h"
+	"empleado.h"
+
+1716249721 source:c:\users\gianf\desktop\utn\labo2\proyectof\empleadomanager.cpp
+	<iostream>
+	<cstring>
+	"funcionesGlobales.h"
+	"empleado.h"
+	"empleadoManager.h"
+	"consultas.h"
+
+1715893317 source:c:\users\gianf\desktop\utn\labo2\proyectof\proveedor.cpp
+	<iostream>
+
+1716249721 source:c:\users\gianf\desktop\utn\labo2\proyectof\proveedormanager.cpp
+	<iostream>
+	"proveedorManager.h"
+	"funcionesGlobales.h"
+
+1716249721 source:c:\users\gianf\desktop\utn\labo2\proyectof\venta.cpp
+	<iostream>
+	"venta.h"
+	"funcionesGlobales.h"
+
+1716249721 source:c:\users\gianf\desktop\utn\labo2\proyectof\ventamanager.cpp
+	<iostream>
+	"ventaManager.h"
+	"funcionesGlobales.h"
+
+1716334376 source:c:\users\gianf\desktop\utn\labo2\proyectof\consultas.cpp
+	<iostream>
+	"consultas.h"
+	"funcionesGlobales.h"
+	"productoManager.h"
 
