@@ -13,5 +13,5 @@
     int contarRegistros();
     Venta leer(int numero);
     int buscar(int id);
-    bool modificarVenta(Venta venta, int pos);
+    bool modificar(Venta venta, int pos);
  };

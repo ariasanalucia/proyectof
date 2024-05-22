@@ -67,7 +67,7 @@ VentaArchivo::VentaArchivo(const char *nombre)
    return -1;
  }
 
- bool VentaArchivo::modificarVenta(Venta reg, int pos)
+ bool VentaArchivo::modificar(Venta reg, int pos)
  {
    FILE *p = fopen(_nombre, "rb+");
    if (p==nullptr)

@@ -94,12 +94,12 @@ using namespace std;
         break;
        case 3:
         {
-//          bajaPoducto();
+//          baja();
         }
         break;
        case 4:
         {
-//         modificarRegistro();
+//         modificar();
         }
         break;
        case 5:
