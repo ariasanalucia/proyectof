@@ -82,7 +82,7 @@ using namespace std;
    }
  }
 
- void EmpleadoManager::bajaEmpleado()
+ void EmpleadoManager::baja()
  {
    Empleado empleado;
    int dni;
@@ -111,7 +111,7 @@ using namespace std;
    if (respuesta == 1)
    {
      empleado.setEstado(false);
-     if (_archivo.modificarEmpleado(empleado, posicion))
+     if (_archivo.modificar(empleado, posicion))
      {
        cout << "REGISTRO ELIMINADO CON EXITO!" << endl;
        pausa();
@@ -123,7 +123,7 @@ using namespace std;
    }
  }
 
- void EmpleadoManager::modificarRegistro()
+ void EmpleadoManager::modificar()
  {
    Empleado empleado;
    int dni;
@@ -171,7 +171,7 @@ using namespace std;
      cargarCadena(_telefono,29);
      empleado.setTelefono(_telefono);
 
-     if (_archivo.modificarEmpleado(empleado, posicion))
+     if (_archivo.modificar(empleado, posicion))
      {
        cout << "REGISTRO MODIFICADO CON EXITO!" << endl;
      }else
@@ -216,12 +216,12 @@ using namespace std;
         break;
        case 3:
         {
-          bajaEmpleado();
+          baja();
         }
         break;
        case 4:
         {
-         modificarRegistro();
+         modificar();
         }
         break;
        case 5:

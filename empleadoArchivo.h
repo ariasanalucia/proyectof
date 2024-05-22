@@ -14,5 +14,5 @@ using namespace std;
     int contarRegistros();
     Empleado leer(int numero);
     int buscar(int dni);
-    bool modificarEmpleado(Empleado empleado, int pos);
+    bool modificar(Empleado empleado, int pos);
  };

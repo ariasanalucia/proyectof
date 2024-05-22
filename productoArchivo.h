@@ -14,5 +14,5 @@ using namespace std;
     int contarRegistros();
     Producto leer(int numero);
     int buscar(int id);
-    bool modificarProducto(Producto producto, int pos);
+    bool modificar(Producto producto, int pos);
  };

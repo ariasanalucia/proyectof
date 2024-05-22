@@ -1,6 +1,6 @@
 #pragma once
-#include "ProveedorArchivo.h"
-#include "Proveedor.h"
+#include "proveedorArchivo.h"
+#include "proveedor.h"
 
 class ProveedorManager
 {
@@ -11,5 +11,5 @@ class ProveedorManager
         Proveedor Cargar();
         void Mostrar (Proveedor proveedores);
         void mostrarPorId();
-        void bajaPoducto();
+        void baja();
 };

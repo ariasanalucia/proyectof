@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-#include "ProveedorManager.h"
+#include "proveedorManager.h"
 #include "funcionesGlobales.h"
 
 void ProveedorManager::menuProveedor()
@@ -26,7 +26,7 @@ void ProveedorManager::menuProveedor()
       {
        case 1:
         {
-//          Product aux = Cargar();
+//          Proveedor aux = Cargar();
 //          _archivo.guardarArchivo(aux);
         }
         break;
@@ -37,12 +37,12 @@ void ProveedorManager::menuProveedor()
         break;
        case 3:
         {
-//          bajaPoducto();
+//          baja();
         }
         break;
        case 4:
         {
-//         modificarRegistro();
+//         modificar();
         }
         break;
        case 5:

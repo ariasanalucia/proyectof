@@ -7,11 +7,11 @@ using namespace std;
    private:
     EmpleadoArchivo _archivo = EmpleadoArchivo("empleado.dat");
     void mostrarTodos();
-    void modificarRegistro();
+    void modificar();
    public:
     void menuEmpleado();
     Empleado Cargar();
     void Mostrar (Empleado empleado);
     void mostrarPorDni();
-    void bajaEmpleado();
+    void baja();
  };

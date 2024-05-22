@@ -119,7 +119,7 @@ using namespace std;
    }
  }
 
- void ProductoManager::bajaPoducto()
+ void ProductoManager::baja()
  {
    Producto producto;
    int id;
@@ -147,7 +147,7 @@ using namespace std;
    if (respuesta == 1)
    {
      producto.setEstado(false);
-     if (_archivo.modificarProducto(producto, posicion))
+     if (_archivo.modificar(producto, posicion))
      {
        cout << "REGISTRO ELIMINADO CON EXITO!" << endl;
        pausa();
@@ -159,7 +159,7 @@ using namespace std;
    }
  }
 
- void ProductoManager::modificarRegistro()
+ void ProductoManager::modificar()
  {
    Producto producto;
    int id;
@@ -233,7 +233,7 @@ using namespace std;
      _stock += cantidad;
      producto.setStock(_stock);
 
-     if (_archivo.modificarProducto(producto, posicion))
+     if (_archivo.modificar(producto, posicion))
      {
        cout << "REGISTRO MODIFICADO CON EXITO!" << endl;
      }else
@@ -374,12 +374,12 @@ using namespace std;
         break;
        case 3:
         {
-          bajaPoducto();
+          baja();
         }
         break;
        case 4:
         {
-         modificarRegistro();
+         modificar();
         }
         break;
        case 5:

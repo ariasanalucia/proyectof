@@ -2,7 +2,7 @@
 #include "productoManager.h"
 #include "empleadoManager.h"
 #include "ventaManager.h"
-#include "ProveedorManager.h"
+#include "proveedorManager.h"
 
  class App
  {
