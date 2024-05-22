@@ -67,7 +67,7 @@ EmpleadoArchivo::EmpleadoArchivo(const char *nombre)
    return -1;
  }
 
- bool EmpleadoArchivo::modificarEmpleado(Empleado empleado, int pos)
+ bool EmpleadoArchivo::modificar(Empleado empleado, int pos)
  {
    FILE *p = fopen(_nombre, "rb+");
    if (p==nullptr)

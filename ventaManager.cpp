@@ -26,7 +26,7 @@ using namespace std;
       {
        case 1:
         {
-//          Product aux = Cargar();
+//          Venta aux = Cargar();
 //          _archivo.guardarArchivo(aux);
         }
         break;
@@ -37,12 +37,12 @@ using namespace std;
         break;
        case 3:
         {
-//          bajaPoducto();
+//          baja();
         }
         break;
        case 4:
         {
-//         modificarRegistro();
+//         modificar();
         }
         break;
        case 5:

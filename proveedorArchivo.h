@@ -1,6 +1,6 @@
 #pragma once
 #include <cstring>
-#include "Proveedor.h"
+#include "proveedor.h"
 
 class ProveedorArchivo
 {
@@ -14,5 +14,5 @@ class ProveedorArchivo
         bool guardarArchivo(Proveedor Proveedor);
         int contarRegistros();
         int buscar(int id);
-        bool modificarProveedor(Proveedor provedor, int pos);
+        bool modificar(Proveedor provedor, int pos);
 };

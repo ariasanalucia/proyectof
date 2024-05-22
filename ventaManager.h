@@ -7,12 +7,12 @@
    private:
     VentaArchivo _archivo = VentaArchivo("venta.dat");
     void mostrarTodos();
-    void modificarRegistro();
+    void modificar();
 
    public:
     void menuVentas();
     Venta Cargar();
     void Mostrar (Venta venta);
-    void bajaVenta();
+    void baja();
     void MostrarPorNumCompra();
  };

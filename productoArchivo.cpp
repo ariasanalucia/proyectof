@@ -67,7 +67,7 @@ ProductoArchivo::ProductoArchivo(const char *nombre)
    return -1;
  }
 
- bool ProductoArchivo::modificarProducto(Producto producto, int pos)
+ bool ProductoArchivo::modificar(Producto producto, int pos)
  {
    FILE *p = fopen(_nombre, "rb+");
    if (p==nullptr)
