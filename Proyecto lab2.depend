@@ -64,7 +64,7 @@
 	<iostream>
 	"app.h"
 
-1716390602 c:\users\usuario\documents\github\proyectof\productomanager.h
+1716390991 c:\users\usuario\documents\github\proyectof\productomanager.h
 	"productoArchivo.h"
 
 1716390602 c:\users\usuario\documents\github\proyectof\productoarchivo.h
@@ -80,7 +80,7 @@
 	"funcionesGlobales.h"
 	"fecha.h"
 
-1714965965 source:c:\users\usuario\documents\github\proyectof\productoarchivo.cpp
+1716390602 source:c:\users\usuario\documents\github\proyectof\productoarchivo.cpp
 	<iostream>
 	"productoArchivo.h"
 	"producto.h"
@@ -91,7 +91,7 @@
 	"ventaManager.h"
 	"proveedorManager.h"
 
-1716386188 source:c:\users\usuario\documents\github\proyectof\productomanager.cpp
+1716390602 source:c:\users\usuario\documents\github\proyectof\productomanager.cpp
 	<iostream>
 	<cstring>
 	"funcionesGlobales.h"
@@ -306,7 +306,7 @@
 
 1715897661 7e267874ed97dcf35189ce0fc24851198d8bf
 
-1715884078 source:c:\users\usuario\documents\github\proyectof\empleadoarchivo.cpp
+1716390602 source:c:\users\usuario\documents\github\proyectof\empleadoarchivo.cpp
 	<iostream>
 	"empleadoArchivo.h"
 	"empleado.h"
@@ -323,7 +323,7 @@
 	"empleado.h"
 	"funcionesGlobales.h"
 
-1715955648 source:c:\users\usuario\documents\github\proyectof\empleadomanager.cpp
+1716390602 source:c:\users\usuario\documents\github\proyectof\empleadomanager.cpp
 	<iostream>
 	<cstring>
 	"funcionesGlobales.h"
@@ -346,18 +346,18 @@
 1716069391 c:\users\usuario\documents\github\proyectof\venta.h
 	"fecha.h"
 
-1716390861 c:\users\usuario\documents\github\proyectof\ventaarchivo.h
+1716393439 c:\users\usuario\documents\github\proyectof\ventaarchivo.h
 	<cstring>
 	"venta.h"
 
-1716386554 source:c:\users\usuario\documents\github\proyectof\ventamanager.cpp
+1716403515 source:c:\users\usuario\documents\github\proyectof\ventamanager.cpp
 	<iostream>
 	"ventaManager.h"
 	"funcionesGlobales.h"
 
-1716383982 source:c:\users\usuario\documents\github\proyectof\proveedormanager.cpp
+1716390602 source:c:\users\usuario\documents\github\proyectof\proveedormanager.cpp
 	<iostream>
-	"ProveedorManager.h"
+	"proveedorManager.h"
 	"funcionesGlobales.h"
 
 1716390602 c:\users\usuario\documents\github\proyectof\proveedormanager.h
@@ -581,7 +581,7 @@
 	<iostream>
 	<cstdlib>
 
-1716388237 source:c:\users\usuario\documents\github\proyectof\ventaarchivo.cpp
+1716393439 source:c:\users\usuario\documents\github\proyectof\ventaarchivo.cpp
 	<iostream>
 	"ventaArchivo.h"
 	"venta.h"

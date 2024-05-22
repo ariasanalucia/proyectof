@@ -58,6 +58,104 @@ using namespace std;
    pausa();
  }
 
+ void VentaManager::baja()
+ {
+   Venta reg;
+   int numero;
+   cout << "Ingresar el Numero de venta: ";
+   cin >> numero;
+   cout << endl;
+
+   int cantidad = _archiVenta.contarRegistros();
+   int posicion = _archiVenta.buscar(numero);
+   if (posicion >= 0)
+   {
+     reg = _archiVenta.leer(posicion);
+     Mostrar(reg);
+     pausa();
+   }else
+   {
+     cout << "NO EXISTE EL NUMERO DE VENTA INGRESADO" << endl;
+     return;
+   }
+   int respuesta;
+   cout << "¿ESTA SEGURO QUE QUIERE ELIMINAR EL REGISTRO?(1 - SI / 0 - NO)" << endl;
+   cin >> respuesta;
+   cout << endl;
+
+   if (respuesta == 1)
+   {
+     reg.setEstado(false);
+     if (_archiVenta.modificar(reg, posicion))
+     {
+       cout << "REGISTRO ELIMINADO CON EXITO!" << endl;
+       pausa();
+     }else
+     {
+       cout << "NO SE PUDO ELIMINAR EL REGISTRO!" << endl;
+       pausa();
+     }
+   }
+ }
+
+ void VentaManager::modificar()
+ {
+   Venta reg;
+   int numero;
+   cout << "Ingresar el Numero de venta: ";
+   cin >> numero;
+   cout << endl;
+
+   int cantidad = _archiVenta.contarRegistros();
+   int posicion = _archiVenta.buscar(numero);
+   if (posicion >= 0)
+   {
+     reg = _archiVenta.leer(posicion);
+     Mostrar(reg);
+   }else
+   {
+     cout << "NO EXISTE EL NUMERO DE VENTA INGRESADO" << endl;
+     return;
+   }
+   int respuesta;
+   cout << "¿ESTA SEGURO QUE QUIERE MODIFICAR EL REGISTRO?" << endl;
+   cout << "(1 - SI / 0 - NO)" << endl;
+   cout << "RESPUESTA: ";
+   cin >> respuesta;
+   cout << endl;
+
+    Fecha fechaDeVenta;
+    float importe;
+    int idEmpleado;
+
+   if (respuesta == 1)
+   {
+     cout << "INGRESE NUEVAMENTE LOS CAMPOS DEL PRODUCTO A MODIFICAR..." << endl;
+
+     cout << "Fecha de venta: " << endl;
+     fechaDeVenta.Cargar();
+     reg.setFechaDeVenta(fechaDeVenta);
+
+     cout << "Importe: ";
+     cin >> importe;
+     reg.setImporte(importe);
+
+     cout << "ID de empleado: ";
+     cin >> idEmpleado;
+     reg.setIdEmpleado(idEmpleado);
+
+
+     if (_archiVenta.modificar(reg, posicion))
+     {
+       cout << "REGISTRO MODIFICADO CON EXITO!" << endl;
+     }else
+     {
+       cout << "NO SE PUDO MODIFICAR EL REGISTRO!" << endl;
+     }
+   }
+ }
+
+
 
  void VentaManager::menuVentas()
  {
@@ -94,12 +192,12 @@ using namespace std;
         break;
        case 3:
         {
-//          baja();
+          baja();
         }
         break;
        case 4:
         {
-//         modificar();
+         modificar();
         }
         break;
        case 5:
