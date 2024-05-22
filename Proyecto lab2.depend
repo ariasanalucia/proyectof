@@ -64,10 +64,10 @@
 	<iostream>
 	"app.h"
 
-1716382868 c:\users\usuario\documents\github\proyectof\productomanager.h
+1716390602 c:\users\usuario\documents\github\proyectof\productomanager.h
 	"productoArchivo.h"
 
-1714955731 c:\users\usuario\documents\github\proyectof\productoarchivo.h
+1716390602 c:\users\usuario\documents\github\proyectof\productoarchivo.h
 	"producto.h"
 	<cstring>
 
@@ -85,11 +85,11 @@
 	"productoArchivo.h"
 	"producto.h"
 
-1716383982 c:\users\usuario\documents\github\proyectof\app.h
+1716390602 c:\users\usuario\documents\github\proyectof\app.h
 	"productoManager.h"
 	"empleadoManager.h"
 	"ventaManager.h"
-	"ProveedorManager.h"
+	"proveedorManager.h"
 
 1716386188 source:c:\users\usuario\documents\github\proyectof\productomanager.cpp
 	<iostream>
@@ -311,7 +311,7 @@
 	"empleadoArchivo.h"
 	"empleado.h"
 
-1715884078 c:\users\usuario\documents\github\proyectof\empleadoarchivo.h
+1716390602 c:\users\usuario\documents\github\proyectof\empleadoarchivo.h
 	"empleado.h"
 	<cstring>
 
@@ -331,10 +331,10 @@
 	"empleadoManager.h"
 	"consultas.h"
 
-1715955648 c:\users\usuario\documents\github\proyectof\empleadomanager.h
+1716390602 c:\users\usuario\documents\github\proyectof\empleadomanager.h
 	"empleadoArchivo.h"
 
-1716389466 c:\users\usuario\documents\github\proyectof\ventamanager.h
+1716390602 c:\users\usuario\documents\github\proyectof\ventamanager.h
 	"ventaArchivo.h"
 	"venta.h"
 
@@ -346,7 +346,7 @@
 1716069391 c:\users\usuario\documents\github\proyectof\venta.h
 	"fecha.h"
 
-1716388282 c:\users\usuario\documents\github\proyectof\ventaarchivo.h
+1716390861 c:\users\usuario\documents\github\proyectof\ventaarchivo.h
 	<cstring>
 	"venta.h"
 
@@ -360,13 +360,13 @@
 	"ProveedorManager.h"
 	"funcionesGlobales.h"
 
-1716383982 c:\users\usuario\documents\github\proyectof\proveedormanager.h
-	"ProveedorArchivo.h"
-	"Proveedor.h"
+1716390602 c:\users\usuario\documents\github\proyectof\proveedormanager.h
+	"proveedorArchivo.h"
+	"proveedor.h"
 
-1716383982 c:\users\usuario\documents\github\proyectof\proveedorarchivo.h
+1716390602 c:\users\usuario\documents\github\proyectof\proveedorarchivo.h
 	<cstring>
-	"Proveedor.h"
+	"proveedor.h"
 
 1716383898 c:\users\usuario\documents\github\proyectof\proveedor.h
 
