@@ -298,14 +298,14 @@ using namespace std;
  }
 
  bool compararNombres(char productoSolicitado[30],const char* nombreProducto){
-    int cont = 0,aux = 0;
+    int cont = 0;
     int largo1 = strlen(nombreProducto);
     int largo2 = strlen(productoSolicitado);
     if(largo2 > largo1){
         return false;
     }else{
         for(int i = 0; i < largo1; i++){
-            if(productoSolicitado[i] == nombreProducto[i]){
+            if(productoSolicitado[cont] == nombreProducto[i]){
                 cont++;
             }
         }
