@@ -7,6 +7,6 @@ using namespace std;
  void clear();
  void pausa();
  void cargarCadena(char *palabra, int tamano);
- void validar_proveedor(int* proveedor);
- bool es_proveedor(int proveedor);
+ void validar_proveedor(int* Proveedor);
+ bool es_proveedor(int Proveedor);
 

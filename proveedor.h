@@ -1,20 +1,21 @@
 #pragma once
-#include <cstring>
 
-class proveedor
-{
-    private:
-        int _telefono,_idProveedor;
-        char _nombreProveedor;
-        bool _estado;
-    public:
-        void setTelefono(int telefonoNuevo){_telefono = telefonoNuevo;}
-        void setId(int idNuevo){_idProveedor = idNuevo;}
-//        void setNombre(const char *nombre){strcpy(_nombreProveedor, nombre);}
-        void setEstado(bool estadoNuevo){_estado = estadoNuevo;}
-        int getTelefono(){return _telefono;}
-        int getId(){return _idProveedor;}
-        char getNombre(){return _nombreProveedor;}
-        bool getEstado(){return _estado;}
+ class Proveedor
+ {
+   private:
+    int _telefono,_idProveedor;
+    char _nombreProveedor;
+    bool _estado;
+   public:
+    Proveedor();
+    Proveedor(int telefono, int idProveedor, const char *nombre);
+    void setTelefono(int telefonoNuevo);
+    void setId(int idNuevo);
+    void setNombre(const char *nombre);
+    void setEstado(bool estadoNuevo);
+    int getTelefono();
+    int getId();
+    char getNombre();
+    bool getEstado();
 
-};
+ };

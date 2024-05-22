@@ -2,27 +2,27 @@
 using namespace std;
 #include "proveedor.h"
 #include "funcionesGlobales.h"
+#include <cstring>
 
 //CONSTRUCTORES
-Producto::Producto(int telefono, int idProveedor, bool estado){
+Proveedor::Proveedor(int telefono, int idProveedor, const char *nombre){
   _telefono=telefono;
   _idProveedor=idProveedor;
-  _estado=estado;
 }
-Producto::Producto(){
+Proveedor::Proveedor(){
   _telefono=0;
   _idProveedor=0;
-  _estado=true;
+  _estado=false;
 }
 
 //SET
-void Producto::setTelefono(int telefonoNuevo){_telefono = telefonoNuevo;}
-void Producto::setId(int idNuevo){_idProveedor = idNuevo;}
-//void setNombre(const char *nombre){strcpy(_nombreProveedor, nombre);}
-void Producto::setEstado(bool estadoNuevo){_estado = estadoNuevo;}
+void Proveedor::setTelefono(int telefonoNuevo){_telefono = telefonoNuevo;}
+void Proveedor::setId(int idNuevo){_idProveedor = idNuevo;}
+//void Proveedor::setNombre(const char *nombre){strcpy(_nombreProveedor, nombre);}
+void Proveedor::setEstado(bool estadoNuevo){_estado = estadoNuevo;}
 
 //GET
-int Producto::getTelefono(){return _telefono;}
-int Producto::getId(){return _idProveedor;}
-char Producto::getNombre(){return _nombreProveedor;}
-bool Producto::getEstado(){return _estado;}
+int Proveedor::getTelefono(){return _telefono;}
+int Proveedor::getId(){return _idProveedor;}
+char Proveedor::getNombre(){return _nombreProveedor;}
+bool Proveedor::getEstado(){return _estado;}

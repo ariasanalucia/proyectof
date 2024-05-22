@@ -5,13 +5,13 @@ using namespace std;
 #include "fecha.h"
 
 //CONSTRUCTOR CON PARAMETROS
- Producto::Producto(int id,const char *marca, const char *droga, const char *categoria, int proveedor, Fecha vencimiento, bool estado, const char *presentacion, int cantidad, float importe)
+ Producto::Producto(int id,const char *marca, const char *droga, const char *categoria, int Proveedor, Fecha vencimiento, bool estado, const char *presentacion, int cantidad, float importe)
  {
    _id = id;
    strcpy(_marca,marca);
    strcpy(_droga, droga);
    strcpy(_categoria,categoria);
-   _proveedor = proveedor;
+   _proveedor = Proveedor;
    _vencimiento = Fecha();
    _estado = true;
    strcpy(_presentacion, presentacion);
@@ -39,7 +39,7 @@ using namespace std;
  void Producto::setMarca(const char *marca){strcpy(_marca,marca);}
  void Producto::setDroga(const char *droga){strcpy(_droga,droga);}
  void Producto::setCategoria(const char *categoria){strcpy(_categoria, categoria);}
- void Producto::setProveedor(int proveedor){_proveedor = proveedor;}
+ void Producto::setProveedor(int Proveedor){_proveedor = Proveedor;}
  void Producto::setVencimiento(Fecha vencimiento){_vencimiento = vencimiento;}
  void Producto::setStock(int stock){_stock = stock;}
  void Producto::setEstado(bool estado){_estado = estado;}

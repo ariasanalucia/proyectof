@@ -2,7 +2,7 @@
 #include "productoManager.h"
 #include "empleadoManager.h"
 #include "ventaManager.h"
-#include "proveedorManager.h"
+#include "ProveedorManager.h"
 
  class App
  {
@@ -10,7 +10,7 @@
     ProductoManager subMenuP;
     EmpleadoManager subMenuE;
     VentaManager subMenuV;
-    proveedorManager subMenuProveedor;
+    ProveedorManager subMenuProveedor;
 
 
    public:

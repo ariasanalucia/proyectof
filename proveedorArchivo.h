@@ -1,18 +1,18 @@
 #pragma once
 #include <cstring>
-#include "proveedor.h"
+#include "Proveedor.h"
 
-class proveedorArchivo
+class ProveedorArchivo
 {
     private:
         char _nombre[30];
     public:
-        proveedorArchivo(const char* nombre)
+        ProveedorArchivo(const char* nombre)
         {
           strcpy(_nombre, nombre);
         }
-        bool guardarArchivo(proveedor proveedor);
+        bool guardarArchivo(Proveedor Proveedor);
         int contarRegistros();
         int buscar(int id);
-        bool modificarProveedor(proveedor provedor, int pos);
+        bool modificarProveedor(Proveedor provedor, int pos);
 };

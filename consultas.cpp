@@ -15,7 +15,7 @@ using namespace std;
       cout << "1 - POR ID" << endl;
       cout << "2 - POR PROVEEDOR" << endl;
       cout << "3 - POR CATEGORIA" << endl;
-      cout << "4 - POR NOMBRE" << endl;
+      cout << "4 - POR DROGA" << endl;
       cout << endl;
       cout << "0 - PARA SALIR" << endl;
       cout << "----------------" << endl;
@@ -42,9 +42,9 @@ using namespace std;
         break;
        case 4:
         {
-           pm.mostrarPorNombre();
-           system("pause");
+         pm.mostrarPorDroga();
         }
+        break;
        case 0:
         {
           return;

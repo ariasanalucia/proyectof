@@ -11,7 +11,7 @@ using namespace std;
  {
     Producto aux;
     ProductoArchivo obj_archivo_producto("producto.dat");
-    int id, proveedor, stock, cantidad;
+    int id, Proveedor, stock, cantidad;
     char marca[30], droga[30], categoria[30], presentacion[30];
     Fecha venci;
     float importe;
@@ -33,9 +33,9 @@ using namespace std;
 
    cout << "Proveedor: " << endl;
    cout << "[1 - Disval | 2 - Suizo]" << endl;
-   cin >> proveedor;
-   validar_proveedor(&proveedor);
-   aux.setProveedor(proveedor);
+   cin >> Proveedor;
+   validar_proveedor(&Proveedor);
+   aux.setProveedor(Proveedor);
 
    cout << "Fecha de vencimiento: " << endl;
    venci.Cargar();
@@ -246,19 +246,19 @@ using namespace std;
  void ProductoManager::mostrarPorProveedor()
  {
    Producto aux;
-   int proveedor;
+   int Proveedor;
    int cantidad = _archivo.contarRegistros();
 
    cout << "Ingresar el proveedor: ";
-   cin >> proveedor;
+   cin >> Proveedor;
    cout << endl;
 
    for (int i=0; i<cantidad; i++)
    {
       aux = _archivo.leer(i);
-     if (proveedor == 1 || proveedor == 2)
+     if (Proveedor == 1 || Proveedor == 2)
      {
-       if (aux.getProveedor() == proveedor)
+       if (aux.getProveedor() == Proveedor)
        {
          Mostrar(aux);
        }
@@ -297,15 +297,15 @@ using namespace std;
    }
  }
 
- bool compararNombres(char productoSolicitado[30],const char* nombreProducto){
+ bool compararDrogas(char drogaSolicitada[30],const char* drogaProducto){
     int cont = 0;
-    int largo1 = strlen(nombreProducto);
-    int largo2 = strlen(productoSolicitado);
+    int largo1 = strlen(drogaProducto);
+    int largo2 = strlen(drogaSolicitada);
     if(largo2 > largo1){
         return false;
     }else{
         for(int i = 0; i < largo1; i++){
-            if(productoSolicitado[cont] == nombreProducto[i]){
+            if(drogaSolicitada[cont] == drogaProducto[i]){
                 cont++;
             }
         }
@@ -317,19 +317,26 @@ using namespace std;
     }
  }
 
- void ProductoManager::mostrarPorNombre(){
+ void ProductoManager::mostrarPorDroga(){
     ProductoArchivo archiProducto("producto.dat");
     Producto productos;
-    char nombreProducto[30];
-    cout<<"ingrese el producto solicitado:";
-    cargarCadena(nombreProducto,29);
+    char drogaProducto[30];
+    cout<<"INGRESE LA DROGA SOLICITADA: ";
+    cargarCadena(drogaProducto,29);
+    bool drogaActiva = false;
+
     for(int i = 0; i < archiProducto.contarRegistros(); i++)
     {
-        productos = archiProducto.leer(i);
-        if(compararNombres(nombreProducto,productos.getDroga())){
-            Mostrar(productos);
-        }
+      productos = archiProducto.leer(i);
+      if(compararDrogas(drogaProducto,productos.getDroga())){
+        Mostrar(productos);
+        drogaActiva = true;
+      }
 
+    }
+    if (!drogaActiva)
+    {
+      cout << "NO SE ENCONTRO NINGUNA DROGA CON ESE NOMBRE" << endl;
     }
  }
 

@@ -1,15 +1,15 @@
 #pragma once
-#include "proveedorArchivo.h"
-#include "proveedor.h"
+#include "ProveedorArchivo.h"
+#include "Proveedor.h"
 
-class proveedorManager
+class ProveedorManager
 {
     private:
-        proveedorArchivo _archivo = proveedorArchivo("proveedores.dat");
+        ProveedorArchivo _archivo = ProveedorArchivo("proveedores.dat");
     public:
         void menuProveedor();
-        proveedor Cargar();
-        void Mostrar (proveedor proveedores);
+        Proveedor Cargar();
+        void Mostrar (Proveedor proveedores);
         void mostrarPorId();
         void bajaPoducto();
 };

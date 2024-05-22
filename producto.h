@@ -18,14 +18,14 @@ using namespace std;
     float _importe;
 
    public:
-    Producto(int id,const char *marca, const char *droga, const char *categoria, int proveedor, Fecha vencimiento, bool estado, const char *presentacion, int cantidad, float importe);
+    Producto(int id,const char *marca, const char *droga, const char *categoria, int Proveedor, Fecha vencimiento, bool estado, const char *presentacion, int cantidad, float importe);
     Producto();
     //SETS
     void setId(int id);
     void setMarca(const char *marca);
     void setDroga(const char *droga);
     void setCategoria(const char *categoria);
-    void setProveedor(int proveedor);
+    void setProveedor(int Proveedor);
     void setVencimiento(Fecha vencimiento);
     void setStock(int stock);
     void setEstado(bool estado);

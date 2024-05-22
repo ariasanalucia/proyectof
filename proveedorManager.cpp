@@ -1,9 +1,9 @@
 #include <iostream>
 using namespace std;
-#include "proveedorManager.h"
+#include "ProveedorManager.h"
 #include "funcionesGlobales.h"
 
-void proveedorManager::menuProveedor()
+void ProveedorManager::menuProveedor()
  {
    int opcion;
     while(true)

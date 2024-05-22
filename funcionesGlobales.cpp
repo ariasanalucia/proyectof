@@ -48,13 +48,13 @@ void pausa() {
     fflush(stdin);
  }
 
- bool es_proveedor(int proveedor){
-    return (proveedor == 1 || proveedor == 2);
+ bool es_proveedor(int Proveedor){
+    return (Proveedor == 1 || Proveedor == 2);
  }
 
- void validar_proveedor(int *proveedor){
-    while(!es_proveedor(*proveedor)){
+ void validar_proveedor(int *Proveedor){
+    while(!es_proveedor(*Proveedor)){
         cout<<"Ingrese correctamente el provedor 1 o 2:";
-        cin>>*proveedor;
+        cin>>*Proveedor;
     }
  }
