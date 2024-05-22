@@ -270,45 +270,23 @@ using namespace std;
    }
  }
 
- void ProductoManager::mostrarPorCategoria()
- {
-   Producto aux;
-   char categoria[30];
-   int cantidad = _archivo.contarRegistros();
-   bool existe = false;
 
-   cout << "Ingresar categoria: ";
-   cargarCadena(categoria,29);
-   cout << endl;
-
-   for (int i=0; i<cantidad; i++)
-   {
-     aux = _archivo.leer(i);
-     int comparacion = strcmp(aux.getCategoria(),categoria);
-     if (comparacion == 0)
-     {
-       Mostrar(aux);
-       existe = true;
-     }
-   }
-   if (!existe)
-   {
-     cout << "CATEGORIA INEXISTENTE" << endl;
-   }
- }
-
- bool compararDrogas(char drogaSolicitada[30],const char* drogaProducto){
+ bool compararCaracteres(char palabraSolicitada[30],const char* palabraExistente){
     int cont = 0;
-    int largo1 = strlen(drogaProducto);
-    int largo2 = strlen(drogaSolicitada);
-    if(largo2 > largo1){
-        return false;
-    }else{
-        for(int i = 0; i < largo1; i++){
-            if(drogaSolicitada[cont] == drogaProducto[i]){
-                cont++;
-            }
+    int largo1 = strlen(palabraExistente);
+    int largo2 = strlen(palabraSolicitada);
+    if(largo2 > largo1)
+   {
+     return false;
+   }else
+    {
+      for(int i = 0; i < largo1; i++)
+      {
+        if(palabraSolicitada[cont] == palabraExistente[i])
+        {
+          cont++;
         }
+      }
     }
     if(cont > 0 && cont == largo2){
         return true;
@@ -328,15 +306,36 @@ using namespace std;
     for(int i = 0; i < archiProducto.contarRegistros(); i++)
     {
       productos = archiProducto.leer(i);
-      if(compararDrogas(drogaProducto,productos.getDroga())){
+      if(compararCaracteres(drogaProducto,productos.getDroga())){
         Mostrar(productos);
         drogaActiva = true;
       }
-
     }
     if (!drogaActiva)
     {
       cout << "NO SE ENCONTRO NINGUNA DROGA CON ESE NOMBRE" << endl;
+    }
+ }
+
+ void ProductoManager::mostrarPorCategoria(){
+    ProductoArchivo archiProducto("producto.dat");
+    Producto productos;
+    char categoriaProducto[30];
+    cout<<"INGRESE LA CATEGORIA SOLICITADA: ";
+    cargarCadena(categoriaProducto,29);
+    bool categoriaActiva = false;
+
+    for(int i = 0; i < archiProducto.contarRegistros(); i++)
+    {
+      productos = archiProducto.leer(i);
+      if(compararCaracteres(categoriaProducto,productos.getCategoria())){
+        Mostrar(productos);
+        categoriaActiva = true;
+      }
+    }
+    if (!categoriaActiva)
+    {
+      cout << "NO SE ENCONTRO NINGUNA CATEGORIA CON ESE NOMBRE" << endl;
     }
  }
 

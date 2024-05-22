@@ -5,7 +5,7 @@
  class VentaManager
  {
    private:
-    VentaArchivo _archivo = VentaArchivo("venta.dat");
+    VentaArchivo _archiVenta = VentaArchivo("venta.dat");
     void mostrarTodos();
     void modificarRegistro();
 

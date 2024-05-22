@@ -8,13 +8,10 @@
     char _nombre[30];
 
    public:
-    VentaArchivo(const char *nombre)
-    {
-      strcpy(_nombre,nombre);
-    }
+    VentaArchivo(const char *nombre);
     bool guardarArchivo(Venta venta);
     int contarRegistros();
     Venta leer(int numero);
     int buscar(int id);
-    bool modificarProducto(Venta venta, int pos);
+    bool modificarVenta(Venta venta, int pos);
  };

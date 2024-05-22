@@ -60,6 +60,7 @@
 		<Unit filename="proveedorManager.h" />
 		<Unit filename="venta.cpp" />
 		<Unit filename="venta.h" />
+		<Unit filename="ventaArchivo.cpp" />
 		<Unit filename="ventaArchivo.h" />
 		<Unit filename="ventaManager.cpp" />
 		<Unit filename="ventaManager.h" />
