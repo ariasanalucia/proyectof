@@ -15,9 +15,6 @@ using namespace std;
    int idEmpleado;
    bool estado;
 
-   numero = archiVenta.contarRegistros()+1;
-   aux.setNumero(numero);
-
    cout << "Fecha de venta: " << endl;
    fechaDeVenta.Cargar();
    aux.setFechaDeVenta(fechaDeVenta);
@@ -40,6 +37,7 @@ using namespace std;
  {
    if (reg.getEstado())
    {
+     reiniciarVentasPorMes();
      cout << "Numero de venta: " << reg.getNumero() << endl;
      cout << "Fecha de venta: " << reg.getFechaDeVenta().toString() << endl;
      cout << "Importe: " << reg.getImporte() << endl;
@@ -63,20 +61,31 @@ using namespace std;
  {
    Venta reg;
    int numero;
+    Fecha fechaIngresante;
    cout << "Ingresar el Numero de venta: ";
    cin >> numero;
    cout << endl;
+   cout << "Ingrese la fecha de venta: " << endl;
+   fechaIngresante.Cargar();
+   cout << endl;
+   bool activo = false;
+   int posicion;
 
    int cantidad = _archiVenta.contarRegistros();
-   int posicion = _archiVenta.buscar(numero);
-   if (posicion >= 0)
+   for (int i=0; i<cantidad; i++)
    {
-     reg = _archiVenta.leer(posicion);
-     Mostrar(reg);
+     reg = _archiVenta.leer(i);
+     if (reg.getNumero() == numero && reg.getFechaDeVenta().toString() == fechaIngresante.toString())
+     {
+       activo = true;
+       Mostrar(reg);
+       posicion = i;
+     }
+   }
+   if (!activo)
+   {
+     cout << "NO EXISTE EL REGISTRO QUE ESTAS BUSCANDO" << endl;
      pausa();
-   }else
-   {
-     cout << "NO EXISTE EL NUMERO DE VENTA INGRESADO" << endl;
      return;
    }
    int respuesta;
@@ -103,21 +112,34 @@ using namespace std;
  {
    Venta reg;
    int numero;
+   Fecha fechaIngresante;
    cout << "Ingresar el Numero de venta: ";
    cin >> numero;
    cout << endl;
+   cout << "Ingrese la fecha de venta: " << endl;
+   fechaIngresante.Cargar();
+   cout << endl;
+   bool activo = false;
+   int posicion;
 
    int cantidad = _archiVenta.contarRegistros();
-   int posicion = _archiVenta.buscar(numero);
-   if (posicion >= 0)
+   for (int i=0; i<cantidad; i++)
    {
-     reg = _archiVenta.leer(posicion);
-     Mostrar(reg);
-   }else
+     reg = _archiVenta.leer(i);
+     if (reg.getNumero() == numero && reg.getFechaDeVenta().toString() == fechaIngresante.toString())
+     {
+       activo = true;
+       Mostrar(reg);
+       posicion = i;
+     }
+   }
+   if (!activo)
    {
-     cout << "NO EXISTE EL NUMERO DE VENTA INGRESADO" << endl;
+     cout << "NO EXISTE EL REGISTRO QUE ESTAS BUSCANDO" << endl;
+     pausa();
      return;
    }
+
    int respuesta;
    cout << "¿ESTA SEGURO QUE QUIERE MODIFICAR EL REGISTRO?" << endl;
    cout << "(1 - SI / 0 - NO)" << endl;
@@ -149,9 +171,11 @@ using namespace std;
      if (_archiVenta.modificar(reg, posicion))
      {
        cout << "REGISTRO MODIFICADO CON EXITO!" << endl;
+       pausa();
      }else
      {
        cout << "NO SE PUDO MODIFICAR EL REGISTRO!" << endl;
+       pausa();
      }
    }
  }
@@ -182,6 +206,33 @@ using namespace std;
    if (!activo)
    {
      cout << "NO SE ENCONTRO NINGUNA VENTA CON ESA FECHA" << endl;
+   }
+ }
+
+ void VentaManager::reiniciarVentasPorMes()
+ {
+    Venta reg;
+    VentaArchivo _archiVenta("venta.dat");
+    int cant = _archiVenta.contarRegistros();
+    int mesActual;
+
+    if (cant == 0) return;
+
+    reg = _archiVenta.leer(0);
+    mesActual = reg.getFechaDeVenta().getMes();
+    int numeroVenta = 1;
+
+    for (int i = 0; i < cant; ++i)
+   {
+     reg = _archiVenta.leer(i);
+     if (reg.getFechaDeVenta().getMes() != mesActual)
+     {
+        numeroVenta = 1;
+        mesActual = reg.getFechaDeVenta().getMes();
+     }
+     reg.setNumero(numeroVenta);
+     _archiVenta.modificar(reg, i);
+     numeroVenta++;
    }
  }
 

@@ -36,6 +36,8 @@
 		<Unit filename="app.h" />
 		<Unit filename="consultas.cpp" />
 		<Unit filename="consultas.h" />
+		<Unit filename="consultasVentas.cpp" />
+		<Unit filename="consultasVentas.h" />
 		<Unit filename="empleado.cpp" />
 		<Unit filename="empleado.h" />
 		<Unit filename="empleadoArchivo.cpp" />

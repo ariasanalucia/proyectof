@@ -15,4 +15,5 @@
     void Mostrar (Venta venta);
     void baja();
     void MostrarPorFechaDeCompra();
+    void reiniciarVentasPorMes();
  };
