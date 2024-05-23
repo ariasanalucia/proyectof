@@ -236,6 +236,37 @@ using namespace std;
    }
  }
 
+  void VentaManager::MostrarPorIdDeEmpleado()
+  {
+    Venta reg;
+    VentaArchivo _archiVenta("venta.dat");
+    int cant = _archiVenta.contarRegistros();
+
+    int idEmpleado;
+    cout << "Ingrese el ID de empleado: ";
+    cin >> idEmpleado;
+    cout << endl;
+
+    bool activo = false;
+
+    for (int i=0; i<cant; i++)
+    {
+      reg = _archiVenta.leer(i);
+      if(reg.getEstado() && reg.getIdEmpleado() == idEmpleado)
+      {
+        activo = true;
+        Mostrar(reg);
+        cout << endl;
+      }
+    }
+    if (!activo)
+    {
+      cout << "NO EXISTEN VENTAS CON EL ID DE USUARIO QUE INGRESO " << endl;
+    }
+  }
+
+
+
 
 
  void VentaManager::menuVentas()

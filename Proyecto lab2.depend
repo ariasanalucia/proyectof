@@ -333,7 +333,7 @@
 1716390602 c:\users\usuario\documents\github\proyectof\empleadomanager.h
 	"empleadoArchivo.h"
 
-1716466664 c:\users\usuario\documents\github\proyectof\ventamanager.h
+1716477199 c:\users\usuario\documents\github\proyectof\ventamanager.h
 	"ventaArchivo.h"
 	"venta.h"
 
@@ -349,7 +349,7 @@
 	<cstring>
 	"venta.h"
 
-1716471940 source:c:\users\usuario\documents\github\proyectof\ventamanager.cpp
+1716477199 source:c:\users\usuario\documents\github\proyectof\ventamanager.cpp
 	<iostream>
 	"ventaManager.h"
 	"funcionesGlobales.h"
@@ -586,7 +586,7 @@
 	"ventaArchivo.h"
 	"venta.h"
 
-1716427415 source:c:\users\usuario\documents\github\proyectof\consultasventas.cpp
+1716477283 source:c:\users\usuario\documents\github\proyectof\consultasventas.cpp
 	<iostream>
 	"consultasVentas.h"
 	"funcionesGlobales.h"
