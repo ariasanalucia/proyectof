@@ -14,5 +14,5 @@
     Venta Cargar();
     void Mostrar (Venta venta);
     void baja();
-    void MostrarPorNumCompra();
+    void MostrarPorFechaDeCompra();
  };

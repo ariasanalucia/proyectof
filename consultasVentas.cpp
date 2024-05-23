@@ -1,20 +1,21 @@
 #include <iostream>
 using namespace std;
-#include "consultas.h"
+#include "consultasVentas.h"
 #include "funcionesGlobales.h"
 
- void Consultas::menuConsultas()
- {
-   int opcion;
+  void ConsultasVentas::menuConsultasVentas()
+  {
+    int opcion;
     while(true)
     {
       clear();
-      cout << "MENU DE CONSULTAS" << endl;
+      cout << "CONSULTAS" << endl;
       cout << "----------------" << endl;
-      cout << "1 - POR ID" << endl;
-      cout << "2 - POR PROVEEDOR" << endl;
-      cout << "3 - POR CATEGORIA" << endl;
-      cout << "4 - POR DROGA" << endl;
+      cout << "1 - BUSCAR POR FECHA DE VENTA" << endl;
+      cout << "2 -" << endl;
+      cout << "3 - " << endl;
+      cout << "4 - " << endl;
+      cout << "5 - " << endl;
       cout << endl;
       cout << "0 - PARA SALIR" << endl;
       cout << "----------------" << endl;
@@ -26,22 +27,27 @@ using namespace std;
       {
        case 1:
         {
-         pm.mostrarPorId();
+          Vm.MostrarPorFechaDeCompra();
         }
         break;
        case 2:
         {
-         pm.mostrarPorProveedor();
+
         }
         break;
        case 3:
         {
-         pm.mostrarPorCategoria();
+
         }
         break;
        case 4:
         {
-         pm.mostrarPorDroga();
+
+        }
+        break;
+       case 5:
+        {
+
         }
         break;
        case 0:

@@ -2,20 +2,21 @@
 using namespace std;
 #include "ventaManager.h"
 #include "funcionesGlobales.h"
+#include "consultasVentas.h"
 
   //CARGAR
  Venta VentaManager::Cargar()
  {
-    Venta aux;
-    VentaArchivo archiVenta("venta.dat");
-    int numero;
-    Fecha fechaDeVenta;
-    float importe;
-    int idEmpleado;
-    bool estado;
+   Venta aux;
+   VentaArchivo archiVenta("venta.dat");
+   int numero;
+   Fecha fechaDeVenta;
+   float importe;
+   int idEmpleado;
+   bool estado;
 
-    numero = archiVenta.contarRegistros()+1;
-    aux.setNumero(numero);
+   numero = archiVenta.contarRegistros()+1;
+   aux.setNumero(numero);
 
    cout << "Fecha de venta: " << endl;
    fechaDeVenta.Cargar();
@@ -155,6 +156,35 @@ using namespace std;
    }
  }
 
+ void VentaManager::MostrarPorFechaDeCompra()
+ {
+   Venta reg;
+   VentaArchivo _archiVenta("venta.dat");
+   int cantidadDeReg = _archiVenta.contarRegistros();
+
+   bool activo = false;
+   Fecha fechaAbuscar;
+
+   cout << "INGRESE LA FECHA DE LA VENTA A BUSCAR: " << endl;
+   fechaAbuscar.Cargar();
+   clear();
+
+   for(int i=0; i<cantidadDeReg; i++)
+   {
+     reg = _archiVenta.leer(i);
+     if (reg.getEstado() && reg.getFechaDeVenta().toString() == fechaAbuscar.toString())
+     {
+       activo = true;
+
+       Mostrar(reg);
+     }
+   }
+   if (!activo)
+   {
+     cout << "NO SE ENCONTRO NINGUNA VENTA CON ESA FECHA" << endl;
+   }
+ }
+
 
 
  void VentaManager::menuVentas()
@@ -202,8 +232,8 @@ using namespace std;
         break;
        case 5:
         {
-//          Consultas consulta;
-//          consulta.menuConsultas();
+          ConsultasVentas reg;
+          reg.menuConsultasVentas();
         }
         break;
        case 0:
