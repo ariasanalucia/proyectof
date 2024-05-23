@@ -10,23 +10,34 @@ using namespace std;
    Venta aux;
    VentaArchivo archiVenta("venta.dat");
    int numero;
-   float importe;
    int idEmpleado;
+   int idProducto;
+   int cantidad;
    bool estado;
-
-   numero = archiVenta.contarRegistros()+1;
-   aux.setNumero(numero);
-
-
-   cout << "Importe: ";
-   cin >> importe;
-   aux.setImporte(importe);
-
-   aux.setFechaDeVenta(Fecha());
 
    cout << "ID de empleado: ";
    cin >> idEmpleado;
    aux.setIdEmpleado(idEmpleado);
+
+   numero = archiVenta.contarRegistros()+1;
+   aux.setNumero(numero);
+
+   aux.setFechaDeVenta(Fecha());
+
+   cout << "ID de producto: ";
+   cin >> idProducto;
+   aux.setIdProducto(idProducto);
+
+   while (idProducto > 0)
+   {
+     cout << "Cantidad: ";
+     cin >> cantidad;
+     aux.setCantidad(cantidad);
+
+     cout << "ID de producto: ";
+     cin >> idProducto;
+     aux.setIdProducto(idProducto);
+   }
 
    estado = true;
 
@@ -38,10 +49,11 @@ using namespace std;
  {
    if (reg.getEstado())
    {
+     cout << "ID de empleado: " << reg.getIdEmpleado() << endl;
      cout << "Numero de venta: " << reg.getNumero() << endl;
      cout << "Fecha de venta: " << reg.getFechaDeVenta().toString() << endl;
-     cout << "Importe: " << reg.getImporte() << endl;
-     cout << "ID de empleado: " << reg.getIdEmpleado() << endl;
+     cout << "ID de producto: " << reg.getIdProducto() << endl;
+     cout << "Cantidad: " << reg.getCantidad() << endl;
      cout << endl;
      cout << "-------------------------------" << endl;
    }
@@ -148,25 +160,32 @@ using namespace std;
    cout << endl;
 
     Fecha fechaDeVenta;
-    float importe;
     int idEmpleado;
+    int idProducto;
+    int cantidadProducto;
 
    if (respuesta == 1)
    {
      cout << "INGRESE NUEVAMENTE LOS CAMPOS DEL PRODUCTO A MODIFICAR..." << endl;
 
-     cout << "Fecha de venta: " << endl;
-     fechaDeVenta.Cargar();
-     reg.setFechaDeVenta(fechaDeVenta);
-
-     cout << "Importe: ";
-     cin >> importe;
-     reg.setImporte(importe);
-
      cout << "ID de empleado: ";
      cin >> idEmpleado;
      reg.setIdEmpleado(idEmpleado);
 
+     cout << "ID de producto: ";
+     cin >> idProducto;
+     reg.setIdProducto(idProducto);
+
+     while (idProducto > 0)
+     {
+       cout << "Cantidad: ";
+       cin >> cantidadProducto;
+       reg.setCantidad(cantidadProducto);
+
+       cout << "ID de producto: ";
+       cin >> idProducto;
+       reg.setIdProducto(idProducto);
+     }
 
      if (_archiVenta.modificar(reg, posicion))
      {
