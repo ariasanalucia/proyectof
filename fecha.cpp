@@ -4,9 +4,9 @@ using namespace std;
 
  Fecha::Fecha()
  {
-   _dia = 0;
-   _mes = 0;
-   _anio = 0;
+  _anio=tmPtr->tm_year+1900;
+  _mes=tmPtr->tm_mon+1;
+  _dia=tmPtr->tm_mday;
  }
 
  Fecha::Fecha(int dia, int mes, int anio)

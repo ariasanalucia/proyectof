@@ -21,7 +21,7 @@ void clear() {
 
 #ifdef _WIN32
     // Windows-specific code
-    #define PAUSE_COMMAND "pause"
+    #define PAUSE_COMMAND "pause > nul"
 #else
     // Linux-specific code
     #define PAUSE_COMMAND "read"

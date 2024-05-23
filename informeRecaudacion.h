@@ -2,12 +2,12 @@
 using namespace std;
 #include "fecha.h"
 
- class Informe 
+ class InformeRecaudacion 
  {
    protected:
 
    public:
-    void menuInforme();
+    void menuInformeRecaudacion();
     void porAnio();
     void porEmpleado();
     void porProducto();

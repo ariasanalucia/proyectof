@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-#include "informe.h"
+#include "informeRecaudacion.h"
 #include "funcionesGlobales.h"
 #include "fecha.h"
 
