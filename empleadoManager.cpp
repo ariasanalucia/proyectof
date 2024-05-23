@@ -127,7 +127,7 @@ using namespace std;
  {
    Empleado empleado;
    int dni;
-   cout << "Ingresar el DNI: ";
+   cout << "INGRESAR EL DNI: ";
    cin >> dni;
    cout << endl;
 
@@ -188,11 +188,11 @@ using namespace std;
     while(true)
     {
       clear();
-      cout << "EMPLEADOS" << endl;
+      cout << "   EMPLEADOS" << endl;
       cout << "----------------" << endl;
       cout << "1 - ALTA" << endl;
-      cout << "2 - LISTAR" << endl;
-      cout << "3 - BAJA" << endl;
+      cout << "2 - BAJA" << endl;
+      cout << "3 - LISTAR" << endl;
       cout << "4 - EDITAR" << endl;
       cout << "5 - CONSULTAS" << endl;
       cout << endl;
@@ -211,12 +211,12 @@ using namespace std;
         break;
        case 2:
         {
-          mostrarTodos();
+          baja();
         }
         break;
        case 3:
         {
-          baja();
+          mostrarTodos();
         }
         break;
        case 4:

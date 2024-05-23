@@ -345,11 +345,11 @@ using namespace std;
     while(true)
     {
       clear();
-      cout << "PRODUCTOS" << endl;
+      cout << "    PRODUCTOS" << endl;
       cout << "----------------" << endl;
       cout << "1 - ALTA MEDICAMENTO" << endl;
-      cout << "2 - LISTAR MEDICAMENTOS A LA VENTA" << endl;
-      cout << "3 - BAJA MEDICAMENTO" << endl;
+      cout << "2 - BAJA MEDICAMENTO" << endl;
+      cout << "3 - LISTAR MEDICAMENTOS A LA VENTA" << endl;
       cout << "4 - MODIFICAR REGISTRO DE MEDICAMENTO" << endl;
       cout << "5 - CONSULTAS" << endl;
       cout << endl;
@@ -369,12 +369,12 @@ using namespace std;
         break;
        case 2:
         {
-          mostrarTodos();
+          baja();
         }
         break;
        case 3:
         {
-          baja();
+          mostrarTodos();
         }
         break;
        case 4:

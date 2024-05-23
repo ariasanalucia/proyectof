@@ -9,12 +9,13 @@ using namespace std;
     while(true)
     {
       clear();
-      cout << "MENU PRINCIPAL" << endl;
+      cout << " MENU PRINCIPAL" << endl;
       cout << "----------------" << endl;
-      cout << "1 - PRODUCTO" << endl;
+      cout << "1 - PRODUCTOS" << endl;
       cout << "2 - VENTAS" << endl;
       cout << "3 - EMPLEADOS" << endl;
-      cout << "4 - PROVEEDOR" << endl;
+      cout << "4 - PROVEEDORES" << endl;
+      cout << "5 - INFORMES" << endl;
       cout << endl;
       cout << "0 - PARA SALIR" << endl;
       cout << "----------------" << endl;
@@ -43,6 +44,11 @@ using namespace std;
        case 4:
         {
           subMenuProveedor.menuProveedor();
+        }
+        break;
+        case 5:
+        {
+          //subMenuInforme.menuInforme();
         }
         break;
        case 0:

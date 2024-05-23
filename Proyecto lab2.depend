@@ -106,12 +106,12 @@
 
 1715297419 D
 
-1715872550 source:/home/juli/Documents/UTN/2-Labo2/proyectof/app.cpp
+1716491275 source:/home/juli/Documents/UTN/2-Labo2/proyectof/app.cpp
 	<iostream>
 	"funcionesGlobales.h"
 	"app.h"
 
-1715802206 /home/juli/Documents/UTN/2-Labo2/proyectof/funcionesGlobales.h
+1716385557 /home/juli/Documents/UTN/2-Labo2/proyectof/funcionesGlobales.h
 	<iostream>
 	<cstring>
 
@@ -134,17 +134,21 @@
 	<sys/time.h>
 	"productoManager.h"
 
-1715872576 /home/juli/Documents/UTN/2-Labo2/proyectof/app.h
+1716492936 /home/juli/Documents/UTN/2-Labo2/proyectof/app.h
 	"productoManager.h"
+	"empleadoManager.h"
+	"ventaManager.h"
+	"proveedorManager.h"
+	"informeManager.h"
 
-1715870217 /home/juli/Documents/UTN/2-Labo2/proyectof/productoManager.h
+1716389353 /home/juli/Documents/UTN/2-Labo2/proyectof/productoManager.h
 	"productoArchivo.h"
 
-1715865798 /home/juli/Documents/UTN/2-Labo2/proyectof/productoArchivo.h
+1716389115 /home/juli/Documents/UTN/2-Labo2/proyectof/productoArchivo.h
 	"producto.h"
 	<cstring>
 
-1715903659 /home/juli/Documents/UTN/2-Labo2/proyectof/producto.h
+1716385557 /home/juli/Documents/UTN/2-Labo2/proyectof/producto.h
 	"fecha.h"
 
 1715802206 /home/juli/Documents/UTN/2-Labo2/proyectof/fecha.h
@@ -153,28 +157,28 @@
 	<iostream>
 	"fecha.h"
 
-1715802202 source:/home/juli/Documents/UTN/2-Labo2/proyectof/funcionesGlobales.cpp
+1716385557 source:/home/juli/Documents/UTN/2-Labo2/proyectof/funcionesGlobales.cpp
 	<iostream>
 	"funcionesGlobales.h"
 	<iostream>
 	<cstdlib>
 
-1715802202 source:/home/juli/Documents/UTN/2-Labo2/proyectof/main.cpp
+1716390337 source:/home/juli/Documents/UTN/2-Labo2/proyectof/main.cpp
 	<iostream>
 	"app.h"
 
-1715863564 source:/home/juli/Documents/UTN/2-Labo2/proyectof/producto.cpp
+1716385557 source:/home/juli/Documents/UTN/2-Labo2/proyectof/producto.cpp
 	<iostream>
 	"producto.h"
 	"funcionesGlobales.h"
 	"fecha.h"
 
-1715802202 source:/home/juli/Documents/UTN/2-Labo2/proyectof/productoArchivo.cpp
+1716389096 source:/home/juli/Documents/UTN/2-Labo2/proyectof/productoArchivo.cpp
 	<iostream>
 	"productoArchivo.h"
 	"producto.h"
 
-1715872199 source:/home/juli/Documents/UTN/2-Labo2/proyectof/productoManager.cpp
+1716491071 source:/home/juli/Documents/UTN/2-Labo2/proyectof/productoManager.cpp
 	<iostream>
 	<cstring>
 	"funcionesGlobales.h"
@@ -292,7 +296,7 @@
 1715297419 /home/juli/Documents/UTN/2-Labo2/proyectof/consultasNuevo.h
 	"productoManager.h"
 
-1715802206 /home/juli/Documents/UTN/2-Labo2/proyectof/consultas.h
+1716380589 /home/juli/Documents/UTN/2-Labo2/proyectof/consultas.h
 	"productoManager.h"
 
 1715802206 anager.h"
@@ -593,4 +597,95 @@
 
 1716426562 c:\users\usuario\documents\github\proyectof\consultasventas.h
 	"ventaManager.h"
+
+1716389633 /home/juli/Documents/UTN/2-Labo2/proyectof/empleadoManager.h
+	"empleadoArchivo.h"
+
+1716388689 /home/juli/Documents/UTN/2-Labo2/proyectof/empleadoArchivo.h
+	"empleado.h"
+	<cstring>
+
+1716380589 /home/juli/Documents/UTN/2-Labo2/proyectof/empleado.h
+	<cstring>
+
+1716482864 /home/juli/Documents/UTN/2-Labo2/proyectof/ventaManager.h
+	"ventaArchivo.h"
+	"venta.h"
+
+1716391156 /home/juli/Documents/UTN/2-Labo2/proyectof/ventaArchivo.h
+	<cstring>
+	"venta.h"
+
+1715985644 /home/juli/Documents/UTN/2-Labo2/proyectof/venta.h
+	"fecha.h"
+
+1716390302 /home/juli/Documents/UTN/2-Labo2/proyectof/proveedorManager.h
+	"proveedorArchivo.h"
+	"proveedor.h"
+
+1716390365 /home/juli/Documents/UTN/2-Labo2/proyectof/proveedorArchivo.h
+	<cstring>
+	"proveedor.h"
+
+1716385557 /home/juli/Documents/UTN/2-Labo2/proyectof/proveedor.h
+
+1716491353 source:/home/juli/Documents/UTN/2-Labo2/proyectof/consultas.cpp
+	<iostream>
+	"consultas.h"
+	"funcionesGlobales.h"
+
+1716490946 source:/home/juli/Documents/UTN/2-Labo2/proyectof/consultasVentas.cpp
+	<iostream>
+	"consultasVentas.h"
+	"funcionesGlobales.h"
+
+1716471082 /home/juli/Documents/UTN/2-Labo2/proyectof/consultasVentas.h
+	"ventaManager.h"
+
+1715983566 source:/home/juli/Documents/UTN/2-Labo2/proyectof/empleado.cpp
+	<iostream>
+	"empleado.h"
+	"funcionesGlobales.h"
+
+1716388982 source:/home/juli/Documents/UTN/2-Labo2/proyectof/empleadoArchivo.cpp
+	<iostream>
+	"empleadoArchivo.h"
+	"empleado.h"
+
+1716491587 source:/home/juli/Documents/UTN/2-Labo2/proyectof/empleadoManager.cpp
+	<iostream>
+	<cstring>
+	"funcionesGlobales.h"
+	"empleado.h"
+	"empleadoManager.h"
+	"consultas.h"
+
+1716385557 source:/home/juli/Documents/UTN/2-Labo2/proyectof/proveedor.cpp
+	<iostream>
+	"proveedor.h"
+	"funcionesGlobales.h"
+	<cstring>
+
+1716491500 source:/home/juli/Documents/UTN/2-Labo2/proyectof/proveedorManager.cpp
+	<iostream>
+	"proveedorManager.h"
+	"funcionesGlobales.h"
+
+1716391040 source:/home/juli/Documents/UTN/2-Labo2/proyectof/venta.cpp
+	<iostream>
+	"venta.h"
+	"funcionesGlobales.h"
+
+1716391169 source:/home/juli/Documents/UTN/2-Labo2/proyectof/ventaArchivo.cpp
+	<iostream>
+	"ventaArchivo.h"
+	"venta.h"
+
+1716490934 source:/home/juli/Documents/UTN/2-Labo2/proyectof/ventaManager.cpp
+	<iostream>
+	"ventaManager.h"
+	"funcionesGlobales.h"
+	"consultasVentas.h"
+
+1716493096 /home/juli/Documents/UTN/2-Labo2/proyectof/informeManager.h
 

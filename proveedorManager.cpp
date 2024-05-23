@@ -9,10 +9,11 @@ void ProveedorManager::menuProveedor()
     while(true)
     {
       clear();
-      cout << "PROVEEDOR" << endl;
+      cout << "   PROVEEDORES" << endl;
       cout << "----------------" << endl;
       cout << "1 - ALTA PROVEEDOR" << endl;
       cout << "2 - BAJA PROVEEDOR" << endl;
+      cout << "2 - LISTAR PROVEEDORES" << endl;
       cout << "4 - MODIFICAR REGISTRO DE PROVEEDOR" << endl;
       cout << "5 - CONSULTAS" << endl;
       cout << endl;
@@ -32,12 +33,12 @@ void ProveedorManager::menuProveedor()
         break;
        case 2:
         {
-//          mostrarTodos();
+//          baja();
         }
         break;
        case 3:
         {
-//          baja();
+//          mostrarTodos();
         }
         break;
        case 4:

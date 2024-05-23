@@ -9,7 +9,7 @@ using namespace std;
     while(true)
     {
       clear();
-      cout << "MENU DE CONSULTAS" << endl;
+      cout << "   CONSULTAS" << endl;
       cout << "----------------" << endl;
       cout << "1 - POR ID" << endl;
       cout << "2 - POR PROVEEDOR" << endl;

@@ -267,20 +267,18 @@ using namespace std;
 
 
 
-
-
  void VentaManager::menuVentas()
  {
    int opcion;
     while(true)
     {
       clear();
-      cout << "VENTAS" << endl;
+      cout << "     VENTAS" << endl;
       cout << "----------------" << endl;
       cout << "1 - ALTA VENTA" << endl;
-      cout << "2 - LISTAR VENTAS" << endl;
-      cout << "3 - BAJA VENTA" << endl;
-      cout << "4 - MODIFICAR REGISTRO DE VENTA" << endl;
+      cout << "2 - BAJA VENTA" << endl;
+      cout << "3 - LISTAR VENTAS" << endl;
+      cout << "4 - MODIFICAR" << endl;
       cout << "5 - CONSULTAS" << endl;
       cout << endl;
       cout << "0 - PARA SALIR" << endl;
@@ -299,12 +297,12 @@ using namespace std;
         break;
        case 2:
         {
-          mostrarTodos();
+          baja();
         }
         break;
        case 3:
         {
-          baja();
+          mostrarTodos();
         }
         break;
        case 4:

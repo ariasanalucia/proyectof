@@ -9,7 +9,7 @@ using namespace std;
     while(true)
     {
       clear();
-      cout << "CONSULTAS" << endl;
+      cout << "   CONSULTAS" << endl;
       cout << "----------------" << endl;
       cout << "1 - BUSCAR POR FECHA DE VENTA" << endl;
       cout << "2 - BUSCAR POR ID DE EMPLEADO" << endl;
