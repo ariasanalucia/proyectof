@@ -15,6 +15,9 @@ using namespace std;
    int idEmpleado;
    bool estado;
 
+   numero = _archiVenta.contarRegistros()+1;
+   aux.setNumero(numero);
+
    cout << "Fecha de venta: " << endl;
    fechaDeVenta.Cargar();
    aux.setFechaDeVenta(fechaDeVenta);
@@ -37,7 +40,6 @@ using namespace std;
  {
    if (reg.getEstado())
    {
-     reiniciarVentasPorMes();
      cout << "Numero de venta: " << reg.getNumero() << endl;
      cout << "Fecha de venta: " << reg.getFechaDeVenta().toString() << endl;
      cout << "Importe: " << reg.getImporte() << endl;
@@ -209,32 +211,6 @@ using namespace std;
    }
  }
 
- void VentaManager::reiniciarVentasPorMes()
- {
-    Venta reg;
-    VentaArchivo _archiVenta("venta.dat");
-    int cant = _archiVenta.contarRegistros();
-    int mesActual;
-
-    if (cant == 0) return;
-
-    reg = _archiVenta.leer(0);
-    mesActual = reg.getFechaDeVenta().getMes();
-    int numeroVenta = 1;
-
-    for (int i = 0; i < cant; ++i)
-   {
-     reg = _archiVenta.leer(i);
-     if (reg.getFechaDeVenta().getMes() != mesActual)
-     {
-        numeroVenta = 1;
-        mesActual = reg.getFechaDeVenta().getMes();
-     }
-     reg.setNumero(numeroVenta);
-     _archiVenta.modificar(reg, i);
-     numeroVenta++;
-   }
- }
 
   void VentaManager::MostrarPorIdDeEmpleado()
   {

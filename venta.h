@@ -17,13 +17,13 @@
     void setNumero(int numero);
     void setIdEmpleado(int idEmpleado);
     void setFechaDeVenta(Fecha fechaDeVenta);
-    void setEstado(bool estado);
     void setImporte(float importe);
+    void setEstado(bool estado);
     //GETS
     int getNumero();
     int getIdEmpleado();
     Fecha getFechaDeVenta();
-    bool getEstado();
     float getImporte();
+    bool getEstado();
  };
 

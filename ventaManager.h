@@ -8,7 +8,6 @@
     VentaArchivo _archiVenta = VentaArchivo("venta.dat");
     void mostrarTodos();
     void modificar();
-    void reiniciarVentasPorMes();
     Venta Cargar();
     void Mostrar (Venta venta);
     void baja();
