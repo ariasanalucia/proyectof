@@ -1,12 +1,15 @@
 #include <iostream>
 using namespace std;
 #include "fecha.h"
+#include <ctime>
 
  Fecha::Fecha()
  {
-  _anio=tmPtr->tm_year+1900;
-  _mes=tmPtr->tm_mon+1;
-  _dia=tmPtr->tm_mday;
+   time_t now = time(0);
+   tm* tmPtr = localtime(&now);
+   _anio=tmPtr->tm_year+1900;
+   _mes=tmPtr->tm_mon+1;
+   _dia=tmPtr->tm_mday;
  }
 
  Fecha::Fecha(int dia, int mes, int anio)

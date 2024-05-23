@@ -44,13 +44,14 @@
 
 1714394985 c:\users\usuario\documents\utn\laboratorio 2\proyecto lab2\fecha.h
 
-1715816191 source:c:\users\usuario\documents\github\proyectof\fecha.cpp
+1716504535 source:c:\users\usuario\documents\github\proyectof\fecha.cpp
 	<iostream>
 	"fecha.h"
+	<ctime>
 
 1714394985 c:\users\usuario\documents\github\proyectof\fecha.h
 
-1716383034 source:c:\users\usuario\documents\github\proyectof\funcionesglobales.cpp
+1716504244 source:c:\users\usuario\documents\github\proyectof\funcionesglobales.cpp
 	<iostream>
 	"funcionesGlobales.h"
 	<iostream>
@@ -85,12 +86,12 @@
 	"productoArchivo.h"
 	"producto.h"
 
-1716499734 c:\users\usuario\documents\github\proyectof\app.h
+1716504244 c:\users\usuario\documents\github\proyectof\app.h
 	"productoManager.h"
 	"empleadoManager.h"
 	"ventaManager.h"
 	"proveedorManager.h"
-	"informe.h"
+	"informeRecaudacion.h"
 
 1716499734 source:c:\users\usuario\documents\github\proyectof\productomanager.cpp
 	<iostream>
@@ -354,7 +355,7 @@
 	<cstring>
 	"venta.h"
 
-1716502244 source:c:\users\usuario\documents\github\proyectof\ventamanager.cpp
+1716504944 source:c:\users\usuario\documents\github\proyectof\ventamanager.cpp
 	<iostream>
 	"ventaManager.h"
 	"funcionesGlobales.h"
@@ -691,5 +692,8 @@
 1716493096 /home/juli/Documents/UTN/2-Labo2/proyectof/informeManager.h
 
 1716499734 c:\users\usuario\documents\github\proyectof\informe.h
+	"fecha.h"
+
+1716504244 c:\users\usuario\documents\github\proyectof\informerecaudacion.h
 	"fecha.h"
 

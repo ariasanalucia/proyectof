@@ -10,21 +10,19 @@ using namespace std;
    Venta aux;
    VentaArchivo archiVenta("venta.dat");
    int numero;
-   Fecha fechaDeVenta;
    float importe;
    int idEmpleado;
    bool estado;
 
-   numero = _archiVenta.contarRegistros()+1;
+   numero = archiVenta.contarRegistros()+1;
    aux.setNumero(numero);
 
-   cout << "Fecha de venta: " << endl;
-   fechaDeVenta.Cargar();
-   aux.setFechaDeVenta(fechaDeVenta);
 
    cout << "Importe: ";
    cin >> importe;
    aux.setImporte(importe);
+
+   aux.setFechaDeVenta(Fecha());
 
    cout << "ID de empleado: ";
    cin >> idEmpleado;
