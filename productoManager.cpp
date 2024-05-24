@@ -1,6 +1,7 @@
 #include <iostream>
 using namespace std;
 #include <cstring>
+#include <ctype.h>
 #include "funcionesGlobales.h"
 #include "producto.h"
 #include "productoManager.h"
@@ -282,7 +283,7 @@ using namespace std;
     {
       for(int i = 0; i < largo1; i++)
       {
-        if(palabraSolicitada[cont] == palabraExistente[i])
+        if(tolower(palabraSolicitada[cont]) == tolower(palabraExistente[i]))
         {
           cont++;
         }

@@ -93,9 +93,10 @@
 	"proveedorManager.h"
 	"informeRecaudacion.h"
 
-1716499734 source:c:\users\usuario\documents\github\proyectof\productomanager.cpp
+1716551822 source:c:\users\usuario\documents\github\proyectof\productomanager.cpp
 	<iostream>
 	<cstring>
+	<ctype.h>
 	"funcionesGlobales.h"
 	"producto.h"
 	"productoManager.h"
