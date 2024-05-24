@@ -24,6 +24,8 @@ using namespace std;
 
    aux.setFechaDeVenta(Fecha());
 
+   aux.setHora(Hora());
+
    cout << "ID de producto: ";
    cin >> idProducto;
    aux.setIdProducto(idProducto);
@@ -52,6 +54,7 @@ using namespace std;
      cout << "ID de empleado: " << reg.getIdEmpleado() << endl;
      cout << "Numero de venta: " << reg.getNumero() << endl;
      cout << "Fecha de venta: " << reg.getFechaDeVenta().toString() << endl;
+     cout << "Horario: " << reg.getHorario().toString() << endl;
      cout << "ID de producto: " << reg.getIdProducto() << endl;
      cout << "Cantidad: " << reg.getCantidad() << endl;
      cout << endl;
@@ -159,7 +162,6 @@ using namespace std;
    cin >> respuesta;
    cout << endl;
 
-    Fecha fechaDeVenta;
     int idEmpleado;
     int idProducto;
     int cantidadProducto;

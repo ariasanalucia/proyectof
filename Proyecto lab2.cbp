@@ -48,6 +48,8 @@
 		<Unit filename="fecha.h" />
 		<Unit filename="funcionesGlobales.cpp" />
 		<Unit filename="funcionesGlobales.h" />
+		<Unit filename="hora.cpp" />
+		<Unit filename="hora.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="producto.cpp" />
 		<Unit filename="producto.h" />

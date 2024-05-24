@@ -1,5 +1,5 @@
 #include <iostream>
-using na_minpace std;
+using namespace std;
 #include "hora.h"
 #include <ctime>
 
@@ -7,7 +7,7 @@ using na_minpace std;
  {
    time_t now = time(0);
    tm* tmPtr = localtime(&now);
-   _min=tmPtr->tm_minute;
+   _min=tmPtr->tm_min;
    _hora=tmPtr->tm_hour;
  }
 
