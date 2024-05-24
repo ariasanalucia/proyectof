@@ -93,7 +93,7 @@
 	"proveedorManager.h"
 	"informeRecaudacion.h"
 
-1716551822 source:c:\users\usuario\documents\github\proyectof\productomanager.cpp
+1716551850 source:c:\users\usuario\documents\github\proyectof\productomanager.cpp
 	<iostream>
 	<cstring>
 	<ctype.h>
@@ -344,20 +344,21 @@
 	"ventaArchivo.h"
 	"venta.h"
 
-1716508653 source:c:\users\usuario\documents\github\proyectof\venta.cpp
+1716555795 source:c:\users\usuario\documents\github\proyectof\venta.cpp
 	<iostream>
 	"venta.h"
 	"funcionesGlobales.h"
 
-1716508591 c:\users\usuario\documents\github\proyectof\venta.h
+1716560782 c:\users\usuario\documents\github\proyectof\venta.h
 	"fecha.h"
 	"hora.h"
+	<vector>
 
 1716393439 c:\users\usuario\documents\github\proyectof\ventaarchivo.h
 	<cstring>
 	"venta.h"
 
-1716509515 source:c:\users\usuario\documents\github\proyectof\ventamanager.cpp
+1716560833 source:c:\users\usuario\documents\github\proyectof\ventamanager.cpp
 	<iostream>
 	"ventaManager.h"
 	"funcionesGlobales.h"
@@ -589,7 +590,7 @@
 	<iostream>
 	<cstdlib>
 
-1716393439 source:c:\users\usuario\documents\github\proyectof\ventaarchivo.cpp
+1716560568 source:c:\users\usuario\documents\github\proyectof\ventaarchivo.cpp
 	<iostream>
 	"ventaArchivo.h"
 	"venta.h"
