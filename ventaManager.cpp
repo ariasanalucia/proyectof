@@ -30,18 +30,12 @@ using namespace std;
    cin >> idProducto;
    aux.setIdProducto(idProducto);
 
-   while (idProducto > 0)
-   {
-     cout << "Cantidad: ";
-     cin >> cantidad;
-     aux.setCantidad(cantidad);
-
-     cout << "ID de producto: ";
-     cin >> idProducto;
-     aux.setIdProducto(idProducto);
-   }
+   cout << "Cantidad: ";
+   cin >> cantidad;
+   aux.setCantidad(cantidad);
 
    estado = true;
+   aux.setEstado(estado);
 
    return aux;
  }
