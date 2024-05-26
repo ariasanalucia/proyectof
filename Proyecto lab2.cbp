@@ -59,6 +59,7 @@
 		<Unit filename="productoManager.h" />
 		<Unit filename="proveedor.cpp" />
 		<Unit filename="proveedor.h" />
+		<Unit filename="proveedorArchivo.cpp" />
 		<Unit filename="proveedorArchivo.h" />
 		<Unit filename="proveedorManager.cpp" />
 		<Unit filename="proveedorManager.h" />
