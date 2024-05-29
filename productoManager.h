@@ -17,4 +17,5 @@ using namespace std;
     void mostrarPorProveedor();
     void mostrarPorCategoria();
     void mostrarPorDroga();
+    void solicitarProducto();
  };

@@ -452,70 +452,71 @@
 	"funcionesGlobales.h"
 	"productoManager.h"
 
-1716222473 source:c:\users\gpantanetti\desktop\utn\proyectof\app.cpp
+1716894715 source:c:\users\gpantanetti\desktop\utn\proyectof\app.cpp
 	<iostream>
 	"funcionesGlobales.h"
 	"app.h"
 
-1716226605 c:\users\gpantanetti\desktop\utn\proyectof\funcionesglobales.h
+1716388654 c:\users\gpantanetti\desktop\utn\proyectof\funcionesglobales.h
 	<iostream>
 	<cstring>
 
-1716222473 c:\users\gpantanetti\desktop\utn\proyectof\app.h
+1716894715 c:\users\gpantanetti\desktop\utn\proyectof\app.h
 	"productoManager.h"
 	"empleadoManager.h"
 	"ventaManager.h"
 	"proveedorManager.h"
+	"informeRecaudacion.h"
 
-1716377117 c:\users\gpantanetti\desktop\utn\proyectof\productomanager.h
+1717001934 c:\users\gpantanetti\desktop\utn\proyectof\productomanager.h
 	"productoArchivo.h"
 
-1715341291 c:\users\gpantanetti\desktop\utn\proyectof\productoarchivo.h
+1716390826 c:\users\gpantanetti\desktop\utn\proyectof\productoarchivo.h
 	"producto.h"
 	<cstring>
 
-1716222473 c:\users\gpantanetti\desktop\utn\proyectof\producto.h
+1716388654 c:\users\gpantanetti\desktop\utn\proyectof\producto.h
 	"fecha.h"
 
 1715341291 c:\users\gpantanetti\desktop\utn\proyectof\fecha.h
 
-1716222473 c:\users\gpantanetti\desktop\utn\proyectof\empleadomanager.h
+1716390826 c:\users\gpantanetti\desktop\utn\proyectof\empleadomanager.h
 	"empleadoArchivo.h"
 
-1716222473 c:\users\gpantanetti\desktop\utn\proyectof\empleadoarchivo.h
+1716390826 c:\users\gpantanetti\desktop\utn\proyectof\empleadoarchivo.h
 	"empleado.h"
 	<cstring>
 
 1716222473 c:\users\gpantanetti\desktop\utn\proyectof\empleado.h
 	<cstring>
 
-1716222473 c:\users\gpantanetti\desktop\utn\proyectof\ventamanager.h
+1716894715 c:\users\gpantanetti\desktop\utn\proyectof\ventamanager.h
 	"ventaArchivo.h"
 	"venta.h"
 
-1716222473 c:\users\gpantanetti\desktop\utn\proyectof\ventaarchivo.h
+1716394821 c:\users\gpantanetti\desktop\utn\proyectof\ventaarchivo.h
 	<cstring>
 	"venta.h"
 
-1716222473 c:\users\gpantanetti\desktop\utn\proyectof\venta.h
+1716894715 c:\users\gpantanetti\desktop\utn\proyectof\venta.h
 	"fecha.h"
+	"hora.h"
+	<vector>
 
-1716222473 c:\users\gpantanetti\desktop\utn\proyectof\proveedormanager.h
+1716894715 c:\users\gpantanetti\desktop\utn\proyectof\proveedormanager.h
 	"proveedorArchivo.h"
 	"proveedor.h"
 
-1716222473 c:\users\gpantanetti\desktop\utn\proyectof\proveedorarchivo.h
+1716894715 c:\users\gpantanetti\desktop\utn\proyectof\proveedorarchivo.h
 	<cstring>
 	"proveedor.h"
 
-1716222473 c:\users\gpantanetti\desktop\utn\proyectof\proveedor.h
-	<cstring>
+1716894715 c:\users\gpantanetti\desktop\utn\proyectof\proveedor.h
 
-1716377117 source:c:\users\gpantanetti\desktop\utn\proyectof\consultas.cpp
+1716894715 source:c:\users\gpantanetti\desktop\utn\proyectof\consultas.cpp
 	<iostream>
 	"consultas.h"
 	"funcionesGlobales.h"
-	"productoManager.h"
 
 1716222473 c:\users\gpantanetti\desktop\utn\proyectof\consultas.h
 	"productoManager.h"
@@ -525,12 +526,12 @@
 	"empleado.h"
 	"funcionesGlobales.h"
 
-1716222473 source:c:\users\gpantanetti\desktop\utn\proyectof\empleadoarchivo.cpp
+1716390826 source:c:\users\gpantanetti\desktop\utn\proyectof\empleadoarchivo.cpp
 	<iostream>
 	"empleadoArchivo.h"
 	"empleado.h"
 
-1716222473 source:c:\users\gpantanetti\desktop\utn\proyectof\empleadomanager.cpp
+1716894715 source:c:\users\gpantanetti\desktop\utn\proyectof\empleadomanager.cpp
 	<iostream>
 	<cstring>
 	"funcionesGlobales.h"
@@ -538,52 +539,57 @@
 	"empleadoManager.h"
 	"consultas.h"
 
-1715863406 source:c:\users\gpantanetti\desktop\utn\proyectof\fecha.cpp
+1716894715 source:c:\users\gpantanetti\desktop\utn\proyectof\fecha.cpp
 	<iostream>
 	"fecha.h"
+	<ctime>
 
 1715341291 source:c:\users\gpantanetti\desktop\utn\proyectof\main.cpp
 	<iostream>
 	"app.h"
 
-1716222473 source:c:\users\gpantanetti\desktop\utn\proyectof\producto.cpp
+1716388654 source:c:\users\gpantanetti\desktop\utn\proyectof\producto.cpp
 	<iostream>
 	"producto.h"
 	"funcionesGlobales.h"
 	"fecha.h"
 
-1715341291 source:c:\users\gpantanetti\desktop\utn\proyectof\productoarchivo.cpp
+1716390826 source:c:\users\gpantanetti\desktop\utn\proyectof\productoarchivo.cpp
 	<iostream>
 	"productoArchivo.h"
 	"producto.h"
 
-1716377117 source:c:\users\gpantanetti\desktop\utn\proyectof\productomanager.cpp
+1717002517 source:c:\users\gpantanetti\desktop\utn\proyectof\productomanager.cpp
 	<iostream>
 	<cstring>
+	<ctype.h>
 	"funcionesGlobales.h"
 	"producto.h"
 	"productoManager.h"
 	"consultas.h"
 
-1716222473 source:c:\users\gpantanetti\desktop\utn\proyectof\proveedor.cpp
+1716894715 source:c:\users\gpantanetti\desktop\utn\proyectof\proveedor.cpp
 	<iostream>
+	<cstring>
+	"proveedor.h"
 
-1716222473 source:c:\users\gpantanetti\desktop\utn\proyectof\proveedormanager.cpp
+1716982128 source:c:\users\gpantanetti\desktop\utn\proyectof\proveedormanager.cpp
 	<iostream>
 	"proveedorManager.h"
 	"funcionesGlobales.h"
 
-1716222473 source:c:\users\gpantanetti\desktop\utn\proyectof\venta.cpp
+1716894715 source:c:\users\gpantanetti\desktop\utn\proyectof\venta.cpp
 	<iostream>
 	"venta.h"
 	"funcionesGlobales.h"
 
-1716222473 source:c:\users\gpantanetti\desktop\utn\proyectof\ventamanager.cpp
+1716894715 source:c:\users\gpantanetti\desktop\utn\proyectof\ventamanager.cpp
 	<iostream>
 	"ventaManager.h"
 	"funcionesGlobales.h"
+	"consultasVentas.h"
 
-1716226605 source:c:\users\gpantanetti\desktop\utn\proyectof\funcionesglobales.cpp
+1716894715 source:c:\users\gpantanetti\desktop\utn\proyectof\funcionesglobales.cpp
 	<iostream>
 	"funcionesGlobales.h"
 	<iostream>
@@ -709,4 +715,31 @@
 1716744379 source:c:\users\usuario\documents\github\proyectof\proveedorarchivo.cpp
 	<iostream>
 	"proveedorArchivo.h"
+
+1716894715 c:\users\gpantanetti\desktop\utn\proyectof\hora.h
+
+1716894715 c:\users\gpantanetti\desktop\utn\proyectof\informerecaudacion.h
+	"fecha.h"
+
+1716894715 source:c:\users\gpantanetti\desktop\utn\proyectof\consultasventas.cpp
+	<iostream>
+	"consultasVentas.h"
+	"funcionesGlobales.h"
+
+1716463933 c:\users\gpantanetti\desktop\utn\proyectof\consultasventas.h
+	"ventaManager.h"
+
+1716894715 source:c:\users\gpantanetti\desktop\utn\proyectof\hora.cpp
+	<iostream>
+	"hora.h"
+	<ctime>
+
+1716894715 source:c:\users\gpantanetti\desktop\utn\proyectof\proveedorarchivo.cpp
+	<iostream>
+	"proveedorArchivo.h"
+
+1716894715 source:c:\users\gpantanetti\desktop\utn\proyectof\ventaarchivo.cpp
+	<iostream>
+	"ventaArchivo.h"
+	"venta.h"
 

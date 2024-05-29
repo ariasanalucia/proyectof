@@ -316,6 +316,7 @@ using namespace std;
     {
       cout << "NO SE ENCONTRO NINGUNA DROGA CON ESE NOMBRE" << endl;
     }
+    system("pause");
  }
 
  void ProductoManager::mostrarPorCategoria(){
@@ -340,6 +341,32 @@ using namespace std;
     }
  }
 
+
+ void ProductoManager::solicitarProducto(){
+    mostrarPorDroga();
+    ProductoArchivo archiProducto("producto.dat");
+    Producto productos;
+    int idProducto,cantStockSolicitada;
+    FILE* f_leer_producto = fopen("producto.dat","rb+");
+    if(f_leer_producto == NULL){
+        cout<<"no se pudo abrir el archivo";
+        fclose(f_leer_producto);
+        return;
+    }
+    cout<<"INGRESE EL ID DEL PRODUCTO QUE QUIERE PEDIRLE AL PROVEEDOR:";
+    cin>>idProducto;
+    cout<<"ingrese la cantidad de dicho producto que desea:";
+    cin>>cantStockSolicitada;
+    productos = archiProducto.leer(idProducto);
+    productos.setStock(productos.getStock() + cantStockSolicitada);
+    cout<<productos.getStock();
+    fseek(f_leer_producto,sizeof(Producto)*(idProducto),0);
+    archiProducto.guardarArchivo(productos);
+    cout<<productos.getStock();
+    system("pause");
+    fclose(f_leer_producto);
+}
+
  void ProductoManager::menuProducto()
  {
    int opcion;
@@ -352,7 +379,8 @@ using namespace std;
       cout << "2 - BAJA MEDICAMENTO" << endl;
       cout << "3 - LISTAR MEDICAMENTOS A LA VENTA" << endl;
       cout << "4 - MODIFICAR REGISTRO DE MEDICAMENTO" << endl;
-      cout << "5 - CONSULTAS" << endl;
+      cout << "5 - SOLICITAR PRODUCTO" << endl;
+      cout << "6 - CONSULTAS" << endl;
       cout << endl;
       cout << "0 - PARA SALIR" << endl;
       cout << "----------------" << endl;
@@ -384,6 +412,11 @@ using namespace std;
         }
         break;
        case 5:
+        {
+         solicitarProducto();
+        }
+        break;
+        case 6:
         {
           Consultas consulta;
           consulta.menuConsultas();
