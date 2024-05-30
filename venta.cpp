@@ -9,9 +9,6 @@ using namespace std;
    _idEmpleado=idEmpleado;
    _fechaDeVenta=fechaDeVenta;
    _horario = horario;
-   // Inicializa los vectores con los datos del primer producto
-   _idProductos.push_back(idProducto);
-   _cantidades.push_back(cantidad);
  }
  Venta::Venta()
  {
@@ -19,12 +16,33 @@ using namespace std;
    _idEmpleado=0;
    _fechaDeVenta=Fecha();
    _horario = Hora();
-   //No es necesario inicializar los idProducto y cantidad ya que los vectores se inicializan con sus propios constructores.
+
  }
 //SETS
 void Venta::setNumero(int numero){_numero=numero;}
 void Venta::setIdEmpleado(int idEmpleado){_idEmpleado=idEmpleado;}
 void Venta::setFechaDeVenta(Fecha fechaDeVenta){_fechaDeVenta=fechaDeVenta;}
+ void Venta::setIdProducto(int idProducto, int pos)
+ {
+   for (int i=0; i<100; i++)
+   {
+     if (pos == i)
+     {
+       _idProducto[i] = idProducto;
+     }
+   }
+ }
+
+ void Venta::setCantidad(int cantidad, int pos)
+ {
+   for (int i=0; i<100; i++)
+   {
+     if (pos == i)
+     {
+       _cantidad[i] = cantidad;
+     }
+   }
+ }
 void Venta::setHora(Hora horario){_horario = horario;}
 void Venta::setEstado(bool estado){_estado=estado;}
 
@@ -33,4 +51,24 @@ int Venta::getNumero(){return _numero;}
 int Venta::getIdEmpleado(){return _idEmpleado;}
 Fecha Venta::getFechaDeVenta(){return _fechaDeVenta;}
 Hora Venta::getHorario(){return _horario;}
+int Venta::getIdProducto(int pos)
+ {
+   for (int i=0; i<100; i++)
+   {
+     if (pos == i)
+     {
+       return _idProducto[i];
+     }
+   }
+ }
+int Venta::getCantidad(int pos)
+ {
+   for (int i=0; i<100; i++)
+   {
+     if (pos == i)
+     {
+       return _cantidad[i];
+     }
+   }
+ }
 bool Venta::getEstado(){return _estado;}

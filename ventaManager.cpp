@@ -11,8 +11,8 @@ using namespace std;
    VentaArchivo archiVenta("venta.dat");
    int numero;
    int idEmpleado;
-   int idProducto;
-   int cantidad;
+   int idProducto[100] = {};
+   int cantidad[100] = {};
    bool estado;
 
    cout << "ID de empleado: ";
@@ -26,19 +26,24 @@ using namespace std;
 
    aux.setHora(Hora());
 
-   while (true)
-    {
-     cout << "ID de producto (ingrese 0 para terminar): ";
-     cin >> idProducto;
+   int contador = 0;
+   cout << "ID de producto: ";
+   cin >> idProducto[contador];
+   aux.setIdProducto(idProducto[contador], contador);
 
-     if (idProducto == 0)
-     {
-       break;
-     }
+   while (idProducto[contador] > 0)
+   {
      cout << "Cantidad: ";
-     cin >> cantidad;
-     aux.guardarCantidadesYidProductos(idProducto,cantidad);
-    }
+     cin >> cantidad[contador];
+     aux.setCantidad(cantidad[contador], contador);
+     cout << endl;
+
+     contador++;
+
+     cout << "ID de producto: ";
+     cin >> idProducto[contador];
+     aux.setIdProducto(idProducto[contador], contador);
+   }
 
    estado = true;
    aux.setEstado(estado);
@@ -55,16 +60,17 @@ using namespace std;
      cout << "Numero de venta: " << reg.getNumero() << endl;
      cout << "Fecha de venta: " << reg.getFechaDeVenta().toString() << endl;
      cout << "Horario: " << reg.getHorario().toString() << endl;
-     // Este método devuelve una referencia constante a un vector que contiene los IDs de los productos asociados con la venta.
-     //La expresión const auto& se utiliza para deducir automáticamente el tipo del vector devuelto y declarar una referencia
-     //constante a ese tipo.
-     const auto& idProductos = reg.getIdProductos();
-     const auto& cantidades = reg.getCantidades();
-     for (size_t i = 0; i < idProductos.size(); ++i)
+     cout << endl;
+     for (int i=0; i<100; i++)
      {
-        cout << "ID de producto: " << idProductos[i] << endl;
-        cout << "Cantidad: " << cantidades[i] << endl;
+       if (reg.getIdProducto(i) > 0)
+       {
+         cout << "ID Producto: " << reg.getIdProducto(i) << endl;
+         cout << "Cantidad: " << reg.getCantidad(i) << endl;
+         cout << endl;
+       }
      }
+
      cout << endl;
      cout << "-------------------------------" << endl;
    }
@@ -182,19 +188,6 @@ using namespace std;
      cin >> idEmpleado;
      reg.setIdEmpleado(idEmpleado);
 
-     while (true)
-     {
-       cout << "ID de producto (ingrese 0 para terminar): ";
-       cin >> idProducto;
-
-       if (idProducto == 0)
-       {
-         break;
-       }
-       cout << "Cantidad: ";
-       cin >> cantidadProducto;
-       reg.guardarCantidadesYidProductos(idProducto,cantidad);
-     }
 
 
      if (_archiVenta.modificar(reg, posicion))

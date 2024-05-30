@@ -17,16 +17,6 @@ VentaArchivo::VentaArchivo(const char *nombre)
    }
 
    bool escribio = fwrite(&reg, sizeof(Venta), 1,p);
-
-   // Guardar los vectores idProductos y cantidades
-    int size = reg.getIdProductos().size(); // Obtener el tamaño del vector idProductos
-    fwrite(&size, sizeof(int), 1, p); // Guardar el tamaño del vector
-    fwrite(reg.getIdProductos().data(), sizeof(int), size, p); // Guardar los ID de productos
-
-    size = reg.getCantidades().size(); // Obtener el tamaño del vector cantidades
-    fwrite(&size, sizeof(int), 1, p); // Guardar el tamaño del vector
-    fwrite(reg.getCantidades().data(), sizeof(int), size, p); // Guardar las cantidades
-
    fclose(p);
 
    return escribio;
@@ -63,21 +53,6 @@ VentaArchivo::VentaArchivo(const char *nombre)
     // Leer los datos de la venta principal
     Venta reg;
     fread(&reg, sizeof(Venta), 1, p);
-
-    // Leer los tamaños de los vectores idProductos y cantidades
-    int size_idProductos, size_cantidades;
-    fread(&size_idProductos, sizeof(int), 1, p);
-    fread(&size_cantidades, sizeof(int), 1, p);
-
-    // Leer los datos de los vectores idProductos y cantidades
-    vector<int> idProductos(size_idProductos); // Crear un vector temporal para ajustar su tamaño
-    fread(idProductos.data(), sizeof(int), size_idProductos, p); // Leer los ID de productos
-    reg.setIdProductos(idProductos); // Asignar el vector de ID de productos a la venta
-
-    vector<int> cantidades(size_cantidades); // Crear un vector temporal para ajustar su tamaño
-    fread(cantidades.data(), sizeof(int), size_cantidades, p); // Leer las cantidades
-    reg.setCantidades(cantidades); // Asignar el vector de cantidades a la venta
-
     fclose(p);
 
     return reg;
