@@ -11,8 +11,8 @@ using namespace std;
    VentaArchivo archiVenta("venta.dat");
    int numero;
    int idEmpleado;
-   int idProducto[100] = {};
-   int cantidad[100] = {};
+   int idProducto[10] = {};
+   int cantidad[10] = {};
    bool estado;
 
    cout << "ID de empleado: ";
@@ -62,7 +62,7 @@ using namespace std;
      cout << "Fecha de venta: " << reg.getFechaDeVenta().toString() << endl;
      cout << "Horario: " << reg.getHorario().toString() << endl;
      cout << endl;
-     for (int i=0; i<100; i++)
+     for (int i=0; i<10; i++)
      {
        if (reg.getIdProducto(i) > 0)
        {
@@ -172,8 +172,8 @@ using namespace std;
    cout << endl;
 
     int idEmpleado;
-    int idProducto[100] = {};
-    int cantidadP[100] = {};
+    int idProducto[10] = {};
+    int cantidadP[10] = {};
 
    if (respuesta == 1)
    {

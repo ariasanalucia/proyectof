@@ -24,7 +24,7 @@ void Venta::setIdEmpleado(int idEmpleado){_idEmpleado=idEmpleado;}
 void Venta::setFechaDeVenta(Fecha fechaDeVenta){_fechaDeVenta=fechaDeVenta;}
  void Venta::setIdProducto(int idProducto, int pos)
  {
-   for (int i=0; i<100; i++)
+   for (int i=0; i<10; i++)
    {
      if (pos == i)
      {
@@ -35,7 +35,7 @@ void Venta::setFechaDeVenta(Fecha fechaDeVenta){_fechaDeVenta=fechaDeVenta;}
 
  void Venta::setCantidad(int cantidad, int pos)
  {
-   for (int i=0; i<100; i++)
+   for (int i=0; i<10; i++)
    {
      if (pos == i)
      {
@@ -53,7 +53,7 @@ Fecha Venta::getFechaDeVenta(){return _fechaDeVenta;}
 Hora Venta::getHorario(){return _horario;}
 int Venta::getIdProducto(int pos)
  {
-   for (int i=0; i<100; i++)
+   for (int i=0; i<10; i++)
    {
      if (pos == i)
      {
@@ -63,7 +63,7 @@ int Venta::getIdProducto(int pos)
  }
 int Venta::getCantidad(int pos)
  {
-   for (int i=0; i<100; i++)
+   for (int i=0; i<10; i++)
    {
      if (pos == i)
      {

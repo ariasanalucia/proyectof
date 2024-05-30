@@ -343,12 +343,12 @@
 	"ventaArchivo.h"
 	"venta.h"
 
-1717104120 source:c:\users\usuario\documents\github\proyectof\venta.cpp
+1717106610 source:c:\users\usuario\documents\github\proyectof\venta.cpp
 	<iostream>
 	"venta.h"
 	"funcionesGlobales.h"
 
-1717098119 c:\users\usuario\documents\github\proyectof\venta.h
+1717106610 c:\users\usuario\documents\github\proyectof\venta.h
 	"fecha.h"
 	"hora.h"
 	<vector>
@@ -357,7 +357,7 @@
 	<cstring>
 	"venta.h"
 
-1717103183 source:c:\users\usuario\documents\github\proyectof\ventamanager.cpp
+1717106610 source:c:\users\usuario\documents\github\proyectof\ventamanager.cpp
 	<iostream>
 	"ventaManager.h"
 	"funcionesGlobales.h"

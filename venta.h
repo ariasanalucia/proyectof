@@ -11,8 +11,8 @@ using namespace std;
     Fecha _fechaDeVenta;
     int _idEmpleado;
     Hora _horario;
-    int _idProducto[100] = {};
-    int _cantidad[100] = {};
+    int _idProducto[10] = {};
+    int _cantidad[10] = {};
     bool _estado;
 
    public:
