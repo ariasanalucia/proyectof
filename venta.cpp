@@ -72,3 +72,4 @@ int Venta::getCantidad(int pos)
    }
  }
 bool Venta::getEstado(){return _estado;}
+
