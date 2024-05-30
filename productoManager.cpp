@@ -357,12 +357,10 @@ using namespace std;
     cin>>idProducto;
     cout<<"ingrese la cantidad de dicho producto que desea:";
     cin>>cantStockSolicitada;
-    productos = archiProducto.leer(idProducto);
+    productos = archiProducto.leer(idProducto-1);
+    cout<<"el stock anterior es:"<<productos.getId()<<endl;
     productos.setStock(productos.getStock() + cantStockSolicitada);
-    cout<<productos.getStock();
-    fseek(f_leer_producto,sizeof(Producto)*(idProducto),0);
-    archiProducto.guardarArchivo(productos);
-    cout<<productos.getStock();
+    _archivo.modificar(productos,idProducto-1);
     system("pause");
     fclose(f_leer_producto);
 }
