@@ -179,6 +179,8 @@ using namespace std;
    {
      cout << "INGRESE NUEVAMENTE LOS CAMPOS DEL PRODUCTO A MODIFICAR..." << endl;
 
+     reg.setNumero(numero);
+
      cout << "ID de empleado: ";
      cin >> idEmpleado;
      reg.setIdEmpleado(idEmpleado);

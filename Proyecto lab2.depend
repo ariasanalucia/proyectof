@@ -357,7 +357,7 @@
 	<cstring>
 	"venta.h"
 
-1717102237 source:c:\users\usuario\documents\github\proyectof\ventamanager.cpp
+1717103183 source:c:\users\usuario\documents\github\proyectof\ventamanager.cpp
 	<iostream>
 	"ventaManager.h"
 	"funcionesGlobales.h"
