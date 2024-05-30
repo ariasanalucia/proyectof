@@ -93,7 +93,7 @@
 	"proveedorManager.h"
 	"informeRecaudacion.h"
 
-1717029089 source:c:\users\usuario\documents\github\proyectof\productomanager.cpp
+1717099187 source:c:\users\usuario\documents\github\proyectof\productomanager.cpp
 	<iostream>
 	<cstring>
 	<ctype.h>
@@ -357,7 +357,7 @@
 	<cstring>
 	"venta.h"
 
-1717098119 source:c:\users\usuario\documents\github\proyectof\ventamanager.cpp
+1717099070 source:c:\users\usuario\documents\github\proyectof\ventamanager.cpp
 	<iostream>
 	"ventaManager.h"
 	"funcionesGlobales.h"
