@@ -26,6 +26,7 @@ using namespace std;
 
    aux.setHora(Hora());
 
+   cout << endl;
    int contador = 0;
    cout << "ID de producto: ";
    cin >> idProducto[contador];
@@ -141,21 +142,18 @@ using namespace std;
  {
    Venta reg;
    int numero;
-   Fecha fechaIngresante;
-   cout << "Ingresar el Numero de venta: ";
-   cin >> numero;
-   cout << endl;
-   cout << "Ingrese la fecha de venta: " << endl;
-   fechaIngresante.Cargar();
-   cout << endl;
+
    bool activo = false;
+
+   cout << "Ingrese el numero de la venta a modificar: ";
+   cin >> numero;
    int posicion;
 
    int cantidad = _archiVenta.contarRegistros();
    for (int i=0; i<cantidad; i++)
    {
      reg = _archiVenta.leer(i);
-     if (reg.getNumero() == numero && reg.getFechaDeVenta().toString() == fechaIngresante.toString())
+     if (reg.getNumero() == numero)
      {
        activo = true;
        Mostrar(reg);
@@ -177,8 +175,8 @@ using namespace std;
    cout << endl;
 
     int idEmpleado;
-    int idProducto;
-    int cantidadProducto;
+    int idProducto[100] = {};
+    int cantidadP[100] = {};
 
    if (respuesta == 1)
    {
@@ -188,7 +186,26 @@ using namespace std;
      cin >> idEmpleado;
      reg.setIdEmpleado(idEmpleado);
 
+     int contador = 0;
 
+     cout << endl;
+     cout << "ID de producto: ";
+     cin >> idProducto[contador];
+     reg.setIdProducto(idProducto[contador], contador);
+
+     while (idProducto[contador] > 0)
+     {
+       cout << "Cantidad: ";
+       cin >> cantidadP[contador];
+       reg.setCantidad(cantidadP[contador], contador);
+       cout << endl;
+
+       contador++;
+
+       cout << "ID de producto: ";
+       cin >> idProducto[contador];
+       reg.setIdProducto(idProducto[contador], contador);
+     }
 
      if (_archiVenta.modificar(reg, posicion))
      {
