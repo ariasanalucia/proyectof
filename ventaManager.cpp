@@ -57,8 +57,8 @@ using namespace std;
  {
    if (reg.getEstado())
    {
-     cout << "ID de empleado: " << reg.getIdEmpleado() << endl;
      cout << "Numero de venta: " << reg.getNumero() << endl;
+     cout << "ID de empleado: " << reg.getIdEmpleado() << endl;
      cout << "Fecha de venta: " << reg.getFechaDeVenta().toString() << endl;
      cout << "Horario: " << reg.getHorario().toString() << endl;
      cout << endl;
@@ -95,9 +95,6 @@ using namespace std;
    cout << "Ingresar el Numero de venta: ";
    cin >> numero;
    cout << endl;
-   cout << "Ingrese la fecha de venta: " << endl;
-   fechaIngresante.Cargar();
-   cout << endl;
    bool activo = false;
    int posicion;
 
@@ -105,7 +102,7 @@ using namespace std;
    for (int i=0; i<cantidad; i++)
    {
      reg = _archiVenta.leer(i);
-     if (reg.getNumero() == numero && reg.getFechaDeVenta().toString() == fechaIngresante.toString())
+     if (reg.getNumero() == numero)
      {
        activo = true;
        Mostrar(reg);
