@@ -9,13 +9,13 @@ using namespace std;
  //CARGAR
  Empleado EmpleadoManager::Cargar()
  {
-    Empleado aux;
-    EmpleadoArchivo obj_archivo_empleado("empleado.dat");
-    int dni;
-    char nombre[30], apellido[30], telefono[30];
+   Empleado aux;
+   EmpleadoArchivo archiEmpleado("empleado.dat");
+   int dni;
+   char nombre[30], apellido[30], telefono[30];
 
-    dni = obj_archivo_empleado.contarRegistros()+1;
-    aux.setDni(dni);
+   dni = archiEmpleado.contarRegistros()+1;
+   aux.setDni(dni);
 
    cout << "Nombre: ";
    cargarCadena(nombre, 29);

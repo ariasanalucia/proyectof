@@ -21,8 +21,8 @@ class Empleado{
         void setEstado(bool estado);
         //GETS
         int getDni();
-        const char *getNombre(){return _nombre;}
-        const char *getApellido(){return _apellido;}
-        const char *getTelefono(){return _telefono;}
+        const char *getNombre();
+        const char *getApellido();
+        const char *getTelefono();
         bool getEstado();
 };

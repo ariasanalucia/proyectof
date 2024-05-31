@@ -3,20 +3,23 @@ using namespace std;
 #include "venta.h"
 #include "funcionesGlobales.h"
 
- Venta::Venta(int numero, int idEmpleado, Fecha fechaDeVenta,Hora horario, int idProducto, int cantidad)
+ Venta::Venta(int numero, int idEmpleado, Fecha fechaDeVenta,Hora horario, int idProducto, int cantidad, bool estado, float importe)
  {
-   _numero=numero;
-   _idEmpleado=idEmpleado;
-   _fechaDeVenta=fechaDeVenta;
+   _numero = numero;
+   _idEmpleado = idEmpleado;
+   _fechaDeVenta = fechaDeVenta;
    _horario = horario;
+   _estado = true;
+   _importe = importe;
  }
  Venta::Venta()
  {
-   _numero=0;
-   _idEmpleado=0;
-   _fechaDeVenta=Fecha();
+   _numero = 0;
+   _idEmpleado = 0;
+   _fechaDeVenta = Fecha();
    _horario = Hora();
-
+   _estado = true;
+   _importe = 0;
  }
 //SETS
 void Venta::setNumero(int numero){_numero=numero;}
@@ -45,6 +48,7 @@ void Venta::setCantidad(int cantidad, int pos)
    }
  }
 void Venta::setEstado(bool estado){_estado=estado;}
+void Venta::setImporte(float importe){_importe=importe;}
 
 //GETS
 int Venta::getNumero(){return _numero;}

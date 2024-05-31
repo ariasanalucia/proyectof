@@ -14,10 +14,12 @@ using namespace std;
     int _idProducto[10] = {};
     int _cantidad[10] = {};
     bool _estado;
+    float _importe;
 
    public:
-    Venta(int numero, int idEmpleado, Fecha fechaDeVenta,Hora horario, int idProducuto, int cantidad);
+    Venta(int numero, int idEmpleado, Fecha fechaDeVenta,Hora horario, int idProducuto, int cantidad, bool estado, float importe);
     Venta();
+
     //SETS
     void setNumero(int numero);
     void setIdEmpleado(int idEmpleado);
@@ -26,7 +28,7 @@ using namespace std;
     void setIdProducto(int idProducto, int pos);
     void setCantidad(int cantidad, int pos);
     void setEstado(bool estado);
-
+    void setImporte(float importe);
 
     //GETS
     int getNumero();
@@ -36,6 +38,5 @@ using namespace std;
     int getIdProducto(int pos);
     int getCantidad(int pos);
     bool getEstado();
-
  };
 

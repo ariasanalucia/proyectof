@@ -15,10 +15,10 @@ using namespace std;
     bool _estado;
     char _presentacion[30];
     int _cantidad;
-    float _importe;
+    float _precioUnitario;
 
    public:
-    Producto(int id,const char *marca, const char *droga, const char *categoria, int Proveedor, Fecha vencimiento, bool estado, const char *presentacion, int cantidad, float importe);
+    Producto(int id,const char *marca, const char *droga, const char *categoria, int Proveedor, Fecha vencimiento, bool estado, const char *presentacion, int cantidad, float precioUnitario);
     Producto();
     //SETS
     void setId(int id);
@@ -31,7 +31,7 @@ using namespace std;
     void setEstado(bool estado);
     void setPresentacion(const char *presentacion);
     void setCantidad(int cantidad);
-    void setImporte(float importe);
+    void setPrecioUnitario(float precioUnitario);
     //GETS
     int getId();
     const char *getMarca(){return _marca;}
@@ -43,5 +43,5 @@ using namespace std;
     bool getEstado();
     const char *getPresentacion(){return _presentacion;}
     int getCantidad();
-    float getImporte();
+    float getPrecioUnitario();
  };

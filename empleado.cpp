@@ -10,6 +10,7 @@ Empleado::Empleado(int dni, const char *nombre, const char *apellido, const char
     strcpy(_apellido,apellido);
     strcpy(_telefono,telefono);
     _estado = true;
+   //Nro de empleado? 
 }
 
 Empleado::Empleado(){
@@ -29,4 +30,7 @@ void Empleado::setEstado(bool estado){_estado = estado;}
 
 //GETS
 int Empleado::getDni(){return _dni;}
+const char* Empleado::getNombre(){return _nombre;}
+const char* Empleado::getApellido(){return _apellido;}
+const char* Empleado::getTelefono(){return _telefono;}
 bool Empleado::getEstado(){return _estado;}

@@ -161,10 +161,10 @@ void ProveedorManager::menuProveedor()
       clear();
       cout << "   PROVEEDORES" << endl;
       cout << "----------------" << endl;
-      cout << "1 - ALTA PROVEEDOR" << endl;
-      cout << "2 - BAJA PROVEEDOR" << endl;
-      cout << "3 - LISTAR PROVEEDORES" << endl;
-      cout << "4 - MODIFICAR REGISTRO DE PROVEEDOR" << endl;
+      cout << "1 - ALTA" << endl;
+      cout << "2 - BAJA" << endl;
+      cout << "3 - LISTAR" << endl;
+      cout << "4 - MODIFICAR" << endl;
       cout << "5 - CONSULTAS" << endl;
       cout << endl;
       cout << "0 - PARA SALIR" << endl;

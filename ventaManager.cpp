@@ -9,16 +9,19 @@ using namespace std;
  {
    Venta aux;
    VentaArchivo archiVenta("venta.dat");
-   int numero;
-   int idEmpleado;
+   Producto prod;
+   ProductoArchivo archiProducto("producto.dat");
+   int numero, idEmpleado;
    int idProducto[10] = {};
    int cantidad[10] = {};
    bool estado;
+   float importe;
 
    cout << "ID de empleado: ";
    cin >> idEmpleado;
    aux.setIdEmpleado(idEmpleado);
-   cout << "--------------------" << endl;
+   cout << "(Ingrese 0 para detener la carga)" << endl;
+   cout << "------------------------------------" << endl;
 
    numero = archiVenta.contarRegistros()+1;
    aux.setNumero(numero);
@@ -28,20 +31,35 @@ using namespace std;
    aux.setHora(Hora());
 
    int contador = 0;
-   while (contador < 10) //Carga productos hasta recibir idProducto<=0 o si contador>=10
+   while (contador < 10) //Carga productos hasta recibir 0 
    {
-     cout << "Cantidad: ";
-     cin >> cantidad[contador];
-     aux.setCantidad(cantidad[contador], contador);
-
-
      cout << "ID de producto: ";
      cin >> idProducto[contador];
      if (idProducto[contador]<=0) {break;}
      aux.setIdProducto(idProducto[contador], contador);
 
+     cout << "Cantidad: ";
+     cin >> cantidad[contador];
+     if (cantidad[contador]<=0) {break;}
+     aux.setCantidad(cantidad[contador], contador);
+
+     //Calculo del importe:
+     for (int i = 0; i < archiProducto.contarRegistros(); i++) {
+       prod=archiProducto.leer(i);
+       if (prod.getId()==idProducto[contador]) { 
+         importe += prod.getPrecioUnitario()*cantidad[contador];
+         break;
+       }
+     }
+
      contador++;
    }
+   
+   cout << "------------------------------------" << endl;
+   cout << "TOTAL: $" << importe;
+   pausa();
+
+   aux.setImporte(importe);
 
    estado = true;
    aux.setEstado(estado);

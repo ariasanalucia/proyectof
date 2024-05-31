@@ -3,32 +3,31 @@ using namespace std;
 #include <cstring>
 #include <ctype.h>
 #include "funcionesGlobales.h"
-#include "producto.h"
 #include "productoManager.h"
 #include "consultas.h"
 
  //CARGAR
  Producto ProductoManager::Cargar()
  {
-    Producto aux;
-    ProductoArchivo obj_archivo_producto("producto.dat");
-    int id, Proveedor, stock, cantidad;
-    char marca[30], droga[30], categoria[30], presentacion[30];
-    Fecha venci;
-    float importe;
+   Producto aux;
+   ProductoArchivo archiProducto("producto.dat");
+   int id, Proveedor, stock, cantidad;
+   char marca[30], droga[30], categoria[30], presentacion[30];
+   Fecha venci;
+   float precioUnitario;
 
-    id = obj_archivo_producto.contarRegistros()+1;
-    aux.setId(id);
+   id = archiProducto.contarRegistros()+1;
+   aux.setId(id);
 
-   cout << "Marca del medicameto: ";
+   cout << "Marca: ";
    cargarCadena(marca, 29);
    aux.setMarca(marca);
 
-   cout << "Droga del medicamento: ";
+   cout << "Droga: ";
    cargarCadena(droga, 29);
    aux.setDroga(droga);
 
-   cout << "Categoria de medicamento: ";
+   cout << "Categoria: ";
    cargarCadena(categoria, 29);
    aux.setCategoria(categoria);
 
@@ -38,7 +37,7 @@ using namespace std;
    validar_proveedor(&Proveedor);
    aux.setProveedor(Proveedor);
 
-   cout << "Fecha de vencimiento: " << endl;
+   cout << "Fecha de vto: " << endl;
    venci.Cargar();
    aux.setVencimiento(venci);
 
@@ -50,9 +49,9 @@ using namespace std;
    cin >> cantidad;
    aux.setCantidad(cantidad);
 
-   cout << "Importe: ";
-   cin >> importe;
-   aux.setImporte(importe);
+   cout << "Precio: ";
+   cin >> precioUnitario;
+   aux.setPrecioUnitario(precioUnitario);
 
    stock += cantidad;
    aux.setStock(stock);
@@ -73,7 +72,7 @@ using namespace std;
      cout << "Fecha de vencimiento: " << producto.getVenciemiento().toString() << endl;
      cout << "Presentacion: " << producto.getPresentacion() << endl;
      cout << "Cantidad que ingresa: " << producto.getCantidad() << endl;
-     cout << "Importe: " << producto.getImporte() << endl;
+     cout << "Precio: " << producto.getPrecioUnitario() << endl;
      cout << endl;
      cout << "-------------------------------" << endl;
    }
@@ -188,8 +187,8 @@ using namespace std;
 
    int _id,_proveedor, _stock, _cantidad;
    char _marca[30], _droga[30], _categoria[30], _presentacion[30];
-   Fecha _venci;
-   float _importe;
+   Fecha _vencimiento;
+   float _precioUnitario;
 
    if (respuesta == 1)
    {
@@ -216,8 +215,8 @@ using namespace std;
      producto.setProveedor(_proveedor);
 
      cout << "Fecha de vencimiento: " << endl;
-     _venci.Cargar();
-     producto.setVencimiento(_venci);
+     _vencimiento.Cargar();
+     producto.setVencimiento(_vencimiento);
 
      cout << "Presentacion: ";
      cargarCadena(_presentacion,29);
@@ -227,9 +226,9 @@ using namespace std;
      cin >> _cantidad;
      producto.setCantidad(_cantidad);
 
-     cout << "Importe: ";
-     cin >> _importe;
-     producto.setImporte(_importe);
+     cout << "Precio: ";
+     cin >> _precioUnitario;
+     producto.setPrecioUnitario(_precioUnitario);
 
      _stock += cantidad;
      producto.setStock(_stock);
@@ -314,9 +313,9 @@ using namespace std;
     }
     if (!drogaActiva)
     {
-      cout << "NO SE ENCONTRO NINGUNA DROGA CON ESE NOMBRE" << endl;
+      cout << "ESA DROGA NO SE ENCUENTRA REGISTRADA" << endl;
     }
-    system("pause");
+    pausa();
  }
 
  void ProductoManager::mostrarPorCategoria(){
@@ -337,31 +336,36 @@ using namespace std;
     }
     if (!categoriaActiva)
     {
-      cout << "NO SE ENCONTRO NINGUNA CATEGORIA CON ESE NOMBRE" << endl;
+      cout << "ESA CATEGORIA NO SE ENCUENTRA REGISTRADA" << endl;
     }
  }
 
 
  void ProductoManager::solicitarProducto(){
+
     mostrarPorDroga();
+    
     ProductoArchivo archiProducto("producto.dat");
     Producto productos;
     int idProducto,cantStockSolicitada;
     FILE* f_leer_producto = fopen("producto.dat","rb+");
     if(f_leer_producto == NULL){
-        cout<<"no se pudo abrir el archivo";
+        cout<<"No se pudo abrir el archivo";
         fclose(f_leer_producto);
         return;
     }
+
     cout<<"INGRESE EL ID DEL PRODUCTO QUE QUIERE PEDIRLE AL PROVEEDOR:";
     cin>>idProducto;
-    cout<<"ingrese la cantidad de dicho producto que desea:";
+
+    cout<<"Ingrese la cantidad de dicho producto que desea:";
     cin>>cantStockSolicitada;
+
     productos = archiProducto.leer(idProducto-1);
-    cout<<"el stock anterior es:"<<productos.getId()<<endl;
+    cout<<"El stock anterior es:"<<productos.getId()<<endl;
     productos.setStock(productos.getStock() + cantStockSolicitada);
     _archivo.modificar(productos,idProducto-1);
-    system("pause");
+    pausa();
     fclose(f_leer_producto);
 }
 
@@ -373,10 +377,10 @@ using namespace std;
       clear();
       cout << "    PRODUCTOS" << endl;
       cout << "----------------" << endl;
-      cout << "1 - ALTA MEDICAMENTO" << endl;
-      cout << "2 - BAJA MEDICAMENTO" << endl;
-      cout << "3 - LISTAR MEDICAMENTOS A LA VENTA" << endl;
-      cout << "4 - MODIFICAR REGISTRO DE MEDICAMENTO" << endl;
+      cout << "1 - ALTA" << endl;
+      cout << "2 - BAJA" << endl;
+      cout << "3 - LISTAR" << endl;
+      cout << "4 - MODIFICAR" << endl;
       cout << "5 - SOLICITAR PRODUCTO" << endl;
       cout << "6 - CONSULTAS" << endl;
       cout << endl;

@@ -1,6 +1,8 @@
 #pragma once
 #include "ventaArchivo.h"
+#include "productoArchivo.h"
 #include "venta.h"
+#include "producto.h"
 
  class VentaManager
  {

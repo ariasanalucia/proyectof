@@ -5,7 +5,7 @@ using namespace std;
 #include "fecha.h"
 
 //CONSTRUCTOR CON PARAMETROS
- Producto::Producto(int id,const char *marca, const char *droga, const char *categoria, int Proveedor, Fecha vencimiento, bool estado, const char *presentacion, int cantidad, float importe)
+ Producto::Producto(int id,const char *marca, const char *droga, const char *categoria, int Proveedor, Fecha vencimiento, bool estado, const char *presentacion, int cantidad, float precioUnitario)
  {
    _id = id;
    strcpy(_marca,marca);
@@ -16,7 +16,7 @@ using namespace std;
    _estado = true;
    strcpy(_presentacion, presentacion);
    _cantidad = cantidad;
-   _importe = importe;
+   _precioUnitario = precioUnitario;
  }
 
 //CONSTRUCTOR SIN PARAMETROS
@@ -31,7 +31,7 @@ using namespace std;
    _estado = true;
    strcpy(_presentacion, "VACIO");
    _cantidad = 0;
-   _importe = 0;
+   _precioUnitario = 0;
  }
 
 //SETS
@@ -45,11 +45,11 @@ using namespace std;
  void Producto::setEstado(bool estado){_estado = estado;}
  void Producto::setPresentacion(const char *presentacion){strcpy(_presentacion,presentacion);}
  void Producto::setCantidad(int cantidad){_cantidad = cantidad;}
- void Producto::setImporte(float importe){_importe = importe;}
+ void Producto::setPrecioUnitario(float precioUnitario){_precioUnitario = precioUnitario;}
  //GETS
  int Producto::getId(){return _id;}
  int Producto::getProveedor(){return _proveedor;}
  int Producto::getStock(){return _stock;}
  bool Producto::getEstado(){return _estado;}
  int Producto::getCantidad(){return _cantidad;}
- float Producto::getImporte(){return _importe;}
+ float Producto::getPrecioUnitario(){return _precioUnitario;}
