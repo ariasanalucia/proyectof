@@ -22,7 +22,8 @@ using namespace std;
 void Venta::setNumero(int numero){_numero=numero;}
 void Venta::setIdEmpleado(int idEmpleado){_idEmpleado=idEmpleado;}
 void Venta::setFechaDeVenta(Fecha fechaDeVenta){_fechaDeVenta=fechaDeVenta;}
- void Venta::setIdProducto(int idProducto, int pos)
+void Venta::setHora(Hora horario){_horario = horario;}
+void Venta::setIdProducto(int idProducto, int pos)
  {
    for (int i=0; i<10; i++)
    {
@@ -33,7 +34,7 @@ void Venta::setFechaDeVenta(Fecha fechaDeVenta){_fechaDeVenta=fechaDeVenta;}
    }
  }
 
- void Venta::setCantidad(int cantidad, int pos)
+void Venta::setCantidad(int cantidad, int pos)
  {
    for (int i=0; i<10; i++)
    {
@@ -43,14 +44,13 @@ void Venta::setFechaDeVenta(Fecha fechaDeVenta){_fechaDeVenta=fechaDeVenta;}
      }
    }
  }
-void Venta::setHora(Hora horario){_horario = horario;}
 void Venta::setEstado(bool estado){_estado=estado;}
 
 //GETS
 int Venta::getNumero(){return _numero;}
 int Venta::getIdEmpleado(){return _idEmpleado;}
 Fecha Venta::getFechaDeVenta(){return _fechaDeVenta;}
-Hora Venta::getHorario(){return _horario;}
+Hora Venta::getHora(){return _horario;}
 int Venta::getIdProducto(int pos)
  {
    for (int i=0; i<10; i++)
@@ -60,6 +60,7 @@ int Venta::getIdProducto(int pos)
        return _idProducto[i];
      }
    }
+  return -1;
  }
 int Venta::getCantidad(int pos)
  {
@@ -70,7 +71,6 @@ int Venta::getCantidad(int pos)
        return _cantidad[i];
      }
    }
+  return -1;
  }
 bool Venta::getEstado(){return _estado;}
-
-

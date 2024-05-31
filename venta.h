@@ -32,7 +32,7 @@ using namespace std;
     int getNumero();
     int getIdEmpleado();
     Fecha getFechaDeVenta();
-    Hora getHorario();
+    Hora getHora();
     int getIdProducto(int pos);
     int getCantidad(int pos);
     bool getEstado();

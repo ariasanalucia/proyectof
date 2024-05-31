@@ -18,6 +18,7 @@ using namespace std;
    cout << "ID de empleado: ";
    cin >> idEmpleado;
    aux.setIdEmpleado(idEmpleado);
+   cout << "--------------------" << endl;
 
    numero = archiVenta.contarRegistros()+1;
    aux.setNumero(numero);
@@ -26,24 +27,20 @@ using namespace std;
 
    aux.setHora(Hora());
 
-   cout << endl;
    int contador = 0;
-   cout << "ID de producto: ";
-   cin >> idProducto[contador];
-   aux.setIdProducto(idProducto[contador], contador);
-
-   while (idProducto[contador] > 0)
+   while (contador < 10) //Carga productos hasta recibir idProducto<=0 o si contador>=10
    {
      cout << "Cantidad: ";
      cin >> cantidad[contador];
      aux.setCantidad(cantidad[contador], contador);
-     cout << endl;
 
-     contador++;
 
      cout << "ID de producto: ";
      cin >> idProducto[contador];
+     if (idProducto[contador]<=0) {break;}
      aux.setIdProducto(idProducto[contador], contador);
+
+     contador++;
    }
 
    estado = true;
@@ -59,8 +56,8 @@ using namespace std;
    {
      cout << "Numero de venta: " << reg.getNumero() << endl;
      cout << "ID de empleado: " << reg.getIdEmpleado() << endl;
-     cout << "Fecha de venta: " << reg.getFechaDeVenta().toString() << endl;
-     cout << "Horario: " << reg.getHorario().toString() << endl;
+     cout << "Fecha: " << reg.getFechaDeVenta().toString() << endl;
+     cout << "Hora: " << reg.getHora().toString() << endl;
      cout << endl;
      for (int i=0; i<10; i++)
      {
@@ -71,8 +68,6 @@ using namespace std;
          cout << endl;
        }
      }
-
-     cout << endl;
      cout << "-------------------------------" << endl;
    }
  }
