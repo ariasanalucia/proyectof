@@ -65,17 +65,18 @@
 	<iostream>
 	"app.h"
 
-1717029089 c:\users\usuario\documents\github\proyectof\productomanager.h
+1717201322 c:\users\usuario\documents\github\proyectof\productomanager.h
 	"productoArchivo.h"
+	"producto.h"
 
 1716390602 c:\users\usuario\documents\github\proyectof\productoarchivo.h
 	"producto.h"
 	<cstring>
 
-1716383034 c:\users\usuario\documents\github\proyectof\producto.h
+1717201322 c:\users\usuario\documents\github\proyectof\producto.h
 	"fecha.h"
 
-1716383034 source:c:\users\usuario\documents\github\proyectof\producto.cpp
+1717201322 source:c:\users\usuario\documents\github\proyectof\producto.cpp
 	<iostream>
 	"producto.h"
 	"funcionesGlobales.h"
@@ -93,12 +94,11 @@
 	"proveedorManager.h"
 	"informeRecaudacion.h"
 
-1717099187 source:c:\users\usuario\documents\github\proyectof\productomanager.cpp
+1717201322 source:c:\users\usuario\documents\github\proyectof\productomanager.cpp
 	<iostream>
 	<cstring>
 	<ctype.h>
 	"funcionesGlobales.h"
-	"producto.h"
 	"productoManager.h"
 	"consultas.h"
 
@@ -320,15 +320,15 @@
 	"empleado.h"
 	<cstring>
 
-1715955140 c:\users\usuario\documents\github\proyectof\empleado.h
+1717201322 c:\users\usuario\documents\github\proyectof\empleado.h
 	<cstring>
 
-1715955140 source:c:\users\usuario\documents\github\proyectof\empleado.cpp
+1717201322 source:c:\users\usuario\documents\github\proyectof\empleado.cpp
 	<iostream>
 	"empleado.h"
 	"funcionesGlobales.h"
 
-1716499734 source:c:\users\usuario\documents\github\proyectof\empleadomanager.cpp
+1717201322 source:c:\users\usuario\documents\github\proyectof\empleadomanager.cpp
 	<iostream>
 	<cstring>
 	"funcionesGlobales.h"
@@ -339,16 +339,18 @@
 1716390602 c:\users\usuario\documents\github\proyectof\empleadomanager.h
 	"empleadoArchivo.h"
 
-1716502197 c:\users\usuario\documents\github\proyectof\ventamanager.h
+1717201322 c:\users\usuario\documents\github\proyectof\ventamanager.h
 	"ventaArchivo.h"
+	"productoArchivo.h"
 	"venta.h"
+	"producto.h"
 
-1717106610 source:c:\users\usuario\documents\github\proyectof\venta.cpp
+1717201322 source:c:\users\usuario\documents\github\proyectof\venta.cpp
 	<iostream>
 	"venta.h"
 	"funcionesGlobales.h"
 
-1717106610 c:\users\usuario\documents\github\proyectof\venta.h
+1717201322 c:\users\usuario\documents\github\proyectof\venta.h
 	"fecha.h"
 	"hora.h"
 	<vector>
@@ -357,13 +359,13 @@
 	<cstring>
 	"venta.h"
 
-1717106610 source:c:\users\usuario\documents\github\proyectof\ventamanager.cpp
+1717201322 source:c:\users\usuario\documents\github\proyectof\ventamanager.cpp
 	<iostream>
 	"ventaManager.h"
 	"funcionesGlobales.h"
 	"consultasVentas.h"
 
-1716762785 source:c:\users\usuario\documents\github\proyectof\proveedormanager.cpp
+1717201322 source:c:\users\usuario\documents\github\proyectof\proveedormanager.cpp
 	<iostream>
 	"proveedorManager.h"
 	"funcionesGlobales.h"
