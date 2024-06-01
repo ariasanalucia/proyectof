@@ -49,7 +49,7 @@ using namespace std;
    cin >> cantidad;
    aux.setCantidad(cantidad);
 
-   cout << "Precio: ";
+   cout << "Precio: $";
    cin >> precioUnitario;
    aux.setPrecioUnitario(precioUnitario);
 
@@ -65,14 +65,14 @@ using namespace std;
    if (producto.getEstado())
    {
      cout << "ID de medicamento: " << producto.getId() << endl;
-     cout << "Marca del medicamento: " << producto.getMarca() << endl;
-     cout << "Droga del medicamento :" << producto.getDroga() << endl;
-     cout << "Categoria de medicamento: " << producto.getCategoria() << endl;
+     cout << "Marca: " << producto.getMarca() << endl;
+     cout << "Droga:" << producto.getDroga() << endl;
+     cout << "Categoria: " << producto.getCategoria() << endl;
      cout << "Proveedor(1 - Disval / 2 - Suizo): " << producto.getProveedor() << endl;
-     cout << "Fecha de vencimiento: " << producto.getVenciemiento().toString() << endl;
+     cout << "Fecha de vto: " << producto.getVenciemiento().toString() << endl;
      cout << "Presentacion: " << producto.getPresentacion() << endl;
      cout << "Cantidad que ingresa: " << producto.getCantidad() << endl;
-     cout << "Precio: " << producto.getPrecioUnitario() << endl;
+     cout << "Precio: $" << producto.getPrecioUnitario() << endl;
      cout << endl;
      cout << "-------------------------------" << endl;
    }
@@ -140,7 +140,9 @@ using namespace std;
      return;
    }
    int respuesta;
-   cout << "¿ESTA SEGURO QUE QUIERE ELIMINAR EL REGISTRO?(1 - SI / 0 - NO)" << endl;
+   cout << "¿ESTA SEGURO QUE QUIERE ELIMINAR EL REGISTRO?" << endl;
+   cout << "(1 - SI / 0 - NO)" << endl;
+   cout << "RESPUESTA: ";
    cin >> respuesta;
    cout << endl;
 
@@ -198,23 +200,24 @@ using namespace std;
      cin >> _id;
      producto.setId(_id);
 
-     cout << "Marca del medicamento: ";
+     cout << "Marca: ";
      cargarCadena(_marca, 29);
      producto.setMarca(_marca);
 
-     cout << "Droga del medicamento: ";
+     cout << "Droga: ";
      cargarCadena(_droga, 29);
      producto.setDroga(_droga);
 
-     cout << "Categoria de medicamento: ";
+     cout << "Categoria: ";
      cargarCadena(_categoria, 29);
      producto.setCategoria(_categoria);
 
-     cout << "Proveedor(1 - Disval / 2 - Suizo): ";
+     cout << "Proveedor:" << endl;
+     cout << "(1 - Disval / 2 - Suizo)";
      cin >> _proveedor;
      producto.setProveedor(_proveedor);
 
-     cout << "Fecha de vencimiento: " << endl;
+     cout << "Fecha de vto: " << endl;
      _vencimiento.Cargar();
      producto.setVencimiento(_vencimiento);
 
