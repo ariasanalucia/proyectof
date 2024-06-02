@@ -347,7 +347,7 @@ using namespace std;
  void ProductoManager::solicitarProducto(){
 
     mostrarPorDroga();
-    
+
     ProductoArchivo archiProducto("producto.dat");
     Producto productos;
     int idProducto,cantStockSolicitada;

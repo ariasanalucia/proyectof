@@ -76,7 +76,7 @@
 1717201322 c:\users\usuario\documents\github\proyectof\producto.h
 	"fecha.h"
 
-1717201322 source:c:\users\usuario\documents\github\proyectof\producto.cpp
+1717369055 source:c:\users\usuario\documents\github\proyectof\producto.cpp
 	<iostream>
 	"producto.h"
 	"funcionesGlobales.h"
@@ -94,7 +94,7 @@
 	"proveedorManager.h"
 	"informeRecaudacion.h"
 
-1717201322 source:c:\users\usuario\documents\github\proyectof\productomanager.cpp
+1717368909 source:c:\users\usuario\documents\github\proyectof\productomanager.cpp
 	<iostream>
 	<cstring>
 	<ctype.h>
