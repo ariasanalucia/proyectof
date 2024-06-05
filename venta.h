@@ -8,7 +8,7 @@ using namespace std;
  {
    private:
     int _numero;
-    Fecha _fechaDeVenta;
+    Fecha _fecha;
     int _idEmpleado;
     Hora _horario;
     int _idProducto[10] = {};
@@ -17,13 +17,13 @@ using namespace std;
     float _importe;
 
    public:
-    Venta(int numero, int idEmpleado, Fecha fechaDeVenta,Hora horario, int idProducuto, int cantidad, bool estado, float importe);
+    Venta(int numero, int idEmpleado, Fecha fecha,Hora horario, int idProducuto, int cantidad, bool estado, float importe);
     Venta();
 
     //SETS
     void setNumero(int numero);
     void setIdEmpleado(int idEmpleado);
-    void setFechaDeVenta(Fecha fechaDeVenta);
+    void setFecha(Fecha fecha);
     void setHora(Hora horario);
     void setIdProducto(int idProducto, int pos);
     void setCantidad(int cantidad, int pos);
@@ -33,10 +33,11 @@ using namespace std;
     //GETS
     int getNumero();
     int getIdEmpleado();
-    Fecha getFechaDeVenta();
+    Fecha getFecha();
     Hora getHora();
     int getIdProducto(int pos);
     int getCantidad(int pos);
     bool getEstado();
+    float getImporte();
  };
 

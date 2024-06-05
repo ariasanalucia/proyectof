@@ -26,7 +26,7 @@ using namespace std;
    numero = archiVenta.contarRegistros()+1;
    aux.setNumero(numero);
 
-   aux.setFechaDeVenta(Fecha());
+   aux.setFecha(Fecha());
 
    aux.setHora(Hora());
 
@@ -74,7 +74,7 @@ using namespace std;
    {
      cout << "Numero de venta: " << reg.getNumero() << endl;
      cout << "ID de empleado: " << reg.getIdEmpleado() << endl;
-     cout << "Fecha: " << reg.getFechaDeVenta().toString() << endl;
+     cout << "Fecha: " << reg.getFecha().toString() << endl;
      cout << "Hora: " << reg.getHora().toString() << endl;
      cout << endl;
      for (int i=0; i<10; i++)
@@ -104,7 +104,7 @@ using namespace std;
  {
    Venta reg;
    int numero;
-    Fecha fechaIngresante;
+   Fecha fechaIngresante;
    cout << "Ingresar el Numero de venta: ";
    cin >> numero;
    cout << endl;
@@ -247,7 +247,7 @@ using namespace std;
    for(int i=0; i<cantidadDeReg; i++)
    {
      reg = _archiVenta.leer(i);
-     if (reg.getEstado() && reg.getFechaDeVenta().toString() == fechaAbuscar.toString())
+     if (reg.getEstado() && reg.getFecha().toString() == fechaAbuscar.toString())
      {
        activo = true;
 

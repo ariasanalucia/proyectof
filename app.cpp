@@ -48,7 +48,7 @@ using namespace std;
         break;
         case 5:
         {
-          //subMenuInforme.menuInforme();
+          subMenuInforme.menuInformeRecaudacion();
         }
         break;
        case 0:
