@@ -360,15 +360,18 @@ using namespace std;
 
     cout<<"INGRESE EL ID DEL PRODUCTO QUE QUIERE PEDIRLE AL PROVEEDOR:";
     cin>>idProducto;
-
-    cout<<"Ingrese la cantidad de dicho producto que desea:";
-    cin>>cantStockSolicitada;
-
-    productos = archiProducto.leer(idProducto-1);
-    cout<<"El stock anterior es:"<<productos.getId()<<endl;
-    productos.setStock(productos.getStock() + cantStockSolicitada);
-    _archivo.modificar(productos,idProducto-1);
-    pausa();
+    if(idProducto <= archiProducto.contarRegistros()){
+        cout<<"Ingrese la cantidad de dicho producto que desea:";
+        cin>>cantStockSolicitada;
+        productos = archiProducto.leer(idProducto-1);
+        cout<<"El stock anterior es:"<<productos.getId()<<endl;
+        productos.setStock(productos.getStock() + cantStockSolicitada);
+        _archivo.modificar(productos,idProducto-1);
+        pausa();
+    }else{
+        cout<<"no se encontro dicho producto";
+        pausa();
+    }
     fclose(f_leer_producto);
 }
 
