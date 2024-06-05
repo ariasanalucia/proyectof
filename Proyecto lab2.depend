@@ -199,12 +199,12 @@
 	"consultas.h"
 	"funcionesGlobales.h"
 
-1716249721 source:c:\users\gianf\desktop\utn\labo2\proyectof\app.cpp
+1716593344 source:c:\users\gianf\desktop\utn\labo2\proyectof\app.cpp
 	<iostream>
 	"funcionesGlobales.h"
 	"app.h"
 
-1715816134 c:\users\gianf\desktop\utn\labo2\proyectof\funcionesglobales.h
+1716593344 c:\users\gianf\desktop\utn\labo2\proyectof\funcionesglobales.h
 	<iostream>
 	<cstring>
 
@@ -222,41 +222,44 @@
 	<sys/types.h>
 	<sys/time.h>
 
-1716249721 c:\users\gianf\desktop\utn\labo2\proyectof\app.h
+1716593344 c:\users\gianf\desktop\utn\labo2\proyectof\app.h
 	"productoManager.h"
 	"empleadoManager.h"
 	"ventaManager.h"
 	"proveedorManager.h"
+	"informeRecaudacion.h"
 
-1716334278 c:\users\gianf\desktop\utn\labo2\proyectof\productomanager.h
+1717540850 c:\users\gianf\desktop\utn\labo2\proyectof\productomanager.h
 	"productoArchivo.h"
+	"producto.h"
 
-1715299078 c:\users\gianf\desktop\utn\labo2\proyectof\productoarchivo.h
+1716593344 c:\users\gianf\desktop\utn\labo2\proyectof\productoarchivo.h
 	"producto.h"
 	<cstring>
 
-1716249721 c:\users\gianf\desktop\utn\labo2\proyectof\producto.h
+1717540850 c:\users\gianf\desktop\utn\labo2\proyectof\producto.h
 	"fecha.h"
 
 1715299078 c:\users\gianf\desktop\utn\labo2\proyectof\fecha.h
 
-1715816134 source:c:\users\gianf\desktop\utn\labo2\proyectof\fecha.cpp
+1716593344 source:c:\users\gianf\desktop\utn\labo2\proyectof\fecha.cpp
 	<iostream>
 	"fecha.h"
+	<ctime>
 
-1715816134 source:c:\users\gianf\desktop\utn\labo2\proyectof\funcionesglobales.cpp
+1716593344 source:c:\users\gianf\desktop\utn\labo2\proyectof\funcionesglobales.cpp
 	<iostream>
 	"funcionesGlobales.h"
 	<iostream>
 	<cstdlib>
 
-1716249721 source:c:\users\gianf\desktop\utn\labo2\proyectof\producto.cpp
+1717540850 source:c:\users\gianf\desktop\utn\labo2\proyectof\producto.cpp
 	<iostream>
 	"producto.h"
 	"funcionesGlobales.h"
 	"fecha.h"
 
-1715299078 source:c:\users\gianf\desktop\utn\labo2\proyectof\productoarchivo.cpp
+1716593344 source:c:\users\gianf\desktop\utn\labo2\proyectof\productoarchivo.cpp
 	<iostream>
 	"productoArchivo.h"
 	"producto.h"
@@ -380,44 +383,47 @@
 
 1716754670 c:\users\usuario\documents\github\proyectof\proveedor.h
 
-1716249721 c:\users\gianf\desktop\utn\labo2\proyectof\empleadomanager.h
+1716593344 c:\users\gianf\desktop\utn\labo2\proyectof\empleadomanager.h
 	"empleadoArchivo.h"
 
-1715889627 c:\users\gianf\desktop\utn\labo2\proyectof\empleadoarchivo.h
+1716593344 c:\users\gianf\desktop\utn\labo2\proyectof\empleadoarchivo.h
 	"empleado.h"
 	<cstring>
 
-1716249721 c:\users\gianf\desktop\utn\labo2\proyectof\empleado.h
+1717540850 c:\users\gianf\desktop\utn\labo2\proyectof\empleado.h
 	<cstring>
 
-1716249721 c:\users\gianf\desktop\utn\labo2\proyectof\ventamanager.h
+1717540850 c:\users\gianf\desktop\utn\labo2\proyectof\ventamanager.h
 	"ventaArchivo.h"
+	"productoArchivo.h"
 	"venta.h"
+	"producto.h"
 
-1716249721 c:\users\gianf\desktop\utn\labo2\proyectof\ventaarchivo.h
+1716593344 c:\users\gianf\desktop\utn\labo2\proyectof\ventaarchivo.h
 	<cstring>
 	"venta.h"
 
-1716249721 c:\users\gianf\desktop\utn\labo2\proyectof\venta.h
+1717540850 c:\users\gianf\desktop\utn\labo2\proyectof\venta.h
 	"fecha.h"
+	"hora.h"
+	<vector>
 
-1716334279 c:\users\gianf\desktop\utn\labo2\proyectof\proveedormanager.h
+1716940034 c:\users\gianf\desktop\utn\labo2\proyectof\proveedormanager.h
 	"proveedorArchivo.h"
 	"proveedor.h"
 
-1716249721 c:\users\gianf\desktop\utn\labo2\proyectof\proveedorarchivo.h
+1716940034 c:\users\gianf\desktop\utn\labo2\proyectof\proveedorarchivo.h
 	<cstring>
 	"proveedor.h"
 
-1716249721 c:\users\gianf\desktop\utn\labo2\proyectof\proveedor.h
-	<cstring>
+1716940034 c:\users\gianf\desktop\utn\labo2\proyectof\proveedor.h
 
 1716249721 source:c:\users\gianf\desktop\utn\labo2\proyectof\empleado.cpp
 	<iostream>
 	"empleado.h"
 	"funcionesGlobales.h"
 
-1715889627 source:c:\users\gianf\desktop\utn\labo2\proyectof\empleadoarchivo.cpp
+1716593344 source:c:\users\gianf\desktop\utn\labo2\proyectof\empleadoarchivo.cpp
 	<iostream>
 	"empleadoArchivo.h"
 	"empleado.h"
@@ -430,29 +436,31 @@
 	"empleadoManager.h"
 	"consultas.h"
 
-1715893317 source:c:\users\gianf\desktop\utn\labo2\proyectof\proveedor.cpp
+1716940034 source:c:\users\gianf\desktop\utn\labo2\proyectof\proveedor.cpp
 	<iostream>
+	<cstring>
+	"proveedor.h"
 
 1716249721 source:c:\users\gianf\desktop\utn\labo2\proyectof\proveedormanager.cpp
 	<iostream>
 	"proveedorManager.h"
 	"funcionesGlobales.h"
 
-1716249721 source:c:\users\gianf\desktop\utn\labo2\proyectof\venta.cpp
+1717540850 source:c:\users\gianf\desktop\utn\labo2\proyectof\venta.cpp
 	<iostream>
 	"venta.h"
 	"funcionesGlobales.h"
 
-1716249721 source:c:\users\gianf\desktop\utn\labo2\proyectof\ventamanager.cpp
+1717540850 source:c:\users\gianf\desktop\utn\labo2\proyectof\ventamanager.cpp
 	<iostream>
 	"ventaManager.h"
 	"funcionesGlobales.h"
+	"consultasVentas.h"
 
-1716334376 source:c:\users\gianf\desktop\utn\labo2\proyectof\consultas.cpp
+1716593344 source:c:\users\gianf\desktop\utn\labo2\proyectof\consultas.cpp
 	<iostream>
 	"consultas.h"
 	"funcionesGlobales.h"
-	"productoManager.h"
 
 1716894715 source:c:\users\gpantanetti\desktop\utn\proyectof\app.cpp
 	<iostream>
@@ -741,6 +749,33 @@
 	"proveedorArchivo.h"
 
 1716894715 source:c:\users\gpantanetti\desktop\utn\proyectof\ventaarchivo.cpp
+	<iostream>
+	"ventaArchivo.h"
+	"venta.h"
+
+1716593344 c:\users\gianf\desktop\utn\labo2\proyectof\hora.h
+
+1716593344 c:\users\gianf\desktop\utn\labo2\proyectof\informerecaudacion.h
+	"fecha.h"
+
+1716593344 source:c:\users\gianf\desktop\utn\labo2\proyectof\consultasventas.cpp
+	<iostream>
+	"consultasVentas.h"
+	"funcionesGlobales.h"
+
+1716593344 c:\users\gianf\desktop\utn\labo2\proyectof\consultasventas.h
+	"ventaManager.h"
+
+1716593344 source:c:\users\gianf\desktop\utn\labo2\proyectof\hora.cpp
+	<iostream>
+	"hora.h"
+	<ctime>
+
+1716940034 source:c:\users\gianf\desktop\utn\labo2\proyectof\proveedorarchivo.cpp
+	<iostream>
+	"proveedorArchivo.h"
+
+1717106606 source:c:\users\gianf\desktop\utn\labo2\proyectof\ventaarchivo.cpp
 	<iostream>
 	"ventaArchivo.h"
 	"venta.h"
