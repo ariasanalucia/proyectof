@@ -2,7 +2,6 @@
 using namespace std;
 #include "fecha.h"
 #include "hora.h"
-#include <vector>
 
  class Venta
  {

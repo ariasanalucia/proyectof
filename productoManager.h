@@ -9,11 +9,15 @@ using namespace std;
     ProductoArchivo _archivo = ProductoArchivo("producto.dat");
     void mostrarTodos();
     void modificar();
+    void validar_proveedor(int *Proveedor);
+    bool es_proveedor(int Proveedor);
+//    bool validarFechaVencimiento(int id);
+//    void esFechaValida();
    public:
     void menuProducto();
     Producto Cargar();
-    void Mostrar (Producto producto);
     void mostrarPorId();
+    void Mostrar (Producto producto);
     void baja();
     void mostrarPorProveedor();
     void mostrarPorCategoria();

@@ -13,6 +13,7 @@
     Venta Cargar();
     void Mostrar (Venta venta);
     void baja();
+    bool restarStockDeProducto(int idProducto, int cantidad);
 
    public:
     void menuVentas();

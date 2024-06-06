@@ -4,10 +4,11 @@ using namespace std;
 
  class Producto
  {
-   protected:
+   private:
     int _id;
     char _marca[30];
     char _droga[30];
+    float _miligramos;
     char _categoria[30];
     int _proveedor;
     Fecha _vencimiento;
@@ -18,12 +19,13 @@ using namespace std;
     float _precioUnitario;
 
    public:
-    Producto(int id,const char *marca, const char *droga, const char *categoria, int Proveedor, Fecha vencimiento, bool estado, const char *presentacion, int cantidad, float precioUnitario);
+    Producto(int id,const char *marca, const char *droga,float miligramos, const char *categoria, int Proveedor, Fecha vencimiento, bool estado, const char *presentacion, int cantidad, float precioUnitario);
     Producto();
     //SETS
     void setId(int id);
     void setMarca(const char *marca);
     void setDroga(const char *droga);
+    void setMiligramos(float miligramos);
     void setCategoria(const char *categoria);
     void setProveedor(int Proveedor);
     void setVencimiento(Fecha vencimiento);
@@ -36,6 +38,7 @@ using namespace std;
     int getId();
     const char *getMarca(){return _marca;}
     const char *getDroga(){return _droga;}
+    float getMiligramos();
     const char *getCategoria(){return _categoria;}
     int getProveedor();
     Fecha getVenciemiento(){return _vencimiento;}

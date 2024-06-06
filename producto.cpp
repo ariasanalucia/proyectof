@@ -5,11 +5,12 @@ using namespace std;
 #include "fecha.h"
 
 //CONSTRUCTOR CON PARAMETROS
- Producto::Producto(int id,const char *marca, const char *droga, const char *categoria, int Proveedor, Fecha vencimiento, bool estado, const char *presentacion, int cantidad, float precioUnitario)
+ Producto::Producto(int id,const char *marca, const char *droga, float miligramos, const char *categoria, int Proveedor, Fecha vencimiento, bool estado, const char *presentacion, int cantidad, float precioUnitario)
  {
    _id = id;
    strcpy(_marca,marca);
    strcpy(_droga, droga);
+   _miligramos = miligramos;
    strcpy(_categoria,categoria);
    _proveedor = Proveedor;
    _vencimiento = Fecha();
@@ -25,6 +26,7 @@ using namespace std;
    _id = 0;
    strcpy(_marca,"VACIO");
    strcpy(_droga,"VACIO");
+   _miligramos = 0;
    strcpy(_categoria, "VACIO");
    _proveedor = 0;
    _vencimiento = Fecha();
@@ -38,6 +40,7 @@ using namespace std;
  void Producto::setId(int id){_id = id;}
  void Producto::setMarca(const char *marca){strcpy(_marca,marca);}
  void Producto::setDroga(const char *droga){strcpy(_droga,droga);}
+ void Producto::setMiligramos(float miligramos){_miligramos = miligramos;}
  void Producto::setCategoria(const char *categoria){strcpy(_categoria, categoria);}
  void Producto::setProveedor(int Proveedor){_proveedor = Proveedor;}
  void Producto::setVencimiento(Fecha vencimiento){_vencimiento = vencimiento;}
@@ -48,6 +51,7 @@ using namespace std;
  void Producto::setPrecioUnitario(float precioUnitario){_precioUnitario = precioUnitario;}
  //GETS
  int Producto::getId(){return _id;}
+ float Producto::getMiligramos(){return _miligramos;}
  int Producto::getProveedor(){return _proveedor;}
  int Producto::getStock(){return _stock;}
  bool Producto::getEstado(){return _estado;}

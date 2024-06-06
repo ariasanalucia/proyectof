@@ -9,6 +9,11 @@ using namespace std;
    _idEmpleado = idEmpleado;
    _fecha = fecha;
    _horario = horario;
+   for (int i=0; i<10; i++)
+   {
+     _idProducto[i] = idProducto;
+     _cantidad[i] = cantidad;
+   }
    _estado = true;
    _importe = importe;
  }
@@ -18,6 +23,11 @@ using namespace std;
    _idEmpleado = 0;
    _fecha= Fecha();
    _horario = Hora();
+   for (int i=0; i<10; i++)
+   {
+     _idProducto[i] = 0;
+     _cantidad[i] = 0;
+   }
    _estado = true;
    _importe = 0;
  }

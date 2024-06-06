@@ -4,9 +4,9 @@ using namespace std;
 #include "informeRecaudacion.h"
 #include "funcionesGlobales.h"
 
-void porAnio(){
+void InformeRecaudacion::porAnio(){
   Venta reg;
-  VentaArchivo archiVenta("ventas.dat");
+  VentaArchivo archiVenta("venta.dat");
   int cant = archiVenta.contarRegistros();
 
   float mes[12]={};
@@ -18,7 +18,7 @@ void porAnio(){
   for (int i = 0; i < cant; i++) {
     reg = archiVenta.leer(i);
     if (reg.getFecha().getAnio()==anio) {
-      mes[i] += reg.getImporte();
+      mes[reg.getFecha().getMes()-1] += reg.getImporte();
     }
   }
 
@@ -26,25 +26,25 @@ void porAnio(){
 
   cout << "Recaudacion " << anio << ":" << endl;
   cout << "---------------------------" << endl;
-  cout << "Enero      |" << mes[0] << endl;
-  cout << "Febrero    |" << mes[1] << endl;
-  cout << "Marzo      |" << mes[2] << endl;
-  cout << "Abril      |" << mes[3] << endl;
-  cout << "Mayo       |" << mes[4] << endl;
-  cout << "Junio      |" << mes[5] << endl;
-  cout << "Julio      |" << mes[6] << endl;
-  cout << "Agosto     |" << mes[7] << endl;
-  cout << "Septiembre |" << mes[8] << endl;
-  cout << "Octubre    |" << mes[9] << endl;
-  cout << "Noviembre  |" << mes[10] << endl;
-  cout << "Diciembre  |" << mes[11] << endl;
+  cout << "Enero      |$" << mes[0] << endl;
+  cout << "Febrero    |$" << mes[1] << endl;
+  cout << "Marzo      |$" << mes[2] << endl;
+  cout << "Abril      |$" << mes[3] << endl;
+  cout << "Mayo       |$" << mes[4] << endl;
+  cout << "Junio      |$" << mes[5] << endl;
+  cout << "Julio      |$" << mes[6] << endl;
+  cout << "Agosto     |$" << mes[7] << endl;
+  cout << "Septiembre |$" << mes[8] << endl;
+  cout << "Octubre    |$" << mes[9] << endl;
+  cout << "Noviembre  |$" << mes[10] << endl;
+  cout << "Diciembre  |$" << mes[11] << endl;
   pausa();
 }
 
 //void porEmpleado(){}
 //void porProducto(){}
 
-void menuInformeRecaudacion()
+void InformeRecaudacion::menuInformeRecaudacion()
  {
    int opcion;
     while(true)
@@ -66,7 +66,7 @@ void menuInformeRecaudacion()
       {
        case 1:
         {
-          void porAnio();
+         porAnio();
         }
         break;
        case 2:

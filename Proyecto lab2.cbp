@@ -50,6 +50,8 @@
 		<Unit filename="funcionesGlobales.h" />
 		<Unit filename="hora.cpp" />
 		<Unit filename="hora.h" />
+		<Unit filename="informeRecaudacion.cpp" />
+		<Unit filename="informeRecaudacion.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="producto.cpp" />
 		<Unit filename="producto.h" />

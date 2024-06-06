@@ -14,7 +14,7 @@ using namespace std;
    int id, Proveedor, stock, cantidad;
    char marca[30], droga[30], categoria[30], presentacion[30];
    Fecha venci;
-   float precioUnitario;
+   float precioUnitario, miligramos;
 
    id = archiProducto.contarRegistros()+1;
    aux.setId(id);
@@ -26,6 +26,10 @@ using namespace std;
    cout << "Droga: ";
    cargarCadena(droga, 29);
    aux.setDroga(droga);
+
+   cout << "Miligramos: ";
+   cin >> miligramos;
+   aux.setMiligramos(miligramos);
 
    cout << "Categoria: ";
    cargarCadena(categoria, 29);
@@ -39,22 +43,18 @@ using namespace std;
 
    cout << "Fecha de vto: " << endl;
    venci.Cargar();
+//   esFechaValida();
    aux.setVencimiento(venci);
 
    cout << "Presentacion: ";
    cargarCadena(presentacion,29);
    aux.setPresentacion(presentacion);
 
-   cout << "Cantidad: ";
-   cin >> cantidad;
-   aux.setCantidad(cantidad);
-
    cout << "Precio: $";
    cin >> precioUnitario;
    aux.setPrecioUnitario(precioUnitario);
 
-   stock += cantidad;
-   aux.setStock(stock);
+   aux.setStock(0);
 
    return aux;
  }
@@ -67,16 +67,60 @@ using namespace std;
      cout << "ID de medicamento: " << producto.getId() << endl;
      cout << "Marca: " << producto.getMarca() << endl;
      cout << "Droga:" << producto.getDroga() << endl;
+     cout << "Miligramos: " << producto.getMiligramos() << endl;
      cout << "Categoria: " << producto.getCategoria() << endl;
      cout << "Proveedor(1 - Disval / 2 - Suizo): " << producto.getProveedor() << endl;
      cout << "Fecha de vto: " << producto.getVenciemiento().toString() << endl;
      cout << "Presentacion: " << producto.getPresentacion() << endl;
-     cout << "Cantidad que ingresa: " << producto.getCantidad() << endl;
+     cout << "Stock disponible: " << producto.getStock() << endl;
      cout << "Precio: $" << producto.getPrecioUnitario() << endl;
      cout << endl;
      cout << "-------------------------------" << endl;
    }
  }
+
+ bool ProductoManager::es_proveedor(int Proveedor){
+    return (Proveedor == 1 || Proveedor == 2);
+ }
+
+ void ProductoManager::validar_proveedor(int *Proveedor){
+    while(!es_proveedor(*Proveedor)){
+        cout<<"Ingrese correctamente el provedor 1 o 2:";
+        cin>>*Proveedor;
+    }
+ }
+
+// bool ProductoManager::validarFechaVencimiento(int idProducto)
+// {
+//   Producto reg;
+//   ProductoArchivo archiP("producto.dat");
+//   int cant = archiP.contarRegistros();
+//
+//   Fecha fechaActual();
+//
+//   for (int i=0; i<cant; i++)
+//   {
+//     reg = archiP.leer(i);
+//     if(reg.getId() == idProducto)
+//     {
+//       if (reg.getVenciemiento().getAnio() < fechaActual().getAnio())
+//       {
+//         return false;
+//       }
+//     }
+//   }
+//   return true;
+// }
+//
+// void ProductoManager::esFechaValida()
+// {
+//   Fecha venci;
+//   while (!validarFechaVencimiento(id))
+//   {
+//     cout << "Ingrese una fecha de vto valida: ";
+//     venci.Cargar();
+//   }
+// }
 
 
  void ProductoManager::mostrarTodos()
@@ -102,20 +146,16 @@ using namespace std;
    {
      aux = _archivo.leer(posicion);
      Mostrar(aux);
-     if (aux.getProveedor() == 0)
-     {
-       cout << "ESTE REGISTRO NO PUEDE SER LISTADO YA QUE SE DEBE MODIFICAR X CAMPO DE PRODUCTO" << endl;
-       cout << "(Sugerencia: ir al apartado de (LISTAR PRODUCTOS A MODIFICAR POR X ERROR DE CARGA))" << endl;
-       return;
-     }
-     cout << "STOCK ACTUAL: " << aux.getStock() << endl;
+     pausa();
      if (aux.getStock() == 0)
      {
        cout << "REPONER STOCK!" << endl;
+       pausa();
      }
    }else
    {
      cout << "NO EXISTE EL NUMERO DE ID INGRESADO" << endl;
+     pausa();
    }
  }
 
@@ -190,7 +230,7 @@ using namespace std;
    int _id,_proveedor, _stock, _cantidad;
    char _marca[30], _droga[30], _categoria[30], _presentacion[30];
    Fecha _vencimiento;
-   float _precioUnitario;
+   float _precioUnitario, _miligramos;
 
    if (respuesta == 1)
    {
@@ -207,6 +247,10 @@ using namespace std;
      cout << "Droga: ";
      cargarCadena(_droga, 29);
      producto.setDroga(_droga);
+
+     cout << "Miligramos: ";
+     cin >> _miligramos;
+     producto.setMiligramos(_miligramos);
 
      cout << "Categoria: ";
      cargarCadena(_categoria, 29);
@@ -344,36 +388,79 @@ using namespace std;
  }
 
 
- void ProductoManager::solicitarProducto(){
+// void ProductoManager::solicitarProducto(){
+//
+//    mostrarPorDroga();
+//
+//    ProductoArchivo archiProducto("producto.dat");
+//    Producto productos;
+//    int idProducto,cantStockSolicitada;
+//
+//    cout<<"INGRESE EL ID DEL PRODUCTO QUE QUIERE PEDIRLE AL PROVEEDOR:";
+//    cin>>idProducto;
+//    if(idProducto <= archiProducto.contarRegistros()){
+//        cout<<"Ingrese la cantidad de dicho producto que desea:";
+//        cin>>cantStockSolicitada;
+//        productos = archiProducto.leer(idProducto-1);
+//        cout<<"El stock anterior es:"<<productos.getId()<<endl;
+//        productos.setStock(productos.getStock() + cantStockSolicitada);
+//        _archivo.modificar(productos,idProducto-1);
+//        pausa();
+//    }else{
+//        cout<<"no se encontro dicho producto";
+//        pausa();
+//    }
+//    fclose(f_leer_producto);
+//}
 
-    mostrarPorDroga();
+ void ProductoManager::solicitarProducto()
+ {
+   Producto reg;
+   ProductoArchivo archivoP("producto.dat");
+   int cantProductos = archivoP.contarRegistros();
 
-    ProductoArchivo archiProducto("producto.dat");
-    Producto productos;
-    int idProducto,cantStockSolicitada;
-    FILE* f_leer_producto = fopen("producto.dat","rb+");
-    if(f_leer_producto == NULL){
-        cout<<"No se pudo abrir el archivo";
-        fclose(f_leer_producto);
-        return;
-    }
+   int idProducto, cantStockSolicitada;
+   bool esta = false;
 
-    cout<<"INGRESE EL ID DEL PRODUCTO QUE QUIERE PEDIRLE AL PROVEEDOR:";
-    cin>>idProducto;
-    if(idProducto <= archiProducto.contarRegistros()){
-        cout<<"Ingrese la cantidad de dicho producto que desea:";
-        cin>>cantStockSolicitada;
-        productos = archiProducto.leer(idProducto-1);
-        cout<<"El stock anterior es:"<<productos.getId()<<endl;
-        productos.setStock(productos.getStock() + cantStockSolicitada);
-        _archivo.modificar(productos,idProducto-1);
-        pausa();
-    }else{
-        cout<<"no se encontro dicho producto";
-        pausa();
-    }
-    fclose(f_leer_producto);
-}
+   cout << "INGRESE EL ID DEL PRODUCTO A SOLICITAR: ";
+   cin >> idProducto;
+   cout << endl;
+
+   if (idProducto > 0)
+   {
+     cout << "INGRESE LA CANTIDAD DEL PRODUCTO A SOLICITAR: ";
+     cin >> cantStockSolicitada;
+     cout << endl;
+
+     for (int i=0; i<cantProductos; i++)
+     {
+       reg = archivoP.leer(i);
+       if (reg.getId()==idProducto && reg.getEstado())
+       {
+         esta = true;
+         reg.setStock(reg.getStock()+cantStockSolicitada);
+         if (archivoP.modificar(reg,i))
+         {
+           cout << "STOCK AGREGARDO CORRECTAMENTE" << endl;
+           cout << endl;
+           pausa();
+           cout << "PRODUCTO CON STOCK AGREGADO: " << endl;
+           cout << endl;
+           Mostrar(reg);
+           pausa();
+         }else
+         {
+           cout << "NO SE PUDO AGREGAR EL STOCK SOLICITADO" << endl;
+           pausa();
+         }
+       }
+     }
+     if (!esta)
+     {
+       cout << "NO EXISTE EL PRODUCTO SOLICITADO" << endl;
+     }
+   }
+ }
 
  void ProductoManager::menuProducto()
  {

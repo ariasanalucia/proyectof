@@ -14,7 +14,8 @@ using namespace std;
    int dni;
    char nombre[30], apellido[30], telefono[30];
 
-   dni = archiEmpleado.contarRegistros()+1;
+   cout << "DNI: ";
+   cin >> dni;
    aux.setDni(dni);
 
    cout << "Nombre: ";
@@ -226,8 +227,7 @@ using namespace std;
         break;
        case 5:
         {
-          Consultas consulta;
-          consulta.menuConsultas();
+
         }
         break;
        case 0:

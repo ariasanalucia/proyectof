@@ -31,7 +31,7 @@ using namespace std;
    aux.setHora(Hora());
 
    int contador = 0;
-   while (contador < 10) //Carga productos hasta recibir 0 
+   while (contador < 10) //Carga productos hasta recibir 0
    {
      cout << "ID de producto: ";
      cin >> idProducto[contador];
@@ -43,10 +43,16 @@ using namespace std;
      if (cantidad[contador]<=0) {break;}
      aux.setCantidad(cantidad[contador], contador);
 
+     if(!restarStockDeProducto(idProducto[contador], cantidad[contador]))
+     {
+       break;
+       return Venta();
+     }
+
      //Calculo del importe:
      for (int i = 0; i < archiProducto.contarRegistros(); i++) {
        prod=archiProducto.leer(i);
-       if (prod.getId()==idProducto[contador]) { 
+       if (prod.getId()==idProducto[contador]) {
          importe += prod.getPrecioUnitario()*cantidad[contador];
          break;
        }
@@ -54,7 +60,7 @@ using namespace std;
 
      contador++;
    }
-   
+
    cout << "------------------------------------" << endl;
    cout << "TOTAL: $" << importe;
    pausa();
@@ -70,7 +76,7 @@ using namespace std;
 //MOSTRAR
  void VentaManager::Mostrar(Venta reg)
  {
-   if (reg.getEstado())
+   if (reg.getEstado() && reg.getImporte() > 0)
    {
      cout << "Numero de venta: " << reg.getNumero() << endl;
      cout << "ID de empleado: " << reg.getIdEmpleado() << endl;
@@ -86,8 +92,37 @@ using namespace std;
          cout << endl;
        }
      }
+     cout << "Importe: $" << reg.getImporte() << endl;
      cout << "-------------------------------" << endl;
    }
+ }
+
+ bool VentaManager::restarStockDeProducto(int idProducto,int cantidad)
+ {
+   Producto reg;
+   ProductoArchivo archiP("producto.dat");
+   int cantidadDeProd = archiP.contarRegistros();
+
+   bool ventaExistosa = false;
+
+   for (int i=0; i<cantidadDeProd; i++)
+   {
+     reg = archiP.leer(i);
+     if (reg.getId() == idProducto && reg.getEstado())
+     {
+       if (cantidad > reg.getStock())
+       {
+         cout << "STOCK INSUFICIENTE, CANTIDAD DISPONIBLE: " << reg.getStock() << endl;
+         pausa();
+       }else
+       {
+         reg.setStock(reg.getStock()-cantidad);
+         archiP.modificar(reg, i);
+         ventaExistosa = true;
+       }
+     }
+   }
+   return ventaExistosa;
  }
 
 
