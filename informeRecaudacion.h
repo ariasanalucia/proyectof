@@ -3,8 +3,11 @@ using namespace std;
 #include "fecha.h"
 #include "ventaManager.h"
 #include "ventaArchivo.h"
+#include "empleado.h"
+#include "empleadoManager.h"
+#include "empleadoArchivo.h"
 
- class InformeRecaudacion 
+ class InformeRecaudacion
  {
    public:
     void porAnio();

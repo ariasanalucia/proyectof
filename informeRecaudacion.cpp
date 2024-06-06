@@ -41,7 +41,43 @@ void InformeRecaudacion::porAnio(){
   pausa();
 }
 
-//void porEmpleado(){}
+ void porEmpleado()
+ {
+   Venta regVenta;
+   VentaArchivo archiVenta("venta.dat");
+   int cantV = archiVenta.contarRegistros();
+
+   Empleado regEmpleado;
+   EmpleadoArchivo archiEmp("empleado.dat");
+   int cantE = archiEmp.contarRegistros();
+
+   int maximoEmpleado;
+   float maximo = -1;
+   char nombre[30];
+
+   for (int i=0; i<cantE; i++)
+   {
+     int acumulador = 0;
+     regEmpleado = archiEmp.leer(i);
+     for (int j=0; j<cantV; j++)
+     {
+       regVenta = archiVenta.leer(j);
+       if (regEmpleado.getId() == regVenta.getIdEmpleado())
+       {
+         acumulador += regVenta.getImporte();
+       }
+     }
+     if (maximo == -1 || acumulador > maximo)
+     {
+       maximo = acumulador;
+       maximoEmpleado = regEmpleado.getId();
+       strcpy(nombre,regEmpleado.getNombre());
+     }
+   }
+   cout << "EL EMPLEADO CON MAS RECAUDACION ES: ";
+   cout << "ID: " << maximoEmpleado << endl;
+   cout << "NOMBRE: " << nombre << endl;
+ }
 //void porProducto(){}
 
 void InformeRecaudacion::menuInformeRecaudacion()

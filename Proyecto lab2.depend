@@ -94,7 +94,7 @@
 	"proveedorManager.h"
 	"informeRecaudacion.h"
 
-1717703252 source:c:\users\usuario\documents\github\proyectof\productomanager.cpp
+1717714378 source:c:\users\usuario\documents\github\proyectof\productomanager.cpp
 	<iostream>
 	<cstring>
 	<ctype.h>
@@ -323,10 +323,10 @@
 	"empleado.h"
 	<cstring>
 
-1717201322 c:\users\usuario\documents\github\proyectof\empleado.h
+1717715246 c:\users\usuario\documents\github\proyectof\empleado.h
 	<cstring>
 
-1717201322 source:c:\users\usuario\documents\github\proyectof\empleado.cpp
+1717715241 source:c:\users\usuario\documents\github\proyectof\empleado.cpp
 	<iostream>
 	"empleado.h"
 	"funcionesGlobales.h"
@@ -711,10 +711,13 @@
 1716499734 c:\users\usuario\documents\github\proyectof\informe.h
 	"fecha.h"
 
-1717671799 c:\users\usuario\documents\github\proyectof\informerecaudacion.h
+1717714731 c:\users\usuario\documents\github\proyectof\informerecaudacion.h
 	"fecha.h"
 	"ventaManager.h"
 	"ventaArchivo.h"
+	"empleado.h"
+	"empleadoManager.h"
+	"empleadoArchivo.h"
 
 1716508247 c:\users\usuario\documents\github\proyectof\hora.h
 
@@ -781,7 +784,7 @@
 	"ventaArchivo.h"
 	"venta.h"
 
-1717679261 source:c:\users\usuario\documents\github\proyectof\informerecaudacion.cpp
+1717714628 source:c:\users\usuario\documents\github\proyectof\informerecaudacion.cpp
 	<iostream>
 	"fecha.h"
 	"informeRecaudacion.h"

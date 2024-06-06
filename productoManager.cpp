@@ -11,7 +11,7 @@ using namespace std;
  {
    Producto aux;
    ProductoArchivo archiProducto("producto.dat");
-   int id, Proveedor, stock, cantidad;
+   int id, Proveedor;
    char marca[30], droga[30], categoria[30], presentacion[30];
    Fecha venci;
    float precioUnitario, miligramos;
@@ -31,7 +31,7 @@ using namespace std;
    cin >> miligramos;
    aux.setMiligramos(miligramos);
 
-   cout << "Categoria: ";
+   cout << "Accion terapeutica: ";
    cargarCadena(categoria, 29);
    aux.setCategoria(categoria);
 
@@ -68,7 +68,7 @@ using namespace std;
      cout << "Marca: " << producto.getMarca() << endl;
      cout << "Droga:" << producto.getDroga() << endl;
      cout << "Miligramos: " << producto.getMiligramos() << endl;
-     cout << "Categoria: " << producto.getCategoria() << endl;
+     cout << "Accion terapeutica: " << producto.getCategoria() << endl;
      cout << "Proveedor(1 - Disval / 2 - Suizo): " << producto.getProveedor() << endl;
      cout << "Fecha de vto: " << producto.getVenciemiento().toString() << endl;
      cout << "Presentacion: " << producto.getPresentacion() << endl;
@@ -227,7 +227,7 @@ using namespace std;
    cin >> respuesta;
    cout << endl;
 
-   int _id,_proveedor, _stock, _cantidad;
+   int _id,_proveedor, _stock;
    char _marca[30], _droga[30], _categoria[30], _presentacion[30];
    Fecha _vencimiento;
    float _precioUnitario, _miligramos;
@@ -252,13 +252,14 @@ using namespace std;
      cin >> _miligramos;
      producto.setMiligramos(_miligramos);
 
-     cout << "Categoria: ";
+     cout << "Accion terapeutica: ";
      cargarCadena(_categoria, 29);
      producto.setCategoria(_categoria);
 
      cout << "Proveedor:" << endl;
      cout << "(1 - Disval / 2 - Suizo)";
      cin >> _proveedor;
+     validar_proveedor(&_proveedor);
      producto.setProveedor(_proveedor);
 
      cout << "Fecha de vto: " << endl;
@@ -269,15 +270,12 @@ using namespace std;
      cargarCadena(_presentacion,29);
      producto.setPresentacion(_presentacion);
 
-     cout << "Cantidad: ";
-     cin >> _cantidad;
-     producto.setCantidad(_cantidad);
-
      cout << "Precio: ";
      cin >> _precioUnitario;
      producto.setPrecioUnitario(_precioUnitario);
 
-     _stock += cantidad;
+     cout << "Stock: ";
+     cin >> _stock;
      producto.setStock(_stock);
 
      if (_archivo.modificar(producto, posicion))
@@ -420,56 +418,53 @@ using namespace std;
    int cantProductos = archivoP.contarRegistros();
 
    int idProducto, cantStockSolicitada;
-   bool esta = false;
+
+   mostrarPorDroga();
 
    cout << "INGRESE EL ID DEL PRODUCTO A SOLICITAR: ";
    cin >> idProducto;
    cout << endl;
 
-   if (idProducto > 0)
+   if (idProducto <= cantProductos)
    {
      cout << "INGRESE LA CANTIDAD DEL PRODUCTO A SOLICITAR: ";
      cin >> cantStockSolicitada;
      cout << endl;
      int respuesta;
 
-     for (int i=0; i<cantProductos; i++)
+     reg = archivoP.leer(idProducto-1);
+     if (reg.getEstado() && reg.getId() == idProducto)
      {
-       reg = archivoP.leer(i);
-       if (reg.getEstado() && reg.getId() == idProducto)
+       Mostrar(reg);
+       cout << "DESEA PEDIR STOCK DE ESTE MEDICAMENTO(1-si, 0-no): ";
+       cin >> respuesta;
+       cout << endl;
+       if (respuesta == 1)
        {
-         esta = true;
-         Mostrar(reg);
-         cout << "DESEA PEDIR STOCK DE ESTE MEDICAMENTO(1-si, 0-no): ";
-         cin >> respuesta;
-         cout << endl;
-         if (respuesta == 1)
+         reg.setStock(reg.getStock()+cantStockSolicitada);
+         if (archivoP.modificar(reg,idProducto-1))
          {
-           reg.setStock(reg.getStock()+cantStockSolicitada);
-           if (archivoP.modificar(reg,i))
-           {
-             cout << "STOCK AGREGARDO CORRECTAMENTE" << endl;
-             cout << endl;
-             pausa();
-             cout << "PRODUCTO CON STOCK AGREGADO: " << endl;
-             cout << endl;
-             Mostrar(reg);
-             pausa();
-           }else
-           {
-             cout << "NO SE PUDO AGREGAR EL STOCK SOLICITADO" << endl;
-             pausa();
-           }
+           cout << "STOCK AGREGARDO CORRECTAMENTE" << endl;
+           cout << endl;
+           pausa();
+           cout << "PRODUCTO ACTUALIZADO: " << endl;
+           cout << endl;
+           Mostrar(reg);
+           pausa();
          }else
          {
-           return;
+           cout << "NO SE PUDO AGREGAR EL STOCK SOLICITADO" << endl;
+           pausa();
          }
+       }else
+       {
+         return;
        }
      }
-     if (!esta)
-     {
-       cout << "NO EXISTE EL PRODUCTO SOLICITADO" << endl;
-     }
+   }else
+   {
+     cout << "NO EXISTE EL PRODUCTO SOLICITADO" << endl;
+     pausa();
    }
  }
 
