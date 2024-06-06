@@ -431,27 +431,38 @@ using namespace std;
      cout << "INGRESE LA CANTIDAD DEL PRODUCTO A SOLICITAR: ";
      cin >> cantStockSolicitada;
      cout << endl;
+     int respuesta;
 
      for (int i=0; i<cantProductos; i++)
      {
        reg = archivoP.leer(i);
-       if (reg.getId()==idProducto && reg.getEstado())
+       if (reg.getEstado() && reg.getId() == idProducto)
        {
          esta = true;
-         reg.setStock(reg.getStock()+cantStockSolicitada);
-         if (archivoP.modificar(reg,i))
+         Mostrar(reg);
+         cout << "DESEA PEDIR STOCK DE ESTE MEDICAMENTO(1-si, 0-no): ";
+         cin >> respuesta;
+         cout << endl;
+         if (respuesta == 1)
          {
-           cout << "STOCK AGREGARDO CORRECTAMENTE" << endl;
-           cout << endl;
-           pausa();
-           cout << "PRODUCTO CON STOCK AGREGADO: " << endl;
-           cout << endl;
-           Mostrar(reg);
-           pausa();
+           reg.setStock(reg.getStock()+cantStockSolicitada);
+           if (archivoP.modificar(reg,i))
+           {
+             cout << "STOCK AGREGARDO CORRECTAMENTE" << endl;
+             cout << endl;
+             pausa();
+             cout << "PRODUCTO CON STOCK AGREGADO: " << endl;
+             cout << endl;
+             Mostrar(reg);
+             pausa();
+           }else
+           {
+             cout << "NO SE PUDO AGREGAR EL STOCK SOLICITADO" << endl;
+             pausa();
+           }
          }else
          {
-           cout << "NO SE PUDO AGREGAR EL STOCK SOLICITADO" << endl;
-           pausa();
+           return;
          }
        }
      }
