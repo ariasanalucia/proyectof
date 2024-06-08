@@ -3,6 +3,7 @@ using namespace std;
 #include "ventaManager.h"
 #include "funcionesGlobales.h"
 #include "consultasVentas.h"
+#include "productoManager.h"
 
   //CARGAR
  Venta VentaManager::Cargar()
@@ -30,35 +31,47 @@ using namespace std;
 
    aux.setHora(Hora());
 
+   int respuesta = 1;
    int contador = 0;
    while (contador < 10) //Carga productos hasta recibir 0
    {
-     cout << "ID de producto: ";
-     cin >> idProducto[contador];
-     if (idProducto[contador]<=0) {break;}
-     aux.setIdProducto(idProducto[contador], contador);
+     if (respuesta == 1)
+     {
 
-     cout << "Cantidad: ";
-     cin >> cantidad[contador];
-     if (cantidad[contador]<=0) {break;}
-     aux.setCantidad(cantidad[contador], contador);
+       obj.mostrarPorDroga();
+       cout << endl << endl;
+       cout << "ID de producto: ";
+       cin >> idProducto[contador];
+       if (idProducto[contador]<=0) {break;}
+       aux.setIdProducto(idProducto[contador], contador);
 
-     if(!restarStockDeProducto(idProducto[contador], cantidad[contador]))
+       cout << "Cantidad: ";
+       cin >> cantidad[contador];
+       if (cantidad[contador]<=0) {break;}
+       aux.setCantidad(cantidad[contador], contador);
+
+       if(!restarStockDeProducto(idProducto[contador], cantidad[contador]))
+       {
+         break;
+         return Venta();
+       }
+
+       //Calculo del importe:
+       for (int i = 0; i < archiProducto.contarRegistros(); i++) {
+         prod=archiProducto.leer(i);
+         if (prod.getId()==idProducto[contador]) {
+           importe += prod.getPrecioUnitario()*cantidad[contador];
+           break;
+         }
+       }
+     }else
      {
        break;
-       return Venta();
-     }
-
-     //Calculo del importe:
-     for (int i = 0; i < archiProducto.contarRegistros(); i++) {
-       prod=archiProducto.leer(i);
-       if (prod.getId()==idProducto[contador]) {
-         importe += prod.getPrecioUnitario()*cantidad[contador];
-         break;
-       }
      }
 
      contador++;
+     cout << "QUIERE SEGUIR CARGANDO PRODUCTOS? (SI-1, NO-0): ";
+     cin >> respuesta;
    }
 
    cout << "------------------------------------" << endl;

@@ -3,6 +3,7 @@
 #include "productoArchivo.h"
 #include "venta.h"
 #include "producto.h"
+#include "productoManager.h"
 
  class VentaManager
  {
@@ -14,6 +15,7 @@
     void Mostrar (Venta venta);
     void baja();
     bool restarStockDeProducto(int idProducto, int cantidad);
+    ProductoManager obj;
 
    public:
     void menuVentas();

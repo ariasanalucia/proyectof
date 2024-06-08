@@ -65,7 +65,7 @@
 	<iostream>
 	"app.h"
 
-1717691055 c:\users\usuario\documents\github\proyectof\productomanager.h
+1717813980 c:\users\usuario\documents\github\proyectof\productomanager.h
 	"productoArchivo.h"
 	"producto.h"
 
@@ -342,11 +342,12 @@
 1716390602 c:\users\usuario\documents\github\proyectof\empleadomanager.h
 	"empleadoArchivo.h"
 
-1717686918 c:\users\usuario\documents\github\proyectof\ventamanager.h
+1717814161 c:\users\usuario\documents\github\proyectof\ventamanager.h
 	"ventaArchivo.h"
 	"productoArchivo.h"
 	"venta.h"
 	"producto.h"
+	"productoManager.h"
 
 1717672185 source:c:\users\usuario\documents\github\proyectof\venta.cpp
 	<iostream>
@@ -784,7 +785,7 @@
 	"ventaArchivo.h"
 	"venta.h"
 
-1717714628 source:c:\users\usuario\documents\github\proyectof\informerecaudacion.cpp
+1717715622 source:c:\users\usuario\documents\github\proyectof\informerecaudacion.cpp
 	<iostream>
 	"fecha.h"
 	"informeRecaudacion.h"
