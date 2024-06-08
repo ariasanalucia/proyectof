@@ -7,5 +7,4 @@ using namespace std;
  void clear();
  void pausa();
  void cargarCadena(char *palabra, int tamano);
-
-
+ int ingresoEntero();

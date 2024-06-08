@@ -307,12 +307,10 @@ using namespace std;
        {
          Mostrar(aux);
        }
-     }else
-     {
-       cout << "NO EXISTE EL NUMERO DE PROVEEDOR INGRESADO" << endl;
-       return;
      }
    }
+   cout << "NO EXISTE EL NUMERO DE PROVEEDOR INGRESADO" << endl;
+   return;
  }
 
 

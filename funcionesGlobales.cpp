@@ -48,4 +48,16 @@ void pausa() {
     fflush(stdin);
  }
 
+int ingresoEntero(){
+    
+    int num;
+    cin >> num;
 
+    while (cin.fail()) {
+        cout << "ERROR: Valor ingresado no es un numero" << endl;
+        cin.clear();
+        cin.ignore(132,'\n');
+        cin >> num;
+    }
+
+}
