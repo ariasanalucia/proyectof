@@ -51,7 +51,7 @@
 
 1714394985 c:\users\usuario\documents\github\proyectof\fecha.h
 
-1717689145 source:c:\users\usuario\documents\github\proyectof\funcionesglobales.cpp
+1717902903 source:c:\users\usuario\documents\github\proyectof\funcionesglobales.cpp
 	<iostream>
 	"funcionesGlobales.h"
 	<iostream>
@@ -331,7 +331,7 @@
 	"empleado.h"
 	"funcionesGlobales.h"
 
-1717688929 source:c:\users\usuario\documents\github\proyectof\empleadomanager.cpp
+1717904455 source:c:\users\usuario\documents\github\proyectof\empleadomanager.cpp
 	<iostream>
 	<cstring>
 	"funcionesGlobales.h"
@@ -713,7 +713,7 @@
 1716499734 c:\users\usuario\documents\github\proyectof\informe.h
 	"fecha.h"
 
-1717714731 c:\users\usuario\documents\github\proyectof\informerecaudacion.h
+1717903726 c:\users\usuario\documents\github\proyectof\informerecaudacion.h
 	"fecha.h"
 	"ventaManager.h"
 	"ventaArchivo.h"
@@ -786,7 +786,7 @@
 	"ventaArchivo.h"
 	"venta.h"
 
-1717715622 source:c:\users\usuario\documents\github\proyectof\informerecaudacion.cpp
+1717904744 source:c:\users\usuario\documents\github\proyectof\informerecaudacion.cpp
 	<iostream>
 	"fecha.h"
 	"informeRecaudacion.h"

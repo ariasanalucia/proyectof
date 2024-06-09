@@ -11,8 +11,11 @@ using namespace std;
  {
    Empleado aux;
    EmpleadoArchivo archiEmpleado("empleado.dat");
-   int dni;
+   int dni, id;
    char nombre[30], apellido[30], telefono[30];
+
+   id = archiEmpleado.contarRegistros()+1;
+   aux.setId(id);
 
    cout << "DNI: ";
    cin >> dni;
