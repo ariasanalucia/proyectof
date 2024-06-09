@@ -37,8 +37,7 @@ using namespace std;
    {
      if (respuesta == 1)
      {
-
-       obj.mostrarPorDroga();
+       validarDroga();
        cout << endl << endl;
        cout << "ID de producto: ";
        cin >> idProducto[contador];
@@ -64,6 +63,7 @@ using namespace std;
            break;
          }
        }
+
      }else
      {
        break;
@@ -107,6 +107,17 @@ using namespace std;
      }
      cout << "Importe: $" << reg.getImporte() << endl;
      cout << "-------------------------------" << endl;
+   }
+ }
+
+ void VentaManager::validarDroga()
+ {
+   while(!obj.mostrarPorDroga())
+   {
+     if(obj.mostrarPorDroga())
+     {
+       break;
+     }
    }
  }
 

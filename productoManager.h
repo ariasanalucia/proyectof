@@ -11,6 +11,8 @@ using namespace std;
     void modificar();
     void validar_proveedor(int *Proveedor);
     bool es_proveedor(int Proveedor);
+    void validarDroga();
+
 //    bool validarFechaVencimiento(int id);
 //    void esFechaValida();
    public:
@@ -21,6 +23,6 @@ using namespace std;
     void baja();
     void mostrarPorProveedor();
     void mostrarPorCategoria();
-    void mostrarPorDroga();
+    bool mostrarPorDroga();
     void solicitarProducto();
  };

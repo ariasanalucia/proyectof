@@ -16,6 +16,7 @@
     void baja();
     bool restarStockDeProducto(int idProducto, int cantidad);
     ProductoManager obj;
+    void validarDroga();
 
    public:
     void menuVentas();

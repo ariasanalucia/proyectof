@@ -338,7 +338,7 @@ using namespace std;
     }
  }
 
- void ProductoManager::mostrarPorDroga(){
+ bool ProductoManager::mostrarPorDroga(){
     ProductoArchivo archiProducto("producto.dat");
     Producto productos;
     char drogaProducto[30];
@@ -359,6 +359,8 @@ using namespace std;
       cout << "ESA DROGA NO SE ENCUENTRA REGISTRADA" << endl;
     }
     pausa();
+
+    return drogaActiva;
  }
 
  void ProductoManager::mostrarPorCategoria(){
@@ -409,6 +411,17 @@ using namespace std;
 //    fclose(f_leer_producto);
 //}
 
+ void ProductoManager::validarDroga()
+ {
+   while(!mostrarPorDroga())
+   {
+     if(mostrarPorDroga())
+     {
+       break;
+     }
+   }
+ }
+
  void ProductoManager::solicitarProducto()
  {
    Producto reg;
@@ -417,7 +430,7 @@ using namespace std;
 
    int idProducto, cantStockSolicitada;
 
-   mostrarPorDroga();
+   validarDroga();
 
    cout << "INGRESE EL ID DEL PRODUCTO A SOLICITAR: ";
    cin >> idProducto;
