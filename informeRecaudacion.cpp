@@ -11,6 +11,8 @@ void InformeRecaudacion::porAnio(){
 
   float mes[12]={};
 
+  float totalRecaudado = 0;
+
   int anio;
   cout << "INGRESE EL ANIO:" << endl;
   cin >> anio;
@@ -19,6 +21,7 @@ void InformeRecaudacion::porAnio(){
     reg = archiVenta.leer(i);
     if (reg.getFecha().getAnio()==anio) {
       mes[reg.getFecha().getMes()-1] += reg.getImporte();
+      totalRecaudado += reg.getImporte();
     }
   }
 
@@ -38,6 +41,10 @@ void InformeRecaudacion::porAnio(){
   cout << "Octubre    |$" << mes[9] << endl;
   cout << "Noviembre  |$" << mes[10] << endl;
   cout << "Diciembre  |$" << mes[11] << endl;
+
+  cout << endl << endl;
+  cout << "-----------------------------" << endl;
+  cout << "TOTAL RECAUDADO: $" << totalRecaudado << endl;
   pausa();
 }
 
