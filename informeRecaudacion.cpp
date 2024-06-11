@@ -14,8 +14,9 @@ void InformeRecaudacion::porAnio(){
   float totalRecaudado = 0;
 
   int anio;
-  cout << "INGRESE EL ANIO:" << endl;
+  cout << "INGRESE EL ANIO:";
   cin >> anio;
+  cout << endl;
 
   for (int i = 0; i < cant; i++) {
     reg = archiVenta.leer(i);
@@ -65,6 +66,13 @@ void InformeRecaudacion::porAnio(){
 
    int maximoVentas;
 
+   int anio;
+   cout << "INGRESE EL ANIO:";
+   cin >> anio;
+   cout << endl;
+
+   bool activo = false;
+
    for (int i=0; i<cantE; i++)
    {
      float acumulador = 0;
@@ -73,13 +81,17 @@ void InformeRecaudacion::porAnio(){
      for (int j=0; j<cantV; j++)
      {
        regVenta = archiVenta.leer(j);
-       if (regEmpleado.getId() == regVenta.getIdEmpleado())
+       if (regEmpleado.getId() == regVenta.getIdEmpleado() && regEmpleado.getEstado() && regVenta.getFecha().getAnio() == anio)
        {
+         activo = true;
          acumulador += regVenta.getImporte();
          contador++;
        }
      }
-     cout << "EL EMPLEADO CON ID: " << regEmpleado.getId() << " RECAUDO: $" << acumulador << endl;
+     if (activo)
+     {
+       cout << "EL EMPLEADO CON ID: " << regEmpleado.getId() << " RECAUDO: $" << acumulador << endl;
+     }
      if (maximo == -1 || acumulador > maximo)
      {
        maximo = acumulador;
@@ -89,12 +101,21 @@ void InformeRecaudacion::porAnio(){
        maximoVentas = contador;
      }
    }
-   cout << endl << endl;
-   cout << "EL EMPLEADO CON MAS RECAUDACION ES " << endl;
-   cout << "ID: " << maximoEmpleado << endl;
-   cout << "NOMBRE: " << nombre << endl;
-   cout << "APELLIDO: " << apellido << endl;
-   cout << "CANTIDAD DE VENTAS REALIZADAS: " << maximoVentas << endl;
+   if (activo)
+   {
+     cout << endl;
+     cout << " - - - - - - - - - - - - - - - - - - - -" << endl;
+     cout << "EL EMPLEADO CON MAS RECAUDACION ES " << endl;
+     cout << "ID: " << maximoEmpleado << endl;
+     cout << "NOMBRE: " << nombre << endl;
+     cout << "APELLIDO: " << apellido << endl;
+     cout << "CANTIDAD DE VENTAS REALIZADAS: " << maximoVentas << endl;
+   }
+
+   if (!activo)
+   {
+     cout << "NINGUN EMPLEADO RECAUDO EN EL ANIO INGRESADO" << endl;
+   }
    pausa();
  }
  void InformeRecaudacion::porProducto()
@@ -107,6 +128,13 @@ void InformeRecaudacion::porAnio(){
    VentaArchivo archiVenta("venta.dat");
    int cantVentas = archiVenta.contarRegistros();
 
+   int anio;
+   cout << "INGRESE EL ANIO:";
+   cin >> anio;
+   cout << endl;
+
+   bool activo = false;
+
    for (int i=0; i<cantProductos; i++)
    {
      float acumulador = 0;
@@ -116,14 +144,22 @@ void InformeRecaudacion::porAnio(){
      {
        regVenta = archiVenta.leer(j);
 
-       if (regP.getId() == regVenta.getIdProducto(i) && regP.getEstado())
+       if (regP.getId() == regVenta.getIdProducto(i) && regP.getEstado() && regVenta.getFecha().getAnio() == anio)
        {
          acumulador += regVenta.getImporte();
+         activo = true;
        }
      }
-     cout << "NOMBRE MEDICAMENTO: " << regP.getMarca() << "\t" << " | ";
-     cout << "RECAUDACION: $" << acumulador << endl;
-     cout << endl;
+     if(activo)
+     {
+       cout << "NOMBRE MEDICAMENTO: " << regP.getMarca() << "\t" << " | ";
+       cout << "RECAUDACION: $" << acumulador << endl;
+       cout << endl;
+     }
+   }
+   if (!activo)
+   {
+     cout << "NINGUN MEDICAMENTO RECAUDO DINERO EN EL ANIO INGRESADO" << endl;
    }
 
    pausa();
