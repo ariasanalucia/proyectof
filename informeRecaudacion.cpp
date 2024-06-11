@@ -90,7 +90,7 @@ void InformeRecaudacion::porAnio(){
      }
    }
    cout << endl << endl;
-   cout << "EL EMPLEADO CON MAS RECAUDACION ES: ";
+   cout << "EL EMPLEADO CON MAS RECAUDACION ES " << endl;
    cout << "ID: " << maximoEmpleado << endl;
    cout << "NOMBRE: " << nombre << endl;
    cout << "APELLIDO: " << apellido << endl;
@@ -135,7 +135,7 @@ void InformeRecaudacion::menuInformeRecaudacion()
     while(true)
     {
       clear();
-      cout << "     VENTAS" << endl;
+      cout << "  RECAUDACION" << endl;
       cout << "----------------" << endl;
       cout << "1 - POR ANIO" << endl;
       cout << "2 - POR EMPLEADO" << endl;
