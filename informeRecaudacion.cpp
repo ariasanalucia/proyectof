@@ -67,7 +67,7 @@ void InformeRecaudacion::porAnio(){
 
    for (int i=0; i<cantE; i++)
    {
-     int acumulador = 0;
+     float acumulador = 0;
      int contador = 0;
      regEmpleado = archiEmp.leer(i);
      for (int j=0; j<cantV; j++)
@@ -97,7 +97,37 @@ void InformeRecaudacion::porAnio(){
    cout << "CANTIDAD DE VENTAS REALIZADAS: " << maximoVentas << endl;
    pausa();
  }
-//void porProducto(){}
+ void InformeRecaudacion::porProducto()
+ {
+   Producto regP;
+   ProductoArchivo archiP("producto.dat");
+   int cantProductos = archiP.contarRegistros();
+
+   Venta regVenta;
+   VentaArchivo archiVenta("venta.dat");
+   int cantVentas = archiVenta.contarRegistros();
+
+   for (int i=0; i<cantProductos; i++)
+   {
+     float acumulador = 0;
+     regP = archiP.leer(i);
+
+     for (int j=0; j<cantVentas; j++)
+     {
+       regVenta = archiVenta.leer(j);
+
+       if (regP.getId() == regVenta.getIdProducto(i) && regP.getEstado())
+       {
+         acumulador += regVenta.getImporte();
+       }
+     }
+     cout << "NOMBRE MEDICAMENTO: " << regP.getMarca() << "\t" << " | ";
+     cout << "RECAUDACION: $" << acumulador << endl;
+     cout << endl;
+   }
+
+   pausa();
+ }
 
 void InformeRecaudacion::menuInformeRecaudacion()
  {
@@ -131,7 +161,7 @@ void InformeRecaudacion::menuInformeRecaudacion()
         break;
        case 3:
         {
-        //void porProducto(){}
+         porProducto();
         }
         break;
        case 0:
