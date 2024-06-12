@@ -60,5 +60,5 @@ int ingresoEntero(){
         cin >> num;
     }
 
-    return num 
+    return num; 
 }
