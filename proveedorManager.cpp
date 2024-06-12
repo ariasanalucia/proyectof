@@ -42,13 +42,53 @@ using namespace std;
    }
  }
 
- void ProveedorManager::mostrarTodos()
+ void ProveedorManager::mostrarTodos() //Ordenados por Nombre 
  {
-   for (int i=0; i<_archivo.contarRegistros(); i++)
-   {
-     Mostrar(_archivo.leer(i));
-   }
-   pausa();
+    int cantReg = _archivo.contarRegistros();
+    ArchivoProveedor archiProv("proveedores.dat");
+
+    // Crear un arreglo de punteros a Proveedor
+    Proveedor *vecOrdenados;
+    Proveedor vecOrdenados = new Proveedor[cantReg];
+
+    // Guardo todos los proveedores
+    for (int i = 0; i < cantReg; i++)
+    {
+        vecOrdenados[i] = new Proveedor(archiProv.leer(i));
+    }
+    // Ordenar los proveedores por nombre usando el algoritmo de burbuja
+    for (int i = 0; i < cantReg - 1; i++)
+    {
+        for (int j = 0; j < cantReg - i - 1; j++)
+        {
+            // Convertir los nombres a minúsculas para comparar
+            string aux1 = tolower(vecOrdenados[j].getNombre());
+            string aux2 = tolower(vecOrdenados[j + 1].getNombre());
+
+            // Comparar los nombres y si están desordenados, intercambiar
+            if (strcmp(aux1, aux2) == 1) //Sera valido (aux1 > aux2) para comparar?
+            {
+                Proveedor* temp = vecOrdenados[j];
+                vecOrdenados[j] = vecOrdenados[j + 1];
+                vecOrdenados[j + 1] = temp;
+            }
+        }
+    }
+
+    // Mostrar los proveedores ordenados
+    for (int i = 0; i < cantReg; i++)
+    {
+        vecOrdenados[i].Mostrar();
+    }
+
+    // Liberar la memoria asignada a los proveedores y al arreglo
+    for (int i = 0; i < cantReg; i++)
+    {
+        delete vecOrdenados[i];
+    }
+    delete[] vecOrdenados;
+
+    pausa();
  }
 
 
