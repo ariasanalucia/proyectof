@@ -36,7 +36,7 @@ using namespace std;
    {
      cout << "ID: " << reg.getId() << endl;
      cout << "Nombre: " << reg.getNombre() << endl;
-     cout << "Telefono :" << reg.getTelefono() << endl;
+     cout << "Telefono: " << reg.getTelefono() << endl;
      cout << endl;
      cout << "-------------------------------" << endl;
    }
@@ -47,13 +47,12 @@ using namespace std;
     int cantReg = _archivo.contarRegistros();
 
     // Crear un arreglo de punteros a Proveedor
-    Proveedor** vecOrdenados = new Proveedor*[cantReg];
+    Proveedor* vecOrdenados = new Proveedor[cantReg];
 
     // Guardo todos los proveedores
     for (int i = 0; i < cantReg; i++)
     {
-        vecOrdenados[i] = new Proveedor(_archivo.leer(i));
-        vecOrdenados[i]->Mostrar();
+        vecOrdenados[i] = _archivo.leer(i);
     }
     // Ordenar los proveedores por nombre usando el algoritmo de burbuja
     for (int i = 0; i < cantReg - 1; i++)
@@ -61,17 +60,17 @@ using namespace std;
         for (int j = 0; j < cantReg - i - 1; j++)
         {
             // Convertir los nombres a minúsculas para comparar
-            string aux1 = vecOrdenados[j]->getNombre();
-            string aux2 = vecOrdenados[j + 1]->getNombre();
-            transform(aux1.begin(), aux1.end(), aux1.begin(), ::tolower); //Aplico tolower() a cada caracter del array
+            string aux1 = vecOrdenados[j].getNombre();
+            string aux2 = vecOrdenados[j+1].getNombre();
+            transform(aux1.begin(), aux1.end(), aux1.begin(), ::tolower); //Aplico tolower() a cada caracter del string
             transform(aux2.begin(), aux2.end(), aux2.begin(), ::tolower);
 
             // Comparar los nombres y si están desordenados, intercambiar
             if (strcmp(aux1.c_str(), aux2.c_str()) > 0) //Sera valido (aux1 > aux2) para comparar?
             {
-                Proveedor* temp = vecOrdenados[j];
-                vecOrdenados[j] = vecOrdenados[j + 1];
-                vecOrdenados[j + 1] = temp;
+                Proveedor temp = vecOrdenados[j];
+                vecOrdenados[j] = vecOrdenados[j+1];
+                vecOrdenados[j+1] = temp;
             }
         }
     }
@@ -79,15 +78,10 @@ using namespace std;
     // Mostrar los proveedores ordenados
     for (int i = 0; i < cantReg; i++)
     {
-        vecOrdenados[i]->Mostrar();
-        //Mostrar(vecOrdenados[i]);
+        //vecOrdenados[i]->Mostrar();
+        Mostrar(vecOrdenados[i]);
     }
 
-    // Liberar la memoria asignada a los proveedores y al arreglo
-    for (int i = 0; i < cantReg; i++)
-    {
-        delete vecOrdenados[i];
-    }
     delete[] vecOrdenados;
 
     pausa();

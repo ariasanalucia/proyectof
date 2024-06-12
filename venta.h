@@ -38,5 +38,8 @@ using namespace std;
     int getCantidad(int pos);
     bool getEstado();
     float getImporte();
+
+    //MOSTRAR
+    void Mostrar(Venta reg);
  };
 

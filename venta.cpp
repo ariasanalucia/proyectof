@@ -89,3 +89,27 @@ int Venta::getCantidad(int pos)
  }
 bool Venta::getEstado(){return _estado;}
 float Venta::getImporte(){return _importe;}
+
+//MOSTRAR
+ void Venta::Mostrar(Venta reg)
+ {
+   if (reg.getEstado() && reg.getImporte() > 0)
+   {
+     cout << "Numero de venta: " << reg.getNumero() << endl;
+     cout << "ID de empleado: " << reg.getIdEmpleado() << endl;
+     cout << "Fecha: " << reg.getFecha().toString() << endl;
+     cout << "Hora: " << reg.getHora().toString() << endl;
+     cout << endl;
+     for (int i=0; i<10; i++)
+     {
+       if (reg.getIdProducto(i) > 0)
+       {
+         cout << "ID Producto: " << reg.getIdProducto(i) << endl;
+         cout << "Cantidad: " << reg.getCantidad(i) << endl;
+         cout << endl;
+       }
+     }
+     cout << "Importe: $" << reg.getImporte() << endl;
+     cout << "-------------------------------" << endl;
+   }
+ }

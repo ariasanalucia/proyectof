@@ -9,7 +9,9 @@
  {
    private:
     VentaArchivo _archiVenta = VentaArchivo("venta.dat");
-    void mostrarTodos();
+    void menuListar();
+    void mostrarPorFecha();
+    void mostrarPorEmpleado();
     void modificar();
     Venta Cargar();
     void Mostrar (Venta venta);
