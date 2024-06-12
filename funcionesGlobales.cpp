@@ -53,11 +53,12 @@ int ingresoEntero(){
     int num;
     cin >> num;
 
-    while (cin.fail()) {
+    while (cin.fail()) { //Ingresa al loop si el valor ingresado NO es un int
         cout << "ERROR: Valor ingresado no es un numero" << endl;
         cin.clear();
         cin.ignore(132,'\n');
         cin >> num;
     }
 
+    return num 
 }
