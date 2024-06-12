@@ -369,7 +369,8 @@ using namespace std;
       cout << "----------------" << endl;
 
       cout << "INGRESE UNA OPCION: ";
-      cin >> opcion;
+      //cin >> opcion;
+      opcion = ingresoEntero();
       clear();
       switch (opcion)
       {

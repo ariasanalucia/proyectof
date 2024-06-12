@@ -342,7 +342,7 @@ using namespace std;
     ProductoArchivo archiProducto("producto.dat");
     Producto productos;
     char drogaProducto[30];
-    cout<<"INGRESE LA DROGA SOLICITADA: ";
+    cout<<"INGRESE LA DROGA A BUSCAR: ";
     cargarCadena(drogaProducto,29);
     bool drogaActiva = false;
 
@@ -365,27 +365,50 @@ using namespace std;
 
  void ProductoManager::mostrarPorCategoria(){
     ProductoArchivo archiProducto("producto.dat");
-    Producto productos;
+    Producto producto;
     char categoriaProducto[30];
-    cout<<"INGRESE LA CATEGORIA SOLICITADA: ";
+    cout<<"INGRESE LA CATEGORIA A SOLICITAR: ";
     cargarCadena(categoriaProducto,29);
-    bool categoriaActiva = false;
+    bool existe = false;
 
     for(int i = 0; i < archiProducto.contarRegistros(); i++)
     {
-      productos = archiProducto.leer(i);
-      if(compararCaracteres(categoriaProducto,productos.getCategoria())){
-        Mostrar(productos);
-        categoriaActiva = true;
+      producto = archiProducto.leer(i);
+      if(compararCaracteres(categoriaProducto,producto.getCategoria())){
+        Mostrar(producto);
+        existe = true;
       }
     }
-    if (!categoriaActiva)
+    if (!existe)
     {
       cout << "ESA CATEGORIA NO SE ENCUENTRA REGISTRADA" << endl;
     }
  }
 
+ void ProductoManager::mostrarPorPrecio(){
+    ProductoArchivo archiProducto("producto.dat");
+    Producto producto;
+    
+    int precio = 0;
+    cout<<"INGRESE EL PRECIO A SOLICITAR: ";
+    cin >> precio;
 
+    bool existe = false;
+    for(int i = 0; i < archiProducto.contarRegistros(); i++)
+    {
+      producto = archiProducto.leer(i);
+      if(precio == producto.getPrecioUnitario()){
+        Mostrar(producto);
+        existe = true;
+      }
+    }
+    
+    if (!existe) {
+      cout << "ESA CATEGORIA NO SE ENCUENTRA REGISTRADA" << endl;
+      pausa();
+    }
+
+ }
 // void ProductoManager::solicitarProducto(){
 //
 //    mostrarPorDroga();
@@ -498,7 +521,8 @@ using namespace std;
       cout << "----------------" << endl;
 
       cout << "INGRESE UNA OPCION: ";
-      cin >> opcion;
+      //cin >> opcion;
+      opcion = ingresoEntero();
       clear();
       switch (opcion)
       {

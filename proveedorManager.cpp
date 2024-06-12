@@ -53,6 +53,7 @@ using namespace std;
     for (int i = 0; i < cantReg; i++)
     {
         vecOrdenados[i] = new Proveedor(_archivo.leer(i));
+        vecOrdenados[i]->Mostrar();
     }
     // Ordenar los proveedores por nombre usando el algoritmo de burbuja
     for (int i = 0; i < cantReg - 1; i++)
@@ -213,6 +214,7 @@ void ProveedorManager::menuProveedor()
 
       cout << "INGRESE UNA OPCION: ";
       cin >> opcion;
+      opcion = ingresoEntero();
       clear();
       switch (opcion)
       {

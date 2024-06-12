@@ -11,8 +11,8 @@ using namespace std;
       clear();
       cout << "   CONSULTAS" << endl;
       cout << "----------------" << endl;
-      cout << "1 - BUSCAR POR FECHA DE VENTA" << endl;
-      cout << "2 - BUSCAR POR ID DE EMPLEADO" << endl;
+      cout << "1 - POR FECHA DE VENTA" << endl;
+      cout << "2 - POR ID DE EMPLEADO" << endl;
       cout << "3 - " << endl;
       cout << "4 - " << endl;
       cout << "5 - " << endl;
@@ -21,7 +21,8 @@ using namespace std;
       cout << "----------------" << endl;
 
       cout << "INGRESE UNA OPCION: ";
-      cin >> opcion;
+      //cin >> opcion;
+      opcion = ingresoEntero();
       clear();
       switch (opcion)
       {
