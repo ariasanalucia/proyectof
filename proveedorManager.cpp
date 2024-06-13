@@ -7,7 +7,7 @@ using namespace std;
  Proveedor ProveedorManager::Cargar()
  {
     Proveedor aux;
-    ProveedorArchivo archiProveedor("proveedor.dat");
+    ProveedorArchivo archiProveedor("proveedores.dat");
     int telefono,idProveedor;
     char nombre[30];
     bool estado;
@@ -42,7 +42,7 @@ using namespace std;
    }
  }
 
- void ProveedorManager::mostrarTodos() //Ordenados por Nombre 
+ void ProveedorManager::mostrarTodos() //Ordenados por Nombre
  {
     int cantReg = _archivo.contarRegistros();
 
@@ -208,7 +208,6 @@ void ProveedorManager::menuProveedor()
 
       cout << "INGRESE UNA OPCION: ";
       cin >> opcion;
-      opcion = ingresoEntero();
       clear();
       switch (opcion)
       {

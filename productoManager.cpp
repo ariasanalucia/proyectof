@@ -5,6 +5,7 @@ using namespace std;
 #include "funcionesGlobales.h"
 #include "productoManager.h"
 #include "consultas.h"
+#include "listadosProductos.h"
 
  //CARGAR
  Producto ProductoManager::Cargar()
@@ -356,22 +357,29 @@ using namespace std;
     ProductoArchivo archiProducto("producto.dat");
     Producto producto;
 
-    int precio = 0;
-    cout<<"INGRESE EL PRECIO A SOLICITAR: ";
-    cin >> precio;
+    float precio1;
+    float precio2;
+    cout<<"INGRESE UN RANGO DE PRECIOS " << endl;
+    cout << "PRECIO NUMERO 1 (MAS BAJO): $";
+    cin >> precio1;
+    cout << endl;
+    cout << "PRECIO NUMERO 2 (MAS ALTO): $";
+    cin >> precio2;
+    cout << endl;
 
     bool existe = false;
     for(int i = 0; i < archiProducto.contarRegistros(); i++)
     {
       producto = archiProducto.leer(i);
-      if(precio == producto.getPrecioUnitario()){
+      if(producto.getPrecioUnitario() >= precio1 && producto.getPrecioUnitario() <= precio2){
         Mostrar(producto);
+        cout << endl;
         existe = true;
       }
     }
 
     if (!existe) {
-      cout << "ESA CATEGORIA NO SE ENCUENTRA REGISTRADA" << endl;
+      cout << "NO SE ENCUENTRAN MEDICAMENTOS EN ESE RANGO DE PRECIOS" << endl;
       pausa();
     }
 
@@ -475,13 +483,13 @@ using namespace std;
     while(true)
     {
       clear();
-      cout << "    PRODUCTOS" << endl;
+      cout << "  MEDICAMENTOS" << endl;
       cout << "----------------" << endl;
       cout << "1 - ALTA" << endl;
       cout << "2 - BAJA" << endl;
       cout << "3 - LISTAR" << endl;
       cout << "4 - MODIFICAR" << endl;
-      cout << "5 - SOLICITAR PRODUCTO" << endl;
+      cout << "5 - SOLICITAR MEDICAMENTO" << endl;
       cout << "6 - CONSULTAS" << endl;
       cout << endl;
       cout << "0 - PARA SALIR" << endl;
@@ -506,7 +514,8 @@ using namespace std;
         break;
        case 3:
         {
-          mostrarTodos();
+          listadosProductos reg;
+          reg.menuListados();
         }
         break;
        case 4:

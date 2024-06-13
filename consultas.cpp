@@ -15,6 +15,7 @@ using namespace std;
       cout << "2 - POR PROVEEDOR" << endl;
       cout << "3 - POR CATEGORIA" << endl;
       cout << "4 - POR DROGA" << endl;
+      cout << "5 - POR PRECIO UNITARIO" << endl;
       cout << endl;
       cout << "0 - PARA SALIR" << endl;
       cout << "----------------" << endl;
@@ -43,6 +44,11 @@ using namespace std;
        case 4:
         {
          pm.mostrarPorDroga();
+        }
+        break;
+       case 5:
+        {
+          pm.mostrarPorPrecio();
         }
         break;
        case 0:

@@ -56,6 +56,8 @@
 		<Unit filename="informeStock.h" />
 		<Unit filename="informes.cpp" />
 		<Unit filename="informes.h" />
+		<Unit filename="listadosProductos.cpp" />
+		<Unit filename="listadosProductos.h" />
 		<Unit filename="listadosVentas.cpp" />
 		<Unit filename="listadosVentas.h" />
 		<Unit filename="main.cpp" />

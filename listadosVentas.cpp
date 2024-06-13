@@ -4,7 +4,6 @@ using namespace std;
 
 void listadosVentas::MostrarPorFechaDeCompra()//Por Fecha y Por Empleado (ID)
  {
-    //--------Por Fecha Descendente----------------------
     VentaArchivo _archiVenta("venta.dat");
     int cantReg = _archiVenta.contarRegistros();
     // Crear un arreglo de ventas dinamico
@@ -16,21 +15,46 @@ void listadosVentas::MostrarPorFechaDeCompra()//Por Fecha y Por Empleado (ID)
     {
         vecOrdenados[i] = _archiVenta.leer(i);
     }
+
+    int respuesta;
+    cout << "COMO DESEA ORDENARLOS(1 - Ascendente || 2 - Descendente): ";
+    cin >> respuesta;
+
     // Burbujeo
-    for (int i = 0; i < cantReg - 1; i++)
+    if (respuesta == 2)
     {
-        for (int j = 0; j < cantReg - i - 1; j++)
-        {   //Se ve asqueroso, pero simplemente pase todo a minutos y compare a ambos
-            int aux1 = (vecOrdenados[j].getFecha().getAnio()*525960)+(vecOrdenados[j].getFecha().getMes()*43830)+(vecOrdenados[j].getFecha().getDia()*1440);
-            int aux2 = (vecOrdenados[j+1].getFecha().getAnio()*525960)+(vecOrdenados[j].getFecha().getMes()*43830)+(vecOrdenados[j+1].getFecha().getDia()*1440);
-            // Comparar los minutos de cada venta
-            if (aux1 < aux2)
-            {
-                Venta temp = vecOrdenados[j];
-                vecOrdenados[j] = vecOrdenados[j+1];
-                vecOrdenados[j+1] = temp;
-            }
-        }
+     for (int i = 0; i < cantReg - 1; i++)
+     {
+         for (int j = 0; j < cantReg - i - 1; j++)
+         {   //Se ve asqueroso, pero simplemente pase todo a minutos y compare a ambos
+             int aux1 = (vecOrdenados[j].getFecha().getAnio()*525960)+(vecOrdenados[j].getFecha().getMes()*43830)+(vecOrdenados[j].getFecha().getDia()*1440);
+             int aux2 = (vecOrdenados[j+1].getFecha().getAnio()*525960)+(vecOrdenados[j].getFecha().getMes()*43830)+(vecOrdenados[j+1].getFecha().getDia()*1440);
+             // Comparar los minutos de cada venta
+             if (aux1 < aux2)
+             {
+                 Venta temp = vecOrdenados[j];
+                 vecOrdenados[j] = vecOrdenados[j+1];
+                 vecOrdenados[j+1] = temp;
+             }
+         }
+     }
+    }else if(respuesta == 1)
+    {
+     for (int i = 0; i < cantReg - 1; i++)
+     {
+         for (int j = 0; j < cantReg - i - 1; j++)
+         {   //Se ve asqueroso, pero simplemente pase todo a minutos y compare a ambos
+             int aux1 = (vecOrdenados[j].getFecha().getAnio()*525960)+(vecOrdenados[j].getFecha().getMes()*43830)+(vecOrdenados[j].getFecha().getDia()*1440);
+             int aux2 = (vecOrdenados[j+1].getFecha().getAnio()*525960)+(vecOrdenados[j].getFecha().getMes()*43830)+(vecOrdenados[j+1].getFecha().getDia()*1440);
+             // Comparar los minutos de cada venta
+             if (aux1 > aux2)
+             {
+                 Venta temp = vecOrdenados[j];
+                 vecOrdenados[j] = vecOrdenados[j+1];
+                 vecOrdenados[j+1] = temp;
+             }
+         }
+     }
     }
 
     // Mostrar los proveedores ordenados
@@ -46,7 +70,6 @@ void listadosVentas::MostrarPorFechaDeCompra()//Por Fecha y Por Empleado (ID)
 
  void listadosVentas::MostrarPorIdDeEmpleado()//Por Empleado (ID)
  {
-    //--------Por Fecha Descendente----------------------
     VentaArchivo _archiVenta("venta.dat");
     int cantReg = _archiVenta.contarRegistros();
     // Crear un arreglo de ventas dinamico
@@ -58,20 +81,44 @@ void listadosVentas::MostrarPorFechaDeCompra()//Por Fecha y Por Empleado (ID)
     {
         vecOrdenados[i] = _archiVenta.leer(i);
     }
+
+    int respuesta;
+    cout << "COMO DESEA ORDENARLOS(1 - Ascendente || 2 - Descendente): ";
+    cin >> respuesta;
+
     // Burbujeo
-    for (int i = 0; i < cantReg - 1; i++)
+    if (respuesta == 1)
     {
-        for (int j = 0; j < cantReg - i - 1; j++)
-        {
-            int aux1 = vecOrdenados[j].getIdEmpleado();
-            int aux2 = vecOrdenados[j+1].getIdEmpleado();
-            if (aux1 > aux2)
-            {
-                Venta temp = vecOrdenados[j];
-                vecOrdenados[j] = vecOrdenados[j+1];
-                vecOrdenados[j+1] = temp;
-            }
-        }
+      for (int i = 0; i < cantReg - 1; i++)
+      {
+          for (int j = 0; j < cantReg - i - 1; j++)
+          {
+              int aux1 = vecOrdenados[j].getIdEmpleado();
+              int aux2 = vecOrdenados[j+1].getIdEmpleado();
+              if (aux1 > aux2)
+              {
+                  Venta temp = vecOrdenados[j];
+                  vecOrdenados[j] = vecOrdenados[j+1];
+                  vecOrdenados[j+1] = temp;
+              }
+          }
+      }
+    }else if (respuesta == 2)
+    {
+      for (int i = 0; i < cantReg - 1; i++)
+      {
+          for (int j = 0; j < cantReg - i - 1; j++)
+          {
+              int aux1 = vecOrdenados[j].getIdEmpleado();
+              int aux2 = vecOrdenados[j+1].getIdEmpleado();
+              if (aux1 < aux2)
+              {
+                  Venta temp = vecOrdenados[j];
+                  vecOrdenados[j] = vecOrdenados[j+1];
+                  vecOrdenados[j+1] = temp;
+              }
+          }
+      }
     }
 
     // Mostrar los proveedores ordenados
@@ -114,6 +161,7 @@ void listadosVentas::menuListados()
         {
          MostrarPorIdDeEmpleado();
         }
+        break;
        case 0:
         {
           return;

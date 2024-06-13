@@ -94,15 +94,16 @@
 	"proveedorManager.h"
 	"informes.h"
 
-1718228498 source:c:\users\usuario\documents\github\proyectof\productomanager.cpp
+1718311302 source:c:\users\usuario\documents\github\proyectof\productomanager.cpp
 	<iostream>
 	<cstring>
 	<ctype.h>
 	"funcionesGlobales.h"
 	"productoManager.h"
 	"consultas.h"
+	"listadosProductos.h"
 
-1718241877 source:c:\users\usuario\documents\github\proyectof\app.cpp
+1718310543 source:c:\users\usuario\documents\github\proyectof\app.cpp
 	<iostream>
 	"funcionesGlobales.h"
 	"app.h"
@@ -194,7 +195,7 @@
 1715884078 c:\users\usuario\documents\github\proyectof\consultas.h
 	"productoManager.h"
 
-1718216735 source:c:\users\usuario\documents\github\proyectof\consultas.cpp
+1718311092 source:c:\users\usuario\documents\github\proyectof\consultas.cpp
 	<iostream>
 	"consultas.h"
 	"funcionesGlobales.h"
@@ -363,7 +364,7 @@
 	<cstring>
 	"venta.h"
 
-1718249308 source:c:\users\usuario\documents\github\proyectof\ventamanager.cpp
+1718249832 source:c:\users\usuario\documents\github\proyectof\ventamanager.cpp
 	<iostream>
 	"ventaManager.h"
 	"funcionesGlobales.h"
@@ -371,7 +372,7 @@
 	"productoManager.h"
 	"venta.h"
 
-1718226820 source:c:\users\usuario\documents\github\proyectof\proveedormanager.cpp
+1718310207 source:c:\users\usuario\documents\github\proyectof\proveedormanager.cpp
 	<iostream>
 	"proveedorManager.h"
 	"funcionesGlobales.h"
@@ -822,7 +823,7 @@
 
 1718237716 c:\users\usuario\documents\github\proyectof\listados.h
 
-1718245503 source:c:\users\usuario\documents\github\proyectof\listadosventas.cpp
+1718294921 source:c:\users\usuario\documents\github\proyectof\listadosventas.cpp
 	<iostream>
 	"listadosVentas.h"
 
@@ -831,4 +832,14 @@
 	"venta.h"
 	"ventaArchivo.h"
 	"ventaManager.h"
+
+1718293726 source:c:\users\usuario\documents\github\proyectof\listadosproductos.cpp
+	<iostream>
+	"listadosProductos.h"
+
+1718293307 c:\users\usuario\documents\github\proyectof\listadosproductos.h
+	"producto.h"
+	"productoManager.h"
+	"productoArchivo.h"
+	"funcionesGlobales.h"
 

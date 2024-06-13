@@ -11,7 +11,7 @@ using namespace std;
       clear();
       cout << " MENU PRINCIPAL" << endl;
       cout << "----------------" << endl;
-      cout << "1 - PRODUCTOS" << endl;
+      cout << "1 - MEDICAMENTOS" << endl;
       cout << "2 - VENTAS" << endl;
       cout << "3 - EMPLEADOS" << endl;
       cout << "4 - PROVEEDORES" << endl;
