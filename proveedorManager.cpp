@@ -59,7 +59,6 @@ using namespace std;
     {
         for (int j = 0; j < cantReg - i - 1; j++)
         {
-            // Convertir los nombres a minúsculas para comparar
             string aux1 = vecOrdenados[j].getNombre();
             string aux2 = vecOrdenados[j+1].getNombre();
             transform(aux1.begin(), aux1.end(), aux1.begin(), ::tolower); //Aplico tolower() a cada caracter del string

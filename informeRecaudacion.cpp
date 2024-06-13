@@ -28,7 +28,7 @@ void InformeRecaudacion::porAnio(){
 
   clear();
 
-  cout << "Recaudacion " << anio << ":" << endl;
+  cout << "Recaudacion Anio " << anio << ":" << endl;
   cout << "---------------------------" << endl;
   cout << "Enero      |$" << mes[0] << endl;
   cout << "Febrero    |$" << mes[1] << endl;
@@ -46,6 +46,112 @@ void InformeRecaudacion::porAnio(){
   cout << endl << endl;
   cout << "-----------------------------" << endl;
   cout << "TOTAL RECAUDADO: $" << totalRecaudado << endl;
+  pausa();
+}
+
+void InformeRecaudacion::porMes(){
+  Venta reg;
+  VentaArchivo archiVenta("venta.dat");
+  int cant = archiVenta.contarRegistros();
+
+  float importe;
+
+  float totalRecaudado = 0;
+
+  int anio;
+  cout << "INGRESE EL ANIO:";
+  cin >> anio;
+  cout << endl;
+
+  int mes;
+  cout << "INGRESE EL MES:";
+  cin >> mes;
+  cout << endl;
+
+  for (int i = 0; i < cant; i++) {
+    reg = archiVenta.leer(i);
+    if (reg.getFecha().getAnio()==anio && reg.getFecha().getMes()==mes) {
+      importe += reg.getImporte();
+    }
+  }
+
+  clear();
+
+  cout << "Recaudacion Mes " << mes << ":" << endl;
+  cout << "-------------------------------" << endl;
+  switch (mes)
+  {
+   case 1:
+    {
+    cout << "Enero      |$" << importe << endl;
+    }
+    break;
+   case 2:
+    {
+    cout << "Febrero    |$" << importe << endl;
+    }
+    break;
+   case 3:
+    {
+    cout << "Marzo      |$" << importe << endl;
+    }
+    break;
+   case 4:
+    {
+    cout << "Abril      |$" << importe << endl;
+    }
+    break;
+    case 5:
+    {
+    cout << "Mayo       |$" << importe << endl;
+    }
+    break;
+   case 6:
+    {
+    cout << "Junio      |$" << importe << endl;
+    }
+    break;
+   case 7:
+    {
+    cout << "Julio      |$" << importe << endl;
+    }
+    break;
+   case 8:
+    {
+    cout << "Agosto     |$" << importe << endl;
+    }
+    break;
+   case 9:
+    {
+    cout << "Septiembre |$" << importe << endl;
+    }
+    break;
+   case 10:
+    {
+    cout << "Octubre    |$" << importe << endl;
+    }
+    break;
+   case 11:
+    {
+    cout << "Noviembre  |$" << importe << endl;
+    }
+    break;
+   case 12:
+    {
+    cout << "Diciembre  |$" << importe << endl;
+    }
+    break;
+   case 0:
+    {
+      return;
+    }
+   default:
+    {
+      cout << "OPCION INCORRECTA" << endl;
+    }
+    break;
+  }
+  cout << "-------------------------------" << endl;
   pausa();
 }
 
@@ -174,8 +280,9 @@ void InformeRecaudacion::menuInformeRecaudacion()
       cout << "  RECAUDACION" << endl;
       cout << "----------------" << endl;
       cout << "1 - POR ANIO" << endl;
-      cout << "2 - POR EMPLEADO" << endl;
-      cout << "3 - POR MEDICAMENTO" << endl;
+      cout << "2 - POR MES" << endl;
+      cout << "3 - POR EMPLEADO" << endl;
+      cout << "4 - POR PRODUCTO" << endl;
       cout << endl;
       cout << "0 - PARA SALIR" << endl;
       cout << "----------------" << endl;
@@ -193,10 +300,15 @@ void InformeRecaudacion::menuInformeRecaudacion()
         break;
        case 2:
         {
-         porEmpleado();
+         porMes();
         }
         break;
        case 3:
+        {
+         porEmpleado();
+        }
+        break;
+       case 4:
         {
          porProducto();
         }

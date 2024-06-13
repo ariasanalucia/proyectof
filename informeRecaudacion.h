@@ -11,6 +11,7 @@ using namespace std;
  {
    public:
     void porAnio();
+    void porMes();
     void porEmpleado();
     void porProducto();
     void menuInformeRecaudacion();
