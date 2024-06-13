@@ -342,7 +342,7 @@
 1716390602 c:\users\usuario\documents\github\proyectof\empleadomanager.h
 	"empleadoArchivo.h"
 
-1718243871 c:\users\usuario\documents\github\proyectof\ventamanager.h
+1718248959 c:\users\usuario\documents\github\proyectof\ventamanager.h
 	"listadosVentas.h"
 	"ventaArchivo.h"
 	"productoArchivo.h"
@@ -363,13 +363,13 @@
 	<cstring>
 	"venta.h"
 
-1718243871 source:c:\users\usuario\documents\github\proyectof\ventamanager.cpp
+1718249308 source:c:\users\usuario\documents\github\proyectof\ventamanager.cpp
 	<iostream>
 	"ventaManager.h"
 	"funcionesGlobales.h"
 	"consultasVentas.h"
 	"productoManager.h"
-	"listadosVentas.h"
+	"venta.h"
 
 1718226820 source:c:\users\usuario\documents\github\proyectof\proveedormanager.cpp
 	<iostream>
@@ -614,7 +614,7 @@
 	"ventaArchivo.h"
 	"venta.h"
 
-1718216735 source:c:\users\usuario\documents\github\proyectof\consultasventas.cpp
+1718249369 source:c:\users\usuario\documents\github\proyectof\consultasventas.cpp
 	<iostream>
 	"consultasVentas.h"
 	"funcionesGlobales.h"
@@ -822,7 +822,7 @@
 
 1718237716 c:\users\usuario\documents\github\proyectof\listados.h
 
-1718241082 source:c:\users\usuario\documents\github\proyectof\listadosventas.cpp
+1718245503 source:c:\users\usuario\documents\github\proyectof\listadosventas.cpp
 	<iostream>
 	"listadosVentas.h"
 

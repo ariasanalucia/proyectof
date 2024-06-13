@@ -65,7 +65,7 @@ void listadosVentas::MostrarPorFechaDeCompra()//Por Fecha y Por Empleado (ID)
         {
             int aux1 = vecOrdenados[j].getIdEmpleado();
             int aux2 = vecOrdenados[j+1].getIdEmpleado();
-            if (aux1 < aux2)
+            if (aux1 > aux2)
             {
                 Venta temp = vecOrdenados[j];
                 vecOrdenados[j] = vecOrdenados[j+1];

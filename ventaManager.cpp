@@ -4,6 +4,7 @@ using namespace std;
 #include "funcionesGlobales.h"
 #include "consultasVentas.h"
 #include "productoManager.h"
+#include "venta.h"
 
 
   //CARGAR
@@ -291,16 +292,26 @@ using namespace std;
    int cantidadDeReg = _archiVenta.contarRegistros();
 
    bool activo = false;
-   Fecha fechaAbuscar;
+   Fecha fechaAbuscar1, fechaAbuscar2;
 
-   cout << "INGRESE LA FECHA DE LA VENTA A BUSCAR: " << endl;
-   fechaAbuscar.Cargar();
+   cout << "INGRESE UN RAGO DE FECHAS: " << endl;
+   cout << "PRIMER FECHA(fecha mas antigua): " << endl;
+   fechaAbuscar1.Cargar();
+   int aux1 = (fechaAbuscar1.getAnio()*525960)+(fechaAbuscar1.getMes()*43830)+(fechaAbuscar1.getDia()*1440);
+   cout << endl;
+
+   cout << "SEGUNDA FECHA(fecha mas reciente): " << endl;
+   fechaAbuscar2.Cargar();
+   int aux2 = (fechaAbuscar2.getAnio()*525960)+(fechaAbuscar2.getMes()*43830)+(fechaAbuscar2.getDia()*1440);
+
    clear();
 
    for(int i=0; i<cantidadDeReg; i++)
    {
      reg = _archiVenta.leer(i);
-     if (reg.getEstado() && reg.getFecha().toString() == fechaAbuscar.toString())
+     int fechaDeVenta = (reg.getFecha().getAnio()*525960)+(reg.getFecha().getMes()*43830)+(reg.getFecha().getDia()*1440);
+
+     if (fechaDeVenta >= aux1 && fechaDeVenta <= aux2)
      {
        activo = true;
 
@@ -341,6 +352,41 @@ using namespace std;
     {
       cout << "NO EXISTEN VENTAS CON EL ID DE USUARIO QUE INGRESO " << endl;
     }
+  }
+
+  void VentaManager::MostrarPorProducto()
+  {
+   Producto reg;
+   ProductoArchivo archivoP("producto.dat");
+   int cantProductos = archivoP.contarRegistros();
+
+   Venta regVenta;
+   VentaArchivo _archiVenta("venta.dat");
+   int cantVentas = _archiVenta.contarRegistros();
+
+   validarDroga();
+
+   int idProducto;
+   cout << "INGRESE EL ID DEL PRODUCTO: ";
+   cin >> idProducto;
+   cout << endl;
+   clear();
+
+   if (idProducto <= cantProductos)
+   {
+     reg = archivoP.leer(idProducto-1);
+     for (int i=0; i<cantVentas; i++)
+     {
+       regVenta = _archiVenta.leer(i);
+
+       if (reg.getId() == regVenta.getIdProducto(idProducto-1) && reg.getEstado())
+       {
+         Mostrar(regVenta);
+         cout << endl;
+       }
+     }
+   }
+   pausa();
   }
 
 

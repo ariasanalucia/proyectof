@@ -22,4 +22,5 @@
     void menuVentas();
     void MostrarPorFechaDeCompra();
     void MostrarPorIdDeEmpleado();
+    void MostrarPorProducto();
  };
