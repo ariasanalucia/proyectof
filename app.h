@@ -3,7 +3,7 @@
 #include "empleadoManager.h"
 #include "ventaManager.h"
 #include "proveedorManager.h"
-#include "informeRecaudacion.h"
+#include "informes.h"
 
  class App
  {
@@ -12,7 +12,7 @@
     EmpleadoManager subMenuE;
     VentaManager subMenuV;
     ProveedorManager subMenuProveedor;
-    InformeRecaudacion subMenuInforme;
+    Informes subMenuInformes;
 
    public:
     void MenuPrincipal();

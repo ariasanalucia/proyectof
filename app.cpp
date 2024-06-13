@@ -49,7 +49,7 @@ using namespace std;
         break;
         case 5:
         {
-          subMenuInforme.menuInformeRecaudacion();
+          subMenuInformes.MenuInforme();
         }
         break;
        case 0:

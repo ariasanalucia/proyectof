@@ -90,39 +90,6 @@ using namespace std;
     }
  }
 
-// bool ProductoManager::validarFechaVencimiento(int idProducto)
-// {
-//   Producto reg;
-//   ProductoArchivo archiP("producto.dat");
-//   int cant = archiP.contarRegistros();
-//
-//   Fecha fechaActual();
-//
-//   for (int i=0; i<cant; i++)
-//   {
-//     reg = archiP.leer(i);
-//     if(reg.getId() == idProducto)
-//     {
-//       if (reg.getVenciemiento().getAnio() < fechaActual().getAnio())
-//       {
-//         return false;
-//       }
-//     }
-//   }
-//   return true;
-// }
-//
-// void ProductoManager::esFechaValida()
-// {
-//   Fecha venci;
-//   while (!validarFechaVencimiento(id))
-//   {
-//     cout << "Ingrese una fecha de vto valida: ";
-//     venci.Cargar();
-//   }
-// }
-
-
  void ProductoManager::mostrarTodos()
  {
    for (int i=0; i<_archivo.contarRegistros(); i++)
@@ -388,7 +355,7 @@ using namespace std;
  void ProductoManager::mostrarPorPrecio(){
     ProductoArchivo archiProducto("producto.dat");
     Producto producto;
-    
+
     int precio = 0;
     cout<<"INGRESE EL PRECIO A SOLICITAR: ";
     cin >> precio;
@@ -402,7 +369,7 @@ using namespace std;
         existe = true;
       }
     }
-    
+
     if (!existe) {
       cout << "ESA CATEGORIA NO SE ENCUENTRA REGISTRADA" << endl;
       pausa();

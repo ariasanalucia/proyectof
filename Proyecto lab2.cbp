@@ -52,6 +52,12 @@
 		<Unit filename="hora.h" />
 		<Unit filename="informeRecaudacion.cpp" />
 		<Unit filename="informeRecaudacion.h" />
+		<Unit filename="informeStock.cpp" />
+		<Unit filename="informeStock.h" />
+		<Unit filename="informes.cpp" />
+		<Unit filename="informes.h" />
+		<Unit filename="listadosVentas.cpp" />
+		<Unit filename="listadosVentas.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="producto.cpp" />
 		<Unit filename="producto.h" />
