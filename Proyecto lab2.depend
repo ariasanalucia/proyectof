@@ -65,7 +65,7 @@
 	<iostream>
 	"app.h"
 
-1718216735 c:\users\usuario\documents\github\proyectof\productomanager.h
+1718333196 c:\users\usuario\documents\github\proyectof\productomanager.h
 	"productoArchivo.h"
 	"producto.h"
 
@@ -94,7 +94,7 @@
 	"proveedorManager.h"
 	"informes.h"
 
-1718311302 source:c:\users\usuario\documents\github\proyectof\productomanager.cpp
+1718333196 source:c:\users\usuario\documents\github\proyectof\productomanager.cpp
 	<iostream>
 	<cstring>
 	<ctype.h>
@@ -195,7 +195,7 @@
 1715884078 c:\users\usuario\documents\github\proyectof\consultas.h
 	"productoManager.h"
 
-1718311092 source:c:\users\usuario\documents\github\proyectof\consultas.cpp
+1718333196 source:c:\users\usuario\documents\github\proyectof\consultas.cpp
 	<iostream>
 	"consultas.h"
 	"funcionesGlobales.h"
@@ -332,13 +332,14 @@
 	"empleado.h"
 	"funcionesGlobales.h"
 
-1718216735 source:c:\users\usuario\documents\github\proyectof\empleadomanager.cpp
+1718332362 source:c:\users\usuario\documents\github\proyectof\empleadomanager.cpp
 	<iostream>
 	<cstring>
 	"funcionesGlobales.h"
 	"empleado.h"
 	"empleadoManager.h"
 	"consultas.h"
+	<algorithm>
 
 1716390602 c:\users\usuario\documents\github\proyectof\empleadomanager.h
 	"empleadoArchivo.h"
@@ -372,7 +373,7 @@
 	"productoManager.h"
 	"venta.h"
 
-1718310207 source:c:\users\usuario\documents\github\proyectof\proveedormanager.cpp
+1718331905 source:c:\users\usuario\documents\github\proyectof\proveedormanager.cpp
 	<iostream>
 	"proveedorManager.h"
 	"funcionesGlobales.h"
@@ -717,7 +718,7 @@
 1716499734 c:\users\usuario\documents\github\proyectof\informe.h
 	"fecha.h"
 
-1717903726 c:\users\usuario\documents\github\proyectof\informerecaudacion.h
+1718331905 c:\users\usuario\documents\github\proyectof\informerecaudacion.h
 	"fecha.h"
 	"ventaManager.h"
 	"ventaArchivo.h"
@@ -790,7 +791,7 @@
 	"ventaArchivo.h"
 	"venta.h"
 
-1718216735 source:c:\users\usuario\documents\github\proyectof\informerecaudacion.cpp
+1718331905 source:c:\users\usuario\documents\github\proyectof\informerecaudacion.cpp
 	<iostream>
 	"fecha.h"
 	"informeRecaudacion.h"
@@ -823,7 +824,7 @@
 
 1718237716 c:\users\usuario\documents\github\proyectof\listados.h
 
-1718294921 source:c:\users\usuario\documents\github\proyectof\listadosventas.cpp
+1718333474 source:c:\users\usuario\documents\github\proyectof\listadosventas.cpp
 	<iostream>
 	"listadosVentas.h"
 
@@ -833,7 +834,7 @@
 	"ventaArchivo.h"
 	"ventaManager.h"
 
-1718293726 source:c:\users\usuario\documents\github\proyectof\listadosproductos.cpp
+1718333474 source:c:\users\usuario\documents\github\proyectof\listadosproductos.cpp
 	<iostream>
 	"listadosProductos.h"
 

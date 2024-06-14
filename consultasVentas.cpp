@@ -14,8 +14,6 @@ using namespace std;
       cout << "1 - POR FECHA DE VENTA" << endl;
       cout << "2 - POR ID DE EMPLEADO" << endl;
       cout << "3 - POR MEDICAMENTO" << endl;
-      cout << "4 - " << endl;
-      cout << "5 - " << endl;
       cout << endl;
       cout << "0 - PARA SALIR" << endl;
       cout << "----------------" << endl;
@@ -39,16 +37,6 @@ using namespace std;
        case 3:
         {
          Vm.MostrarPorProducto();
-        }
-        break;
-       case 4:
-        {
-
-        }
-        break;
-       case 5:
-        {
-
         }
         break;
        case 0:

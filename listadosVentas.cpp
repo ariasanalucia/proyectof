@@ -55,6 +55,9 @@ void listadosVentas::MostrarPorFechaDeCompra()//Por Fecha y Por Empleado (ID)
              }
          }
      }
+    }else
+    {
+      return;
     }
 
     // Mostrar los proveedores ordenados
@@ -119,6 +122,9 @@ void listadosVentas::MostrarPorFechaDeCompra()//Por Fecha y Por Empleado (ID)
               }
           }
       }
+    }else
+    {
+      return;
     }
 
     // Mostrar los proveedores ordenados

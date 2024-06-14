@@ -53,6 +53,9 @@ using namespace std;
           }
        }
      }
+   }else
+   {
+     return;
    }
 
     // Mostrar los proveedores ordenados
@@ -117,6 +120,9 @@ using namespace std;
           }
        }
      }
+   }else
+   {
+     return;
    }
 
     // Mostrar los proveedores ordenados
@@ -139,8 +145,7 @@ using namespace std;
       cout << "LISTADO DE MEDICAMENTOS" << endl;
       cout << "----------------" << endl;
       cout << "1 - POR PRECIO UNITARIO" << endl;
-      cout << "2 - POR TIPO/DROGA" << endl;
-      cout << "3 - POR CANTIDAD DE STOCK" << endl;
+      cout << "2 - POR CANTIDAD DE STOCK" << endl;
       cout << endl;
       cout << "0 - PARA SALIR" << endl;
       cout << "----------------" << endl;
@@ -157,11 +162,6 @@ using namespace std;
         }
         break;
        case 2:
-        {
-
-        }
-        break;
-       case 3:
         {
          listarPorCantStock();
         }

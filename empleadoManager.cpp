@@ -5,6 +5,7 @@ using namespace std;
 #include "empleado.h"
 #include "empleadoManager.h"
 #include "consultas.h"
+#include <algorithm> //Para transform()
 
  //CARGAR
  Empleado EmpleadoManager::Cargar()
@@ -41,6 +42,7 @@ using namespace std;
  {
    if (empleado.getEstado())
    {
+     cout << "ID: " << empleado.getId() << endl;
      cout << "DNI: " << empleado.getDni() << endl;
      cout << "Nombre: " << empleado.getNombre() << endl;
      cout << "Apellido: " << empleado.getApellido() << endl;
@@ -53,11 +55,45 @@ using namespace std;
 
  void EmpleadoManager::mostrarTodos()
  {
-   for (int i=0; i<_archivo.contarRegistros(); i++)
-   {
-     Mostrar(_archivo.leer(i));
-   }
-   pausa();
+   int cantReg = _archivo.contarRegistros();
+
+    // Crear un arreglo de punteros a empleado
+    Empleado* vecOrdenados = new Empleado[cantReg];
+
+    // Guardo todos los empleados
+    for (int i = 0; i < cantReg; i++)
+    {
+        vecOrdenados[i] = _archivo.leer(i);
+    }
+    // Ordenar los empleados por apellido usando el algoritmo de burbuja
+    for (int i = 0; i < cantReg - 1; i++)
+    {
+        for (int j = 0; j < cantReg - i - 1; j++)
+        {
+            string aux1 = vecOrdenados[j].getApellido();
+            string aux2 = vecOrdenados[j+1].getApellido();
+            transform(aux1.begin(), aux1.end(), aux1.begin(), ::tolower); //Aplico tolower() a cada caracter del string
+            transform(aux2.begin(), aux2.end(), aux2.begin(), ::tolower);
+
+            // Comparar los apellidos y si están desordenados, intercambiar
+            if (strcmp(aux1.c_str(), aux2.c_str()) > 0) //Sera valido (aux1 > aux2) para comparar?
+            {
+                Empleado temp = vecOrdenados[j];
+                vecOrdenados[j] = vecOrdenados[j+1];
+                vecOrdenados[j+1] = temp;
+            }
+        }
+    }
+
+
+    for (int i = 0; i < cantReg; i++)
+    {
+        Mostrar(vecOrdenados[i]);
+    }
+
+    delete[] vecOrdenados;
+
+    pausa();
  }
 
  void EmpleadoManager::mostrarPorDni()

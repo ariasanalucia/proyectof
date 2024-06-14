@@ -13,7 +13,7 @@ using namespace std;
       cout << "----------------" << endl;
       cout << "1 - POR ID" << endl;
       cout << "2 - POR PROVEEDOR" << endl;
-      cout << "3 - POR CATEGORIA" << endl;
+      cout << "3 - POR ACCION TERAPEUTICA" << endl;
       cout << "4 - POR DROGA" << endl;
       cout << "5 - POR PRECIO UNITARIO" << endl;
       cout << endl;
