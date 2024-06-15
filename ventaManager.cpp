@@ -72,7 +72,8 @@ using namespace std;
      }
 
      contador++;
-     cout << "QUIERE SEGUIR CARGANDO PRODUCTOS? (SI-1, NO-0): ";
+     cout << "QUIERE SEGUIR CARGANDO PRODUCTOS?";
+     cout << "(1 - SI | 0 - NO)" << endl;
      cin >> respuesta;
    }
 
@@ -138,7 +139,8 @@ using namespace std;
      {
        if (cantidad > reg.getStock())
        {
-         cout << "STOCK INSUFICIENTE, CANTIDAD DISPONIBLE: " << reg.getStock() << endl;
+         cout << "STOCK INSUFICIENTE!" << endl;
+         cout << "CANTIDAD DISPONIBLE: " << reg.getStock() << endl;
          pausa();
        }else
        {
@@ -183,7 +185,8 @@ using namespace std;
      return;
    }
    int respuesta;
-   cout << "¿ESTA SEGURO QUE QUIERE ELIMINAR EL REGISTRO?(1 - SI / 0 - NO)" << endl;
+   cout << "ESTA SEGURO QUE QUIERE ELIMINAR EL REGISTRO?" << endl;
+   cout << "(1 - SI | 0 - NO)" << endl;
    cin >> respuesta;
    cout << endl;
 
@@ -232,8 +235,8 @@ using namespace std;
    }
 
    int respuesta;
-   cout << "¿ESTA SEGURO QUE QUIERE MODIFICAR EL REGISTRO?" << endl;
-   cout << "(1 - SI / 0 - NO)" << endl;
+   cout << "ESTA SEGURO QUE QUIERE MODIFICAR EL REGISTRO?" << endl;
+   cout << "(1 - SI | 0 - NO)" << endl;
    cout << "RESPUESTA: ";
    cin >> respuesta;
    cout << endl;
@@ -350,7 +353,7 @@ using namespace std;
     }
     if (!activo)
     {
-      cout << "NO EXISTEN VENTAS CON EL ID DE USUARIO QUE INGRESO " << endl;
+      cout << "NO EXISTEN VENTAS CON EL ID DE USUARIO QUE INGRESO" << endl;
     }
   }
 

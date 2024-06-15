@@ -17,7 +17,8 @@ void listadosVentas::MostrarPorFechaDeCompra()//Por Fecha y Por Empleado (ID)
     }
 
     int respuesta;
-    cout << "COMO DESEA ORDENARLOS(1 - Ascendente || 2 - Descendente): ";
+    cout << "COMO DESEA ORDENARLOS?";
+    cout << "(1 - Ascendente || 2 - Descendente): ";
     cin >> respuesta;
 
     // Burbujeo
@@ -86,7 +87,8 @@ void listadosVentas::MostrarPorFechaDeCompra()//Por Fecha y Por Empleado (ID)
     }
 
     int respuesta;
-    cout << "COMO DESEA ORDENARLOS(1 - Ascendente || 2 - Descendente): ";
+    cout << "COMO DESEA ORDENARLOS?";
+    cout << "(1 - Ascendente || 2 - Descendente): ";
     cin >> respuesta;
 
     // Burbujeo

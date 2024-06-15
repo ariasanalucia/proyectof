@@ -18,12 +18,11 @@ void clear() {
 }
 
 //Pausa usada en vez de system("pause")
-
 #ifdef _WIN32
-    // Windows-specific code
+    //Windows
     #define PAUSE_COMMAND "pause > nul"
 #else
-    // Linux-specific code
+    //Linux
     #define PAUSE_COMMAND "read"
 #endif
 

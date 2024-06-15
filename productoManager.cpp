@@ -37,7 +37,7 @@ using namespace std;
    aux.setCategoria(categoria);
 
    cout << "Proveedor(numero entero): " << endl;
-   cout << "[1 - Disval | 2 - Suizo]" << endl;
+   cout << "(1 - Disval | 2 - Suizo)" << endl;
    cin >> Proveedor;
    validar_proveedor(&Proveedor);
    aux.setProveedor(Proveedor);
@@ -67,10 +67,10 @@ using namespace std;
    {
      cout << "ID de medicamento: " << producto.getId() << endl;
      cout << "Marca: " << producto.getMarca() << endl;
-     cout << "Droga:" << producto.getDroga() << endl;
+     cout << "Droga: " << producto.getDroga() << endl;
      cout << "Miligramos: " << producto.getMiligramos() << endl;
      cout << "Accion terapeutica: " << producto.getCategoria() << endl;
-     cout << "Proveedor(1 - Disval / 2 - Suizo): " << producto.getProveedor() << endl;
+     cout << "Proveedor: (1 - Disval | 2 - Suizo):" << producto.getProveedor() << endl;
      cout << "Fecha de vto: " << producto.getVenciemiento().toString() << endl;
      cout << "Presentacion: " << producto.getPresentacion() << endl;
      cout << "Stock disponible: " << producto.getStock() << endl;
@@ -86,8 +86,9 @@ using namespace std;
 
  void ProductoManager::validar_proveedor(int *Proveedor){
     while(!es_proveedor(*Proveedor)){
-        cout<<"Ingrese correctamente el provedor 1 o 2:";
-        cin>>*Proveedor;
+        cout << "Ingrese correctamente el provedor:" << endl;
+        cout << "(1 - Disval | 2 - Suizo):" << endl;
+        cin >> *Proveedor;
     }
  }
 
@@ -190,7 +191,7 @@ using namespace std;
    }
    int respuesta;
    cout << "¿ESTA SEGURO QUE QUIERE MODIFICAR EL REGISTRO?" << endl;
-   cout << "(1 - SI / 0 - NO)" << endl;
+   cout << "(1 - SI | 0 - NO)" << endl;
    cout << "RESPUESTA: ";
    cin >> respuesta;
    cout << endl;
@@ -225,12 +226,12 @@ using namespace std;
      producto.setCategoria(_categoria);
 
      cout << "Proveedor(numero entero):" << endl;
-     cout << "(1 - Disval / 2 - Suizo)";
+     cout << "(1 - Disval | 2 - Suizo)";
      cin >> _proveedor;
      validar_proveedor(&_proveedor);
      producto.setProveedor(_proveedor);
 
-     cout << "Fecha de vto: " << endl;
+     cout << "Fecha de Vto: " << endl;
      _vencimiento.Cargar();
      producto.setVencimiento(_vencimiento);
 
@@ -360,10 +361,10 @@ using namespace std;
     float precio1;
     float precio2;
     cout<<"INGRESE UN RANGO DE PRECIOS " << endl;
-    cout << "PRECIO NUMERO 1 (MAS BAJO): $";
+    cout << "1er PRECIO (MAS BAJO): $";
     cin >> precio1;
     cout << endl;
-    cout << "PRECIO NUMERO 2 (MAS ALTO): $";
+    cout << "2do PRECIO (MAS ALTO): $";
     cin >> precio2;
     cout << endl;
 
@@ -421,7 +422,8 @@ using namespace std;
      if (reg.getEstado() && reg.getId() == idProducto)
      {
        Mostrar(reg);
-       cout << "DESEA PEDIR STOCK DE ESTE MEDICAMENTO(1-si, 0-no): ";
+       cout << "DESEA PEDIR STOCK DE ESTE MEDICAMENTO?";
+       cout << "(1 - SI | 0 - NO): ";
        cin >> respuesta;
        cout << endl;
        if (respuesta == 1)

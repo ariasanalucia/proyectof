@@ -18,7 +18,8 @@ using namespace std;
     }
 
     int respuesta;
-    cout << "COMO DESEA ORDENARLOS(1 - Ascendente || 2 - Descendente): ";
+    cout << "COMO DESEA ORDENARLOS?";
+    cout << "(1 - Ascendente || 2 - Descendente): ";
     cin >> respuesta;
     // Burbujeo
     if (respuesta == 2)
@@ -85,7 +86,8 @@ using namespace std;
     }
 
     int respuesta;
-    cout << "COMO DESEA ORDENARLOS(1 - Ascendente || 2 - Descendente): ";
+    cout << "COMO DESEA ORDENARLOS?";
+    cout << "(1 - Ascendente || 2 - Descendente): ";
     cin >> respuesta;
     // Burbujeo
     if (respuesta == 2)

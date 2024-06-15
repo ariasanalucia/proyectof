@@ -57,15 +57,15 @@ using namespace std;
  {
    int cantReg = _archivo.contarRegistros();
 
-    // Crear un arreglo de punteros a empleado
+    //Creao array de empleados
     Empleado* vecOrdenados = new Empleado[cantReg];
 
-    // Guardo todos los empleados
+    //Guardo todos los empleados
     for (int i = 0; i < cantReg; i++)
     {
         vecOrdenados[i] = _archivo.leer(i);
     }
-    // Ordenar los empleados por apellido usando el algoritmo de burbuja
+    //Burbuja
     for (int i = 0; i < cantReg - 1; i++)
     {
         for (int j = 0; j < cantReg - i - 1; j++)
@@ -75,7 +75,7 @@ using namespace std;
             transform(aux1.begin(), aux1.end(), aux1.begin(), ::tolower); //Aplico tolower() a cada caracter del string
             transform(aux2.begin(), aux2.end(), aux2.begin(), ::tolower);
 
-            // Comparar los apellidos y si están desordenados, intercambiar
+            //Si están desordenados, intercambiar
             if (strcmp(aux1.c_str(), aux2.c_str()) > 0) //Sera valido (aux1 > aux2) para comparar?
             {
                 Empleado temp = vecOrdenados[j];
@@ -112,7 +112,6 @@ using namespace std;
      if (aux.getDni() == 0)
      {
        cout << "ESTE REGISTRO NO PUEDE SER LISTADO" << endl;
-       cout << "Sugerencia: ir al apartado de [LISTAR EMPLEADOS A MODIFICAR POR X ERROR DE CARGA]" << endl;
        return;
      }
      Mostrar(aux);
@@ -143,8 +142,8 @@ using namespace std;
      return;
    }
    int respuesta;
-   cout << "¿ESTA SEGURO QUE QUIERE ELIMINAR EL REGISTRO?" << endl;
-   cout << "(1 - SI / 0 - NO)" << endl;
+   cout << "ESTA SEGURO QUE QUIERE ELIMINAR EL REGISTRO?" << endl;
+   cout << "(1 - SI | 0 - NO)" << endl;
    cin >> respuesta;
    cout << endl;
 
@@ -183,8 +182,8 @@ using namespace std;
      return;
    }
    int respuesta;
-   cout << "¿ESTA SEGURO QUE QUIERE MODIFICAR EL REGISTRO?" << endl;
-   cout << "(1 - SI / 0 - NO)" << endl;
+   cout << "ESTA SEGURO QUE QUIERE MODIFICAR EL REGISTRO?" << endl;
+   cout << "(1 - SI | 0 - NO)" << endl;
    cin >> respuesta;
    cout << endl;
 
