@@ -616,7 +616,7 @@
 	"ventaArchivo.h"
 	"venta.h"
 
-1718249369 source:c:\users\usuario\documents\github\proyectof\consultasventas.cpp
+1718334202 source:c:\users\usuario\documents\github\proyectof\consultasventas.cpp
 	<iostream>
 	"consultasVentas.h"
 	"funcionesGlobales.h"
@@ -791,7 +791,7 @@
 	"ventaArchivo.h"
 	"venta.h"
 
-1718331905 source:c:\users\usuario\documents\github\proyectof\informerecaudacion.cpp
+1718417698 source:c:\users\usuario\documents\github\proyectof\informerecaudacion.cpp
 	<iostream>
 	"fecha.h"
 	"informeRecaudacion.h"

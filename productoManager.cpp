@@ -20,23 +20,23 @@ using namespace std;
    id = archiProducto.contarRegistros()+1;
    aux.setId(id);
 
-   cout << "Marca: ";
+   cout << "Marca(caracteres): ";
    cargarCadena(marca, 29);
    aux.setMarca(marca);
 
-   cout << "Droga: ";
+   cout << "Droga(caracteres): ";
    cargarCadena(droga, 29);
    aux.setDroga(droga);
 
-   cout << "Miligramos: ";
+   cout << "Miligramos(numero con decimales): ";
    cin >> miligramos;
    aux.setMiligramos(miligramos);
 
-   cout << "Accion terapeutica: ";
+   cout << "Accion terapeutica(caracteres): ";
    cargarCadena(categoria, 29);
    aux.setCategoria(categoria);
 
-   cout << "Proveedor: " << endl;
+   cout << "Proveedor(numero entero): " << endl;
    cout << "[1 - Disval | 2 - Suizo]" << endl;
    cin >> Proveedor;
    validar_proveedor(&Proveedor);
@@ -47,11 +47,11 @@ using namespace std;
 //   esFechaValida();
    aux.setVencimiento(venci);
 
-   cout << "Presentacion: ";
+   cout << "Presentacion(caracteres): ";
    cargarCadena(presentacion,29);
    aux.setPresentacion(presentacion);
 
-   cout << "Precio: $";
+   cout << "Precio(numero con decimales): $";
    cin >> precioUnitario;
    aux.setPrecioUnitario(precioUnitario);
 
@@ -208,23 +208,23 @@ using namespace std;
      cin >> _id;
      producto.setId(_id);
 
-     cout << "Marca: ";
+     cout << "Marca(caracteres): ";
      cargarCadena(_marca, 29);
      producto.setMarca(_marca);
 
-     cout << "Droga: ";
+     cout << "Droga(caracteres): ";
      cargarCadena(_droga, 29);
      producto.setDroga(_droga);
 
-     cout << "Miligramos: ";
+     cout << "Miligramos(numero con decimales): ";
      cin >> _miligramos;
      producto.setMiligramos(_miligramos);
 
-     cout << "Accion terapeutica: ";
+     cout << "Accion terapeutica(caracteres): ";
      cargarCadena(_categoria, 29);
      producto.setCategoria(_categoria);
 
-     cout << "Proveedor:" << endl;
+     cout << "Proveedor(numero entero):" << endl;
      cout << "(1 - Disval / 2 - Suizo)";
      cin >> _proveedor;
      validar_proveedor(&_proveedor);
@@ -234,15 +234,15 @@ using namespace std;
      _vencimiento.Cargar();
      producto.setVencimiento(_vencimiento);
 
-     cout << "Presentacion: ";
+     cout << "Presentacion(caracteres): ";
      cargarCadena(_presentacion,29);
      producto.setPresentacion(_presentacion);
 
-     cout << "Precio: ";
+     cout << "Precio(numeros con decimales): ";
      cin >> _precioUnitario;
      producto.setPrecioUnitario(_precioUnitario);
 
-     cout << "Stock: ";
+     cout << "Stock(numero entero): ";
      cin >> _stock;
      producto.setStock(_stock);
 
@@ -384,30 +384,6 @@ using namespace std;
     }
 
  }
-// void ProductoManager::solicitarProducto(){
-//
-//    mostrarPorDroga();
-//
-//    ProductoArchivo archiProducto("producto.dat");
-//    Producto productos;
-//    int idProducto,cantStockSolicitada;
-//
-//    cout<<"INGRESE EL ID DEL PRODUCTO QUE QUIERE PEDIRLE AL PROVEEDOR:";
-//    cin>>idProducto;
-//    if(idProducto <= archiProducto.contarRegistros()){
-//        cout<<"Ingrese la cantidad de dicho producto que desea:";
-//        cin>>cantStockSolicitada;
-//        productos = archiProducto.leer(idProducto-1);
-//        cout<<"El stock anterior es:"<<productos.getId()<<endl;
-//        productos.setStock(productos.getStock() + cantStockSolicitada);
-//        _archivo.modificar(productos,idProducto-1);
-//        pausa();
-//    }else{
-//        cout<<"no se encontro dicho producto";
-//        pausa();
-//    }
-//    fclose(f_leer_producto);
-//}
 
  void ProductoManager::validarDroga()
  {

@@ -282,7 +282,7 @@ void InformeRecaudacion::menuInformeRecaudacion()
       cout << "1 - POR ANIO" << endl;
       cout << "2 - POR MES" << endl;
       cout << "3 - POR EMPLEADO" << endl;
-      cout << "4 - POR PRODUCTO" << endl;
+      cout << "4 - POR MEDICAMENTO" << endl;
       cout << endl;
       cout << "0 - PARA SALIR" << endl;
       cout << "----------------" << endl;
