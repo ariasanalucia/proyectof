@@ -44,10 +44,10 @@ VentaArchivo::VentaArchivo(const char *nombre)
     FILE *p = fopen(_nombre, "rb");
     if (p == nullptr)
     {
-      return Venta(); // Devuelve una venta vacía si no se puede abrir el archivo
+      return Venta(); // Devuelve una venta vacÃ­a si no se puede abrir el archivo
     }
 
-    // Mover el puntero al registro específico en el archivo
+    // Mover el puntero al registro especÃ­fico en el archivo
     fseek(p, numero * sizeof(Venta), SEEK_SET);
 
     // Leer los datos de la venta principal

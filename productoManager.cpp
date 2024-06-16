@@ -149,7 +149,7 @@ using namespace std;
      return;
    }
    int respuesta;
-   cout << "¿ESTA SEGURO QUE QUIERE ELIMINAR EL REGISTRO?" << endl;
+   cout << "Â¿ESTA SEGURO QUE QUIERE ELIMINAR EL REGISTRO?" << endl;
    cout << "(1 - SI / 0 - NO)" << endl;
    cout << "RESPUESTA: ";
    cin >> respuesta;
@@ -190,7 +190,7 @@ using namespace std;
      return;
    }
    int respuesta;
-   cout << "¿ESTA SEGURO QUE QUIERE MODIFICAR EL REGISTRO?" << endl;
+   cout << "Â¿ESTA SEGURO QUE QUIERE MODIFICAR EL REGISTRO?" << endl;
    cout << "(1 - SI | 0 - NO)" << endl;
    cout << "RESPUESTA: ";
    cin >> respuesta;
