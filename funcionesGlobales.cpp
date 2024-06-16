@@ -27,6 +27,7 @@ void clear() {
 #endif
 
 void pausa() {
+    cout << "Presione Enter..." << endl;
     system(PAUSE_COMMAND);
 }
 

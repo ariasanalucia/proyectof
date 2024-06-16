@@ -17,57 +17,60 @@ using namespace std;
         vecOrdenados[i] = archiP.leer(i);
     }
 
-    int respuesta;
-    cout << "COMO DESEA ORDENARLOS?";
-    cout << "(1 - Ascendente || 2 - Descendente): ";
-    cin >> respuesta;
-    // Burbujeo
-    if (respuesta == 2)
-    {
-     for (int i = 0; i < cantReg - 1; i++)
-     {
+    int respuesta = -1;
+    while(respuesta != 0) {
+      clear();
+      cout << "COMO DESEA ORDENARLOS?" << endl;
+      cout << "(1 - Ascendente | 2 - Descendente | 0 - Salir): ";
+      cin >> respuesta;
+      //Burbujeo
+      if (respuesta == 2)
+      {
+       for (int i = 0; i < cantReg - 1; i++)
+       {
+           for (int j = 0; j < cantReg - i - 1; j++)
+           {
+               int aux1 = vecOrdenados[j].getPrecioUnitario();
+               int aux2 = vecOrdenados[j+1].getPrecioUnitario();
+               if (aux1 < aux2)
+               {
+                   Producto temp = vecOrdenados[j];
+                   vecOrdenados[j] = vecOrdenados[j+1];
+                   vecOrdenados[j+1] = temp;
+               }
+           }
+       }
+      }else if (respuesta == 1)
+      {
+        for (int i = 0; i < cantReg - 1; i++)
+       {
          for (int j = 0; j < cantReg - i - 1; j++)
          {
-             int aux1 = vecOrdenados[j].getPrecioUnitario();
-             int aux2 = vecOrdenados[j+1].getPrecioUnitario();
-             if (aux1 < aux2)
-             {
-                 Producto temp = vecOrdenados[j];
-                 vecOrdenados[j] = vecOrdenados[j+1];
-                 vecOrdenados[j+1] = temp;
-             }
+            int aux1 = vecOrdenados[j].getPrecioUnitario();
+            int aux2 = vecOrdenados[j+1].getPrecioUnitario();
+            if (aux1 > aux2)
+            {
+              Producto temp = vecOrdenados[j];
+              vecOrdenados[j] = vecOrdenados[j+1];
+              vecOrdenados[j+1] = temp;
+            }
          }
-     }
-    }else if (respuesta == 1)
-    {
-      for (int i = 0; i < cantReg - 1; i++)
-     {
-       for (int j = 0; j < cantReg - i - 1; j++)
-       {
-          int aux1 = vecOrdenados[j].getPrecioUnitario();
-          int aux2 = vecOrdenados[j+1].getPrecioUnitario();
-          if (aux1 > aux2)
-          {
-            Producto temp = vecOrdenados[j];
-            vecOrdenados[j] = vecOrdenados[j+1];
-            vecOrdenados[j+1] = temp;
-          }
        }
+     }else
+     {
+       return;
      }
-   }else
-   {
-     return;
-   }
 
-    // Mostrar los proveedores ordenados
-    for (int i = 0; i < cantReg; i++)
-    {
-        obj.Mostrar(vecOrdenados[i]);
+      for (int i = 0; i < cantReg; i++)
+      {
+          obj.Mostrar(vecOrdenados[i]);
+      }
+      
+      pausa();
+      clear();
     }
 
     delete[] vecOrdenados;
-
-    pausa();
  }
 
  void listadosProductos::listarPorCantStock()
@@ -85,57 +88,61 @@ using namespace std;
         vecOrdenados[i] = archiP.leer(i);
     }
 
-    int respuesta;
-    cout << "COMO DESEA ORDENARLOS?";
-    cout << "(1 - Ascendente || 2 - Descendente): ";
-    cin >> respuesta;
-    // Burbujeo
-    if (respuesta == 2)
-    {
-     for (int i = 0; i < cantReg - 1; i++)
-     {
+    int respuesta = -1;
+    while(respuesta != 0) {
+      clear();
+      cout << "COMO DESEA ORDENARLOS?";
+      cout << "(1 - Ascendente | 2 - Descendente | 0 - Salir): ";
+      cin >> respuesta;
+      // Burbujeo
+      if (respuesta == 2)
+      {
+       for (int i = 0; i < cantReg - 1; i++)
+       {
+           for (int j = 0; j < cantReg - i - 1; j++)
+           {
+               int aux1 = vecOrdenados[j].getStock();
+               int aux2 = vecOrdenados[j+1].getStock();
+               if (aux1 < aux2)
+               {
+                   Producto temp = vecOrdenados[j];
+                   vecOrdenados[j] = vecOrdenados[j+1];
+                   vecOrdenados[j+1] = temp;
+               }
+           }
+       }
+      }else if (respuesta == 1)
+      {
+        for (int i = 0; i < cantReg - 1; i++)
+       {
          for (int j = 0; j < cantReg - i - 1; j++)
          {
-             int aux1 = vecOrdenados[j].getStock();
-             int aux2 = vecOrdenados[j+1].getStock();
-             if (aux1 < aux2)
-             {
-                 Producto temp = vecOrdenados[j];
-                 vecOrdenados[j] = vecOrdenados[j+1];
-                 vecOrdenados[j+1] = temp;
-             }
+            int aux1 = vecOrdenados[j].getStock();
+            int aux2 = vecOrdenados[j+1].getStock();
+            if (aux1 > aux2)
+            {
+              Producto temp = vecOrdenados[j];
+              vecOrdenados[j] = vecOrdenados[j+1];
+              vecOrdenados[j+1] = temp;
+            }
          }
-     }
-    }else if (respuesta == 1)
-    {
-      for (int i = 0; i < cantReg - 1; i++)
-     {
-       for (int j = 0; j < cantReg - i - 1; j++)
-       {
-          int aux1 = vecOrdenados[j].getStock();
-          int aux2 = vecOrdenados[j+1].getStock();
-          if (aux1 > aux2)
-          {
-            Producto temp = vecOrdenados[j];
-            vecOrdenados[j] = vecOrdenados[j+1];
-            vecOrdenados[j+1] = temp;
-          }
        }
+     }else
+     {
+       return;
      }
-   }else
-   {
-     return;
-   }
 
-    // Mostrar los proveedores ordenados
-    for (int i = 0; i < cantReg; i++)
-    {
-        obj.Mostrar(vecOrdenados[i]);
+      // Mostrar los proveedores ordenados
+      for (int i = 0; i < cantReg; i++)
+      {
+          obj.Mostrar(vecOrdenados[i]);
+      }
+
+      pausa();
+      clear();
     }
 
     delete[] vecOrdenados;
-
-    pausa();
  }
 
  void listadosProductos::menuListados()
@@ -144,13 +151,13 @@ using namespace std;
     while(true)
     {
       clear();
-      cout << "LISTADO DE MEDICAMENTOS" << endl;
-      cout << "----------------" << endl;
-      cout << "1 - POR PRECIO UNITARIO" << endl;
-      cout << "2 - POR CANTIDAD DE STOCK" << endl;
+      cout << "LISTAR MEDICAMENTOS" << endl;
+      cout << "-------------------" << endl;
+      cout << "1 - POR PRECIO" << endl;
+      cout << "2 - POR STOCK" << endl;
       cout << endl;
       cout << "0 - PARA SALIR" << endl;
-      cout << "----------------" << endl;
+      cout << "-------------------" << endl;
 
       cout << "INGRESE UNA OPCION: ";
       //cin >> opcion;
