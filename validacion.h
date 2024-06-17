@@ -15,4 +15,9 @@ class validacionVenta{
         void validarTelefono(int &telefono);
 };
 
+class validacionEmpleado{
+    public:
+
+};
+
 #endif // VALIDACION_H_INCLUDED

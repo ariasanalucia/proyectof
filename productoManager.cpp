@@ -1,5 +1,7 @@
 #include <iostream>
+
 using namespace std;
+
 #include <cstring>
 #include <ctype.h>
 #include "funcionesGlobales.h"
@@ -7,6 +9,7 @@ using namespace std;
 #include "consultas.h"
 #include "listadosProductos.h"
 #include "validacion.h"
+
 
  //CARGAR
  Producto ProductoManager::Cargar()
@@ -153,11 +156,7 @@ using namespace std;
      return;
    }
    int respuesta;
-<<<<<<< Updated upstream
    cout << "¿ESTA SEGURO QUE QUIERE ELIMINAR EL REGISTRO?" << endl;
-=======
-   cout << "�ESTA SEGURO QUE QUIERE ELIMINAR EL REGISTRO?" << endl;
->>>>>>> Stashed changes
    cout << "(1 - SI / 0 - NO)" << endl;
    cout << "RESPUESTA: ";
    cin >> respuesta;
@@ -198,11 +197,7 @@ using namespace std;
      return;
    }
    int respuesta;
-<<<<<<< Updated upstream
    cout << "¿ESTA SEGURO QUE QUIERE MODIFICAR EL REGISTRO?" << endl;
-=======
-   cout << "�ESTA SEGURO QUE QUIERE MODIFICAR EL REGISTRO?" << endl;
->>>>>>> Stashed changes
    cout << "(1 - SI | 0 - NO)" << endl;
    cout << "RESPUESTA: ";
    cin >> respuesta;

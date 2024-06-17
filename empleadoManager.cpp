@@ -75,11 +75,8 @@ using namespace std;
             transform(aux1.begin(), aux1.end(), aux1.begin(), ::tolower); //Aplico tolower() a cada caracter del string
             transform(aux2.begin(), aux2.end(), aux2.begin(), ::tolower);
 
-<<<<<<< Updated upstream
             //Si están desordenados, intercambiar
-=======
             //Si est�n desordenados, intercambiar
->>>>>>> Stashed changes
             if (strcmp(aux1.c_str(), aux2.c_str()) > 0) //Sera valido (aux1 > aux2) para comparar?
             {
                 Empleado temp = vecOrdenados[j];
