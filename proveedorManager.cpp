@@ -2,15 +2,16 @@
 using namespace std;
 #include "proveedorManager.h"
 #include "funcionesGlobales.h"
+#include "validacion.h"
 #include <algorithm> //Para transform()
  //CARGAR
  Proveedor ProveedorManager::Cargar()
  {
+    validacionVenta validarVenta;
     Proveedor aux;
     ProveedorArchivo archiProveedor("proveedores.dat");
     int telefono,idProveedor;
     char nombre[30];
-    bool estado;
 
     idProveedor = archiProveedor.contarRegistros()+1;
     aux.setId(idProveedor);
@@ -21,10 +22,10 @@ using namespace std;
 
    cout << "Telefono: ";
    cin >> telefono;
+   validarVenta.validarTelefono(telefono);
    aux.setTelefono(telefono);
 
-   estado = true;
-   aux.setEstado(estado);
+   aux.setEstado(true);
 
    return aux;
  }
@@ -64,7 +65,11 @@ using namespace std;
             transform(aux1.begin(), aux1.end(), aux1.begin(), ::tolower); //Aplico tolower() a cada caracter del string
             transform(aux2.begin(), aux2.end(), aux2.begin(), ::tolower);
 
+<<<<<<< Updated upstream
             //Si están desordenados, intercambiar
+=======
+            //Si est�n desordenados, intercambiar
+>>>>>>> Stashed changes
             if (strcmp(aux1.c_str(), aux2.c_str()) > 0) //Sera valido (aux1 > aux2) para comparar?
             {
                 Proveedor temp = vecOrdenados[j];

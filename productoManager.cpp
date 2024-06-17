@@ -6,10 +6,12 @@ using namespace std;
 #include "productoManager.h"
 #include "consultas.h"
 #include "listadosProductos.h"
+#include "validacion.h"
 
  //CARGAR
  Producto ProductoManager::Cargar()
  {
+   validacionProducto validaciones;
    Producto aux;
    ProductoArchivo archiProducto("producto.dat");
    int id, Proveedor;
@@ -30,6 +32,7 @@ using namespace std;
 
    cout << "Miligramos(numero con decimales): ";
    cin >> miligramos;
+   validaciones.valdiarMiligramo(miligramos);
    aux.setMiligramos(miligramos);
 
    cout << "Accion terapeutica(caracteres): ";
@@ -39,12 +42,12 @@ using namespace std;
    cout << "Proveedor(numero entero): " << endl;
    cout << "(1 - Disval | 2 - Suizo)" << endl;
    cin >> Proveedor;
-   validar_proveedor(&Proveedor);
+   validaciones.validarProveedor(Proveedor);
    aux.setProveedor(Proveedor);
 
    cout << "Fecha de vto: " << endl;
    venci.Cargar();
-//   esFechaValida();
+   validaciones.validarVencimiento(venci);
    aux.setVencimiento(venci);
 
    cout << "Presentacion(caracteres): ";
@@ -53,6 +56,7 @@ using namespace std;
 
    cout << "Precio(numero con decimales): $";
    cin >> precioUnitario;
+   validaciones.validarPrecio(precioUnitario);
    aux.setPrecioUnitario(precioUnitario);
 
    aux.setStock(0);
@@ -149,7 +153,11 @@ using namespace std;
      return;
    }
    int respuesta;
+<<<<<<< Updated upstream
    cout << "¿ESTA SEGURO QUE QUIERE ELIMINAR EL REGISTRO?" << endl;
+=======
+   cout << "�ESTA SEGURO QUE QUIERE ELIMINAR EL REGISTRO?" << endl;
+>>>>>>> Stashed changes
    cout << "(1 - SI / 0 - NO)" << endl;
    cout << "RESPUESTA: ";
    cin >> respuesta;
@@ -190,7 +198,11 @@ using namespace std;
      return;
    }
    int respuesta;
+<<<<<<< Updated upstream
    cout << "¿ESTA SEGURO QUE QUIERE MODIFICAR EL REGISTRO?" << endl;
+=======
+   cout << "�ESTA SEGURO QUE QUIERE MODIFICAR EL REGISTRO?" << endl;
+>>>>>>> Stashed changes
    cout << "(1 - SI | 0 - NO)" << endl;
    cout << "RESPUESTA: ";
    cin >> respuesta;
