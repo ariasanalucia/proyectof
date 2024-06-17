@@ -2,6 +2,7 @@
 using namespace std;
 #include <cstring>
 #include "validacion.h"
+#include <ctime>
 
 void validacionProducto::validarProveedor(int &proveedor){
     while((proveedor != 1 && proveedor != 2) || (cin.fail())){

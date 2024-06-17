@@ -51,7 +51,7 @@
 
 1714394985 c:\users\usuario\documents\github\proyectof\fecha.h
 
-1718500806 source:c:\users\usuario\documents\github\proyectof\funcionesglobales.cpp
+1718587846 source:c:\users\usuario\documents\github\proyectof\funcionesglobales.cpp
 	<iostream>
 	"funcionesGlobales.h"
 	<iostream>
@@ -94,7 +94,7 @@
 	"proveedorManager.h"
 	"informes.h"
 
-1718500806 source:c:\users\usuario\documents\github\proyectof\productomanager.cpp
+1718663144 source:c:\users\usuario\documents\github\proyectof\productomanager.cpp
 	<iostream>
 	<cstring>
 	<ctype.h>
@@ -102,6 +102,7 @@
 	"productoManager.h"
 	"consultas.h"
 	"listadosProductos.h"
+	"validacion.h"
 
 1718310543 source:c:\users\usuario\documents\github\proyectof\app.cpp
 	<iostream>
@@ -332,7 +333,7 @@
 	"empleado.h"
 	"funcionesGlobales.h"
 
-1718500806 source:c:\users\usuario\documents\github\proyectof\empleadomanager.cpp
+1718663144 source:c:\users\usuario\documents\github\proyectof\empleadomanager.cpp
 	<iostream>
 	<cstring>
 	"funcionesGlobales.h"
@@ -373,10 +374,11 @@
 	"productoManager.h"
 	"venta.h"
 
-1718500806 source:c:\users\usuario\documents\github\proyectof\proveedormanager.cpp
+1718663144 source:c:\users\usuario\documents\github\proyectof\proveedormanager.cpp
 	<iostream>
 	"proveedorManager.h"
 	"funcionesGlobales.h"
+	"validacion.h"
 	<algorithm>
 
 1716762785 c:\users\usuario\documents\github\proyectof\proveedormanager.h
@@ -611,7 +613,7 @@
 	<iostream>
 	<cstdlib>
 
-1717086385 source:c:\users\usuario\documents\github\proyectof\ventaarchivo.cpp
+1718587846 source:c:\users\usuario\documents\github\proyectof\ventaarchivo.cpp
 	<iostream>
 	"ventaArchivo.h"
 	"venta.h"
@@ -824,7 +826,7 @@
 
 1718237716 c:\users\usuario\documents\github\proyectof\listados.h
 
-1718500806 source:c:\users\usuario\documents\github\proyectof\listadosventas.cpp
+1718587846 source:c:\users\usuario\documents\github\proyectof\listadosventas.cpp
 	<iostream>
 	"listadosVentas.h"
 
@@ -834,7 +836,7 @@
 	"ventaArchivo.h"
 	"ventaManager.h"
 
-1718500806 source:c:\users\usuario\documents\github\proyectof\listadosproductos.cpp
+1718587846 source:c:\users\usuario\documents\github\proyectof\listadosproductos.cpp
 	<iostream>
 	"listadosProductos.h"
 
@@ -843,4 +845,13 @@
 	"productoManager.h"
 	"productoArchivo.h"
 	"funcionesGlobales.h"
+
+1718663144 c:\users\usuario\documents\github\proyectof\validacion.h
+	"fecha.h"
+
+1718663444 source:c:\users\usuario\documents\github\proyectof\validacion.cpp
+	<iostream>
+	<cstring>
+	"validacion.h"
+	<ctime>
 

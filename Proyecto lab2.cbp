@@ -73,6 +73,8 @@
 		<Unit filename="proveedorArchivo.h" />
 		<Unit filename="proveedorManager.cpp" />
 		<Unit filename="proveedorManager.h" />
+		<Unit filename="validacion.cpp" />
+		<Unit filename="validacion.h" />
 		<Unit filename="venta.cpp" />
 		<Unit filename="venta.h" />
 		<Unit filename="ventaArchivo.cpp" />
