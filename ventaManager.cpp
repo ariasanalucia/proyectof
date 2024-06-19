@@ -403,7 +403,7 @@ using namespace std;
       cout << "     VENTAS" << endl;
       cout << "----------------" << endl;
       cout << "1 - ALTA" << endl;
-      cout << "2 - BAJA -> Nota de Credito?" << endl;
+      cout << "2 - NOTA DE CREDITO" << endl;
       cout << "3 - LISTAR" << endl;
       cout << "4 - MODIFICAR" << endl;
       cout << "5 - CONSULTAS" << endl;

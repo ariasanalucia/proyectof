@@ -234,7 +234,6 @@ using namespace std;
       cout << "2 - BAJA" << endl;
       cout << "3 - LISTAR" << endl;
       cout << "4 - EDITAR" << endl;
-      cout << "5 - CONSULTAS" << endl;
       cout << endl;
       cout << "0 - PARA SALIR" << endl;
       cout << "----------------" << endl;
@@ -263,11 +262,6 @@ using namespace std;
        case 4:
         {
          modificar();
-        }
-        break;
-       case 5:
-        {
-
         }
         break;
        case 0:

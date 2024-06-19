@@ -333,7 +333,7 @@
 	"empleado.h"
 	"funcionesGlobales.h"
 
-1718663144 source:c:\users\usuario\documents\github\proyectof\empleadomanager.cpp
+1718829322 source:c:\users\usuario\documents\github\proyectof\empleadomanager.cpp
 	<iostream>
 	<cstring>
 	"funcionesGlobales.h"
@@ -366,7 +366,7 @@
 	<cstring>
 	"venta.h"
 
-1718500806 source:c:\users\usuario\documents\github\proyectof\ventamanager.cpp
+1718829386 source:c:\users\usuario\documents\github\proyectof\ventamanager.cpp
 	<iostream>
 	"ventaManager.h"
 	"funcionesGlobales.h"
@@ -374,7 +374,7 @@
 	"productoManager.h"
 	"venta.h"
 
-1718663144 source:c:\users\usuario\documents\github\proyectof\proveedormanager.cpp
+1718826452 source:c:\users\usuario\documents\github\proyectof\proveedormanager.cpp
 	<iostream>
 	"proveedorManager.h"
 	"funcionesGlobales.h"
@@ -793,7 +793,7 @@
 	"ventaArchivo.h"
 	"venta.h"
 
-1718417698 source:c:\users\usuario\documents\github\proyectof\informerecaudacion.cpp
+1718827263 source:c:\users\usuario\documents\github\proyectof\informerecaudacion.cpp
 	<iostream>
 	"fecha.h"
 	"informeRecaudacion.h"
@@ -826,7 +826,7 @@
 
 1718237716 c:\users\usuario\documents\github\proyectof\listados.h
 
-1718587846 source:c:\users\usuario\documents\github\proyectof\listadosventas.cpp
+1718762564 source:c:\users\usuario\documents\github\proyectof\listadosventas.cpp
 	<iostream>
 	"listadosVentas.h"
 
@@ -840,7 +840,7 @@
 	<iostream>
 	"listadosProductos.h"
 
-1718293307 c:\users\usuario\documents\github\proyectof\listadosproductos.h
+1718762564 c:\users\usuario\documents\github\proyectof\listadosproductos.h
 	"producto.h"
 	"productoManager.h"
 	"productoArchivo.h"
@@ -849,7 +849,7 @@
 1718663144 c:\users\usuario\documents\github\proyectof\validacion.h
 	"fecha.h"
 
-1718663444 source:c:\users\usuario\documents\github\proyectof\validacion.cpp
+1718758215 source:c:\users\usuario\documents\github\proyectof\validacion.cpp
 	<iostream>
 	<cstring>
 	"validacion.h"
