@@ -23,7 +23,10 @@ class validacionTelefono{
 class validacionEmpleado{
     public:
         void validarDni(int &dni);
+<<<<<<< Updated upstream
         void validarTelefono(int &telefono);
+=======
+>>>>>>> Stashed changes
 };
 
 #endif // VALIDACION_H_INCLUDED
