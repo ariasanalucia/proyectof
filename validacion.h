@@ -12,12 +12,18 @@ class validacionProducto{
 
 class validacionVenta{
     public:
+        void validarId(int &id);
+};
+
+class validacionTelefono{
+    public:
         void validarTelefono(int &telefono);
 };
 
 class validacionEmpleado{
     public:
-
+        void validarDni(int &dni);
+        void validarTelefono(int &telefono);
 };
 
 #endif // VALIDACION_H_INCLUDED

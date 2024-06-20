@@ -65,11 +65,31 @@ void validacionProducto::validarPrecio(float &precio){
     }
 }
 
-void validacionVenta::validarTelefono(int &telefono){
+void validacionTelefono::validarTelefono(int &telefono){
     while((telefono < 1100000000) || (cin.fail())){
         cin.clear();
         cin.ignore();
         cout<<"ingrese correctamente el telefono:";
         cin>>telefono;
+    }
+}
+
+
+void validacionEmpleado::validarDni(int &dni){
+    while(dni < 0 || cin.fail()){
+        cin.clear();
+        cin.ignore();
+        cout<<"ingrese correctamente el dni:";
+        cin>>dni;
+    }
+}
+
+
+void validacionVenta::validarId(int &id){
+    while(dni < 0 || cin.fail()){
+        cin.clear();
+        cin.ignore();
+        cout<<"ingrese correctamente el dni:";
+        cin>>dni;
     }
 }

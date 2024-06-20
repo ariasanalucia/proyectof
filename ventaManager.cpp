@@ -4,12 +4,14 @@ using namespace std;
 #include "funcionesGlobales.h"
 #include "consultasVentas.h"
 #include "productoManager.h"
+#include "validacion.h"
 #include "venta.h"
 
 
   //CARGAR
  Venta VentaManager::Cargar()
  {
+   validacionVenta validarVenta;
    Venta aux;
    VentaArchivo archiVenta("venta.dat");
    Producto prod;

@@ -7,7 +7,7 @@ using namespace std;
  //CARGAR
  Proveedor ProveedorManager::Cargar()
  {
-    validacionVenta validarVenta;
+    validacionTelefono validarTelefono;
     Proveedor aux;
     ProveedorArchivo archiProveedor("proveedores.dat");
     int telefono,idProveedor;
@@ -22,7 +22,7 @@ using namespace std;
 
    cout << "Telefono: ";
    cin >> telefono;
-   validarVenta.validarTelefono(telefono);
+   validarTelefono.validarTelefono(telefono);
    aux.setTelefono(telefono);
 
    aux.setEstado(true);
