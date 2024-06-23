@@ -1,8 +1,10 @@
 #include <iostream>
 using namespace std;
 #include <cstring>
-#include "validacion.h"
 #include <ctime>
+#include "empleadoArchivo.h"
+#include "ventaArchivo.h"
+#include "validacion.h"
 
 void validacionProducto::validarProveedor(int &proveedor){
     while((proveedor != 1 && proveedor != 2) || (cin.fail())){
@@ -24,7 +26,6 @@ void validacionProducto::validarVencimiento(Fecha &vencimiento){
     int _dia = f->tm_mday;
     int _mes = f->tm_mon+1;
     int _anio = f->tm_year+1900;
-<<<<<<< Updated upstream
     while(_anio >= vencimiento.getAnio() && cin.fail()){
         cin.clear();
         cin.ignore();
@@ -33,29 +34,13 @@ void validacionProducto::validarVencimiento(Fecha &vencimiento){
         vencimiento.setAnio(a);
     }
     while((_mes >= vencimiento.getMes() && _anio == vencimiento.getAnio()) || (vencimiento.getMes() < 0 || vencimiento.getMes() > 12) && cin.fail()){
-=======
-    cout<<"anio actual"<<_anio<<endl;
-    while(_anio + 1 <= vencimiento.getAnio()|| cin.fail()){
-        cin.clear();
-        cin.ignore();
-        cout<<"anio actual"<<_anio<<endl;
-        cout<<"ingrese un año menor al actual";
-        cin>>a;
-        vencimiento.setAnio(a);
-    }
-    while((_mes + 1<= vencimiento.getMes() && _anio == vencimiento.getAnio()) || (vencimiento.getMes() < 0 || vencimiento.getMes() > 12) || cin.fail()){
->>>>>>> Stashed changes
         cin.clear();
         cin.ignore();
         cout<<"ingrese un mes mayor al actual: ";
         cin>>m;
         vencimiento.setMes(m);
     }
-<<<<<<< Updated upstream
     while(_dia >= vencimiento.getDia() && _mes == vencimiento.getMes() && _anio == vencimiento.getAnio() || (vencimiento.getDia() < 0 || vencimiento.getDia() >31 && cin.fail())){
-=======
-    while(_dia + 1 <= vencimiento.getDia() && _mes == vencimiento.getMes() && _anio == vencimiento.getAnio() || (vencimiento.getDia() < 0 || vencimiento.getDia() >31 || cin.fail())){
->>>>>>> Stashed changes
         cin.clear();
         cin.ignore();
         cout<<"ingrese un dia mayor al actual:";
@@ -93,28 +78,33 @@ void validacionTelefono::validarTelefono(int &telefono){
 
 
 void validacionEmpleado::validarDni(int &dni){
-<<<<<<< Updated upstream
     while(dni < 0 || cin.fail()){
-=======
-    while((dni < 0) || (cin.fail())){
->>>>>>> Stashed changes
         cin.clear();
         cin.ignore();
         cout<<"ingrese correctamente el dni:";
         cin>>dni;
     }
-<<<<<<< Updated upstream
 }
 
 
 void validacionVenta::validarId(int &id){
-    while(dni < 0 || cin.fail()){
+    EmpleadoArchivo archiEmpleado("empleados.dat");
+    int tope = archiEmpleado.contarRegistros();
+    while((id < 0 || id > tope) || cin.fail()){
         cin.clear();
         cin.ignore();
-        cout<<"ingrese correctamente el dni:";
-        cin>>dni;
+        cout<<"ingrese correctamente el id, la cantidad de empados es:"<<archiEmpleado.contarRegistros()<<" haga el ingreso:";
+        cin>>id;
     }
 }
-=======
+
+void validacionVenta::validarNumero(int &numero){
+    VentaArchivo archiVenta("ventas.dat");
+    int tope = archiVenta.contarRegistros();
+    while((numero < 0 || numero > tope) || cin.fail()){
+        cin.clear();
+        cin.ignore();
+        cout<<"ingrese correctamente el numero, la cantidad de empados es:"<<archiVenta.contarRegistros()<<" haga el ingreso:";
+        cin>>numero;
+    }
 }
->>>>>>> Stashed changes

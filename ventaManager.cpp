@@ -24,6 +24,7 @@ using namespace std;
 
    cout << "ID de empleado: ";
    cin >> idEmpleado;
+   validarVenta.validarId(idEmpleado);
    aux.setIdEmpleado(idEmpleado);
    cout << "(Ingrese 0 para detener la carga)" << endl;
    cout << "------------------------------------" << endl;
@@ -161,10 +162,12 @@ using namespace std;
  void VentaManager::baja()
  {
    Venta reg;
+   validacionVenta validarVenta;
    int numero;
    Fecha fechaIngresante;
    cout << "Ingresar el Numero de venta: ";
    cin >> numero;
+   validarVenta.validarNumero(numero);
    cout << endl;
    bool activo = false;
    int posicion;
