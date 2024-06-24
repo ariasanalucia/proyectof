@@ -7,7 +7,7 @@ using namespace std;
  //CARGAR
  Proveedor ProveedorManager::Cargar()
  {
-    validacionVenta validarVenta;
+    validacionTelefono validarTelefono;
     Proveedor aux;
     ProveedorArchivo archiProveedor("proveedores.dat");
     int telefono,idProveedor;
@@ -22,7 +22,7 @@ using namespace std;
 
    cout << "Telefono: ";
    cin >> telefono;
-   validarVenta.validarTelefono(telefono);
+   validarTelefono.validarTelefono(telefono);
    aux.setTelefono(telefono);
 
    aux.setEstado(true);
@@ -75,7 +75,7 @@ using namespace std;
         }
     }
 
-    //Mostrar 
+    //Mostrar
     for (int i = 0; i < cantReg; i++)
     {
         //vecOrdenados[i]->Mostrar();
@@ -202,7 +202,6 @@ void ProveedorManager::menuProveedor()
       cout << "2 - BAJA" << endl;
       cout << "3 - LISTAR" << endl;
       cout << "4 - MODIFICAR" << endl;
-      cout << "5 - CONSULTAS" << endl;
       cout << endl;
       cout << "0 - PARA SALIR" << endl;
       cout << "----------------" << endl;
@@ -231,12 +230,6 @@ void ProveedorManager::menuProveedor()
        case 4:
         {
          modificar();
-        }
-        break;
-       case 5:
-        {
-//          Consultas consulta;
-//          consulta.menuConsultas();
         }
         break;
        case 0:

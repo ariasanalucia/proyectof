@@ -4,12 +4,14 @@ using namespace std;
 #include "funcionesGlobales.h"
 #include "consultasVentas.h"
 #include "productoManager.h"
+#include "validacion.h"
 #include "venta.h"
 
 
   //CARGAR
  Venta VentaManager::Cargar()
  {
+   validacionVenta validarVenta;
    Venta aux;
    VentaArchivo archiVenta("venta.dat");
    Producto prod;
@@ -22,6 +24,7 @@ using namespace std;
 
    cout << "ID de empleado: ";
    cin >> idEmpleado;
+   validarVenta.validarId(idEmpleado);
    aux.setIdEmpleado(idEmpleado);
    cout << "(Ingrese 0 para detener la carga)" << endl;
    cout << "------------------------------------" << endl;
@@ -159,10 +162,12 @@ using namespace std;
  void VentaManager::baja()
  {
    Venta reg;
+   validacionVenta validarVenta;
    int numero;
    Fecha fechaIngresante;
    cout << "Ingresar el Numero de venta: ";
    cin >> numero;
+   validarVenta.validarNumero(numero);
    cout << endl;
    bool activo = false;
    int posicion;
@@ -403,7 +408,7 @@ using namespace std;
       cout << "     VENTAS" << endl;
       cout << "----------------" << endl;
       cout << "1 - ALTA" << endl;
-      cout << "2 - BAJA -> Nota de Credito?" << endl;
+      cout << "2 - NOTA DE CREDITO" << endl;
       cout << "3 - LISTAR" << endl;
       cout << "4 - MODIFICAR" << endl;
       cout << "5 - CONSULTAS" << endl;

@@ -169,14 +169,7 @@ void InformeRecaudacion::porMes(){
    float maximo = -1;
    char nombre[30];
    char apellido[30];
-
    int maximoVentas;
-
-   int anio;
-   cout << "INGRESE EL ANIO:";
-   cin >> anio;
-   cout << endl;
-
    bool activo = false;
 
    for (int i=0; i<cantE; i++)
@@ -187,7 +180,7 @@ void InformeRecaudacion::porMes(){
      for (int j=0; j<cantV; j++)
      {
        regVenta = archiVenta.leer(j);
-       if (regEmpleado.getId() == regVenta.getIdEmpleado() && regEmpleado.getEstado() && regVenta.getFecha().getAnio() == anio)
+       if (regEmpleado.getId() == regVenta.getIdEmpleado() && regEmpleado.getEstado())
        {
          activo = true;
          acumulador += regVenta.getImporte();
@@ -220,7 +213,7 @@ void InformeRecaudacion::porMes(){
 
    if (!activo)
    {
-     cout << "NINGUN EMPLEADO RECAUDO EN EL ANIO INGRESADO" << endl;
+     cout << "NINGUN EMPLEADO RECAUDO" << endl;
    }
    pausa();
  }

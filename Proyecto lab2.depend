@@ -333,7 +333,7 @@
 	"empleado.h"
 	"funcionesGlobales.h"
 
-1718663144 source:c:\users\usuario\documents\github\proyectof\empleadomanager.cpp
+1718829322 source:c:\users\usuario\documents\github\proyectof\empleadomanager.cpp
 	<iostream>
 	<cstring>
 	"funcionesGlobales.h"
@@ -366,7 +366,7 @@
 	<cstring>
 	"venta.h"
 
-1718500806 source:c:\users\usuario\documents\github\proyectof\ventamanager.cpp
+1718829386 source:c:\users\usuario\documents\github\proyectof\ventamanager.cpp
 	<iostream>
 	"ventaManager.h"
 	"funcionesGlobales.h"
@@ -374,7 +374,7 @@
 	"productoManager.h"
 	"venta.h"
 
-1718663144 source:c:\users\usuario\documents\github\proyectof\proveedormanager.cpp
+1718826452 source:c:\users\usuario\documents\github\proyectof\proveedormanager.cpp
 	<iostream>
 	"proveedorManager.h"
 	"funcionesGlobales.h"
@@ -793,7 +793,7 @@
 	"ventaArchivo.h"
 	"venta.h"
 
-1718417698 source:c:\users\usuario\documents\github\proyectof\informerecaudacion.cpp
+1718827263 source:c:\users\usuario\documents\github\proyectof\informerecaudacion.cpp
 	<iostream>
 	"fecha.h"
 	"informeRecaudacion.h"
@@ -826,7 +826,7 @@
 
 1718237716 c:\users\usuario\documents\github\proyectof\listados.h
 
-1718587846 source:c:\users\usuario\documents\github\proyectof\listadosventas.cpp
+1718762564 source:c:\users\usuario\documents\github\proyectof\listadosventas.cpp
 	<iostream>
 	"listadosVentas.h"
 
@@ -840,7 +840,7 @@
 	<iostream>
 	"listadosProductos.h"
 
-1718293307 c:\users\usuario\documents\github\proyectof\listadosproductos.h
+1718762564 c:\users\usuario\documents\github\proyectof\listadosproductos.h
 	"producto.h"
 	"productoManager.h"
 	"productoArchivo.h"
@@ -849,9 +849,250 @@
 1718663144 c:\users\usuario\documents\github\proyectof\validacion.h
 	"fecha.h"
 
-1718663444 source:c:\users\usuario\documents\github\proyectof\validacion.cpp
+1718758215 source:c:\users\usuario\documents\github\proyectof\validacion.cpp
 	<iostream>
 	<cstring>
 	"validacion.h"
 	<ctime>
+
+1718910697 source:c:\users\gianf\onedrive\desktop\proyectof\app.cpp
+	<iostream>
+	"funcionesGlobales.h"
+	"app.h"
+
+1718910697 c:\users\gianf\onedrive\desktop\proyectof\funcionesglobales.h
+	<iostream>
+	<cstring>
+
+1718910697 c:\users\gianf\onedrive\desktop\proyectof\app.h
+	"productoManager.h"
+	"empleadoManager.h"
+	"ventaManager.h"
+	"proveedorManager.h"
+	"informes.h"
+
+1718910697 c:\users\gianf\onedrive\desktop\proyectof\productomanager.h
+	"productoArchivo.h"
+	"producto.h"
+
+1718910697 c:\users\gianf\onedrive\desktop\proyectof\productoarchivo.h
+	"producto.h"
+	<cstring>
+
+1718910697 c:\users\gianf\onedrive\desktop\proyectof\producto.h
+	"fecha.h"
+
+1718910697 c:\users\gianf\onedrive\desktop\proyectof\fecha.h
+
+1718910697 c:\users\gianf\onedrive\desktop\proyectof\empleadomanager.h
+	"empleadoArchivo.h"
+
+1718910697 c:\users\gianf\onedrive\desktop\proyectof\empleadoarchivo.h
+	"empleado.h"
+	<cstring>
+
+1718914175 c:\users\gianf\onedrive\desktop\proyectof\empleado.h
+	<cstring>
+
+1718910697 c:\users\gianf\onedrive\desktop\proyectof\ventamanager.h
+	"listadosVentas.h"
+	"ventaArchivo.h"
+	"productoArchivo.h"
+	"venta.h"
+	"producto.h"
+	"productoManager.h"
+
+1718910697 c:\users\gianf\onedrive\desktop\proyectof\listadosventas.h
+	"funcionesGlobales.h"
+	"venta.h"
+	"ventaArchivo.h"
+	"ventaManager.h"
+
+1718910697 c:\users\gianf\onedrive\desktop\proyectof\venta.h
+	"fecha.h"
+	"hora.h"
+
+1718910697 c:\users\gianf\onedrive\desktop\proyectof\hora.h
+
+1718910697 c:\users\gianf\onedrive\desktop\proyectof\ventaarchivo.h
+	<cstring>
+	"venta.h"
+
+1718910697 c:\users\gianf\onedrive\desktop\proyectof\proveedormanager.h
+	"proveedorArchivo.h"
+	"proveedor.h"
+
+1718910697 c:\users\gianf\onedrive\desktop\proyectof\proveedorarchivo.h
+	<cstring>
+	"proveedor.h"
+
+1718910697 c:\users\gianf\onedrive\desktop\proyectof\proveedor.h
+
+1718910697 c:\users\gianf\onedrive\desktop\proyectof\informes.h
+	"informeRecaudacion.h"
+	"informeStock.h"
+
+1718910697 c:\users\gianf\onedrive\desktop\proyectof\informerecaudacion.h
+	"fecha.h"
+	"ventaManager.h"
+	"ventaArchivo.h"
+	"empleado.h"
+	"empleadoManager.h"
+	"empleadoArchivo.h"
+
+1718910697 c:\users\gianf\onedrive\desktop\proyectof\informestock.h
+
+1718910697 source:c:\users\gianf\onedrive\desktop\proyectof\consultas.cpp
+	<iostream>
+	"consultas.h"
+	"funcionesGlobales.h"
+
+1718910697 c:\users\gianf\onedrive\desktop\proyectof\consultas.h
+	"productoManager.h"
+
+1718910697 source:c:\users\gianf\onedrive\desktop\proyectof\consultasventas.cpp
+	<iostream>
+	"consultasVentas.h"
+	"funcionesGlobales.h"
+
+1718910697 c:\users\gianf\onedrive\desktop\proyectof\consultasventas.h
+	"ventaManager.h"
+
+1718914151 source:c:\users\gianf\onedrive\desktop\proyectof\empleado.cpp
+	<iostream>
+	"empleado.h"
+	"funcionesGlobales.h"
+
+1718910697 source:c:\users\gianf\onedrive\desktop\proyectof\empleadoarchivo.cpp
+	<iostream>
+	"empleadoArchivo.h"
+	"empleado.h"
+
+1718914220 source:c:\users\gianf\onedrive\desktop\proyectof\empleadomanager.cpp
+	<iostream>
+	<cstring>
+	"funcionesGlobales.h"
+	"empleado.h"
+	"empleadoManager.h"
+	"consultas.h"
+	"validacion.h"
+	<algorithm>
+
+1718910697 source:c:\users\gianf\onedrive\desktop\proyectof\fecha.cpp
+	<iostream>
+	"fecha.h"
+	<ctime>
+
+1718910697 source:c:\users\gianf\onedrive\desktop\proyectof\funcionesglobales.cpp
+	<iostream>
+	"funcionesGlobales.h"
+	<iostream>
+	<cstdlib>
+
+1718910697 source:c:\users\gianf\onedrive\desktop\proyectof\hora.cpp
+	<iostream>
+	"hora.h"
+	<ctime>
+
+1718910697 source:c:\users\gianf\onedrive\desktop\proyectof\informerecaudacion.cpp
+	<iostream>
+	"fecha.h"
+	"informeRecaudacion.h"
+	"funcionesGlobales.h"
+
+1718910697 source:c:\users\gianf\onedrive\desktop\proyectof\informes.cpp
+	<iostream>
+	"funcionesGlobales.h"
+	"informes.h"
+
+1718910697 source:c:\users\gianf\onedrive\desktop\proyectof\informestock.cpp
+	<iostream>
+	"informeStock.h"
+	"venta.h"
+	"ventaArchivo.h"
+	"producto.h"
+	"productoArchivo.h"
+	"funcionesGlobales.h"
+
+1718910697 source:c:\users\gianf\onedrive\desktop\proyectof\listadosproductos.cpp
+	<iostream>
+	"listadosProductos.h"
+
+1718910697 c:\users\gianf\onedrive\desktop\proyectof\listadosproductos.h
+	"producto.h"
+	"productoManager.h"
+	"productoArchivo.h"
+	"funcionesGlobales.h"
+
+1718910697 source:c:\users\gianf\onedrive\desktop\proyectof\listadosventas.cpp
+	<iostream>
+	"listadosVentas.h"
+
+1718910697 source:c:\users\gianf\onedrive\desktop\proyectof\main.cpp
+	<iostream>
+	"app.h"
+
+1718910697 source:c:\users\gianf\onedrive\desktop\proyectof\producto.cpp
+	<iostream>
+	"producto.h"
+	"funcionesGlobales.h"
+	"fecha.h"
+
+1718910697 source:c:\users\gianf\onedrive\desktop\proyectof\productoarchivo.cpp
+	<iostream>
+	"productoArchivo.h"
+	"producto.h"
+
+1718910697 source:c:\users\gianf\onedrive\desktop\proyectof\productomanager.cpp
+	<iostream>
+	<cstring>
+	<ctype.h>
+	"funcionesGlobales.h"
+	"productoManager.h"
+	"consultas.h"
+	"listadosProductos.h"
+	"validacion.h"
+
+1718911749 c:\users\gianf\onedrive\desktop\proyectof\validacion.h
+	"fecha.h"
+
+1718910697 source:c:\users\gianf\onedrive\desktop\proyectof\proveedor.cpp
+	<iostream>
+	<cstring>
+	"proveedor.h"
+
+1718910697 source:c:\users\gianf\onedrive\desktop\proyectof\proveedorarchivo.cpp
+	<iostream>
+	"proveedorArchivo.h"
+
+1718911791 source:c:\users\gianf\onedrive\desktop\proyectof\proveedormanager.cpp
+	<iostream>
+	"proveedorManager.h"
+	"funcionesGlobales.h"
+	"validacion.h"
+	<algorithm>
+
+1718911567 source:c:\users\gianf\onedrive\desktop\proyectof\validacion.cpp
+	<iostream>
+	<cstring>
+	"validacion.h"
+	<ctime>
+
+1718910697 source:c:\users\gianf\onedrive\desktop\proyectof\venta.cpp
+	<iostream>
+	"venta.h"
+	"funcionesGlobales.h"
+
+1718910697 source:c:\users\gianf\onedrive\desktop\proyectof\ventaarchivo.cpp
+	<iostream>
+	"ventaArchivo.h"
+	"venta.h"
+
+1718910697 source:c:\users\gianf\onedrive\desktop\proyectof\ventamanager.cpp
+	<iostream>
+	"ventaManager.h"
+	"funcionesGlobales.h"
+	"consultasVentas.h"
+	"productoManager.h"
+	"venta.h"
 

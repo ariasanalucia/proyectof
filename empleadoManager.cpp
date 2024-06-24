@@ -5,21 +5,25 @@ using namespace std;
 #include "empleado.h"
 #include "empleadoManager.h"
 #include "consultas.h"
+#include "validacion.h"
 #include <algorithm> //Para transform()
 
  //CARGAR
  Empleado EmpleadoManager::Cargar()
  {
+   validacionTelefono validarTel;
+   validacionEmpleado valdiarEmpleado;
    Empleado aux;
    EmpleadoArchivo archiEmpleado("empleado.dat");
-   int dni, id;
-   char nombre[30], apellido[30], telefono[30];
+   int dni, id,telefono;
+   char nombre[30], apellido[30];
 
    id = archiEmpleado.contarRegistros()+1;
    aux.setId(id);
 
    cout << "DNI: ";
    cin >> dni;
+   valdiarEmpleado.validarDni(dni);
    aux.setDni(dni);
 
    cout << "Nombre: ";
@@ -31,7 +35,8 @@ using namespace std;
    aux.setApellido(apellido);
 
    cout << "Telefono: ";
-   cargarCadena(telefono,29);
+   cin >> telefono;
+   validarTel.validarTelefono(telefono);
    aux.setTelefono(telefono);
 
    return aux;
@@ -188,8 +193,8 @@ using namespace std;
    cin >> respuesta;
    cout << endl;
 
-   int _dni;
-   char _nombre[30], _apellido[30], _telefono[30];
+   int _dni,_telefono;
+   char _nombre[30], _apellido[30];
 
    if (respuesta == 1)
    {
@@ -208,7 +213,7 @@ using namespace std;
      empleado.setApellido(_apellido);
 
      cout << "Telefono: ";
-     cargarCadena(_telefono,29);
+     cin >> _telefono;
      empleado.setTelefono(_telefono);
 
      if (_archivo.modificar(empleado, posicion))
@@ -234,7 +239,6 @@ using namespace std;
       cout << "2 - BAJA" << endl;
       cout << "3 - LISTAR" << endl;
       cout << "4 - EDITAR" << endl;
-      cout << "5 - CONSULTAS" << endl;
       cout << endl;
       cout << "0 - PARA SALIR" << endl;
       cout << "----------------" << endl;
@@ -263,11 +267,6 @@ using namespace std;
        case 4:
         {
          modificar();
-        }
-        break;
-       case 5:
-        {
-
         }
         break;
        case 0:
