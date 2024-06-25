@@ -325,21 +325,22 @@
 	"empleado.h"
 	<cstring>
 
-1717715246 c:\users\usuario\documents\github\proyectof\empleado.h
+1718924676 c:\users\usuario\documents\github\proyectof\empleado.h
 	<cstring>
 
-1717715241 source:c:\users\usuario\documents\github\proyectof\empleado.cpp
+1718924676 source:c:\users\usuario\documents\github\proyectof\empleado.cpp
 	<iostream>
 	"empleado.h"
 	"funcionesGlobales.h"
 
-1718829322 source:c:\users\usuario\documents\github\proyectof\empleadomanager.cpp
+1718924676 source:c:\users\usuario\documents\github\proyectof\empleadomanager.cpp
 	<iostream>
 	<cstring>
 	"funcionesGlobales.h"
 	"empleado.h"
 	"empleadoManager.h"
 	"consultas.h"
+	"validacion.h"
 	<algorithm>
 
 1716390602 c:\users\usuario\documents\github\proyectof\empleadomanager.h
@@ -366,15 +367,16 @@
 	<cstring>
 	"venta.h"
 
-1718829386 source:c:\users\usuario\documents\github\proyectof\ventamanager.cpp
+1719271763 source:c:\users\usuario\documents\github\proyectof\ventamanager.cpp
 	<iostream>
 	"ventaManager.h"
 	"funcionesGlobales.h"
 	"consultasVentas.h"
 	"productoManager.h"
+	"validacion.h"
 	"venta.h"
 
-1718826452 source:c:\users\usuario\documents\github\proyectof\proveedormanager.cpp
+1718924676 source:c:\users\usuario\documents\github\proyectof\proveedormanager.cpp
 	<iostream>
 	"proveedorManager.h"
 	"funcionesGlobales.h"
@@ -846,14 +848,16 @@
 	"productoArchivo.h"
 	"funcionesGlobales.h"
 
-1718663144 c:\users\usuario\documents\github\proyectof\validacion.h
+1719271763 c:\users\usuario\documents\github\proyectof\validacion.h
 	"fecha.h"
 
-1718758215 source:c:\users\usuario\documents\github\proyectof\validacion.cpp
+1719271763 source:c:\users\usuario\documents\github\proyectof\validacion.cpp
 	<iostream>
 	<cstring>
-	"validacion.h"
 	<ctime>
+	"empleadoArchivo.h"
+	"ventaArchivo.h"
+	"validacion.h"
 
 1718910697 source:c:\users\gianf\onedrive\desktop\proyectof\app.cpp
 	<iostream>
