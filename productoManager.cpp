@@ -157,7 +157,7 @@ using namespace std;
    }
    int respuesta;
    cout << "¿ESTA SEGURO QUE QUIERE ELIMINAR EL REGISTRO?" << endl;
-   cout << "(1 - SI / 0 - NO)" << endl;
+   cout << "(1 - SI | 0 - NO)" << endl;
    cout << "RESPUESTA: ";
    cin >> respuesta;
    cout << endl;
@@ -233,7 +233,7 @@ using namespace std;
      producto.setCategoria(_categoria);
 
      cout << "Proveedor(numero entero):" << endl;
-     cout << "(1 - Disval | 2 - Suizo)";
+     cout << "(1 - Disval | 2 - Suizo) ";
      cin >> _proveedor;
      validar_proveedor(&_proveedor);
      producto.setProveedor(_proveedor);
@@ -365,15 +365,23 @@ using namespace std;
     ProductoArchivo archiProducto("producto.dat");
     Producto producto;
 
-    float precio1;
-    float precio2;
-    cout<<"INGRESE UN RANGO DE PRECIOS " << endl;
-    cout << "1er PRECIO (MAS BAJO): $";
-    cin >> precio1;
-    cout << endl;
-    cout << "2do PRECIO (MAS ALTO): $";
-    cin >> precio2;
-    cout << endl;
+    float precio1 = -1;
+    float precio2 = -2;
+    while (precio1>precio2) {//Verificacion de precio1 < precio2
+      cout<<"INGRESE UN RANGO DE PRECIOS:" << endl;
+      cout << "1er PRECIO (MAS BAJO): $";
+      cin >> precio1;
+      cout << endl;
+      cout << "2do PRECIO (MAS ALTO): $";
+      cin >> precio2;
+      cout << endl;
+    
+      if (precio1>precio2) {
+        cout << "ERROR: INGRESE NUEVAMENTE LOS PRECIOS" << endl;
+        pausa();
+      }
+      clear();
+    }
 
     bool existe = false;
     for(int i = 0; i < archiProducto.contarRegistros(); i++)
@@ -388,7 +396,7 @@ using namespace std;
 
     if (!existe) {
       cout << "NO SE ENCUENTRAN MEDICAMENTOS EN ESE RANGO DE PRECIOS" << endl;
-      pausa();
+      //pausa();
     }
 
  }

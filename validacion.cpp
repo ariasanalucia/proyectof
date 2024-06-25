@@ -10,7 +10,7 @@ void validacionProducto::validarProveedor(int &proveedor){
     while((proveedor != 1 && proveedor != 2) || (cin.fail())){
         cin.clear();
         cin.ignore();
-        cout<<"ingrese correctamente el proveedor siendo 1 o 2:";
+        cout<<"Ingrese correctamente el proveedor siendo 1 o 2:";
         cin>>proveedor;
     }
 }
@@ -29,21 +29,21 @@ void validacionProducto::validarVencimiento(Fecha &vencimiento){
     while(_anio >= vencimiento.getAnio() && cin.fail()){
         cin.clear();
         cin.ignore();
-        cout<<"ingrese un año mayor al actual: ";
+        cout<<"Ingrese un año mayor al actual: ";
         cin>>a;
         vencimiento.setAnio(a);
     }
     while((_mes >= vencimiento.getMes() && _anio == vencimiento.getAnio()) || (vencimiento.getMes() < 0 || vencimiento.getMes() > 12) && cin.fail()){
         cin.clear();
         cin.ignore();
-        cout<<"ingrese un mes mayor al actual: ";
+        cout<<"Ingrese un mes mayor al actual: ";
         cin>>m;
         vencimiento.setMes(m);
     }
     while(_dia >= vencimiento.getDia() && _mes == vencimiento.getMes() && _anio == vencimiento.getAnio() || (vencimiento.getDia() < 0 || vencimiento.getDia() >31 && cin.fail())){
         cin.clear();
         cin.ignore();
-        cout<<"ingrese un dia mayor al actual:";
+        cout<<"Ingrese un dia mayor al actual:";
         cin>>d;
         vencimiento.setDia(d);
     }
@@ -53,7 +53,7 @@ void validacionProducto::valdiarMiligramo(float &miligramo){
     while((miligramo < 0) || (cin.fail())){
         cin.clear();
         cin.ignore();
-        cout<<"ingrese correctamente los miligramos:";
+        cout<<"Ingrese correctamente los miligramos:";
         cin>>miligramo;
     }
 }
@@ -62,7 +62,7 @@ void validacionProducto::validarPrecio(float &precio){
     while((precio< 0) || (cin.fail())){
         cin.clear();
         cin.ignore();
-        cout<<"ingrese correctamente el precio:";
+        cout<<"Ingrese correctamente el precio:";
         cin>>precio;
     }
 }
@@ -71,7 +71,7 @@ void validacionTelefono::validarTelefono(int &telefono){
     while((telefono < 1100000000) || (cin.fail())){
         cin.clear();
         cin.ignore();
-        cout<<"ingrese correctamente el telefono:";
+        cout<<"Ingrese correctamente el telefono:";
         cin>>telefono;
     }
 }
@@ -81,7 +81,7 @@ void validacionEmpleado::validarDni(int &dni){
     while(dni < 0 || cin.fail()){
         cin.clear();
         cin.ignore();
-        cout<<"ingrese correctamente el dni:";
+        cout<<"Ingrese correctamente el dni:";
         cin>>dni;
     }
 }
@@ -93,7 +93,7 @@ void validacionVenta::validarId(int &id){
     while((id < 0 || id > tope) || cin.fail()){
         cin.clear();
         cin.ignore();
-        cout<<"ingrese correctamente el id, la cantidad de empados es:"<<archiEmpleado.contarRegistros()<<" haga el ingreso:";
+        cout<<"Ingrese correctamente el id, la cantidad de empados es:"<<archiEmpleado.contarRegistros()<<" haga el ingreso:";
         cin>>id;
     }
 }
@@ -104,7 +104,7 @@ void validacionVenta::validarNumero(int &numero){
     while((numero < 0 || numero > tope) || cin.fail()){
         cin.clear();
         cin.ignore();
-        cout<<"ingrese correctamente el numero, la cantidad de empados es:"<<archiVenta.contarRegistros()<<" haga el ingreso:";
+        cout<<"Ingrese correctamente el numero, la cantidad de empados es:"<<archiVenta.contarRegistros()<<" haga el ingreso:";
         cin>>numero;
     }
 }
