@@ -204,7 +204,7 @@ void InformeRecaudacion::porMes(){
    {
      cout << endl;
      cout << " - - - - - - - - - - - - - - - - - - - -" << endl;
-     cout << "EL EMPLEADO CON MAS RECAUDACION ES " << endl;
+     cout << "EL EMPLEADO CON MAS RECAUDACION ES:" << endl << endl;
      cout << "ID: " << maximoEmpleado << endl;
      cout << "NOMBRE: " << nombre << endl;
      cout << "APELLIDO: " << apellido << endl;

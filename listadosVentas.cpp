@@ -6,7 +6,7 @@ void listadosVentas::MostrarPorFechaDeCompra()
  {
     VentaArchivo _archiVenta("venta.dat");
     int cantReg = _archiVenta.contarRegistros();
-    // Crear un arreglo de ventas dinamico
+    //Creo un arreglo de ventas dinamico
     Venta *vecOrdenados = new Venta[cantReg];
     VentaManager obj;
 
@@ -23,7 +23,7 @@ void listadosVentas::MostrarPorFechaDeCompra()
         cout << "(1 - Ascendente | 2 - Descendente | 0 - Salir): ";
         cin >> respuesta;
 
-        // Burbujeo
+        //Burbujeo
         if (respuesta == 2)
         {
          for (int i = 0; i < cantReg - 1; i++)
@@ -49,7 +49,7 @@ void listadosVentas::MostrarPorFechaDeCompra()
              {   //Se ve asqueroso, pero simplemente pase todo a minutos y compare a ambos
                  int aux1 = (vecOrdenados[j].getFecha().getAnio()*525960)+(vecOrdenados[j].getFecha().getMes()*43830)+(vecOrdenados[j].getFecha().getDia()*1440);
                  int aux2 = (vecOrdenados[j+1].getFecha().getAnio()*525960)+(vecOrdenados[j].getFecha().getMes()*43830)+(vecOrdenados[j+1].getFecha().getDia()*1440);
-                 // Comparo los minutos de cada venta
+                 //Comparo los minutos de cada venta
                  if (aux1 > aux2)
                  {
                      Venta temp = vecOrdenados[j];
@@ -95,10 +95,10 @@ void listadosVentas::MostrarPorFechaDeCompra()
         
         clear();
         cout << "COMO DESEA ORDENARLOS?" << endl;
-        cout << "(1 - Ascendente | 2 - Descendente): ";
+        cout << "(1 - Ascendente | 2 - Descendente | 0 - Salir): ";
         cin >> respuesta;
 
-        // Burbujeo
+        //Burbujeo
         if (respuesta == 1)
         {
           for (int i = 0; i < cantReg - 1; i++)
@@ -136,7 +136,6 @@ void listadosVentas::MostrarPorFechaDeCompra()
           return;
         }
 
-        // Mostrar los proveedores ordenados
         for (int i = 0; i < cantReg; i++)
         {
             obj.Mostrar(vecOrdenados[i]);
