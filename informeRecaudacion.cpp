@@ -14,7 +14,7 @@ void InformeRecaudacion::porAnio(){
   float totalRecaudado = 0;
 
   int anio;
-  cout << "INGRESE EL ANIO:";
+  cout << "INGRESE EL ANIO: ";
   cin >> anio;
   cout << endl;
 
@@ -59,12 +59,12 @@ void InformeRecaudacion::porMes(){
   float totalRecaudado = 0;
 
   int anio;
-  cout << "INGRESE EL ANIO:";
+  cout << "INGRESE EL ANIO: ";
   cin >> anio;
   cout << endl;
 
   int mes;
-  cout << "INGRESE EL MES:";
+  cout << "INGRESE EL MES: ";
   cin >> mes;
   cout << endl;
 
@@ -228,7 +228,7 @@ void InformeRecaudacion::porMes(){
    int cantVentas = archiVenta.contarRegistros();
 
    int anio;
-   cout << "INGRESE EL ANIO:";
+   cout << "INGRESE EL ANIO: ";
    cin >> anio;
    cout << endl;
 

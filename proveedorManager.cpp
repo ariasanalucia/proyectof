@@ -55,7 +55,7 @@ using namespace std;
     {
         vecOrdenados[i] = _archivo.leer(i);
     }
-    //Ordenar los proveedores por nombre usando el algoritmo de burbuja
+    //Ordenor x burbuja 
     for (int i = 0; i < cantReg - 1; i++)
     {
         for (int j = 0; j < cantReg - i - 1; j++)
@@ -65,7 +65,7 @@ using namespace std;
             transform(aux1.begin(), aux1.end(), aux1.begin(), ::tolower); //Aplico tolower() a cada caracter del string
             transform(aux2.begin(), aux2.end(), aux2.begin(), ::tolower);
 
-            //Si est�n desordenados, intercambiar
+            //Si estan desordenados, intercambiar
             if (strcmp(aux1.c_str(), aux2.c_str()) > 0) //Sera valido (aux1 > aux2) para comparar?
             {
                 Proveedor temp = vecOrdenados[j];
@@ -146,8 +146,10 @@ using namespace std;
    }else
    {
      cout << "NO EXISTE EL NUMERO DE ID INGRESADO" << endl;
+     pausa();
      return;
    }
+
    int respuesta;
    cout << "ESTA SEGURO QUE QUIERE MODIFICAR EL REGISTRO?" << endl;
    cout << "(1 - SI | 0 - NO)" << endl;
@@ -155,13 +157,12 @@ using namespace std;
    cin >> respuesta;
    cout << endl;
 
-   int idPro, telefono;
-   char nombre[30];
-   bool estado;
-
    if (respuesta == 1)
    {
-     cout << "INGRESE NUEVAMENTE LOS CAMPOS A MODIFICAR..." << endl;
+     int idPro, telefono;
+     char nombre[30];
+     bool estado;
+     cout << "INGRESE LOS CAMPOS A MODIFICAR..." << endl;
 
      cout << "ID: ";
      cin >> idPro;

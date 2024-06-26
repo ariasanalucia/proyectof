@@ -91,7 +91,7 @@ using namespace std;
     int respuesta = -1;
     while(respuesta != 0) {
       clear();
-      cout << "COMO DESEA ORDENARLOS?";
+      cout << "COMO DESEA ORDENARLOS?" << endl;
       cout << "(1 - Ascendente | 2 - Descendente | 0 - Salir): ";
       cin >> respuesta;
       // Burbujeo
