@@ -65,7 +65,7 @@ using namespace std;
       {
           obj.Mostrar(vecOrdenados[i]);
       }
-      
+
       pausa();
       clear();
     }

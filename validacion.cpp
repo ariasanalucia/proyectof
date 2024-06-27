@@ -33,14 +33,14 @@ void validacionProducto::validarVencimiento(Fecha &vencimiento){
         cin>>a;
         vencimiento.setAnio(a);
     }
-    while((_mes >= vencimiento.getMes() && _anio == vencimiento.getAnio()) || (vencimiento.getMes() < 0 || vencimiento.getMes() > 12) && cin.fail()){
+    while((_mes >= vencimiento.getMes() && _anio >= vencimiento.getAnio()) || (vencimiento.getMes() < 0 || vencimiento.getMes() > 12) && cin.fail()){
         cin.clear();
         cin.ignore();
         cout<<"Ingrese un mes mayor al actual: ";
         cin>>m;
         vencimiento.setMes(m);
     }
-    while(_dia >= vencimiento.getDia() && _mes == vencimiento.getMes() && _anio == vencimiento.getAnio() || (vencimiento.getDia() < 0 || vencimiento.getDia() >31 && cin.fail())){
+    while(_dia >= vencimiento.getDia() && _mes >= vencimiento.getMes() && _anio >= vencimiento.getAnio() || (vencimiento.getDia() < 0 || vencimiento.getDia() >31 && cin.fail())){
         cin.clear();
         cin.ignore();
         cout<<"Ingrese un dia mayor al actual:";

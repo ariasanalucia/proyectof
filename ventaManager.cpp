@@ -20,7 +20,7 @@ using namespace std;
    int idProducto[10] = {};
    int cantidad[10] = {};
    bool estado;
-   float importe;
+   float importe = 0;
 
    cout << "ID de empleado: ";
    cin >> idEmpleado;
@@ -260,10 +260,12 @@ using namespace std;
      cin >> idEmpleado;
      reg.setIdEmpleado(idEmpleado);
 
+     validarDroga();
+
      int contador = 0;
 
      cout << endl;
-     cout << "ID de producto: ";
+     cout << "ID de producto(ingrese 0 para terminar la carga): ";
      cin >> idProducto[contador];
      reg.setIdProducto(idProducto[contador], contador);
 

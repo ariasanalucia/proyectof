@@ -128,6 +128,9 @@ using namespace std;
  void ProductoManager::baja()
  {
    Producto producto;
+
+   validarDroga();
+   cout << endl;
    int id;
    cout << "Ingresar el ID: ";
    cin >> id;
@@ -170,6 +173,11 @@ using namespace std;
  void ProductoManager::modificar()
  {
    Producto producto;
+   ProductoArchivo archiP("producto.dat");
+   int cantP = archiP.contarRegistros();
+
+   validarDroga();
+   cout << endl;
    int id;
    cout << "Ingresar el ID: ";
    cin >> id;
@@ -203,8 +211,7 @@ using namespace std;
    {
      cout << "INGRESE NUEVAMENTE LOS CAMPOS DEL PRODUCTO A MODIFICAR..." << endl;
 
-     cout << "ID de medicamento: ";
-     cin >> _id;
+     _id = posicion+1;
      producto.setId(_id);
 
      cout << "Marca(caracteres): ";
@@ -239,14 +246,14 @@ using namespace std;
      cargarCadena(_presentacion,29);
      producto.setPresentacion(_presentacion);
 
-     cout << "Precio(numeros con decimales): ";
-     cin >> _precioUnitario;
-     validaciones.validarPrecio(_precioUnitario);
-     producto.setPrecioUnitario(_precioUnitario);
-
      cout << "Stock(numero entero): ";
      cin >> _stock;
      producto.setStock(_stock);
+
+     cout << "Precio(numeros con decimales): $";
+     cin >> _precioUnitario;
+     validaciones.validarPrecio(_precioUnitario);
+     producto.setPrecioUnitario(_precioUnitario);
 
      if (_archivo.modificar(producto, posicion))
      {
@@ -256,6 +263,7 @@ using namespace std;
        cout << "NO SE PUDO MODIFICAR EL REGISTRO!" << endl;
      }
    }
+   pausa();
  }
 
  void ProductoManager::mostrarPorProveedor()

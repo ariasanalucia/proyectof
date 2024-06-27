@@ -30,7 +30,7 @@ using namespace std;
    strcpy(_categoria, "VACIO");
    _proveedor = 0;
    _vencimiento = Fecha();
-   _estado = false;
+   _estado = true;
    strcpy(_presentacion, "VACIO");
    _cantidad = 0;
    _precioUnitario = 0;
