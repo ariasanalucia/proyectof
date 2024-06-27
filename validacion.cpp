@@ -26,8 +26,6 @@ void validacionProducto::validarVencimiento(Fecha &vencimiento){
     int _dia = f->tm_mday;
     int _mes = f->tm_mon+1;
     int _anio = f->tm_year+1900;
-    cout<<vencimiento.getAnio();
-        cout<<_anio;
     while(_anio > vencimiento.getAnio() || cin.fail()){
         cin.clear();
         cin.ignore();
