@@ -87,17 +87,7 @@ using namespace std;
    }
  }
 
- bool ProductoManager::es_proveedor(int Proveedor){
-    return (Proveedor == 1 || Proveedor == 2);
- }
 
- void ProductoManager::validar_proveedor(int *Proveedor){
-    while(!es_proveedor(*Proveedor)){
-        cout << "Ingrese correctamente el provedor:" << endl;
-        cout << "(1 - Disval | 2 - Suizo):" << endl;
-        cin >> *Proveedor;
-    }
- }
 
  void ProductoManager::mostrarTodos()
  {
@@ -123,7 +113,7 @@ using namespace std;
      aux = _archivo.leer(posicion);
      Mostrar(aux);
      pausa();
-     if (aux.getStock() == 0)
+     if (aux.getStock() <= 10)
      {
        cout << "REPONER STOCK!" << endl;
        pausa();
@@ -203,6 +193,7 @@ using namespace std;
    cin >> respuesta;
    cout << endl;
 
+   validacionProducto validaciones;
    int _id,_proveedor, _stock;
    char _marca[30], _droga[30], _categoria[30], _presentacion[30];
    Fecha _vencimiento;
@@ -226,6 +217,7 @@ using namespace std;
 
      cout << "Miligramos(numero con decimales): ";
      cin >> _miligramos;
+     validaciones.valdiarMiligramo(_miligramos);
      producto.setMiligramos(_miligramos);
 
      cout << "Accion terapeutica(caracteres): ";
@@ -235,11 +227,12 @@ using namespace std;
      cout << "Proveedor(numero entero):" << endl;
      cout << "(1 - Disval | 2 - Suizo) ";
      cin >> _proveedor;
-     validar_proveedor(&_proveedor);
+     validaciones.validarProveedor(_proveedor);
      producto.setProveedor(_proveedor);
 
      cout << "Fecha de Vto: " << endl;
      _vencimiento.Cargar();
+     validaciones.validarVencimiento(_vencimiento);
      producto.setVencimiento(_vencimiento);
 
      cout << "Presentacion(caracteres): ";
@@ -248,6 +241,7 @@ using namespace std;
 
      cout << "Precio(numeros con decimales): ";
      cin >> _precioUnitario;
+     validaciones.validarPrecio(_precioUnitario);
      producto.setPrecioUnitario(_precioUnitario);
 
      cout << "Stock(numero entero): ";
@@ -375,7 +369,7 @@ using namespace std;
       cout << "2do PRECIO (MAS ALTO): $";
       cin >> precio2;
       cout << endl;
-    
+
       if (precio1>precio2) {
         cout << "ERROR: INGRESE NUEVAMENTE LOS PRECIOS" << endl;
         pausa();

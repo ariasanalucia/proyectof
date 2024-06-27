@@ -12,7 +12,7 @@ using namespace std;
       cout << "    INFORMES" << endl;
       cout << "----------------" << endl;
       cout << "1 - RECAUDACION" << endl;
-      cout << "2 - MEDICAMENTOS SIN STOCK" << endl;
+      cout << "2 - MEDICAMENTOS A REPONER STOCK" << endl;
       cout << endl;
       cout << "0 - PARA SALIR" << endl;
       cout << "----------------" << endl;

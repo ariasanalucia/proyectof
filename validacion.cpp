@@ -88,23 +88,23 @@ void validacionEmpleado::validarDni(int &dni){
 
 
 void validacionVenta::validarId(int &id){
-    EmpleadoArchivo archiEmpleado("empleados.dat");
+    EmpleadoArchivo archiEmpleado("empleado.dat");
     int tope = archiEmpleado.contarRegistros();
-    while((id < 0 || id > tope) || cin.fail()){
+    while((id <= 0 || id > tope) || cin.fail()){
         cin.clear();
         cin.ignore();
-        cout<<"Ingrese correctamente el id, la cantidad de empados es:"<<archiEmpleado.contarRegistros()<<" haga el ingreso:";
+        cout<<"Ingrese correctamente el id de empleado: ";
         cin>>id;
     }
 }
 
 void validacionVenta::validarNumero(int &numero){
-    VentaArchivo archiVenta("ventas.dat");
+    VentaArchivo archiVenta("venta.dat");
     int tope = archiVenta.contarRegistros();
     while((numero < 0 || numero > tope) || cin.fail()){
         cin.clear();
         cin.ignore();
-        cout<<"Ingrese correctamente el numero, la cantidad de empados es:"<<archiVenta.contarRegistros()<<" haga el ingreso:";
+        cout<<"Ingrese correctamente numero de venta: ";
         cin>>numero;
     }
 }

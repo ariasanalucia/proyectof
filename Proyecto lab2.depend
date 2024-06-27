@@ -76,7 +76,7 @@
 1717677974 c:\users\usuario\documents\github\proyectof\producto.h
 	"fecha.h"
 
-1717678681 source:c:\users\usuario\documents\github\proyectof\producto.cpp
+1719431086 source:c:\users\usuario\documents\github\proyectof\producto.cpp
 	<iostream>
 	"producto.h"
 	"funcionesGlobales.h"
@@ -94,7 +94,7 @@
 	"proveedorManager.h"
 	"informes.h"
 
-1719359597 source:c:\users\usuario\documents\github\proyectof\productomanager.cpp
+1719439439 source:c:\users\usuario\documents\github\proyectof\productomanager.cpp
 	<iostream>
 	<cstring>
 	<ctype.h>
@@ -801,7 +801,7 @@
 	"informeRecaudacion.h"
 	"funcionesGlobales.h"
 
-1719359597 source:c:\users\usuario\documents\github\proyectof\informes.cpp
+1719445542 source:c:\users\usuario\documents\github\proyectof\informes.cpp
 	<iostream>
 	"funcionesGlobales.h"
 	"informes.h"
@@ -851,7 +851,7 @@
 1719271763 c:\users\usuario\documents\github\proyectof\validacion.h
 	"fecha.h"
 
-1719359597 source:c:\users\usuario\documents\github\proyectof\validacion.cpp
+1719446046 source:c:\users\usuario\documents\github\proyectof\validacion.cpp
 	<iostream>
 	<cstring>
 	<ctime>
