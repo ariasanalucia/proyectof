@@ -428,7 +428,7 @@ using namespace std;
    cin >> idProducto;
    cout << endl;
 
-   if (idProducto <= cantProductos)
+   if (idProducto > 0 && idProducto <= cantProductos)
    {
      cout << "INGRESE LA CANTIDAD DEL PRODUCTO A SOLICITAR: ";
      cin >> cantStockSolicitada;
