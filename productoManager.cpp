@@ -476,7 +476,7 @@ using namespace std;
       cout << "2 - BAJA" << endl;
       cout << "3 - LISTAR" << endl;
       cout << "4 - MODIFICAR" << endl;
-      cout << "5 - SOLICITAR MEDICAMENTO" << endl;
+      cout << "5 - RE-STOCK" << endl;
       cout << "6 - CONSULTAS" << endl;
       cout << endl;
       cout << "0 - PARA SALIR" << endl;
