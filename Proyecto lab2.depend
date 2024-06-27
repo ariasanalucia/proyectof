@@ -1100,3 +1100,247 @@
 	"productoManager.h"
 	"venta.h"
 
+1718420190 source:c:\users\gian\desktop\utn\labo2\proyectof\app.cpp
+	<iostream>
+	"funcionesGlobales.h"
+	"app.h"
+
+1718420190 c:\users\gian\desktop\utn\labo2\proyectof\funcionesglobales.h
+	<iostream>
+	<cstring>
+
+1718420190 c:\users\gian\desktop\utn\labo2\proyectof\app.h
+	"productoManager.h"
+	"empleadoManager.h"
+	"ventaManager.h"
+	"proveedorManager.h"
+	"informes.h"
+
+1718420190 c:\users\gian\desktop\utn\labo2\proyectof\productomanager.h
+	"productoArchivo.h"
+	"producto.h"
+
+1718420190 c:\users\gian\desktop\utn\labo2\proyectof\productoarchivo.h
+	"producto.h"
+	<cstring>
+
+1718420190 c:\users\gian\desktop\utn\labo2\proyectof\producto.h
+	"fecha.h"
+
+1718420190 c:\users\gian\desktop\utn\labo2\proyectof\fecha.h
+
+1718420190 c:\users\gian\desktop\utn\labo2\proyectof\empleadomanager.h
+	"empleadoArchivo.h"
+
+1718420190 c:\users\gian\desktop\utn\labo2\proyectof\empleadoarchivo.h
+	"empleado.h"
+	<cstring>
+
+1719514925 c:\users\gian\desktop\utn\labo2\proyectof\empleado.h
+	<cstring>
+
+1718420190 c:\users\gian\desktop\utn\labo2\proyectof\ventamanager.h
+	"listadosVentas.h"
+	"ventaArchivo.h"
+	"productoArchivo.h"
+	"venta.h"
+	"producto.h"
+	"productoManager.h"
+
+1718420190 c:\users\gian\desktop\utn\labo2\proyectof\listadosventas.h
+	"funcionesGlobales.h"
+	"venta.h"
+	"ventaArchivo.h"
+	"ventaManager.h"
+
+1718420190 c:\users\gian\desktop\utn\labo2\proyectof\venta.h
+	"fecha.h"
+	"hora.h"
+
+1718420190 c:\users\gian\desktop\utn\labo2\proyectof\hora.h
+
+1718420190 c:\users\gian\desktop\utn\labo2\proyectof\ventaarchivo.h
+	<cstring>
+	"venta.h"
+
+1718420190 c:\users\gian\desktop\utn\labo2\proyectof\proveedormanager.h
+	"proveedorArchivo.h"
+	"proveedor.h"
+
+1718420190 c:\users\gian\desktop\utn\labo2\proyectof\proveedorarchivo.h
+	<cstring>
+	"proveedor.h"
+
+1718420190 c:\users\gian\desktop\utn\labo2\proyectof\proveedor.h
+
+1718420190 c:\users\gian\desktop\utn\labo2\proyectof\informes.h
+	"informeRecaudacion.h"
+	"informeStock.h"
+
+1718420190 c:\users\gian\desktop\utn\labo2\proyectof\informerecaudacion.h
+	"fecha.h"
+	"ventaManager.h"
+	"ventaArchivo.h"
+	"empleado.h"
+	"empleadoManager.h"
+	"empleadoArchivo.h"
+
+1718420190 c:\users\gian\desktop\utn\labo2\proyectof\informestock.h
+
+1718420190 source:c:\users\gian\desktop\utn\labo2\proyectof\consultas.cpp
+	<iostream>
+	"consultas.h"
+	"funcionesGlobales.h"
+
+1718420190 c:\users\gian\desktop\utn\labo2\proyectof\consultas.h
+	"productoManager.h"
+
+1718420190 source:c:\users\gian\desktop\utn\labo2\proyectof\consultasventas.cpp
+	<iostream>
+	"consultasVentas.h"
+	"funcionesGlobales.h"
+
+1718420190 c:\users\gian\desktop\utn\labo2\proyectof\consultasventas.h
+	"ventaManager.h"
+
+1719514925 source:c:\users\gian\desktop\utn\labo2\proyectof\empleado.cpp
+	<iostream>
+	"empleado.h"
+	"funcionesGlobales.h"
+
+1718420190 source:c:\users\gian\desktop\utn\labo2\proyectof\empleadoarchivo.cpp
+	<iostream>
+	"empleadoArchivo.h"
+	"empleado.h"
+
+1719514925 source:c:\users\gian\desktop\utn\labo2\proyectof\empleadomanager.cpp
+	<iostream>
+	<cstring>
+	"funcionesGlobales.h"
+	"empleado.h"
+	"empleadoManager.h"
+	"consultas.h"
+	"validacion.h"
+	<algorithm>
+
+1719514925 c:\users\gian\desktop\utn\labo2\proyectof\validacion.h
+	"fecha.h"
+
+1718420190 source:c:\users\gian\desktop\utn\labo2\proyectof\fecha.cpp
+	<iostream>
+	"fecha.h"
+	<ctime>
+
+1719514925 source:c:\users\gian\desktop\utn\labo2\proyectof\funcionesglobales.cpp
+	<iostream>
+	"funcionesGlobales.h"
+	<iostream>
+	<cstdlib>
+
+1718420190 source:c:\users\gian\desktop\utn\labo2\proyectof\hora.cpp
+	<iostream>
+	"hora.h"
+	<ctime>
+
+1719514925 source:c:\users\gian\desktop\utn\labo2\proyectof\informerecaudacion.cpp
+	<iostream>
+	"fecha.h"
+	"informeRecaudacion.h"
+	"funcionesGlobales.h"
+
+1719514925 source:c:\users\gian\desktop\utn\labo2\proyectof\informes.cpp
+	<iostream>
+	"funcionesGlobales.h"
+	"informes.h"
+
+1718420190 source:c:\users\gian\desktop\utn\labo2\proyectof\informestock.cpp
+	<iostream>
+	"informeStock.h"
+	"venta.h"
+	"ventaArchivo.h"
+	"producto.h"
+	"productoArchivo.h"
+	"funcionesGlobales.h"
+
+1719514925 source:c:\users\gian\desktop\utn\labo2\proyectof\listadosproductos.cpp
+	<iostream>
+	"listadosProductos.h"
+
+1718420190 c:\users\gian\desktop\utn\labo2\proyectof\listadosproductos.h
+	"producto.h"
+	"productoManager.h"
+	"productoArchivo.h"
+	"funcionesGlobales.h"
+
+1719514925 source:c:\users\gian\desktop\utn\labo2\proyectof\listadosventas.cpp
+	<iostream>
+	"listadosVentas.h"
+
+1718420190 source:c:\users\gian\desktop\utn\labo2\proyectof\main.cpp
+	<iostream>
+	"app.h"
+
+1718420190 source:c:\users\gian\desktop\utn\labo2\proyectof\producto.cpp
+	<iostream>
+	"producto.h"
+	"funcionesGlobales.h"
+	"fecha.h"
+
+1718420190 source:c:\users\gian\desktop\utn\labo2\proyectof\productoarchivo.cpp
+	<iostream>
+	"productoArchivo.h"
+	"producto.h"
+
+1719514925 source:c:\users\gian\desktop\utn\labo2\proyectof\productomanager.cpp
+	<iostream>
+	<cstring>
+	<ctype.h>
+	"funcionesGlobales.h"
+	"productoManager.h"
+	"consultas.h"
+	"listadosProductos.h"
+	"validacion.h"
+
+1718420190 source:c:\users\gian\desktop\utn\labo2\proyectof\proveedor.cpp
+	<iostream>
+	<cstring>
+	"proveedor.h"
+
+1718420190 source:c:\users\gian\desktop\utn\labo2\proyectof\proveedorarchivo.cpp
+	<iostream>
+	"proveedorArchivo.h"
+
+1719514925 source:c:\users\gian\desktop\utn\labo2\proyectof\proveedormanager.cpp
+	<iostream>
+	"proveedorManager.h"
+	"funcionesGlobales.h"
+	"validacion.h"
+	<algorithm>
+
+1719515702 source:c:\users\gian\desktop\utn\labo2\proyectof\validacion.cpp
+	<iostream>
+	<cstring>
+	<ctime>
+	"empleadoArchivo.h"
+	"ventaArchivo.h"
+	"validacion.h"
+
+1718420190 source:c:\users\gian\desktop\utn\labo2\proyectof\venta.cpp
+	<iostream>
+	"venta.h"
+	"funcionesGlobales.h"
+
+1719514925 source:c:\users\gian\desktop\utn\labo2\proyectof\ventamanager.cpp
+	<iostream>
+	"ventaManager.h"
+	"funcionesGlobales.h"
+	"consultasVentas.h"
+	"productoManager.h"
+	"validacion.h"
+	"venta.h"
+
+1719514925 source:c:\users\gian\desktop\utn\labo2\proyectof\ventaarchivo.cpp
+	<iostream>
+	"ventaArchivo.h"
+	"venta.h"
+

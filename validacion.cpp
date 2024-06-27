@@ -26,21 +26,23 @@ void validacionProducto::validarVencimiento(Fecha &vencimiento){
     int _dia = f->tm_mday;
     int _mes = f->tm_mon+1;
     int _anio = f->tm_year+1900;
-    while(_anio >= vencimiento.getAnio() && cin.fail()){
+    cout<<vencimiento.getAnio();
+        cout<<_anio;
+    while(_anio > vencimiento.getAnio() || cin.fail()){
         cin.clear();
         cin.ignore();
-        cout<<"Ingrese un año mayor al actual: ";
+        cout<<"Ingrese un anio mayor al actual: ";
         cin>>a;
         vencimiento.setAnio(a);
     }
-    while((_mes >= vencimiento.getMes() && _anio >= vencimiento.getAnio()) || (vencimiento.getMes() < 0 || vencimiento.getMes() > 12) && cin.fail()){
+    while((_mes > vencimiento.getMes() && _anio >= vencimiento.getAnio()) || (vencimiento.getMes() < 0 || vencimiento.getMes() > 12) || cin.fail()){
         cin.clear();
         cin.ignore();
         cout<<"Ingrese un mes mayor al actual: ";
         cin>>m;
         vencimiento.setMes(m);
     }
-    while(_dia >= vencimiento.getDia() && _mes >= vencimiento.getMes() && _anio >= vencimiento.getAnio() || (vencimiento.getDia() < 0 || vencimiento.getDia() >31 && cin.fail())){
+    while(_dia >= vencimiento.getDia() && _mes >= vencimiento.getMes() && _anio >= vencimiento.getAnio() || (vencimiento.getDia() < 0 || vencimiento.getDia() >31 || cin.fail())){
         cin.clear();
         cin.ignore();
         cout<<"Ingrese un dia mayor al actual:";
